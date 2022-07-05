@@ -1,0 +1,10 @@
+{
+    "json.schemas": [
+      {
+        "url": "./data/json/schema.json",
+        "fileMatch": [
+          "data/json/constitucion.json"
+        ],
+      }
+    ],
+  }

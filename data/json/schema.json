@@ -1,0 +1,144 @@
+{
+  "$ref": "#/definitions/Constitucion",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Articulo": {
+      "additionalProperties": false,
+      "properties": {
+        "articulo": {
+          "type": "number"
+        },
+        "incisos": {
+          "items": {
+            "$ref": "#/definitions/Inciso"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "articulo",
+        "incisos"
+      ],
+      "type": "object"
+    },
+    "Capitulo": {
+      "additionalProperties": false,
+      "properties": {
+        "articulos": {
+          "items": {
+            "$ref": "#/definitions/Articulo"
+          },
+          "type": "array"
+        },
+        "capitulo": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "titulos": {
+          "items": {
+            "$ref": "#/definitions/Titulo"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "nombre"
+      ],
+      "type": "object"
+    },
+    "Constitucion": {
+      "additionalProperties": false,
+      "properties": {
+        "capitulos": {
+          "items": {
+            "$ref": "#/definitions/Capitulo"
+          },
+          "type": "array"
+        },
+        "preambulo": {
+          "type": "string"
+        },
+        "transitorias": {
+          "items": {
+            "$ref": "#/definitions/Transitoria"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "preambulo",
+        "capitulos",
+        "transitorias"
+      ],
+      "type": "object"
+    },
+    "Inciso": {
+      "additionalProperties": false,
+      "properties": {
+        "inciso": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "incisos": {
+          "items": {
+            "$ref": "#/definitions/Inciso"
+          },
+          "type": "array"
+        },
+        "nivel": {
+          "type": "number"
+        },
+        "texto": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nivel",
+        "texto"
+      ],
+      "type": "object"
+    },
+    "Titulo": {
+      "additionalProperties": false,
+      "properties": {
+        "articulos": {
+          "items": {
+            "$ref": "#/definitions/Articulo"
+          },
+          "type": "array"
+        },
+        "titulo": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "titulo",
+        "articulos"
+      ],
+      "type": "object"
+    },
+    "Transitoria": {
+      "additionalProperties": false,
+      "properties": {
+        "incisos": {
+          "items": {
+            "$ref": "#/definitions/Inciso"
+          },
+          "type": "array"
+        },
+        "transitoria": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "transitoria",
+        "incisos"
+      ],
+      "type": "object"
+    }
+  }
+}

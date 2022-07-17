@@ -1,0 +1,26 @@
+{
+  "name": "cpr2022-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export",
+    "deploy": "npm run build && gh-pages --dist ./out --dotfiles"
+  },
+  "dependencies": {
+    "next": "12.1.3",
+    "react": "^17",
+    "react-dom": "^17",
+    "react-is": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.5",
+    "@types/react": "18.0.1",
+    "bun-framework-next": "^12",
+    "eslint": "^8.20.0",
+    "eslint-config-next": "^12.2.2",
+    "gh-pages": "^4.0.0",
+    "react-refresh": "0.10.0",
+    "typescript": "^4.7.4"
+  }
+}

@@ -4,6 +4,7 @@
     {
       "capitulo": "I",
       "nombre": "PRINCIPIOS Y DISPOSICIONES GENERALES",
+      "numero": 1,
       "articulos": [
         {
           "articulo": 1,
@@ -243,6 +244,7 @@
     {
       "capitulo": "II",
       "nombre": "DERECHOS FUNDAMENTALES Y GARANTÍAS",
+      "numero": 2,
       "articulos": [
         {
           "articulo": 17,
@@ -2549,6 +2551,7 @@
     {
       "capitulo": "III",
       "nombre": "NATURALEZA Y MEDIOAMBIENTE",
+      "numero": 3,
       "articulos": [
         {
           "articulo": 127,
@@ -3006,6 +3009,7 @@
     {
       "capitulo": "IV",
       "nombre": "PARTICIPACIÓN DEMOCRÁTICA",
+      "numero": 4,
       "articulos": [
         {
           "articulo": 151,
@@ -3281,6 +3285,7 @@
     {
       "capitulo": "V",
       "nombre": "BUEN GOBIERNO Y FUNCIÓN PÚBLICA",
+      "numero": 5,
       "articulos": [
         {
           "articulo": 165,
@@ -3666,6 +3671,7 @@
     {
       "capitulo": "VI",
       "nombre": "ESTADO REGIONAL Y ORGANIZACIÓN TERRITORIAL",
+      "numero": 6,
       "articulos": [
         {
           "articulo": 187,
@@ -5136,6 +5142,7 @@
     {
       "capitulo": "VII",
       "nombre": "PODER LEGISLATIVO",
+      "numero": 7,
       "articulos": [
         {
           "articulo": 251,
@@ -6165,6 +6172,7 @@
     {
       "capitulo": "VIII",
       "nombre": "PODER EJECUTIVO",
+      "numero": 8,
       "articulos": [
         {
           "articulo": 279,
@@ -6869,6 +6877,7 @@
     {
       "capitulo": "IX",
       "nombre": "SISTEMAS DE JUSTICIA",
+      "numero": 9,
       "articulos": [
         {
           "articulo": 307,
@@ -7684,6 +7693,7 @@
     {
       "capitulo": "X",
       "nombre": "ÓRGANOS AUTÓNOMOS CONSTITUCIONALES",
+      "numero": 10,
       "articulos": [
         {
           "articulo": 350,
@@ -8476,6 +8486,7 @@
     {
       "capitulo": "XI",
       "nombre": "REFORMA Y REEMPLAZO DE LA CONSTITUCIÓN",
+      "numero": 11,
       "titulos": [
         {
           "titulo": "Reforma constitucional",
@@ -8648,6 +8659,7 @@
   "transitorias": [
     {
       "transitoria": "Primera",
+      "numero": 1,
       "incisos": [
         {
           "nivel": 1,
@@ -8657,6 +8669,7 @@
     },
     {
       "transitoria": "Segunda",
+      "numero": 2,
       "incisos": [
         {
           "nivel": 1,
@@ -8666,6 +8679,7 @@
     },
     {
       "transitoria": "Tercera",
+      "numero": 3,
       "incisos": [
         {
           "inciso": 1,
@@ -8713,6 +8727,7 @@
     },
     {
       "transitoria": "Cuarta",
+      "numero": 4,
       "incisos": [
         {
           "inciso": 1,
@@ -8728,6 +8743,7 @@
     },
     {
       "transitoria": "Quinta",
+      "numero": 5,
       "incisos": [
         {
           "inciso": 1,
@@ -8743,6 +8759,7 @@
     },
     {
       "transitoria": "Sexta",
+      "numero": 6,
       "incisos": [
         {
           "inciso": 1,
@@ -8773,6 +8790,7 @@
     },
     {
       "transitoria": "Séptima",
+      "numero": 7,
       "incisos": [
         {
           "nivel": 1,
@@ -8782,6 +8800,7 @@
     },
     {
       "transitoria": "Octava",
+      "numero": 8,
       "incisos": [
         {
           "inciso": 1,
@@ -8797,6 +8816,7 @@
     },
     {
       "transitoria": "Novena",
+      "numero": 9,
       "incisos": [
         {
           "nivel": 1,
@@ -8806,6 +8826,7 @@
     },
     {
       "transitoria": "Décima",
+      "numero": 10,
       "incisos": [
         {
           "nivel": 1,
@@ -8815,6 +8836,7 @@
     },
     {
       "transitoria": "Undécima",
+      "numero": 11,
       "incisos": [
         {
           "inciso": 1,
@@ -8830,6 +8852,7 @@
     },
     {
       "transitoria": "Duodécima",
+      "numero": 12,
       "incisos": [
         {
           "inciso": 1,
@@ -8845,6 +8868,7 @@
     },
     {
       "transitoria": "Decimotercera",
+      "numero": 13,
       "incisos": [
         {
           "inciso": 1,
@@ -8870,6 +8894,7 @@
     },
     {
       "transitoria": "Decimocuarta",
+      "numero": 14,
       "incisos": [
         {
           "nivel": 1,
@@ -8879,6 +8904,7 @@
     },
     {
       "transitoria": "Decimoquinta",
+      "numero": 15,
       "incisos": [
         {
           "nivel": 1,
@@ -8888,6 +8914,7 @@
     },
     {
       "transitoria": "Decimosexta",
+      "numero": 16,
       "incisos": [
         {
           "inciso": 1,
@@ -8908,6 +8935,7 @@
     },
     {
       "transitoria": "Decimoséptima",
+      "numero": 17,
       "incisos": [
         {
           "nivel": 1,
@@ -8917,6 +8945,7 @@
     },
     {
       "transitoria": "Decimoctava",
+      "numero": 18,
       "incisos": [
         {
           "nivel": 1,
@@ -8926,6 +8955,7 @@
     },
     {
       "transitoria": "Decimonovena",
+      "numero": 19,
       "incisos": [
         {
           "nivel": 1,
@@ -8935,6 +8965,7 @@
     },
     {
       "transitoria": "Vigésima",
+      "numero": 20,
       "incisos": [
         {
           "inciso": 1,
@@ -8960,6 +8991,7 @@
     },
     {
       "transitoria": "Vigesimoprimera",
+      "numero": 21,
       "incisos": [
         {
           "nivel": 1,
@@ -8969,6 +9001,7 @@
     },
     {
       "transitoria": "Vigesimosegunda",
+      "numero": 22,
       "incisos": [
         {
           "inciso": 1,
@@ -8984,6 +9017,7 @@
     },
     {
       "transitoria": "Vigesimotercera",
+      "numero": 23,
       "incisos": [
         {
           "inciso": 1,
@@ -9004,6 +9038,7 @@
     },
     {
       "transitoria": "Vigesimocuarta",
+      "numero": 24,
       "incisos": [
         {
           "inciso": 1,
@@ -9019,6 +9054,7 @@
     },
     {
       "transitoria": "Vigesimoquinta",
+      "numero": 25,
       "incisos": [
         {
           "nivel": 1,
@@ -9028,6 +9064,7 @@
     },
     {
       "transitoria": "Vigesimosexta",
+      "numero": 26,
       "incisos": [
         {
           "nivel": 1,
@@ -9037,6 +9074,7 @@
     },
     {
       "transitoria": "Vigesimoséptima",
+      "numero": 27,
       "incisos": [
         {
           "inciso": 1,
@@ -9052,6 +9090,7 @@
     },
     {
       "transitoria": "Vigesimoctava",
+      "numero": 28,
       "incisos": [
         {
           "inciso": 1,
@@ -9067,6 +9106,7 @@
     },
     {
       "transitoria": "Vigesimonovena",
+      "numero": 29,
       "incisos": [
         {
           "nivel": 1,
@@ -9076,6 +9116,7 @@
     },
     {
       "transitoria": "Trigésima",
+      "numero": 30,
       "incisos": [
         {
           "inciso": 1,
@@ -9091,6 +9132,7 @@
     },
     {
       "transitoria": "Trigésima primera",
+      "numero": 31,
       "incisos": [
         {
           "inciso": 1,
@@ -9106,6 +9148,7 @@
     },
     {
       "transitoria": "Trigésima segunda",
+      "numero": 32,
       "incisos": [
         {
           "inciso": 1,
@@ -9126,6 +9169,7 @@
     },
     {
       "transitoria": "Trigésima tercera",
+      "numero": 33,
       "incisos": [
         {
           "nivel": 1,
@@ -9135,6 +9179,7 @@
     },
     {
       "transitoria": "Trigésima cuarta",
+      "numero": 34,
       "incisos": [
         {
           "inciso": 1,
@@ -9155,6 +9200,7 @@
     },
     {
       "transitoria": "Trigésima quinta",
+      "numero": 35,
       "incisos": [
         {
           "inciso": 1,
@@ -9192,6 +9238,7 @@
     },
     {
       "transitoria": "Trigésima sexta",
+      "numero": 36,
       "incisos": [
         {
           "inciso": 1,
@@ -9207,6 +9254,7 @@
     },
     {
       "transitoria": "Trigésima séptima",
+      "numero": 37,
       "incisos": [
         {
           "nivel": 1,
@@ -9216,6 +9264,7 @@
     },
     {
       "transitoria": "Trigésima octava",
+      "numero": 38,
       "incisos": [
         {
           "nivel": 1,
@@ -9225,6 +9274,7 @@
     },
     {
       "transitoria": "Trigésima novena",
+      "numero": 39,
       "incisos": [
         {
           "nivel": 1,
@@ -9234,6 +9284,7 @@
     },
     {
       "transitoria": "Cuadragésima",
+      "numero": 40,
       "incisos": [
         {
           "inciso": 1,
@@ -9249,6 +9300,7 @@
     },
     {
       "transitoria": "Cuadragésima primera",
+      "numero": 41,
       "incisos": [
         {
           "nivel": 1,
@@ -9258,6 +9310,7 @@
     },
     {
       "transitoria": "Cuadragésima segunda",
+      "numero": 42,
       "incisos": [
         {
           "nivel": 1,
@@ -9267,6 +9320,7 @@
     },
     {
       "transitoria": "Cuadragésima tercera",
+      "numero": 43,
       "incisos": [
         {
           "inciso": 1,
@@ -9282,6 +9336,7 @@
     },
     {
       "transitoria": "Cuadragésima cuarta",
+      "numero": 44,
       "incisos": [
         {
           "inciso": 1,
@@ -9302,6 +9357,7 @@
     },
     {
       "transitoria": "Cuadragésima quinta",
+      "numero": 45,
       "incisos": [
         {
           "inciso": 1,
@@ -9344,6 +9400,7 @@
     },
     {
       "transitoria": "Cuadragésima sexta",
+      "numero": 46,
       "incisos": [
         {
           "inciso": 1,
@@ -9364,6 +9421,7 @@
     },
     {
       "transitoria": "Cuadragésima séptima",
+      "numero": 47,
       "incisos": [
         {
           "nivel": 1,
@@ -9373,6 +9431,7 @@
     },
     {
       "transitoria": "Cuadragésima octava",
+      "numero": 48,
       "incisos": [
         {
           "inciso": 1,
@@ -9388,6 +9447,7 @@
     },
     {
       "transitoria": "Cuadragésima novena",
+      "numero": 49,
       "incisos": [
         {
           "nivel": 1,
@@ -9397,6 +9457,7 @@
     },
     {
       "transitoria": "Quincuagésima",
+      "numero": 50,
       "incisos": [
         {
           "nivel": 1,
@@ -9406,6 +9467,7 @@
     },
     {
       "transitoria": "Quincuagésima primera",
+      "numero": 51,
       "incisos": [
         {
           "nivel": 1,
@@ -9415,6 +9477,7 @@
     },
     {
       "transitoria": "Quincuagésima segunda",
+      "numero": 52,
       "incisos": [
         {
           "nivel": 1,
@@ -9424,6 +9487,7 @@
     },
     {
       "transitoria": "Quincuagésima tercera",
+      "numero": 53,
       "incisos": [
         {
           "nivel": 1,
@@ -9433,6 +9497,7 @@
     },
     {
       "transitoria": "Quincuagésima cuarta",
+      "numero": 54,
       "incisos": [
         {
           "nivel": 1,
@@ -9442,6 +9507,7 @@
     },
     {
       "transitoria": "Quincuagésima quinta",
+      "numero": 55,
       "incisos": [
         {
           "nivel": 1,
@@ -9451,6 +9517,7 @@
     },
     {
       "transitoria": "Quincuagésima sexta",
+      "numero": 56,
       "incisos": [
         {
           "inciso": 1,
@@ -9466,6 +9533,7 @@
     },
     {
       "transitoria": "Quincuagésima séptima",
+      "numero": 57,
       "incisos": [
         {
           "nivel": 1,

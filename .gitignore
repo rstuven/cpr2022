@@ -1,7 +1,8 @@
 node_modules/
 dist/
 build/
-
+out/
+.next/
 .idea/*
 .nyc_output/
 test/

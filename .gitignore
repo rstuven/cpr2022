@@ -1,1 +1,9 @@
 node_modules/
+dist/
+build/
+
+.idea/*
+.nyc_output/
+test/
+coverage/
+*.log

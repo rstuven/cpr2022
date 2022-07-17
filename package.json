@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "npm run build-schema && node scripts/md2json.mjs && npm run validate-schema",
     "build-schema": "ts-json-schema-generator --path data/json/schema.d.ts --type Constitucion --expose all --out data/json/schema.json",

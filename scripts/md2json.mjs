@@ -1,6 +1,7 @@
 import fs from "fs"
 
-const salida = "data/json/constitucion.json"
+const salida1 = "data/json/constitucion.json"
+const salida2 = "packages/data/src/constitucion.json"
 
 const preambulo = fs.readFileSync("data/markdown/preambulo.md", "utf8")
 const capitulos = itemsDesdeMarkdown("data/markdown/capitulos.md")
@@ -10,7 +11,8 @@ const constitucion = {
   capitulos,
   transitorias,
 }
-fs.writeFileSync(salida, JSON.stringify(constitucion, null, 2))
+fs.writeFileSync(salida1, JSON.stringify(constitucion, null, 2))
+fs.writeFileSync(salida2, JSON.stringify(constitucion, null, 2))
 
 function itemsDesdeMarkdown(entrada) {
   const markdown = fs.readFileSync(entrada, "utf8")

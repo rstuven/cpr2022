@@ -29,7 +29,7 @@ function itemsDesdeMarkdown(entrada) {
     .filter((linea) => linea.trim() != "")
     .forEach((linea) => {
       if (linea.startsWith("## Capítulo ")) {
-        const parts = linea.match(/## Capítulo ([IVX]+) (.*)/)
+        const parts = linea.match(/## Cap\u00EDtulo ([IVX]+) (.*)/)
         capitulo = {
           capitulo: parts[1],
           nombre: parts[2],
@@ -112,7 +112,7 @@ function parseLinea(linea) {
   }
 
   // Markdown no soporta listas de letras, así que adoptamos convención guión+letra+paréntesis
-  const nivel2Match = linea.match(/^(\s*-\s)?([a-z,ñ])\) /)
+  const nivel2Match = linea.match(/^(\s*-\s)?([a-z,\u00F1])\) /)
   if (nivel2Match) {
     return {
       inciso: nivel2Match[2],

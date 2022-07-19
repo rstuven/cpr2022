@@ -1,6 +1,8 @@
 const REPO_NAME = "cpr2022";
+const CUSTOM_DOMAIN = true;
 
 const isProduction = process.env.NODE_ENV === "production";
+const useRepoName = isProduction && !CUSTOM_DOMAIN;
 
 module.exports = {
   reactStrictMode: true,
@@ -11,6 +13,6 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-  basePath: isProduction ? `/${REPO_NAME}` : "",
-  assetPrefix: isProduction ? `/${REPO_NAME}/` : "",
+  basePath: useRepoName ? `/${REPO_NAME}` : "",
+  assetPrefix: useRepoName ? `/${REPO_NAME}/` : "",
 };

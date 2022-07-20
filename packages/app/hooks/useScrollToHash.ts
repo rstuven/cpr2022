@@ -1,9 +1,9 @@
 import { useEffect, RefObject } from "react";
 
-export function useScrollToHash(offset = 0, target: RefObject<HTMLElement>) {
+export function useScrollToHash(offset = 0, target?: RefObject<HTMLElement>) {
   useEffect(() => {
     const scroll = (behavior: ScrollBehavior) => {
-      if (!target.current) return false;
+      if (target && !target.current) return false;
 
       const hash = window.location.hash?.substring(1);
       let elementToScroll = document.getElementById(hash);
@@ -16,7 +16,7 @@ export function useScrollToHash(offset = 0, target: RefObject<HTMLElement>) {
 
       if (!elementToScroll) return false;
 
-      target.current.scrollTo({
+      (target ? target.current : window).scrollTo({
         top: elementToScroll.offsetTop - offset,
         behavior,
       });
@@ -24,7 +24,11 @@ export function useScrollToHash(offset = 0, target: RefObject<HTMLElement>) {
       return true;
     };
 
-    scroll("auto");
+    if (!scroll("auto")) {
+      setTimeout(() => {
+        scroll("auto");
+      }, 500);
+    }
     const onHashChange = () => scroll("smooth");
     window.addEventListener("hashchange", onHashChange);
     return () => {

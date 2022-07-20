@@ -1,28 +1,30 @@
 import React from "react";
 
 export const useHash = (): [string, (newHash: string) => void] => {
-  const [hash, setHash] = React.useState(() => window.location.hash);
+  const csr = typeof window != "undefined";
+  const intialValue = csr ? window.location.hash : "";
+  const [hash, setHash] = React.useState(() => intialValue);
 
   const hashChangeHandler = React.useCallback(() => {
-    setHash(window.location.hash);
-  }, []);
+    setHash(csr ? window.location.hash : "");
+  }, [csr]);
 
   React.useEffect(() => {
-    window.addEventListener("hashchange", hashChangeHandler);
+    csr && window.addEventListener("hashchange", hashChangeHandler);
     return () => {
-      window.removeEventListener("hashchange", hashChangeHandler);
+      csr && window.removeEventListener("hashchange", hashChangeHandler);
     };
-  }, []);
+  }, [csr, hashChangeHandler]);
 
   const updateHash = React.useCallback(
     (newHash: string) => {
       if (newHash == hash) {
         return;
       }
-      history.pushState({}, "", newHash);
-      window.dispatchEvent(new Event("hashchange"));
+      csr && history.pushState({}, "", newHash);
+      csr && window.dispatchEvent(new Event("hashchange"));
     },
-    [hash]
+    [hash, csr]
   );
 
   return [hash, updateHash];

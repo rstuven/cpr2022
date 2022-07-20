@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import { constitucion } from "cpr2022-data";
 import { Capitulo as CapituloSchema } from "cpr2022-data/src/types/schema";

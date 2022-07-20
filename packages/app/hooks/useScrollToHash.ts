@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, RefObject } from "react";
 
-export function useScrollToHash(offset = 0) {
+export function useScrollToHash(offset = 0, target: RefObject<HTMLElement>) {
   useEffect(() => {
-    const scroll = () => {
+    const scroll = (behavior: ScrollBehavior) => {
+      if (!target.current) return false;
+
       const hash = window.location.hash?.substring(1);
       let elementToScroll = document.getElementById(hash);
 
@@ -12,18 +14,21 @@ export function useScrollToHash(offset = 0) {
           .find((el: HTMLAnchorElement) => el.name == hash);
       }
 
-      if (!elementToScroll) return;
+      if (!elementToScroll) return false;
 
-      window.scrollTo({
+      target.current.scrollTo({
         top: elementToScroll.offsetTop - offset,
-        behavior: "smooth",
+        behavior,
       });
+
+      return true;
     };
 
-    scroll();
-    window.addEventListener("hashchange", scroll);
+    scroll("auto");
+    const onHashChange = () => scroll("smooth");
+    window.addEventListener("hashchange", onHashChange);
     return () => {
-      window.removeEventListener("hashchange", scroll);
+      window.removeEventListener("hashchange", onHashChange);
     };
-  }, [offset]);
+  }, [offset, target]);
 }

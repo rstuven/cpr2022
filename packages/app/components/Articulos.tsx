@@ -5,10 +5,10 @@ type ArticulosProps = {
   articulos: ReadonlyArray<ArticuloSchema>;
 };
 
-export default function Articulos({ articulos }: ArticulosProps) {
+export default function Articulos(props: ArticulosProps) {
   return (
     <>
-      {articulos.map((articulo) => (
+      {props.articulos.map((articulo) => (
         <Articulo key={articulo.articulo} {...articulo} />
       ))}
     </>

@@ -1,20 +1,28 @@
 import { useHashPath } from "hooks/useHash";
 import { useCallback } from "react";
 
-type HashLinkProps = { hash: string; children: any };
+type HashLinkProps = {
+  hash: string;
+  className?: string;
+  children: any;
+};
 
-export default function HashLink({ hash, children }: HashLinkProps) {
+export default function HashLink(props: HashLinkProps) {
   const [_, updateHash] = useHashPath();
   const onClick = useCallback(
     (e: any) => {
       e.preventDefault();
-      updateHash(hash);
+      updateHash(props.hash);
     },
-    [hash, updateHash]
+    [props.hash, updateHash]
   );
   return (
-    <a href={"#" + hash} onClick={onClick}>
-      {children}
+    <a
+      className={props.className ?? "text-gray-300"}
+      href={"#" + props.hash}
+      onClick={onClick}
+    >
+      {props.children}
     </a>
   );
 }

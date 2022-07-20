@@ -1,4 +1,4 @@
-## Capítulo I PRINCIPIOS Y DISPOSICIONES GENERALES
+## Capítulo I Principios y Disposiciones Generales
 #### Artículo 1
 1. Chile es un Estado social y democrático de derecho. Es plurinacional, intercultural, regional y ecológico.
 2. Se constituye como una república solidaria. Su democracia es inclusiva y paritaria. Reconoce como valores intrínsecos e irrenunciables la dignidad, la libertad, la igualdad sustantiva de los seres humanos y su relación indisoluble con la naturaleza.
@@ -47,7 +47,7 @@ El Estado reconoce y promueve el diálogo intercultural, horizontal y transversa
 2. Los órganos del Estado y sus titulares e integrantes actúan previa investidura regular y someten su actuar a la Constitución y a las normas dictadas conforme a esta, dentro de los límites y competencias por ellas establecidos.
 3. Ninguna magistratura, persona ni grupo de personas, civiles o militares, pueden atribuirse otra autoridad, competencia o derechos que los que expresamente se les haya conferido en virtud de la Constitución y las leyes, ni aun a pretexto de circunstancias extraordinarias.
 4. Todo acto en contravención a este artículo es nulo y originará las responsabilidades y sanciones que la ley señale. La acción de nulidad se ejercerá en los plazos y condiciones establecidos por esta Constitución y la ley.
-## Capítulo II DERECHOS FUNDAMENTALES Y GARANTÍAS
+## Capítulo II Derechos Fundamentales y Garantías
 #### Artículo 17
 1. Los derechos fundamentales son inherentes a la persona humana, universales, inalienables, indivisibles e interdependientes.
 2. El pleno ejercicio de estos derechos es esencial para la vida digna de las personas y los pueblos, la democracia, la paz y el equilibrio de la naturaleza.
@@ -517,7 +517,7 @@ l) Que la detención o la internación de adolescentes se utilice solo de forma 
 1. Existirá un órgano autónomo, con personalidad jurídica y patrimonio propio, denominado Defensoría de los Derechos de la Niñez, que tendrá por objeto la promoción y protección de los derechos de que son titulares niñas, niños y adolescentes y velar por su interés superior. Lo anterior, conforme a esta Constitución, la Convención sobre los Derechos del Niño, los demás tratados internacionales ratificados y vigentes en Chile y la legislación nacional.
 2. La ley determinará la organización, las funciones y las atribuciones de la Defensoría de los Derechos de la Niñez.
 
-## Capítulo III NATURALEZA Y MEDIOAMBIENTE
+## Capítulo III Naturaleza y Medioambiente
 #### Artículo 127
 1. La naturaleza tiene derechos. El Estado y la sociedad tienen el deber de protegerlos y respetarlos.
 2. El Estado debe adoptar una administración ecológicamente responsable y promover la educación ambiental y científica mediante procesos de formación y aprendizaje permanentes.
@@ -613,7 +613,7 @@ e) Promover la formación y educación en derechos ambientales y de la naturalez
 f) Las demás que le encomienden la Constitución y la ley.
 #### Artículo 150
 La dirección de la Defensoría de la Naturaleza estará a cargo de una defensora o un defensor de la naturaleza, quien será designado en sesión conjunta del Congreso de Diputadas y Diputados y de la Cámara de las Regiones, por la mayoría de sus integrantes en ejercicio, a partir de una terna elaborada por las organizaciones ambientales de la sociedad civil, en la forma que determine la ley.
-## Capítulo IV PARTICIPACIÓN DEMOCRÁTICA
+## Capítulo IV Participación Democrática
 #### Artículo 151
 1. En Chile, la democracia se ejerce en forma directa, participativa, comunitaria y representativa.
 2. Es deber del Estado promover y garantizar la adopción de medidas para la participación efectiva de toda la sociedad en el proceso político y el pleno ejercicio de la democracia.
@@ -670,7 +670,7 @@ El Congreso de Diputadas y Diputados, la Cámara de las Regiones y los órganos 
 4. Las consejeras y los consejeros solo podrán ser removidos por la Corte Suprema a requerimiento de la Presidenta o del Presidente de la República, de la mayoría absoluta de los miembros en ejercicio del Congreso de Diputadas y Diputados o de la Cámara de las Regiones, por infracción grave a la Constitución o a las leyes, incapacidad legal sobreviniente, mal comportamiento o negligencia manifiesta en el ejercicio de sus funciones. La Corte conocerá del asunto en pleno especialmente convocado al efecto y para acordar la remoción deberá reunir el voto conforme de la mayoría de sus integrantes.
 5. En lo referente a la democracia participativa y a los mecanismos consagrados en esta Constitución, es función del Servicio Electoral promover la información, educación y participación ciudadana o electoral en relación con tales procesos, en colaboración con otros organismos del Estado y la sociedad civil. También deberá velar por la implementación y la recta ejecución de estos mecanismos.
 
-## Capítulo V BUEN GOBIERNO Y FUNCIÓN PÚBLICA
+## Capítulo V Buen Gobierno y Función Pública
 #### Artículo 165
 1. El ejercicio de las funciones públicas obliga a sus titulares a dar cumplimiento a los principios de probidad, transparencia y rendición de cuentas en todas sus actuaciones. Además, se rige por los principios de eficiencia, eficacia, responsabilidad, publicidad, buena fe, interculturalidad, enfoque de género, inclusión, no discriminación y sustentabilidad.
 2. La función pública se deberá brindar con pertinencia territorial, cultural y lingüística.
@@ -749,7 +749,7 @@ Una comisión fijará las remuneraciones de las autoridades de elección popular
 #### Artículo 186
 El Estado fijará una política nacional portuaria, orientada por los principios de eficiencia en el uso del borde costero; responsabilidad ambiental, con especial énfasis en el cuidado de la naturaleza y bienes comunes naturales; participación pública en los recursos que genere la actividad; vinculación con el territorio y las comunidades en las cuales se emplacen los recintos portuarios; reconocimiento de la carrera profesional portuaria como trabajo de alto riesgo, y colaboración entre recintos e infraestructura portuaria para asegurar el oportuno abastecimiento de las comunidades.
 
-## Capítulo VI ESTADO REGIONAL Y ORGANIZACIÓN TERRITORIAL
+## Capítulo VI Estado Regional y Organización Territorial
 #### Artículo 187
 1. El Estado se organiza territorialmente en entidades territoriales autónomas y territorios especiales.
 2. Son entidades territoriales autónomas las comunas autónomas, regiones autónomas y autonomías territoriales indígenas. Están dotadas de autonomía política, administrativa y financiera para la realización de sus fines e intereses. Tienen personalidad jurídica de derecho público, patrimonio propio y las potestades y competencias necesarias para gobernarse en atención al interés general de la república, de acuerdo con la Constitución y la ley, teniendo como límites los derechos humanos y de la naturaleza.
@@ -1053,7 +1053,7 @@ c) La prohibición del establecimiento de garantías o cauciones del fisco.
 d) El establecimiento de límites máximos de endeudamiento como porcentaje del presupuesto anual del gobierno regional y municipal respectivo y la obligación de mantener una clasificación de riesgo actualizada.
 e) Restricciones en períodos electorales.
 f) Estos recursos no podrán ser destinados a remuneraciones ni a gasto corriente.
-## Capítulo VII PODER LEGISLATIVO
+## Capítulo VII Poder Legislativo
 #### Artículo 251
 El Poder Legislativo se compone del Congreso de Diputadas y Diputados y de la Cámara de las Regiones.
 
@@ -1269,7 +1269,7 @@ Las leyes referidas a la organización, el funcionamiento y los procedimientos d
 2. Su Secretaría Legislativa estará encargada de asesorar en los aspectos jurídicos de las leyes que tramiten. Podrá, asimismo, emitir informes sobre ámbitos de la legislación que hayan caído en desuso o que presenten problemas técnicos.
 3. Su Secretaría de Presupuestos estará encargada de estudiar el efecto presupuestario y fiscal de los proyectos de ley y de asesorar a diputadas, diputados y representantes regionales durante la tramitación de la Ley de Presupuestos.
 
-## Capítulo VIII PODER EJECUTIVO
+## Capítulo VIII Poder Ejecutivo
 #### Artículo 279
 1. El gobierno y la administración del Estado corresponden a la Presidenta o al Presidente de la República, quien ejerce la jefatura de Estado y la jefatura de Gobierno.
 2. El 5 de julio de cada año dará cuenta al país del estado administrativo y político de la república ante el Congreso de Diputadas y Diputados y la Cámara de las Regiones, en sesión conjunta.
@@ -1410,7 +1410,7 @@ La designación de quienes representen a los ministerios y servicios públicos c
 2. Los órganos del Estado deben colaborar y aportar todos los antecedentes requeridos por la Comisión para el desempeño de sus funciones. En caso de que tome conocimiento de vulneraciones a lo dispuesto en esta Constitución o la ley, debe efectuar las denuncias pertinentes, las cuales serán remitidas y conocidas por los órganos competentes. La ley regulará su integración y funcionamiento.
 #### Artículo 306
 Las medidas adoptadas en ejercicio de las facultades conferidas en los estados de excepción constitucional podrán ser objeto de revisión por los tribunales de justicia tanto en su mérito como en su forma. Las requisiciones que se practiquen darán lugar a indemnizaciones conforme a la ley.
-## Capítulo IX SISTEMAS DE JUSTICIA
+## Capítulo IX Sistemas de Justicia
 #### Artículo 307
 1. La jurisdicción es una función pública que se ejerce en nombre de los pueblos y que consiste en conocer y juzgar, por medio de un debido proceso, los conflictos de relevancia jurídica y hacer ejecutar lo resuelto, conforme a la Constitución y las leyes, así como a los tratados e instrumentos internacionales sobre derechos humanos de los que Chile es parte.
 2. Se ejerce exclusivamente por los tribunales de justicia y las autoridades de los pueblos y naciones indígenas reconocidos por la Constitución o las leyes dictadas conforme a ella.
@@ -1575,7 +1575,7 @@ Son atribuciones del Consejo de la Justicia:
 1. Los procedimientos disciplinarios serán conocidos y resueltos por una comisión compuesta por cinco integrantes del Consejo que se elegirán por sorteo, decisión que será revisable por su pleno a petición del afectado.
 2. La resolución del Consejo que ponga término al procedimiento será impugnable ante la Corte Constitucional.
 3. Las decisiones adoptadas conforme a los incisos anteriores no podrán ser revisadas ni impugnadas ante otros órganos del Sistema Nacional de Justicia.
-## Capítulo X ÓRGANOS AUTÓNOMOS CONSTITUCIONALES
+## Capítulo X Órganos Autónomos Constitucionales
 #### Artículo 350
 Todos los órganos autónomos se rigen por el principio de paridad. Se promueve la implementación de medidas de acción afirmativa, asegurando que al menos el cincuenta por ciento de sus integrantes sean mujeres.
 
@@ -1740,7 +1740,7 @@ Quienes integren la Corte Constitucional son independientes de todo otro poder y
 3. Declarada la inaplicabilidad de un precepto legal, este no podrá ser aplicado en la gestión judicial en la que se originó la cuestión de constitucionalidad.
 4. La sentencia que declare la inconstitucionalidad de un precepto provocará su invalidación, excluyéndolo del ordenamiento jurídico a partir del día siguiente de la publicación de la sentencia en el Diario Oficial. Tiene carácter vinculante, de cumplimiento obligatorio para toda institución, persona o grupo, y contra ella no cabe recurso alguno.
 
-## Capítulo XI REFORMA Y REEMPLAZO DE LA CONSTITUCIÓN
+## Capítulo XI Reforma y Reemplazo de la Constitución
 
 ### Reforma constitucional
 #### Artículo 383

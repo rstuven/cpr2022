@@ -2,15 +2,15 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { constitucion } from "cpr2022-data";
-import {
-  Articulo as ArticuloSchema,
-  Capitulo as CapituloSchema,
-  Titulo as TituloSchema,
-  Constitucion as ConstitucionSchema,
-} from "cpr2022-data/src/types/schema";
 import MetaTags from "components/Meta";
 import { useScrollToHash } from "hooks/useScrollToHash";
 import { useHashPath } from "hooks/useHash";
+import {
+  ArticuloContext,
+  CapituloContext,
+  getCapituloArticulos,
+  parseFragment,
+} from "helpers";
 
 const Capitulo = dynamic(() => import("../../components/Capitulo"), {
   ssr: false,
@@ -56,10 +56,7 @@ export default function Fragmento() {
     return null;
   }
 
-  const { Component, title, description } = getFragment(
-    fragmentId,
-    constitucion
-  );
+  const { Component, title, description } = getFragment(fragmentId);
   return (
     <div className="grid justify-center">
       <MetaTags title={title} description={description} type="article" />
@@ -71,63 +68,34 @@ export default function Fragmento() {
   );
 }
 
-function getFragment(fragmentId: string, constitucion: ConstitucionSchema) {
-  const parts = fragmentId.split(":");
+function getFragment(fragmentId: string) {
+  const fragment = parseFragment(fragmentId);
 
-  if (parts[0] == "cap") {
-    return getCapitulo(constitucion, parts, fragmentId);
+  if ("articulo" in fragment) {
+    return getArticulo(fragment);
   }
 
-  if (parts[0] == "art") {
-    return getArticulo(constitucion, parts, fragmentId);
+  if (fragment.capitulo) {
+    return getCapitulo(fragment);
   }
 
   throw new Error(`Can't handle fragmentId ${fragmentId}`);
 }
 
-function getCapitulo(
-  constitucion: ConstitucionSchema,
-  parts: string[],
-  fragmentId: string
-) {
-  const data = constitucion.capitulos.find(
-    (c) => c.numero.toString() == parts[1]
-  );
-  if (!data) {
-    throw new Error(`Not found fragmentId ${fragmentId}`);
-  }
-  const articulos = getCapituloArticulos(data);
-  const title = `Capítulo ${data.capitulo} ${data.nombre}`;
+function getCapitulo(fragment: CapituloContext) {
+  const capitulo = fragment.capitulo;
+  const articulos = getCapituloArticulos(capitulo);
+  const title = `Capítulo ${capitulo.capitulo} ${capitulo.nombre}`;
   const description = `Artículos ${articulos[0].articulo.articulo} al ${
     articulos[articulos.length - 1].articulo.articulo
   }`;
   const Component = function Component() {
-    return <Capitulo {...data} />;
+    return <Capitulo {...capitulo} />;
   };
   return { Component, title, description };
 }
 
-type ArticuloContext = {
-  articulo: ArticuloSchema;
-  capitulo: CapituloSchema;
-  titulo?: TituloSchema;
-};
-
-function getArticulo(
-  constitucion: ConstitucionSchema,
-  parts: string[],
-  fragmentId: string
-) {
-  const articulos: ArticuloContext[] = [];
-  constitucion.capitulos.forEach((capitulo) => {
-    articulos.push(...getCapituloArticulos(capitulo));
-  });
-  const data = articulos.find(
-    (c) => c.articulo.articulo.toString() == parts[1]
-  );
-  if (!data) {
-    throw new Error(`Not found fragmentId ${fragmentId}`);
-  }
+function getArticulo(data: ArticuloContext) {
   const title = `Artículo ${data.articulo.articulo} (${
     data.titulo ? `§ ${data.titulo.titulo}, ` : ""
   }Cap. ${data.capitulo.capitulo} ${data.capitulo.nombre})`;
@@ -144,24 +112,4 @@ function getArticulo(
     );
   };
   return { Component, title, description };
-}
-
-function getCapituloArticulos(capitulo: CapituloSchema) {
-  const result: ArticuloContext[] = [];
-  result.push(
-    ...(capitulo.articulos || []).map((articulo) => ({
-      articulo,
-      capitulo,
-    }))
-  );
-  capitulo.titulos?.forEach((titulo) => {
-    result.push(
-      ...titulo.articulos.map((articulo) => ({
-        articulo,
-        titulo,
-        capitulo,
-      }))
-    );
-  });
-  return result;
 }

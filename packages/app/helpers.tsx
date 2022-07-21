@@ -31,7 +31,10 @@ export type FragmentContext =
   | CapituloContext
   | TransitoriaContext;
 
-export function parseFragment(fragmentId: string): FragmentContext {
+export function parseFragment(fragmentId: string): FragmentContext | undefined {
+  if (!fragmentId.trim()) {
+    return undefined
+  }
   const parts = fragmentId.split(":");
 
   if (parts[0] == "cap") {

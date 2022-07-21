@@ -71,11 +71,11 @@ export default function Fragmento() {
 function getFragment(fragmentId: string) {
   const fragment = parseFragment(fragmentId);
 
-  if ("articulo" in fragment) {
+  if (fragment && "articulo" in fragment) {
     return getArticulo(fragment);
   }
 
-  if (fragment.capitulo) {
+  if (fragment && "capitulo" in fragment) {
     return getCapitulo(fragment);
   }
 

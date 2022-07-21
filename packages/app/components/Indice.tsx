@@ -23,7 +23,9 @@ export default function Indice() {
           <HashLink
             className={
               "text-black" +
-              (hash == path || "transitoria" in fragment ? " bg-amber-100" : "")
+              (hash == path || (fragment && "transitoria" in fragment)
+                ? " bg-amber-100"
+                : "")
             }
             hash={path}
           >
@@ -41,7 +43,9 @@ function Capitulo(capitulo: CapituloSchema) {
 
   const fragment = parseFragment(hash);
   const isCapitulo =
-    "capitulo" in fragment && fragment.capitulo.numero == capitulo.numero;
+    fragment &&
+    "capitulo" in fragment &&
+    fragment.capitulo.numero == capitulo.numero;
 
   return (
     <li>
@@ -59,7 +63,9 @@ function Capitulo(capitulo: CapituloSchema) {
             key={tituloIndex}
             {...titulo}
             highlight={
-              "titulo" in fragment && fragment.titulo?.titulo == titulo.titulo
+              fragment &&
+              "titulo" in fragment &&
+              fragment.titulo?.titulo == titulo.titulo
             }
             path={`${path}.${tituloIndex + 1}`}
           />

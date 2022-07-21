@@ -417,18 +417,18 @@ La ley podrá establecer restricciones al ejercicio de determinados derechos par
 5. Se prohíbe la detención por deudas, salvo en caso de incumplimiento de deberes alimentarios.
 #### Artículo 111
 Toda persona tiene derecho a las siguientes garantías procesales penales mínimas:
-a) Que toda actuación de la investigación o procedimiento que le prive, restrinja o perturbe el ejercicio de los derechos que asegura la Constitución requiere previa autorización judicial.
-b) Conocer los antecedentes de la investigación seguida en su contra, salvo las excepciones que la ley señale.
-c) Que se presuma su inocencia mientras no exista una sentencia condenatoria firme dictada en su contra.
-d) Que no se presuma de derecho la responsabilidad penal.
-e) Ser informada, sin demora y en forma detallada, de sus derechos y causa de la investigación seguida en su contra.
-f) Guardar silencio y no ser obligada a declarar contra sí misma o reconocer su responsabilidad. No podrán ser obligados a declarar en contra del imputado sus ascendientes, descendientes, cónyuge, conviviente civil y demás personas que señale la ley.
-g) Que su libertad sea la regla general. Las medidas cautelares personales son excepcionales, temporales y proporcionales, debiendo la ley regular los casos de procedencia y requisitos.
-h) No ser sometida a un nuevo procedimiento, investigación o persecución penal por el mismo hecho respecto del cual haya sido condenada, absuelta o sobreseída definitivamente por sentencia ejecutoriada.
-i) Ser sancionada de forma proporcional a la infracción cometida.
-j) Que no se le imponga la pena de confiscación de bienes, sin perjuicio del comiso en los casos establecidos por las leyes.
-k) Que no se le imponga como pena la pérdida de los derechos previsionales.
-l) Que la detención o la internación de adolescentes se utilice solo de forma excepcional y durante el período más breve que proceda y conforme a lo establecido en esta Constitución, la ley y los tratados internacionales de derechos humanos ratificados y vigentes en Chile.
+   - a) Que toda actuación de la investigación o procedimiento que le prive, restrinja o perturbe el ejercicio de los derechos que asegura la Constitución requiere previa autorización judicial.
+   - b) Conocer los antecedentes de la investigación seguida en su contra, salvo las excepciones que la ley señale.
+   - c) Que se presuma su inocencia mientras no exista una sentencia condenatoria firme dictada en su contra.
+   - d) Que no se presuma de derecho la responsabilidad penal.
+   - e) Ser informada, sin demora y en forma detallada, de sus derechos y causa de la investigación seguida en su contra.
+   - f) Guardar silencio y no ser obligada a declarar contra sí misma o reconocer su responsabilidad. No podrán ser obligados a declarar en contra del imputado sus ascendientes, descendientes, cónyuge, conviviente civil y demás personas que señale la ley.
+   - g) Que su libertad sea la regla general. Las medidas cautelares personales son excepcionales, temporales y proporcionales, debiendo la ley regular los casos de procedencia y requisitos.
+   - h) No ser sometida a un nuevo procedimiento, investigación o persecución penal por el mismo hecho respecto del cual haya sido condenada, absuelta o sobreseída definitivamente por sentencia ejecutoriada.
+   - i) Ser sancionada de forma proporcional a la infracción cometida.
+   - j) Que no se le imponga la pena de confiscación de bienes, sin perjuicio del comiso en los casos establecidos por las leyes.
+   - k) Que no se le imponga como pena la pérdida de los derechos previsionales.
+   - l) Que la detención o la internación de adolescentes se utilice solo de forma excepcional y durante el período más breve que proceda y conforme a lo establecido en esta Constitución, la ley y los tratados internacionales de derechos humanos ratificados y vigentes en Chile.
 #### Artículo 112
 1. Ninguna persona podrá ser condenada por acciones u omisiones que al producirse no constituyan delito según la legislación vigente en aquel momento.
 2. Ningún delito se castigará con otra pena que la señalada por una ley que haya entrado en vigencia con anterioridad a su perpetración, a menos que una nueva ley favorezca al imputado.
@@ -576,8 +576,7 @@ El Estado velará por un uso razonable de las aguas. Las autorizaciones de uso d
 1. La Agencia Nacional del Agua es un órgano autónomo, con personalidad jurídica y patrimonio propio, que funciona de forma desconcentrada y está encargada de asegurar el uso sostenible del agua para las generaciones presentes y futuras, el acceso al derecho humano al agua y al saneamiento y la conservación y preservación de sus ecosistemas asociados. Para ello, se encarga de recopilar información, coordinar, dirigir y fiscalizar la actuación de los órganos del Estado con competencias en materia hídrica y de los particulares en su caso.
 2. La Agencia Nacional del Agua tiene las siguientes atribuciones:
    - a) Liderar y coordinar a los organismos con competencia en materia hídrica.
-   - b) Velar por el cumplimiento de la Política Nacional Hídrica que establezca
-la autoridad respectiva.
+   - b) Velar por el cumplimiento de la Política Nacional Hídrica que establezca la autoridad respectiva.
    - c) Otorgar, revisar, modificar, caducar o revocar autorizaciones de uso de agua.
    - d) Implementar y monitorear los instrumentos de gestión y protección ambiental en materia hídrica.
    - e) Coordinar y elaborar un sistema unificado de información de carácter público.
@@ -605,12 +604,12 @@ Quedan excluidos de toda actividad minera los glaciares, las áreas protegidas, 
 2. La Defensoría de la Naturaleza se desconcentrará en defensorías regionales. La ley determinará las atribuciones, la organización, el funcionamiento y los procedimientos de la Defensoría de la Naturaleza.
 #### Artículo 149
 La Defensoría de la Naturaleza tendrá las siguientes atribuciones:
-a) Fiscalizar a los órganos del Estado y a las entidades privadas en el cumplimiento de sus obligaciones en materia de derechos ambientales y derechos de la naturaleza.
-b) Formular recomendaciones en las materias de su competencia.
-c) Tramitar y hacer seguimiento de los reclamos sobre vulneraciones de derechos ambientales y derivar en su caso.
-d) Deducir acciones constitucionales y legales cuando se vulneren derechos ambientales y de la naturaleza.
-e) Promover la formación y educación en derechos ambientales y de la naturaleza.
-f) Las demás que le encomienden la Constitución y la ley.
+   - a) Fiscalizar a los órganos del Estado y a las entidades privadas en el cumplimiento de sus obligaciones en materia de derechos ambientales y derechos de la naturaleza.
+   - b) Formular recomendaciones en las materias de su competencia.
+   - c) Tramitar y hacer seguimiento de los reclamos sobre vulneraciones de derechos ambientales y derivar en su caso.
+   - d) Deducir acciones constitucionales y legales cuando se vulneren derechos ambientales y de la naturaleza.
+   - e) Promover la formación y educación en derechos ambientales y de la naturaleza.
+   - f) Las demás que le encomienden la Constitución y la ley.
 #### Artículo 150
 La dirección de la Defensoría de la Naturaleza estará a cargo de una defensora o un defensor de la naturaleza, quien será designado en sesión conjunta del Congreso de Diputadas y Diputados y de la Cámara de las Regiones, por la mayoría de sus integrantes en ejercicio, a partir de una terna elaborada por las organizaciones ambientales de la sociedad civil, en la forma que determine la ley.
 ## Capítulo IV Participación Democrática
@@ -801,28 +800,27 @@ La elección de representantes por votación popular de las entidades territoria
 2. La ley clasificará las comunas en distintos tipos, las que deberán ser consideradas por los órganos del Estado para el establecimiento de regímenes administrativos y económico-fiscales diferenciados, la implementación de políticas, planes y programas atendiendo a las diversas realidades locales, y en especial, para el traspaso de competencias y recursos. El establecimiento de los tipos comunales deberá considerar, a lo menos, criterios demográficos, económicos, culturales, geográficos, socioambientales, urbanos y rurales.
 #### Artículo 202
 La comuna autónoma cuenta con las potestades y competencias de autogobierno para satisfacer las necesidades de la comunidad local. Son competencias esenciales de la comuna autónoma:
-a) Ejercer funciones de gobierno y administración dentro de la comuna y en
-el ámbito de sus competencias.
-b) La dictación de normas generales y obligatorias en materias de carácter comunal, con arreglo a la Constitución y las leyes.
-c) La creación, prestación, organización y administración de los servicios públicos municipales en el ámbito de sus funciones, conforme a la Constitución y la ley.
-d) El desarrollo sostenible e integral de la comuna.
-e) La protección de los ecosistemas comunales y los derechos de la naturaleza.
-f) Ejercer las acciones pertinentes en resguardo de la naturaleza y sus derechos reconocidos por esta Constitución y la ley.
-g) La ejecución de los mecanismos y acciones de protección ambiental en la forma que determinen la Constitución, la ley, los instrumentos de gestión ambiental y normas afines.
-h) La conservación, la custodia y el resguardo de los patrimonios culturales y naturales.
-i) El fomento y la protección a las culturas, las artes y los patrimonios culturales y naturales, así como la investigación y la formación artística en sus territorios.
-j) Garantizar la participación popular y el fortalecimiento de la democracia.
-k) Desarrollar, con el nivel regional y central, actividades y servicios en materias de educación, salud, vivienda, turismo, recreación, deporte y las demás que establezca la ley.
-l) La construcción de obras que demande el progreso local en el marco de sus atribuciones.
-m) El desarrollo estratégico de la comuna mediante el plan de desarrollo comunal.
-n) La planificación del territorio mediante el plan regulador comunal acordado de forma participativa con la comunidad de su respectivo territorio.
-ñ) El fomento de las actividades productivas.
-o) El fomento del comercio local.
-p) El fomento de la reintegración y reinserción de las personas en situación de calle que así lo requieran, mediante la planificación, coordinación y ejecución de programas al efecto.
-q) Gestionar la reducción de riesgos frente a desastres.
-r) El desarrollo de aseo y ornato de la comuna.
-s) La promoción de la seguridad ciudadana.
-t) Las demás competencias que determinen la Constitución y la ley. Las leyes deberán reconocer las diferencias existentes entre los distintos tipos de comunas y municipalidades, velando por la equidad, inclusión y cohesión territorial.
+   - a) Ejercer funciones de gobierno y administración dentro de la comuna y en el ámbito de sus competencias.
+   - b) La dictación de normas generales y obligatorias en materias de carácter comunal, con arreglo a la Constitución y las leyes.
+   - c) La creación, prestación, organización y administración de los servicios públicos municipales en el ámbito de sus funciones, conforme a la Constitución y la ley.
+   - d) El desarrollo sostenible e integral de la comuna.
+   - e) La protección de los ecosistemas comunales y los derechos de la naturaleza.
+   - f) Ejercer las acciones pertinentes en resguardo de la naturaleza y sus derechos reconocidos por esta Constitución y la ley.
+   - g) La ejecución de los mecanismos y acciones de protección ambiental en la forma que determinen la Constitución, la ley, los instrumentos de gestión ambiental y normas afines.
+   - h) La conservación, la custodia y el resguardo de los patrimonios culturales y naturales.
+   - i) El fomento y la protección a las culturas, las artes y los patrimonios culturales y naturales, así como la investigación y la formación artística en sus territorios.
+   - j) Garantizar la participación popular y el fortalecimiento de la democracia.
+   - k) Desarrollar, con el nivel regional y central, actividades y servicios en materias de educación, salud, vivienda, turismo, recreación, deporte y las demás que establezca la ley.
+   - l) La construcción de obras que demande el progreso local en el marco de sus atribuciones.
+   - m) El desarrollo estratégico de la comuna mediante el plan de desarrollo comunal.
+   - n) La planificación del territorio mediante el plan regulador comunal acordado de forma participativa con la comunidad de su respectivo territorio.
+   - ñ) El fomento de las actividades productivas.
+   - o) El fomento del comercio local.
+   - p) El fomento de la reintegración y reinserción de las personas en situación de calle que así lo requieran, mediante la planificación, coordinación y ejecución de programas al efecto.
+   - q) Gestionar la reducción de riesgos frente a desastres.
+   - r) El desarrollo de aseo y ornato de la comuna.
+   - s) La promoción de la seguridad ciudadana.
+   - t) Las demás competencias que determinen la Constitución y la ley. Las leyes deberán reconocer las diferencias existentes entre los distintos tipos de comunas y municipalidades, velando por la equidad, inclusión y cohesión territorial.
 #### Artículo 203
 1. A fin de garantizar el respeto, la protección y la realización progresiva de los derechos económicos y sociales en igualdad de condiciones, las comunas autónomas podrán encomendar temporalmente una o más competencias a la región autónoma respectiva o la Administración central, conforme a lo establecido en la ley.
 2. A petición de la alcaldesa o del alcalde, con acuerdo del concejo municipal, la región autónoma o la Administración central, cuando así lo exija el interés general, podrán subrogar de forma transitoria a la comuna autónoma en el ejercicio de las competencias que no puedan ser asumidas por esta.
@@ -876,28 +874,28 @@ La provincia es una división territorial establecida con fines administrativos 
 La región autónoma es la entidad política y territorial dotada de personalidad jurídica de derecho público y patrimonio propio que goza de autonomía para el desarrollo de los intereses regionales, la gestión de sus recursos económicos y el ejercicio de las atribuciones legislativas, reglamentarias, ejecutivas y fiscalizadoras a través de sus órganos en el ámbito de sus competencias, con arreglo a lo dispuesto en la Constitución y la ley.
 #### Artículo 220
 Son competencias de la región autónoma:
-a) La organización del Gobierno regional, en conformidad con la Constitución y su estatuto.
-b) La organización político-administrativa y financiera de la región autónoma.
-c) Coordinar y delegar las competencias constitucionales compartidas con las demás entidades territoriales.
-d) La política regional de vivienda, urbanismo, salud, transporte y educación, en coordinación con las políticas, los planes y los programas nacionales, respetando la universalidad de los derechos garantizados por esta Constitución.
-e) La creación de empresas públicas regionales por parte de los órganos de la región autónoma competentes, conforme a los procedimientos regulados en la ley.
-f) Ejercer autónomamente la administración y coordinación de todos los servicios públicos de su dependencia.
-g) La conservación, preservación, protección y restauración de la naturaleza, del equilibrio ecológico y el uso racional del agua y los demás elementos naturales de su territorio.
-h) La regulación y administración de los bosques, las reservas y los parques de las áreas silvestres protegidas y cualquier otro predio fiscal que se considere necesario para el cuidado de los servicios ecosistémicos que se otorgan a las comunidades, en el ámbito de sus competencias.
-i) La planificación, el ordenamiento territorial y el manejo integrado de cuencas.
-j) Establecer una política permanente de desarrollo sostenible y armónico con la naturaleza.
-k) Aprobar, mediando procesos de participación ciudadana, los planes de descontaminación ambientales de la región autónoma.
-l) Promover la participación popular en asuntos de interés regional.
-m) El desarrollo de la investigación, la tecnología y las ciencias.
-n) El fomento y la protección de las culturas, las artes, el patrimonio histórico, inmaterial arqueológico, lingüístico y arquitectónico; y la formación artística en su territorio.
-ñ) Ejecutar las obras públicas de interés en el territorio de la región autónoma.
-o) La planificación e implementación de la conectividad física y digital.
-p) La promoción y el fomento del deporte, el ocio y la recreación.
-q) La promoción y ordenación del turismo en el ámbito territorial de la región autónoma, en coordinación con la comuna autónoma.
-r) El fomento del desarrollo social, productivo y económico de la región autónoma, en coordinación con las políticas, los planes y los programas nacionales.
-s) Establecer contribuciones y tasas dentro de su territorio previa autorización por ley.
-t) Participar en acciones de cooperación internacional, dentro de los marcos establecidos por los tratados y los convenios vigentes.
-u) Las demás competencias que determinen la Constitución y ley.
+   - a) La organización del Gobierno regional, en conformidad con la Constitución y su estatuto.
+   - b) La organización político-administrativa y financiera de la región autónoma.
+   - c) Coordinar y delegar las competencias constitucionales compartidas con las demás entidades territoriales.
+   - d) La política regional de vivienda, urbanismo, salud, transporte y educación, en coordinación con las políticas, los planes y los programas nacionales, respetando la universalidad de los derechos garantizados por esta Constitución.
+   - e) La creación de empresas públicas regionales por parte de los órganos de la región autónoma competentes, conforme a los procedimientos regulados en la ley.
+   - f) Ejercer autónomamente la administración y coordinación de todos los servicios públicos de su dependencia.
+   - g) La conservación, preservación, protección y restauración de la naturaleza, del equilibrio ecológico y el uso racional del agua y los demás elementos naturales de su territorio.
+   - h) La regulación y administración de los bosques, las reservas y los parques de las áreas silvestres protegidas y cualquier otro predio fiscal que se considere necesario para el cuidado de los servicios ecosistémicos que se otorgan a las comunidades, en el ámbito de sus competencias.
+   - i) La planificación, el ordenamiento territorial y el manejo integrado de cuencas.
+   - j) Establecer una política permanente de desarrollo sostenible y armónico con la naturaleza.
+   - k) Aprobar, mediando procesos de participación ciudadana, los planes de descontaminación ambientales de la región autónoma.
+   - l) Promover la participación popular en asuntos de interés regional.
+   - m) El desarrollo de la investigación, la tecnología y las ciencias.
+   - n) El fomento y la protección de las culturas, las artes, el patrimonio histórico, inmaterial arqueológico, lingüístico y arquitectónico; y la formación artística en su territorio.
+   - ñ) Ejecutar las obras públicas de interés en el territorio de la región autónoma.
+   - o) La planificación e implementación de la conectividad física y digital.
+   - p) La promoción y el fomento del deporte, el ocio y la recreación.
+   - q) La promoción y ordenación del turismo en el ámbito territorial de la región autónoma, en coordinación con la comuna autónoma.
+   - r) El fomento del desarrollo social, productivo y económico de la región autónoma, en coordinación con las políticas, los planes y los programas nacionales.
+   - s) Establecer contribuciones y tasas dentro de su territorio previa autorización por ley.
+   - t) Participar en acciones de cooperación internacional, dentro de los marcos establecidos por los tratados y los convenios vigentes.
+   - u) Las demás competencias que determinen la Constitución y ley.
 #### Artículo 221
 1. Las competencias no expresamente conferidas a la región autónoma corresponden a la Administración central, sin perjuicio de las transferencias de competencias que regulan la Constitución y la ley.
 2. Las competencias de la región autónoma podrán ejercerse de manera concurrente y coordinada con otros órganos del Estado.
@@ -911,23 +909,23 @@ La organización institucional de las regiones autónomas se compone del gobiern
 5. Quien dirija el gobierno regional ejercerá sus funciones por el término de cuatro años, pudiendo reelegirse consecutivamente solo una vez para el período siguiente. En este caso, se considerará que se ha ejercido el cargo durante un período cuando se haya cumplido más de la mitad del mandato.
 #### Artículo 224
 Son atribuciones esenciales de los gobiernos regionales las siguientes:
-a) Ejercer la potestad reglamentaria en todas aquellas materias que se encuentren dentro del ámbito de sus competencias, en conformidad con la Constitución, la ley y el estatuto regional.
-b) Organizar, administrar, supervigilar y fiscalizar los servicios públicos de la región autónoma y coordinarse con el Gobierno respecto de aquellos que detenten un carácter nacional y que funcionen en la región.
-c) Proponer a la asamblea regional la creación de empresas públicas regionales o la participación en empresas regionales para la gestión de servicios de su competencia, según lo dispuesto en la Constitución, la ley y el estatuto regional.
-d) Preparar y presentar ante la asamblea regional el plan regional de ordenamiento territorial y los planes de desarrollo urbano de las áreas metropolitanas, en conformidad con el estatuto regional y la ley.
-e) Presentar ante la asamblea regional los planes de manejo integrado de cuencas acordados en los respectivos consejos de cuencas, en conformidad con la ley.
-f) Convocar a referendos y plebiscitos regionales en virtud de lo previsto en la Constitución, el estatuto regional y la ley.
-g) Establecer sistemas de gestión de crisis entre los órganos que tienen asiento en la región autónoma, que incluyan, a lo menos, su preparación, prevención, administración y manejo.
-h) Preparar y presentar ante la asamblea regional el plan de desarrollo regional, conforme al estatuto regional.
-i) Celebrar actos y contratos en los que tenga interés.
-j) Adoptar e implementar políticas públicas que fomenten y promocionen el desarrollo social, productivo, económico y cultural de la región autónoma, especialmente en ámbitos de competencia de la región autónoma.
-k) Promover la innovación, la competitividad y la inversión en la respectiva región autónoma.
-l) Elaborar y presentar ante la asamblea regional el proyecto de presupuesto regional, conforme a esta Constitución y al estatuto regional.
-m) Administrar y ejecutar la planificación presupuestaria sobre la destinación y uso del presupuesto regional.
-n) Ejercer competencias fiscales propias conforme a la Constitución y la ley.
-ñ) Celebrar y ejecutar convenios con los gobiernos de otras regiones autónomas para efectos de implementar programas y políticas públicas interregionales, así como toda otra forma de asociatividad territorial.
-o) Celebrar y ejecutar acciones de cooperación internacional, dentro de los marcos establecidos por los tratados y convenios que el país celebre al efecto y conforme a los procedimientos regulados en la ley.
-p) Las demás atribuciones que señalen la Constitución, la ley y el estatuto regional.
+   - a) Ejercer la potestad reglamentaria en todas aquellas materias que se encuentren dentro del ámbito de sus competencias, en conformidad con la Constitución, la ley y el estatuto regional.
+   - b) Organizar, administrar, supervigilar y fiscalizar los servicios públicos de la región autónoma y coordinarse con el Gobierno respecto de aquellos que detenten un carácter nacional y que funcionen en la región.
+   - c) Proponer a la asamblea regional la creación de empresas públicas regionales o la participación en empresas regionales para la gestión de servicios de su competencia, según lo dispuesto en la Constitución, la ley y el estatuto regional.
+   - d) Preparar y presentar ante la asamblea regional el plan regional de ordenamiento territorial y los planes de desarrollo urbano de las áreas metropolitanas, en conformidad con el estatuto regional y la ley.
+   - e) Presentar ante la asamblea regional los planes de manejo integrado de cuencas acordados en los respectivos consejos de cuencas, en conformidad con la ley.
+   - f) Convocar a referendos y plebiscitos regionales en virtud de lo previsto en la Constitución, el estatuto regional y la ley.
+   - g) Establecer sistemas de gestión de crisis entre los órganos que tienen asiento en la región autónoma, que incluyan, a lo menos, su preparación, prevención, administración y manejo.
+   - h) Preparar y presentar ante la asamblea regional el plan de desarrollo regional, conforme al estatuto regional.
+   - i) Celebrar actos y contratos en los que tenga interés.
+   - j) Adoptar e implementar políticas públicas que fomenten y promocionen el desarrollo social, productivo, económico y cultural de la región autónoma, especialmente en ámbitos de competencia de la región autónoma.
+   - k) Promover la innovación, la competitividad y la inversión en la respectiva región autónoma.
+   - l) Elaborar y presentar ante la asamblea regional el proyecto de presupuesto regional, conforme a esta Constitución y al estatuto regional.
+   - m) Administrar y ejecutar la planificación presupuestaria sobre la destinación y uso del presupuesto regional.
+   - n) Ejercer competencias fiscales propias conforme a la Constitución y la ley.
+   - ñ) Celebrar y ejecutar convenios con los gobiernos de otras regiones autónomas para efectos de implementar programas y políticas públicas interregionales, así como toda otra forma de asociatividad territorial.
+   - o) Celebrar y ejecutar acciones de cooperación internacional, dentro de los marcos establecidos por los tratados y convenios que el país celebre al efecto y conforme a los procedimientos regulados en la ley.
+   - p) Las demás atribuciones que señalen la Constitución, la ley y el estatuto regional.
 #### Artículo 225
 1. La asamblea regional es el órgano colegiado de representación regional que está dotado de potestades normativas, resolutivas y fiscalizadoras.
 2. Una ley determinará los requisitos generales para acceder al cargo de asambleísta regional y su número en proporción a la población regional.
@@ -935,22 +933,22 @@ p) Las demás atribuciones que señalen la Constitución, la ley y el estatuto r
  
 #### Artículo 226
 Son atribuciones de la asamblea regional:
-a) Dictar su reglamento interno de funcionamiento.
-b) Dictar las normas regionales que hagan aplicables las leyes de acuerdo regional.
-c) Iniciar en materias de interés regional el trámite legislativo ante la Cámara de las Regiones.
-d) Solicitar al Congreso de Diputadas y Diputados la transferencia de la potestad legislativa en materias de interés de la región autónoma.
-e) Ejercer la potestad reglamentaria en conjunto con quien dirija el gobierno regional en materias de su competencia y dictar los reglamentos de ejecución de ley cuando esta lo encomiende.
-f) Administrar sus bienes y patrimonio propio.
-g) Aprobar, rechazar o modificar la inversión de los recursos de los fondos solidarios que se creen y otros recursos públicos que disponga la ley.
-h) Fiscalizar los actos del gobierno regional de acuerdo con el procedimiento establecido en el estatuto regional.
-i) Fiscalizar los actos de la administración regional, para lo cual podrá requerir información de autoridades o jefaturas que desempeñen sus funciones en la región autónoma, citar a funcionarios públicos o autoridades regionales y crear comisiones especiales.
-j) Solicitar a la gobernadora o al gobernador regional rendir cuenta sobre su participación en el Consejo de Gobernaciones.
-k) Aprobar, rechazar o proponer modificaciones al plan de manejo integrado de cuencas.
-l) Pronunciarse en conjunto con los órganos competentes respecto de los procedimientos de evaluación ambiental.
-m) Aprobar, modificar o rechazar el presupuesto regional, el plan de desarrollo regional y los planes de ordenamiento territorial.
-n) Pronunciarse sobre la convocatoria a consultas o plebiscitos regionales.
-ñ) Aprobar, a propuesta de la gobernadora o del gobernador regional y previa ratificación de la Cámara de las Regiones, la creación de empresas públicas regionales o la participación en empresas regionales.
-o) Las demás atribuciones que determinen la Constitución y la ley.
+   - a) Dictar su reglamento interno de funcionamiento.
+   - b) Dictar las normas regionales que hagan aplicables las leyes de acuerdo regional.
+   - c) Iniciar en materias de interés regional el trámite legislativo ante la Cámara de las Regiones.
+   - d) Solicitar al Congreso de Diputadas y Diputados la transferencia de la potestad legislativa en materias de interés de la región autónoma.
+   - e) Ejercer la potestad reglamentaria en conjunto con quien dirija el gobierno regional en materias de su competencia y dictar los reglamentos de ejecución de ley cuando esta lo encomiende.
+   - f) Administrar sus bienes y patrimonio propio.
+   - g) Aprobar, rechazar o modificar la inversión de los recursos de los fondos solidarios que se creen y otros recursos públicos que disponga la ley.
+   - h) Fiscalizar los actos del gobierno regional de acuerdo con el procedimiento establecido en el estatuto regional.
+   - i) Fiscalizar los actos de la administración regional, para lo cual podrá requerir información de autoridades o jefaturas que desempeñen sus funciones en la región autónoma, citar a funcionarios públicos o autoridades regionales y crear comisiones especiales.
+   - j) Solicitar a la gobernadora o al gobernador regional rendir cuenta sobre su participación en el Consejo de Gobernaciones.
+   - k) Aprobar, rechazar o proponer modificaciones al plan de manejo integrado de cuencas.
+   - l) Pronunciarse en conjunto con los órganos competentes respecto de los procedimientos de evaluación ambiental.
+   - m) Aprobar, modificar o rechazar el presupuesto regional, el plan de desarrollo regional y los planes de ordenamiento territorial.
+   - n) Pronunciarse sobre la convocatoria a consultas o plebiscitos regionales.
+   - ñ) Aprobar, a propuesta de la gobernadora o del gobernador regional y previa ratificación de la Cámara de las Regiones, la creación de empresas públicas regionales o la participación en empresas regionales.
+   - o) Las demás atribuciones que determinen la Constitución y la ley.
 #### Artículo 227
 1. La organización administrativa y funcionamiento interno de cada región autónoma serán establecidas en un estatuto.
 2. El estatuto regional debe respetar los derechos fundamentales y los principios del Estado social y democrático de derecho reconocidos en la Constitución.
@@ -1026,15 +1024,15 @@ El Estado fomenta los mercados locales, las ferias libres y los circuitos cortos
 2. La suficiencia financiera se determinará bajo criterios objetivos tales como correspondencia entre competencias y recursos necesarios para su cumplimiento, equilibrio presupuestario, coordinación, no discriminación arbitraria entre entidades territoriales, igualdad en las prestaciones sociales, desarrollo armónico de los territorios, unidad, objetividad, razonabilidad, oportunidad y transparencia.
 #### Artículo 247
 Las entidades territoriales tendrán las siguientes fuentes de ingresos:
-a) Los recursos asignados por la Ley de Presupuestos.
-b) Los impuestos en favor de la entidad territorial.
-c) La distribución de los impuestos establecida en la Ley de Presupuestos.
-d) Las tasas y contribuciones.
-e) La distribución de los fondos solidarios.
-f) La transferencia fiscal interterritorial.
-g) La administración y aprovechamiento de su patrimonio.
-h) Las donaciones, las herencias y los legados que reciban conforme a la ley.
-i) Otras que determinen la Constitución y la ley.
+   - a) Los recursos asignados por la Ley de Presupuestos.
+   - b) Los impuestos en favor de la entidad territorial.
+   - c) La distribución de los impuestos establecida en la Ley de Presupuestos.
+   - d) Las tasas y contribuciones.
+   - e) La distribución de los fondos solidarios.
+   - f) La transferencia fiscal interterritorial.
+   - g) La administración y aprovechamiento de su patrimonio.
+   - h) Las donaciones, las herencias y los legados que reciban conforme a la ley.
+   - i) Otras que determinen la Constitución y la ley.
 #### Artículo 248
 1. Los ingresos fiscales generados por impuestos son distribuidos entre la Administración central y las entidades territoriales en la forma establecida en la Ley de Presupuestos.
 2. La ley definirá el órgano encargado de recopilar y sistematizar la información necesaria para proponer al Poder Legislativo las fórmulas de distribución de los ingresos fiscales, de compensación fiscal entre entidades territoriales y de los recursos a integrar en los diversos fondos. Para estos efectos, se deberá considerar la participación y representación de las entidades territoriales.
@@ -1047,12 +1045,12 @@ i) Otras que determinen la Constitución y la ley.
 5. Las regiones y comunas autónomas que cuenten con ingresos por sobre el promedio ponderado de ingresos fiscales transferirán recursos a aquellas equivalentes con ingresos bajo el promedio. El órgano competente sugerirá una fórmula al legislador para realizar tales transferencias.
 #### Artículo 250
 Los gobiernos regionales y locales podrán emitir deuda en conformidad con lo que disponga la ley, general o especial, la que establecerá al menos las siguientes regulaciones:
-a) La prohibición de destinar los fondos recaudados mediante emisión de deuda o empréstitos al financiamiento de gasto corriente.
-b) Los mecanismos que garanticen que la deuda sea íntegra y debidamente servida por el deudor.
-c) La prohibición del establecimiento de garantías o cauciones del fisco.
-d) El establecimiento de límites máximos de endeudamiento como porcentaje del presupuesto anual del gobierno regional y municipal respectivo y la obligación de mantener una clasificación de riesgo actualizada.
-e) Restricciones en períodos electorales.
-f) Estos recursos no podrán ser destinados a remuneraciones ni a gasto corriente.
+   - a) La prohibición de destinar los fondos recaudados mediante emisión de deuda o empréstitos al financiamiento de gasto corriente.
+   - b) Los mecanismos que garanticen que la deuda sea íntegra y debidamente servida por el deudor.
+   - c) La prohibición del establecimiento de garantías o cauciones del fisco.
+   - d) El establecimiento de límites máximos de endeudamiento como porcentaje del presupuesto anual del gobierno regional y municipal respectivo y la obligación de mantener una clasificación de riesgo actualizada.
+   - e) Restricciones en períodos electorales.
+   - f) Estos recursos no podrán ser destinados a remuneraciones ni a gasto corriente.
 ## Capítulo VII Poder Legislativo
 #### Artículo 251
 El Poder Legislativo se compone del Congreso de Diputadas y Diputados y de la Cámara de las Regiones.
@@ -1065,25 +1063,25 @@ El Poder Legislativo se compone del Congreso de Diputadas y Diputados y de la C�
 #### Artículo 253
 Son atribuciones exclusivas del Congreso de Diputadas y Diputados:
 
-a) Fiscalizar los actos del Gobierno. Para ejercer esta atribución puede:
-   1) Adoptar acuerdos o sugerir observaciones, los que se transmitirán por escrito a la Presidenta o al Presidente de la República, quien dentro de los treinta días contados desde la comunicación deberá dar respuesta fundada por medio de la ministra o del ministro de Estado que corresponda.
-   2) Solicitar, con el patrocinio de un cuarto de sus integrantes, antecedentes a la Presidenta o al Presidente de la República sobre el contenido o los fundamentos de los actos del Gobierno, quien deberá contestar fundadamente por medio de la ministra o del ministro de Estado que corresponda dentro de los tres días desde su comunicación. En ningún caso estos actos afectarán la responsabilidad política de las ministras y los ministros de Estado.
-   3) Crear comisiones especiales investigadoras a petición de a lo menos dos quintos de sus integrantes en ejercicio, con el objeto de reunir informaciones relativas a determinados actos del Gobierno. Las comisiones investigadoras, a petición de un tercio de sus miembros, podrán despachar citaciones y solicitar antecedentes. Toda persona que sea citada por estas comisiones estará obligada a comparecer y a suministrar los antecedentes y las informaciones que se le soliciten. No obstante, una misma comisión investigadora no podrá citar más de tres veces a la misma persona sin previo acuerdo de la mayoría de sus integrantes.
+   - a) Fiscalizar los actos del Gobierno. Para ejercer esta atribución puede:
+     1) Adoptar acuerdos o sugerir observaciones, los que se transmitirán por escrito a la Presidenta o al Presidente de la República, quien dentro de los treinta días contados desde la comunicación deberá dar respuesta fundada por medio de la ministra o del ministro de Estado que corresponda.
+     2) Solicitar, con el patrocinio de un cuarto de sus integrantes, antecedentes a la Presidenta o al Presidente de la República sobre el contenido o los fundamentos de los actos del Gobierno, quien deberá contestar fundadamente por medio de la ministra o del ministro de Estado que corresponda dentro de los tres días desde su comunicación. En ningún caso estos actos afectarán la responsabilidad política de las ministras y los ministros de Estado.
+     3) Crear comisiones especiales investigadoras a petición de a lo menos dos quintos de sus integrantes en ejercicio, con el objeto de reunir informaciones relativas a determinados actos del Gobierno. Las comisiones investigadoras, a petición de un tercio de sus miembros, podrán despachar citaciones y solicitar antecedentes. Toda persona que sea citada por estas comisiones estará obligada a comparecer y a suministrar los antecedentes y las informaciones que se le soliciten. No obstante, una misma comisión investigadora no podrá citar más de tres veces a la misma persona sin previo acuerdo de la mayoría de sus integrantes.
 
-b) Declarar, cuando la Presidenta o el Presidente presente la renuncia a su cargo, si los motivos que la originan son o no fundados y, en consecuencia, admitirla o desecharla.
+   - b) Declarar, cuando la Presidenta o el Presidente presente la renuncia a su cargo, si los motivos que la originan son o no fundados y, en consecuencia, admitirla o desecharla.
 
-c) Declarar si ha lugar o no respecto de las acusaciones que no menos de diez ni más de veinte de sus integrantes formulen en contra de:
-   1) La Presidenta o el Presidente de la República, por actos de su administración que hayan comprometido gravemente el honor o la seguridad del Estado o infringido abiertamente la Constitución o las leyes. Esta acusación podrá interponerse mientras la Presidenta o el Presidente esté en funciones y en los seis meses siguientes a su expiración en el cargo. Durante este último tiempo no podrá ausentarse de la república sin acuerdo del Congreso de Diputadas y Diputados.
-   2) Las ministras y los ministros de Estado, por haber comprometido gravemente el honor o la seguridad del Estado, por infringir la Constitución o las leyes o haber dejado estas sin ejecución y por los delitos de traición, concusión, malversación de fondos públicos y soborno.
-   3) Las juezas y los jueces de las cortes de apelaciones y la Corte Suprema y la contralora o el contralor general de la república, por notable abandono de sus deberes.
-   4) Las y los generales o almirantes de las instituciones pertenecientes a las Fuerzas Armadas, el general director de Carabineros de Chile y el director general de la Policía de Investigaciones de Chile, por haber comprometido gravemente el honor o la seguridad del Estado.
-   5) Las gobernadoras y los gobernadores regionales, por infracción de la Constitución y por los delitos de traición, sedición, malversación de fondos públicos y concusión.<br>La acusación se tramitará conforme a la ley que regula la materia.<br>Las acusaciones referidas en los números 2), 3), 4) y 5) podrán interponerse mientras la persona afectada esté en funciones o en los tres meses siguientes a la expiración en su cargo. Interpuesta la acusación, no podrá ausentarse del país sin permiso del Congreso de Diputadas y Diputados y no podrá hacerlo en caso alguno si la acusación ya estuviera aprobada por este.<br>Para declarar que ha lugar la acusación en contra de la Presidenta o el Presidente de la República o de un gobernador regional se necesitará el voto de la mayoría de las diputadas y los diputados en ejercicio. La persona acusada no quedará suspendida de sus funciones.<br>En los demás casos se requerirá el voto de la mayoría de las diputadas y los diputados presentes y la persona acusada quedará suspendida en sus funciones desde el momento en que el Congreso de Diputadas y Diputados declare que ha lugar la acusación. La suspensión cesará si la Cámara de las Regiones desestima la acusación o si no se pronuncia dentro de los treinta días siguientes.
+   - c) Declarar si ha lugar o no respecto de las acusaciones que no menos de diez ni más de veinte de sus integrantes formulen en contra de:
+     1) La Presidenta o el Presidente de la República, por actos de su administración que hayan comprometido gravemente el honor o la seguridad del Estado o infringido abiertamente la Constitución o las leyes. Esta acusación podrá interponerse mientras la Presidenta o el Presidente esté en funciones y en los seis meses siguientes a su expiración en el cargo. Durante este último tiempo no podrá ausentarse de la república sin acuerdo del Congreso de Diputadas y Diputados.
+     2) Las ministras y los ministros de Estado, por haber comprometido gravemente el honor o la seguridad del Estado, por infringir la Constitución o las leyes o haber dejado estas sin ejecución y por los delitos de traición, concusión, malversación de fondos públicos y soborno.
+     3) Las juezas y los jueces de las cortes de apelaciones y la Corte Suprema y la contralora o el contralor general de la república, por notable abandono de sus deberes.
+     4) Las y los generales o almirantes de las instituciones pertenecientes a las Fuerzas Armadas, el general director de Carabineros de Chile y el director general de la Policía de Investigaciones de Chile, por haber comprometido gravemente el honor o la seguridad del Estado.
+     5) Las gobernadoras y los gobernadores regionales, por infracción de la Constitución y por los delitos de traición, sedición, malversación de fondos públicos y concusión.<br>La acusación se tramitará conforme a la ley que regula la materia.<br>Las acusaciones referidas en los números 2), 3), 4) y 5) podrán interponerse mientras la persona afectada esté en funciones o en los tres meses siguientes a la expiración en su cargo. Interpuesta la acusación, no podrá ausentarse del país sin permiso del Congreso de Diputadas y Diputados y no podrá hacerlo en caso alguno si la acusación ya estuviera aprobada por este.<br>Para declarar que ha lugar la acusación en contra de la Presidenta o el Presidente de la República o de un gobernador regional se necesitará el voto de la mayoría de las diputadas y los diputados en ejercicio. La persona acusada no quedará suspendida de sus funciones.<br>En los demás casos se requerirá el voto de la mayoría de las diputadas y los diputados presentes y la persona acusada quedará suspendida en sus funciones desde el momento en que el Congreso de Diputadas y Diputados declare que ha lugar la acusación. La suspensión cesará si la Cámara de las Regiones desestima la acusación o si no se pronuncia dentro de los treinta días siguientes.
 
-d) Otorgar su acuerdo para que la Presidenta o el Presidente de la República pueda ausentarse del país por más de treinta días o a contar del tercer domingo de noviembre del año anterior a aquel en que deba cesar en el cargo quien esté en funciones.
+   - d) Otorgar su acuerdo para que la Presidenta o el Presidente de la República pueda ausentarse del país por más de treinta días o a contar del tercer domingo de noviembre del año anterior a aquel en que deba cesar en el cargo quien esté en funciones.
 
-e) Supervisar periódicamente la ejecución del presupuesto asignado a defensa, así como la implementación de la política de defensa nacional y la política militar.
+   - e) Supervisar periódicamente la ejecución del presupuesto asignado a defensa, así como la implementación de la política de defensa nacional y la política militar.
 
-f) Las otras que establezca la Constitución.
+   - f) Las otras que establezca la Constitución.
 
 ### Cámara de las Regiones
 #### Artículo 254

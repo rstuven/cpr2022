@@ -87,8 +87,8 @@ function itemsDesdeMarkdown(entrada) {
             incisos = incisoPrevio.incisos;
           } else if (inciso.nivel < incisoPrevio.nivel) {
             incisoPrevio = incisoNivel.pop();
-            if (incisoPrevio) {
-              incisos = incisoPrevio.incisos;
+            if (incisoNivel.length >= 1) {
+              incisos = incisoNivel[incisoNivel.length - 1].incisos;
             } else {
               incisos = contenedor.incisos;
             }

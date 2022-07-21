@@ -2195,23 +2195,23 @@
                       "inciso": "d",
                       "nivel": 2,
                       "texto": "Obtengan especial gracia de nacionalización por ley."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "No se exigirá renuncia a la nacionalidad anterior para obtener la carta de nacionalización chilena."
-                    },
-                    {
-                      "inciso": 3,
-                      "nivel": 1,
-                      "texto": "Toda persona podrá exigir que en cualquier documento oficial de identificación sea consignada, además de la nacionalidad chilena, su pertenencia a alguno de los pueblos y naciones indígenas del país."
-                    },
-                    {
-                      "inciso": 4,
-                      "nivel": 1,
-                      "texto": "La ley establecerá medidas para la recuperación de la nacionalidad chilena en favor de quienes la perdieron o tuvieron que renunciar a ella como consecuencia del exilio, sus hijas e hijos."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "No se exigirá renuncia a la nacionalidad anterior para obtener la carta de nacionalización chilena."
+                },
+                {
+                  "inciso": 3,
+                  "nivel": 1,
+                  "texto": "Toda persona podrá exigir que en cualquier documento oficial de identificación sea consignada, además de la nacionalidad chilena, su pertenencia a alguno de los pueblos y naciones indígenas del país."
+                },
+                {
+                  "inciso": 4,
+                  "nivel": 1,
+                  "texto": "La ley establecerá medidas para la recuperación de la nacionalidad chilena en favor de quienes la perdieron o tuvieron que renunciar a ella como consecuencia del exilio, sus hijas e hijos."
                 }
               ]
             },
@@ -2252,13 +2252,13 @@
                       "inciso": "c",
                       "nivel": 2,
                       "texto": "Revocación por ley de la nacionalización concedida por gracia."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "En el caso de la letra a), la nacionalidad podrá recuperarse por carta de nacionalización. En los restantes casos, podrá ser solo por ley."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "En el caso de la letra a), la nacionalidad podrá recuperarse por carta de nacionalización. En los restantes casos, podrá ser solo por ley."
                 }
               ]
             },
@@ -2484,18 +2484,18 @@
                       "inciso": "j",
                       "nivel": 2,
                       "texto": "Las demás que le encomienden la Constitución y la ley."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "Todo órgano deberá colaborar con los requerimientos de la Defensoría del Pueblo, pudiendo acceder a la información necesaria y constituirse en dependencias de los órganos objeto de fiscalización, en conformidad con la ley."
-                    },
-                    {
-                      "inciso": 3,
-                      "nivel": 1,
-                      "texto": "Durante los estados de excepción constitucional la Defensoría del Pueblo ejercerá plenamente sus atribuciones."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "Todo órgano deberá colaborar con los requerimientos de la Defensoría del Pueblo, pudiendo acceder a la información necesaria y constituirse en dependencias de los órganos objeto de fiscalización, en conformidad con la ley."
+                },
+                {
+                  "inciso": 3,
+                  "nivel": 1,
+                  "texto": "Durante los estados de excepción constitucional la Defensoría del Pueblo ejercerá plenamente sus atribuciones."
                 }
               ]
             },
@@ -2826,60 +2826,54 @@
                     {
                       "inciso": "b",
                       "nivel": 2,
-                      "texto": "Velar por el cumplimiento de la Política Nacional Hídrica que establezca"
+                      "texto": "Velar por el cumplimiento de la Política Nacional Hídrica que establezca la autoridad respectiva."
                     },
                     {
-                      "nivel": 1,
-                      "texto": "la autoridad respectiva.",
-                      "incisos": [
-                        {
-                          "inciso": "c",
-                          "nivel": 2,
-                          "texto": "Otorgar, revisar, modificar, caducar o revocar autorizaciones de uso de agua."
-                        },
-                        {
-                          "inciso": "d",
-                          "nivel": 2,
-                          "texto": "Implementar y monitorear los instrumentos de gestión y protección ambiental en materia hídrica."
-                        },
-                        {
-                          "inciso": "e",
-                          "nivel": 2,
-                          "texto": "Coordinar y elaborar un sistema unificado de información de carácter público."
-                        },
-                        {
-                          "inciso": "f",
-                          "nivel": 2,
-                          "texto": "Impulsar la constitución de los consejos de cuencas. Les prestará asistencia para que realicen la gestión integrada, gobernanza participativa y planificación de las intervenciones en los cuerpos de agua y los ecosistemas asociados a la o las respectivas cuencas."
-                        },
-                        {
-                          "inciso": "g",
-                          "nivel": 2,
-                          "texto": "Fiscalizar el uso responsable y sostenible del agua."
-                        },
-                        {
-                          "inciso": "h",
-                          "nivel": 2,
-                          "texto": "Imponer las sanciones administrativas que correspondan, las que podrán ser reclamadas ante los tribunales de justicia."
-                        },
-                        {
-                          "inciso": "i",
-                          "nivel": 2,
-                          "texto": "Determinar la calidad de los servicios sanitarios."
-                        },
-                        {
-                          "inciso": "j",
-                          "nivel": 2,
-                          "texto": "Las demás que establezca la ley."
-                        },
-                        {
-                          "inciso": 3,
-                          "nivel": 1,
-                          "texto": "La ley regulará la organización, la designación, la estructura, el funcionamiento y las demás funciones y competencias de la Agencia Nacional del Agua."
-                        }
-                      ]
+                      "inciso": "c",
+                      "nivel": 2,
+                      "texto": "Otorgar, revisar, modificar, caducar o revocar autorizaciones de uso de agua."
+                    },
+                    {
+                      "inciso": "d",
+                      "nivel": 2,
+                      "texto": "Implementar y monitorear los instrumentos de gestión y protección ambiental en materia hídrica."
+                    },
+                    {
+                      "inciso": "e",
+                      "nivel": 2,
+                      "texto": "Coordinar y elaborar un sistema unificado de información de carácter público."
+                    },
+                    {
+                      "inciso": "f",
+                      "nivel": 2,
+                      "texto": "Impulsar la constitución de los consejos de cuencas. Les prestará asistencia para que realicen la gestión integrada, gobernanza participativa y planificación de las intervenciones en los cuerpos de agua y los ecosistemas asociados a la o las respectivas cuencas."
+                    },
+                    {
+                      "inciso": "g",
+                      "nivel": 2,
+                      "texto": "Fiscalizar el uso responsable y sostenible del agua."
+                    },
+                    {
+                      "inciso": "h",
+                      "nivel": 2,
+                      "texto": "Imponer las sanciones administrativas que correspondan, las que podrán ser reclamadas ante los tribunales de justicia."
+                    },
+                    {
+                      "inciso": "i",
+                      "nivel": 2,
+                      "texto": "Determinar la calidad de los servicios sanitarios."
+                    },
+                    {
+                      "inciso": "j",
+                      "nivel": 2,
+                      "texto": "Las demás que establezca la ley."
                     }
                   ]
+                },
+                {
+                  "inciso": 3,
+                  "nivel": 1,
+                  "texto": "La ley regulará la organización, la designación, la estructura, el funcionamiento y las demás funciones y competencias de la Agencia Nacional del Agua."
                 }
               ]
             }
@@ -3916,113 +3910,107 @@
                     {
                       "inciso": "a",
                       "nivel": 2,
-                      "texto": "Ejercer funciones de gobierno y administración dentro de la comuna y en"
+                      "texto": "Ejercer funciones de gobierno y administración dentro de la comuna y en el ámbito de sus competencias."
                     },
                     {
-                      "nivel": 1,
-                      "texto": "el ámbito de sus competencias.",
-                      "incisos": [
-                        {
-                          "inciso": "b",
-                          "nivel": 2,
-                          "texto": "La dictación de normas generales y obligatorias en materias de carácter comunal, con arreglo a la Constitución y las leyes."
-                        },
-                        {
-                          "inciso": "c",
-                          "nivel": 2,
-                          "texto": "La creación, prestación, organización y administración de los servicios públicos municipales en el ámbito de sus funciones, conforme a la Constitución y la ley."
-                        },
-                        {
-                          "inciso": "d",
-                          "nivel": 2,
-                          "texto": "El desarrollo sostenible e integral de la comuna."
-                        },
-                        {
-                          "inciso": "e",
-                          "nivel": 2,
-                          "texto": "La protección de los ecosistemas comunales y los derechos de la naturaleza."
-                        },
-                        {
-                          "inciso": "f",
-                          "nivel": 2,
-                          "texto": "Ejercer las acciones pertinentes en resguardo de la naturaleza y sus derechos reconocidos por esta Constitución y la ley."
-                        },
-                        {
-                          "inciso": "g",
-                          "nivel": 2,
-                          "texto": "La ejecución de los mecanismos y acciones de protección ambiental en la forma que determinen la Constitución, la ley, los instrumentos de gestión ambiental y normas afines."
-                        },
-                        {
-                          "inciso": "h",
-                          "nivel": 2,
-                          "texto": "La conservación, la custodia y el resguardo de los patrimonios culturales y naturales."
-                        },
-                        {
-                          "inciso": "i",
-                          "nivel": 2,
-                          "texto": "El fomento y la protección a las culturas, las artes y los patrimonios culturales y naturales, así como la investigación y la formación artística en sus territorios."
-                        },
-                        {
-                          "inciso": "j",
-                          "nivel": 2,
-                          "texto": "Garantizar la participación popular y el fortalecimiento de la democracia."
-                        },
-                        {
-                          "inciso": "k",
-                          "nivel": 2,
-                          "texto": "Desarrollar, con el nivel regional y central, actividades y servicios en materias de educación, salud, vivienda, turismo, recreación, deporte y las demás que establezca la ley."
-                        },
-                        {
-                          "inciso": "l",
-                          "nivel": 2,
-                          "texto": "La construcción de obras que demande el progreso local en el marco de sus atribuciones."
-                        },
-                        {
-                          "inciso": "m",
-                          "nivel": 2,
-                          "texto": "El desarrollo estratégico de la comuna mediante el plan de desarrollo comunal."
-                        },
-                        {
-                          "inciso": "n",
-                          "nivel": 2,
-                          "texto": "La planificación del territorio mediante el plan regulador comunal acordado de forma participativa con la comunidad de su respectivo territorio."
-                        },
-                        {
-                          "inciso": "ñ",
-                          "nivel": 2,
-                          "texto": "El fomento de las actividades productivas."
-                        },
-                        {
-                          "inciso": "o",
-                          "nivel": 2,
-                          "texto": "El fomento del comercio local."
-                        },
-                        {
-                          "inciso": "p",
-                          "nivel": 2,
-                          "texto": "El fomento de la reintegración y reinserción de las personas en situación de calle que así lo requieran, mediante la planificación, coordinación y ejecución de programas al efecto."
-                        },
-                        {
-                          "inciso": "q",
-                          "nivel": 2,
-                          "texto": "Gestionar la reducción de riesgos frente a desastres."
-                        },
-                        {
-                          "inciso": "r",
-                          "nivel": 2,
-                          "texto": "El desarrollo de aseo y ornato de la comuna."
-                        },
-                        {
-                          "inciso": "s",
-                          "nivel": 2,
-                          "texto": "La promoción de la seguridad ciudadana."
-                        },
-                        {
-                          "inciso": "t",
-                          "nivel": 2,
-                          "texto": "Las demás competencias que determinen la Constitución y la ley. Las leyes deberán reconocer las diferencias existentes entre los distintos tipos de comunas y municipalidades, velando por la equidad, inclusión y cohesión territorial."
-                        }
-                      ]
+                      "inciso": "b",
+                      "nivel": 2,
+                      "texto": "La dictación de normas generales y obligatorias en materias de carácter comunal, con arreglo a la Constitución y las leyes."
+                    },
+                    {
+                      "inciso": "c",
+                      "nivel": 2,
+                      "texto": "La creación, prestación, organización y administración de los servicios públicos municipales en el ámbito de sus funciones, conforme a la Constitución y la ley."
+                    },
+                    {
+                      "inciso": "d",
+                      "nivel": 2,
+                      "texto": "El desarrollo sostenible e integral de la comuna."
+                    },
+                    {
+                      "inciso": "e",
+                      "nivel": 2,
+                      "texto": "La protección de los ecosistemas comunales y los derechos de la naturaleza."
+                    },
+                    {
+                      "inciso": "f",
+                      "nivel": 2,
+                      "texto": "Ejercer las acciones pertinentes en resguardo de la naturaleza y sus derechos reconocidos por esta Constitución y la ley."
+                    },
+                    {
+                      "inciso": "g",
+                      "nivel": 2,
+                      "texto": "La ejecución de los mecanismos y acciones de protección ambiental en la forma que determinen la Constitución, la ley, los instrumentos de gestión ambiental y normas afines."
+                    },
+                    {
+                      "inciso": "h",
+                      "nivel": 2,
+                      "texto": "La conservación, la custodia y el resguardo de los patrimonios culturales y naturales."
+                    },
+                    {
+                      "inciso": "i",
+                      "nivel": 2,
+                      "texto": "El fomento y la protección a las culturas, las artes y los patrimonios culturales y naturales, así como la investigación y la formación artística en sus territorios."
+                    },
+                    {
+                      "inciso": "j",
+                      "nivel": 2,
+                      "texto": "Garantizar la participación popular y el fortalecimiento de la democracia."
+                    },
+                    {
+                      "inciso": "k",
+                      "nivel": 2,
+                      "texto": "Desarrollar, con el nivel regional y central, actividades y servicios en materias de educación, salud, vivienda, turismo, recreación, deporte y las demás que establezca la ley."
+                    },
+                    {
+                      "inciso": "l",
+                      "nivel": 2,
+                      "texto": "La construcción de obras que demande el progreso local en el marco de sus atribuciones."
+                    },
+                    {
+                      "inciso": "m",
+                      "nivel": 2,
+                      "texto": "El desarrollo estratégico de la comuna mediante el plan de desarrollo comunal."
+                    },
+                    {
+                      "inciso": "n",
+                      "nivel": 2,
+                      "texto": "La planificación del territorio mediante el plan regulador comunal acordado de forma participativa con la comunidad de su respectivo territorio."
+                    },
+                    {
+                      "inciso": "ñ",
+                      "nivel": 2,
+                      "texto": "El fomento de las actividades productivas."
+                    },
+                    {
+                      "inciso": "o",
+                      "nivel": 2,
+                      "texto": "El fomento del comercio local."
+                    },
+                    {
+                      "inciso": "p",
+                      "nivel": 2,
+                      "texto": "El fomento de la reintegración y reinserción de las personas en situación de calle que así lo requieran, mediante la planificación, coordinación y ejecución de programas al efecto."
+                    },
+                    {
+                      "inciso": "q",
+                      "nivel": 2,
+                      "texto": "Gestionar la reducción de riesgos frente a desastres."
+                    },
+                    {
+                      "inciso": "r",
+                      "nivel": 2,
+                      "texto": "El desarrollo de aseo y ornato de la comuna."
+                    },
+                    {
+                      "inciso": "s",
+                      "nivel": 2,
+                      "texto": "La promoción de la seguridad ciudadana."
+                    },
+                    {
+                      "inciso": "t",
+                      "nivel": 2,
+                      "texto": "Las demás competencias que determinen la Constitución y la ley. Las leyes deberán reconocer las diferencias existentes entre los distintos tipos de comunas y municipalidades, velando por la equidad, inclusión y cohesión territorial."
                     }
                   ]
                 }
@@ -5204,60 +5192,60 @@
                           "inciso": 3,
                           "nivel": 3,
                           "texto": "Crear comisiones especiales investigadoras a petición de a lo menos dos quintos de sus integrantes en ejercicio, con el objeto de reunir informaciones relativas a determinados actos del Gobierno. Las comisiones investigadoras, a petición de un tercio de sus miembros, podrán despachar citaciones y solicitar antecedentes. Toda persona que sea citada por estas comisiones estará obligada a comparecer y a suministrar los antecedentes y las informaciones que se le soliciten. No obstante, una misma comisión investigadora no podrá citar más de tres veces a la misma persona sin previo acuerdo de la mayoría de sus integrantes."
-                        },
-                        {
-                          "inciso": "b",
-                          "nivel": 2,
-                          "texto": "Declarar, cuando la Presidenta o el Presidente presente la renuncia a su cargo, si los motivos que la originan son o no fundados y, en consecuencia, admitirla o desecharla."
-                        },
-                        {
-                          "inciso": "c",
-                          "nivel": 2,
-                          "texto": "Declarar si ha lugar o no respecto de las acusaciones que no menos de diez ni más de veinte de sus integrantes formulen en contra de:",
-                          "incisos": [
-                            {
-                              "inciso": 1,
-                              "nivel": 3,
-                              "texto": "La Presidenta o el Presidente de la República, por actos de su administración que hayan comprometido gravemente el honor o la seguridad del Estado o infringido abiertamente la Constitución o las leyes. Esta acusación podrá interponerse mientras la Presidenta o el Presidente esté en funciones y en los seis meses siguientes a su expiración en el cargo. Durante este último tiempo no podrá ausentarse de la república sin acuerdo del Congreso de Diputadas y Diputados."
-                            },
-                            {
-                              "inciso": 2,
-                              "nivel": 3,
-                              "texto": "Las ministras y los ministros de Estado, por haber comprometido gravemente el honor o la seguridad del Estado, por infringir la Constitución o las leyes o haber dejado estas sin ejecución y por los delitos de traición, concusión, malversación de fondos públicos y soborno."
-                            },
-                            {
-                              "inciso": 3,
-                              "nivel": 3,
-                              "texto": "Las juezas y los jueces de las cortes de apelaciones y la Corte Suprema y la contralora o el contralor general de la república, por notable abandono de sus deberes."
-                            },
-                            {
-                              "inciso": 4,
-                              "nivel": 3,
-                              "texto": "Las y los generales o almirantes de las instituciones pertenecientes a las Fuerzas Armadas, el general director de Carabineros de Chile y el director general de la Policía de Investigaciones de Chile, por haber comprometido gravemente el honor o la seguridad del Estado."
-                            },
-                            {
-                              "inciso": 5,
-                              "nivel": 3,
-                              "texto": "Las gobernadoras y los gobernadores regionales, por infracción de la Constitución y por los delitos de traición, sedición, malversación de fondos públicos y concusión.\nLa acusación se tramitará conforme a la ley que regula la materia.\nLas acusaciones referidas en los números 2), 3), 4) y 5) podrán interponerse mientras la persona afectada esté en funciones o en los tres meses siguientes a la expiración en su cargo. Interpuesta la acusación, no podrá ausentarse del país sin permiso del Congreso de Diputadas y Diputados y no podrá hacerlo en caso alguno si la acusación ya estuviera aprobada por este.\nPara declarar que ha lugar la acusación en contra de la Presidenta o el Presidente de la República o de un gobernador regional se necesitará el voto de la mayoría de las diputadas y los diputados en ejercicio. La persona acusada no quedará suspendida de sus funciones.\nEn los demás casos se requerirá el voto de la mayoría de las diputadas y los diputados presentes y la persona acusada quedará suspendida en sus funciones desde el momento en que el Congreso de Diputadas y Diputados declare que ha lugar la acusación. La suspensión cesará si la Cámara de las Regiones desestima la acusación o si no se pronuncia dentro de los treinta días siguientes."
-                            },
-                            {
-                              "inciso": "d",
-                              "nivel": 2,
-                              "texto": "Otorgar su acuerdo para que la Presidenta o el Presidente de la República pueda ausentarse del país por más de treinta días o a contar del tercer domingo de noviembre del año anterior a aquel en que deba cesar en el cargo quien esté en funciones."
-                            },
-                            {
-                              "inciso": "e",
-                              "nivel": 2,
-                              "texto": "Supervisar periódicamente la ejecución del presupuesto asignado a defensa, así como la implementación de la política de defensa nacional y la política militar."
-                            },
-                            {
-                              "inciso": "f",
-                              "nivel": 2,
-                              "texto": "Las otras que establezca la Constitución."
-                            }
-                          ]
                         }
                       ]
+                    },
+                    {
+                      "inciso": "b",
+                      "nivel": 2,
+                      "texto": "Declarar, cuando la Presidenta o el Presidente presente la renuncia a su cargo, si los motivos que la originan son o no fundados y, en consecuencia, admitirla o desecharla."
+                    },
+                    {
+                      "inciso": "c",
+                      "nivel": 2,
+                      "texto": "Declarar si ha lugar o no respecto de las acusaciones que no menos de diez ni más de veinte de sus integrantes formulen en contra de:",
+                      "incisos": [
+                        {
+                          "inciso": 1,
+                          "nivel": 3,
+                          "texto": "La Presidenta o el Presidente de la República, por actos de su administración que hayan comprometido gravemente el honor o la seguridad del Estado o infringido abiertamente la Constitución o las leyes. Esta acusación podrá interponerse mientras la Presidenta o el Presidente esté en funciones y en los seis meses siguientes a su expiración en el cargo. Durante este último tiempo no podrá ausentarse de la república sin acuerdo del Congreso de Diputadas y Diputados."
+                        },
+                        {
+                          "inciso": 2,
+                          "nivel": 3,
+                          "texto": "Las ministras y los ministros de Estado, por haber comprometido gravemente el honor o la seguridad del Estado, por infringir la Constitución o las leyes o haber dejado estas sin ejecución y por los delitos de traición, concusión, malversación de fondos públicos y soborno."
+                        },
+                        {
+                          "inciso": 3,
+                          "nivel": 3,
+                          "texto": "Las juezas y los jueces de las cortes de apelaciones y la Corte Suprema y la contralora o el contralor general de la república, por notable abandono de sus deberes."
+                        },
+                        {
+                          "inciso": 4,
+                          "nivel": 3,
+                          "texto": "Las y los generales o almirantes de las instituciones pertenecientes a las Fuerzas Armadas, el general director de Carabineros de Chile y el director general de la Policía de Investigaciones de Chile, por haber comprometido gravemente el honor o la seguridad del Estado."
+                        },
+                        {
+                          "inciso": 5,
+                          "nivel": 3,
+                          "texto": "Las gobernadoras y los gobernadores regionales, por infracción de la Constitución y por los delitos de traición, sedición, malversación de fondos públicos y concusión.\nLa acusación se tramitará conforme a la ley que regula la materia.\nLas acusaciones referidas en los números 2), 3), 4) y 5) podrán interponerse mientras la persona afectada esté en funciones o en los tres meses siguientes a la expiración en su cargo. Interpuesta la acusación, no podrá ausentarse del país sin permiso del Congreso de Diputadas y Diputados y no podrá hacerlo en caso alguno si la acusación ya estuviera aprobada por este.\nPara declarar que ha lugar la acusación en contra de la Presidenta o el Presidente de la República o de un gobernador regional se necesitará el voto de la mayoría de las diputadas y los diputados en ejercicio. La persona acusada no quedará suspendida de sus funciones.\nEn los demás casos se requerirá el voto de la mayoría de las diputadas y los diputados presentes y la persona acusada quedará suspendida en sus funciones desde el momento en que el Congreso de Diputadas y Diputados declare que ha lugar la acusación. La suspensión cesará si la Cámara de las Regiones desestima la acusación o si no se pronuncia dentro de los treinta días siguientes."
+                        }
+                      ]
+                    },
+                    {
+                      "inciso": "d",
+                      "nivel": 2,
+                      "texto": "Otorgar su acuerdo para que la Presidenta o el Presidente de la República pueda ausentarse del país por más de treinta días o a contar del tercer domingo de noviembre del año anterior a aquel en que deba cesar en el cargo quien esté en funciones."
+                    },
+                    {
+                      "inciso": "e",
+                      "nivel": 2,
+                      "texto": "Supervisar periódicamente la ejecución del presupuesto asignado a defensa, así como la implementación de la política de defensa nacional y la política militar."
+                    },
+                    {
+                      "inciso": "f",
+                      "nivel": 2,
+                      "texto": "Las otras que establezca la Constitución."
                     }
                   ]
                 }
@@ -5440,13 +5428,13 @@
                       "inciso": "n",
                       "nivel": 2,
                       "texto": "Las y los militares en servicio activo."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "Las inhabilidades establecidas en este artículo serán aplicables a quienes hayan tenido las calidades o cargos antes mencionados dentro del año inmediatamente anterior a la elección, excepto respecto de las personas mencionadas en la letra m), las que no deberán reunir esas condiciones al momento de inscribir su candidatura, y de las indicadas en las letras k), l) y n), respecto de las cuales el plazo de la inhabilidad será de los dos años inmediatamente anteriores a la elección."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "Las inhabilidades establecidas en este artículo serán aplicables a quienes hayan tenido las calidades o cargos antes mencionados dentro del año inmediatamente anterior a la elección, excepto respecto de las personas mencionadas en la letra m), las que no deberán reunir esas condiciones al momento de inscribir su candidatura, y de las indicadas en las letras k), l) y n), respecto de las cuales el plazo de la inhabilidad será de los dos años inmediatamente anteriores a la elección."
                 }
               ]
             },
@@ -5522,18 +5510,18 @@
                       "inciso": "e",
                       "nivel": 2,
                       "texto": "Que, durante su ejercicio, pierda algún requisito general de elegibilidad o incurra en una causal de inhabilidad de las establecidas en este capítulo."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "Diputadas, diputados y representantes regionales podrán renunciar a sus cargos cuando les afecte una enfermedad grave, debidamente acreditada, que les impida desempeñarlos, y así lo califique el Tribunal Calificador de Elecciones."
-                    },
-                    {
-                      "inciso": 3,
-                      "nivel": 1,
-                      "texto": "En caso de vacancia de una diputada o un diputado o de una o un representante regional, la ley determinará su forma de reemplazo. Su reemplazante debe reunir los requisitos establecidos por esta Constitución para ser elegido en el cargo respectivo y le alcanzarán las mismas inhabilidades e incompatibilidades. Se asegurará a todo evento la composición paritaria del órgano."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "Diputadas, diputados y representantes regionales podrán renunciar a sus cargos cuando les afecte una enfermedad grave, debidamente acreditada, que les impida desempeñarlos, y así lo califique el Tribunal Calificador de Elecciones."
+                },
+                {
+                  "inciso": 3,
+                  "nivel": 1,
+                  "texto": "En caso de vacancia de una diputada o un diputado o de una o un representante regional, la ley determinará su forma de reemplazo. Su reemplazante debe reunir los requisitos establecidos por esta Constitución para ser elegido en el cargo respectivo y le alcanzarán las mismas inhabilidades e incompatibilidades. Se asegurará a todo evento la composición paritaria del órgano."
                 }
               ]
             },
@@ -5911,13 +5899,13 @@
                       "inciso": "r",
                       "nivel": 2,
                       "texto": "Las demás que esta Constitución califique como de acuerdo regional."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "Si se generara un conflicto de competencia entre la Cámara de las Regiones y el Congreso de Diputadas y Diputados con relación a si una o más materias dispuestas en este artículo deben ser revisadas por la Cámara de las Regiones, esta aprobará su competencia por mayoría de sus integrantes y el Congreso lo ratificará por mayoría. En caso de que el Congreso rechace la revisión aprobada por la Cámara de las Regiones, esta podrá recurrir a la Corte Constitucional por acuerdo de mayoría."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "Si se generara un conflicto de competencia entre la Cámara de las Regiones y el Congreso de Diputadas y Diputados con relación a si una o más materias dispuestas en este artículo deben ser revisadas por la Cámara de las Regiones, esta aprobará su competencia por mayoría de sus integrantes y el Congreso lo ratificará por mayoría. En caso de que el Congreso rechace la revisión aprobada por la Cámara de las Regiones, esta podrá recurrir a la Corte Constitucional por acuerdo de mayoría."
                 }
               ]
             }
@@ -7581,18 +7569,18 @@
                       "inciso": "d",
                       "nivel": 2,
                       "texto": "Cinco personas elegidas por el Congreso de Diputadas y Diputados y la Cámara de las Regiones en sesión conjunta, previa determinación de las ternas correspondientes por concurso público, a cargo del Consejo de Alta Dirección Pública. Deberán ser profesionales con a lo menos diez años del título correspondiente, que se hayan destacado en la actividad profesional, académica o en la función pública."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "Durarán seis años en sus cargos y no podrán reelegirse. Se renovarán por parcialidades cada tres años conforme a lo establecido por la ley."
-                    },
-                    {
-                      "inciso": 3,
-                      "nivel": 1,
-                      "texto": "Sus integrantes serán elegidos de acuerdo con criterios de paridad de género, plurinacionalidad y equidad territorial."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "Durarán seis años en sus cargos y no podrán reelegirse. Se renovarán por parcialidades cada tres años conforme a lo establecido por la ley."
+                },
+                {
+                  "inciso": 3,
+                  "nivel": 1,
+                  "texto": "Sus integrantes serán elegidos de acuerdo con criterios de paridad de género, plurinacionalidad y equidad territorial."
                 }
               ]
             },
@@ -8333,18 +8321,18 @@
                       "inciso": "c",
                       "nivel": 2,
                       "texto": "Cuatro integrantes elegidos por el Consejo de la Justicia a partir de concursos públicos. En caso de haber sido designadas juezas o jueces del Sistema Nacional de Justicia, quedarán suspendidos de sus cargos judiciales de origen en tanto se extienda su función en la Corte Constitucional."
-                    },
-                    {
-                      "inciso": 4,
-                      "nivel": 1,
-                      "texto": "Quienes postulen al cargo de jueza o juez de la Corte Constitucional deberán ser abogadas o abogados con más de quince años de ejercicio profesional, con reconocida y comprobada competencia e idoneidad profesional o académica y, preferentemente, de distintas especialidades del derecho."
-                    },
-                    {
-                      "inciso": 5,
-                      "nivel": 1,
-                      "texto": "Una ley determinará la organización, el funcionamiento, los procedimientos y fijará la planta, el régimen de remuneraciones y el estatuto del personal de la Corte Constitucional."
                     }
                   ]
+                },
+                {
+                  "inciso": 4,
+                  "nivel": 1,
+                  "texto": "Quienes postulen al cargo de jueza o juez de la Corte Constitucional deberán ser abogadas o abogados con más de quince años de ejercicio profesional, con reconocida y comprobada competencia e idoneidad profesional o académica y, preferentemente, de distintas especialidades del derecho."
+                },
+                {
+                  "inciso": 5,
+                  "nivel": 1,
+                  "texto": "Una ley determinará la organización, el funcionamiento, los procedimientos y fijará la planta, el régimen de remuneraciones y el estatuto del personal de la Corte Constitucional."
                 }
               ]
             },
@@ -8439,18 +8427,18 @@
                       "inciso": "j",
                       "nivel": 2,
                       "texto": "Las demás previstas en esta Constitución."
-                    },
-                    {
-                      "inciso": 2,
-                      "nivel": 1,
-                      "texto": "En el caso de los conflictos de competencia contemplados en las letras h) e i) podrán ser deducidas por cualquiera de las autoridades o tribunales en conflicto."
-                    },
-                    {
-                      "inciso": 3,
-                      "nivel": 1,
-                      "texto": "En lo demás, el procedimiento, el quorum y la legitimación activa para el ejercicio de cada atribución se determinará por la ley."
                     }
                   ]
+                },
+                {
+                  "inciso": 2,
+                  "nivel": 1,
+                  "texto": "En el caso de los conflictos de competencia contemplados en las letras h) e i) podrán ser deducidas por cualquiera de las autoridades o tribunales en conflicto."
+                },
+                {
+                  "inciso": 3,
+                  "nivel": 1,
+                  "texto": "En lo demás, el procedimiento, el quorum y la legitimación activa para el ejercicio de cada atribución se determinará por la ley."
                 }
               ]
             },
@@ -8715,13 +8703,13 @@
               "inciso": "e",
               "nivel": 2,
               "texto": "Para el cumplimiento de la integración de escaños reservados de pueblos y naciones indígenas en estos órganos, se aplicarán, en lo pertinente y necesario, las reglas establecidas en las disposiciones transitorias cuadragésima tercera y siguientes de la Constitución anterior. El Servicio Electoral determinará la procedencia y, en su caso, el número de escaños reservados que correspondan para cada órgano. En caso de proceder la integración de escaños reservados, estos se considerarán por sobre el número de representantes establecidos previamente con criterios de proporcionalidad, paridad y representatividad."
-            },
-            {
-              "inciso": 3,
-              "nivel": 1,
-              "texto": "El Presidente de la República, dentro del plazo de un año desde la entrada en vigencia de la presente Constitución, iniciará el trámite legislativo para regular la creación y actualización del Registro Electoral Indígena a que se refiere el artículo 162 de esta Constitución. El Servicio Electoral asegurará la difusión y los medios logísticos necesarios para facilitar el registro de los electores indígenas."
             }
           ]
+        },
+        {
+          "inciso": 3,
+          "nivel": 1,
+          "texto": "El Presidente de la República, dentro del plazo de un año desde la entrada en vigencia de la presente Constitución, iniciará el trámite legislativo para regular la creación y actualización del Registro Electoral Indígena a que se refiere el artículo 162 de esta Constitución. El Servicio Electoral asegurará la difusión y los medios logísticos necesarios para facilitar el registro de los electores indígenas."
         }
       ]
     },
@@ -9226,13 +9214,13 @@
               "inciso": "c",
               "nivel": 2,
               "texto": "Las autorizaciones de uso de aguas otorgados, constituidos, regularizados o reconocidos antes de la entrada en vigencia de esta Constitución se sujetarán a las normas del derecho común para efectos de su transmisibilidad por causa de muerte, hasta la regulación de esta materia en la ley ordenada en la disposición transitoria anterior."
-            },
-            {
-              "inciso": 3,
-              "nivel": 1,
-              "texto": "Con el objeto de asegurar la continuidad del servicio y el cumplimiento del derecho humano al agua y saneamiento establecidos en el artículo 57, y mientras no se dicte la ley indicada en la disposición transitoria anterior, se mantendrán en vigor los actos jurídicos que tengan por objeto contar con agua para abastecer sectores urbanos, asentamientos rurales, cooperativas y comités de agua potable rural, destinados exclusivamente al consumo humano o al saneamiento, suscritos con titulares de autorizaciones de aguas o con organizaciones de usuarios de aguas, sin perjuicio de la revisión y autorización de la Dirección General de Aguas. Las materias relativas a agua potable y saneamiento serán reguladas en la ley ordenada en la disposición transitoria anterior. Una vez concluidos los plazos contemplados en el artículo segundo transitorio de la ley N°21.435, los registros de aguas de los conservadores de bienes raíces se traspasarán a la Agencia Nacional del Agua o a la Dirección General de Aguas en caso de no estar aún implementada."
             }
           ]
+        },
+        {
+          "inciso": 3,
+          "nivel": 1,
+          "texto": "Con el objeto de asegurar la continuidad del servicio y el cumplimiento del derecho humano al agua y saneamiento establecidos en el artículo 57, y mientras no se dicte la ley indicada en la disposición transitoria anterior, se mantendrán en vigor los actos jurídicos que tengan por objeto contar con agua para abastecer sectores urbanos, asentamientos rurales, cooperativas y comités de agua potable rural, destinados exclusivamente al consumo humano o al saneamiento, suscritos con titulares de autorizaciones de aguas o con organizaciones de usuarios de aguas, sin perjuicio de la revisión y autorización de la Dirección General de Aguas. Las materias relativas a agua potable y saneamiento serán reguladas en la ley ordenada en la disposición transitoria anterior. Una vez concluidos los plazos contemplados en el artículo segundo transitorio de la ley N°21.435, los registros de aguas de los conservadores de bienes raíces se traspasarán a la Agencia Nacional del Agua o a la Dirección General de Aguas en caso de no estar aún implementada."
         }
       ]
     },

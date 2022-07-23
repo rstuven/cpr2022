@@ -107,3 +107,7 @@ export function getCapituloArticulos(capitulo: CapituloSchema) {
   });
   return result;
 }
+
+export function firstToUpperCase(text: string) {
+  return text[0].toUpperCase() + text.substring(1);
+}

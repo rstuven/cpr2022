@@ -14,13 +14,18 @@ Se aceptan contribuciones para convertir desde el formato JSON a otros formatos 
 
 - Extender el modelo con:
 
-  - Referencias cruzadas.
-  - Etiquetas temáticas.
-  - Referencias a leyes existentes cuando una norma remite a la ley.
-  - Catálogo de Preguntas Frecuentes con referencias internas (normas) y externas (por ejemplo, sitios de fact checking).
+  - [ ] Referencias cruzadas.
+  - [x] Etiquetas temáticas.
+  - [ ] Referencias a leyes existentes cuando una norma remite a la ley.
+  - [ ] Catálogo de Preguntas Frecuentes con referencias internas (normas) y externas (por ejemplo, sitios de fact checking).
 
 - Visualizaciones basadas en extensiones del modelo.
-  - Sitio estático.
+  - [x] Sitio estático.
+
+## Créditos
+
+- Etiquetas basadas en las de [este TiddlyWiki](https://nuevaconstitucion.tiddlyhost.com/) por @bicubico
+- Nombre corto de artículos y números de página basados en la [Tabla Periódica Constitucional](https://tabla-constitucional.cl/) por [Diego](https://twitter.com/diegotherium), [Xavier](https://twitter.com/XCMLBG) y [Antoine](https://www.linkedin.com/in/antoine-lb/). También la idea de enlazar la página del PDF.
 
 ## Licencias
 

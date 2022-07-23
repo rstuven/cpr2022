@@ -1,0 +1,4542 @@
+[
+  {
+    "sobre": "Estado",
+    "articulo": 1,
+    "pagina": 5,
+    "etiquetas": [
+      "cultura",
+      "igualdad",
+      "naturaleza",
+      "derechos humanos",
+      "democracia"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Lucía Miranda Leibe, FLACSO",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/71"
+      },
+      {
+        "incisos": [
+          "1"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Observatorio Ciudadano",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/80"
+      }
+    ]
+  },
+  {
+    "sobre": "soberanía",
+    "articulo": 2,
+    "pagina": 5,
+    "etiquetas": [
+      "derechos humanos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "CODEPU",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/46"
+      }
+    ]
+  },
+  {
+    "sobre": "territorio único",
+    "articulo": 3,
+    "pagina": 5,
+    "etiquetas": [
+      "cultura",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "libertad e igualdad",
+    "articulo": 4,
+    "pagina": 5,
+    "etiquetas": [
+      "libertad",
+      "igualdad"
+    ]
+  },
+  {
+    "sobre": "plurinacionalidad",
+    "articulo": 5,
+    "pagina": 5,
+    "etiquetas": [
+      "comuna",
+      "indígenas",
+      "democracia",
+      "elección popular"
+    ]
+  },
+  {
+    "sobre": "igualdad sexogenérica",
+    "articulo": 6,
+    "pagina": 6,
+    "etiquetas": [
+      "igualdad",
+      "democracia",
+      "paridad",
+      "enfoque de género"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Humanas",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/65"
+      },
+      {
+        "incisos": [
+          "1",
+          "2",
+          "3"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Núcleo Constitucional - Universidad Alberto Hurtado",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/67"
+      }
+    ]
+  },
+  {
+    "sobre": "división administrativa",
+    "articulo": 7,
+    "pagina": 6,
+    "etiquetas": [
+      "entidades territoriales",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "equilibrio con la naturaleza",
+    "articulo": 8,
+    "pagina": 6,
+    "etiquetas": [
+      "naturaleza"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Superación de la Pobreza",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/36"
+      }
+    ]
+  },
+  {
+    "sobre": "Estado laico",
+    "articulo": 9,
+    "pagina": 7,
+    "etiquetas": [
+      "religión"
+    ]
+  },
+  {
+    "sobre": "familias",
+    "articulo": 10,
+    "pagina": 7,
+    "etiquetas": [
+      "familia"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Familias: Ahora",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/3"
+      }
+    ]
+  },
+  {
+    "sobre": "interculturalidad",
+    "articulo": 11,
+    "pagina": 7,
+    "etiquetas": [
+      "cultura"
+    ]
+  },
+  {
+    "sobre": "plurilingüismo",
+    "articulo": 12,
+    "pagina": 7,
+    "etiquetas": [
+      "indígenas",
+      "lengua",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "emblemas",
+    "articulo": 13,
+    "pagina": 7,
+    "etiquetas": [
+      "indígenas"
+    ]
+  },
+  {
+    "sobre": "relaciones internacionales",
+    "articulo": 14,
+    "pagina": 7,
+    "etiquetas": [
+      "cultura",
+      "igualdad",
+      "justicia",
+      "región",
+      "democracia",
+      "derechos humanos",
+      "indígenas",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "derechos humanos",
+    "articulo": 15,
+    "pagina": 8,
+    "etiquetas": [
+      "derechos humanos"
+    ]
+  },
+  {
+    "sobre": "supremacía constitucional",
+    "articulo": 16,
+    "pagina": 8,
+    "etiquetas": [
+      "derechos humanos",
+      "militares"
+    ]
+  },
+  {
+    "sobre": "derechos fundamentales",
+    "articulo": 17,
+    "pagina": 9,
+    "etiquetas": [
+      "derechos fundamentales",
+      "democracia",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "titularidad de derechos",
+    "articulo": 18,
+    "pagina": 9,
+    "etiquetas": [
+      "indígenas",
+      "naturaleza",
+      "derechos fundamentales",
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "CODEPU",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/40"
+      }
+    ]
+  },
+  {
+    "sobre": "garantías",
+    "articulo": 19,
+    "pagina": 9,
+    "etiquetas": [
+      "derechos fundamentales"
+    ]
+  },
+  {
+    "sobre": "progresividad",
+    "articulo": 20,
+    "pagina": 9,
+    "etiquetas": [
+      "derechos fundamentales",
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "2"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/74"
+      }
+    ]
+  },
+  {
+    "sobre": "vida e integridad física",
+    "articulo": 21,
+    "pagina": 9,
+    "etiquetas": [
+      "condena"
+    ]
+  },
+  {
+    "sobre": "derecho a ser buscado(a)",
+    "articulo": 22,
+    "pagina": 10,
+    "etiquetas": [
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/76"
+      }
+    ]
+  },
+  {
+    "sobre": "derecho a no ser desterrado(a)",
+    "articulo": 23,
+    "pagina": 10,
+    "etiquetas": [
+      "derechos"
+    ]
+  },
+  {
+    "sobre": "verdad y justa reparación",
+    "articulo": 24,
+    "pagina": 10,
+    "etiquetas": [
+      "crímen",
+      "derechos humanos",
+      "investigación",
+      "justicia"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "5"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/78"
+      }
+    ]
+  },
+  {
+    "sobre": "igualdad y no discriminación",
+    "articulo": 25,
+    "pagina": 10,
+    "etiquetas": [
+      "igualdad",
+      "nacionalidad",
+      "rural",
+      "derechos fundamentales",
+      "discapacidad",
+      "naturaleza",
+      "religión",
+      "salud"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/22"
+      },
+      {
+        "incisos": [
+          "1",
+          "2",
+          "3"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Humanas",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/12"
+      }
+    ]
+  },
+  {
+    "sobre": "niñas, niños y adolescentes",
+    "articulo": 26,
+    "pagina": 11,
+    "etiquetas": [
+      "ambiental",
+      "derechos humanos",
+      "familia",
+      "trabajo"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Infancia Primero",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/5"
+      },
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Corporación Opción",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/29"
+      }
+    ]
+  },
+  {
+    "sobre": "vida libre de violencia de género",
+    "articulo": 27,
+    "pagina": 12,
+    "etiquetas": [
+      "cultura",
+      "violencia de género"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Humanas",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/20"
+      },
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Red Chilena Contra la Violencia a las Mujeres",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/61"
+      }
+    ]
+  },
+  {
+    "sobre": "personas con discapacidad",
+    "articulo": 28,
+    "pagina": 12,
+    "etiquetas": [
+      "agua",
+      "cultura",
+      "derechos humanos",
+      "educación",
+      "salud",
+      "discapacidad",
+      "accesibilidad",
+      "trabajo",
+      "vivienda",
+      "lengua"
+    ]
+  },
+  {
+    "sobre": "neurodiversidad",
+    "articulo": 29,
+    "pagina": 13,
+    "etiquetas": [
+      "derechos humanos"
+    ]
+  },
+  {
+    "sobre": "personas privadas de libertad",
+    "articulo": 30,
+    "pagina": 13,
+    "etiquetas": [
+      "derechos humanos",
+      "salud",
+      "trabajo",
+      "libertad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Red Acción Carcelaria",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
+      }
+    ]
+  },
+  {
+    "sobre": "personas privadas de libertad II",
+    "articulo": 31,
+    "pagina": 13,
+    "etiquetas": [
+      "libertad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Red Acción Carcelaria",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
+      }
+    ]
+  },
+  {
+    "sobre": "reinserción social",
+    "articulo": 32,
+    "pagina": 14,
+    "etiquetas": [
+      "libertad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Red Acción Carcelaria",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
+      }
+    ]
+  },
+  {
+    "sobre": "personas mayores",
+    "articulo": 33,
+    "pagina": 14,
+    "etiquetas": [
+      "accesibilidad",
+      "cultura",
+      "derechos humanos",
+      "digital"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Gero Zoom",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/23"
+      }
+    ]
+  },
+  {
+    "sobre": "naciones indíginas",
+    "articulo": 34,
+    "pagina": 14,
+    "etiquetas": [
+      "cultura",
+      "indígenas",
+      "lengua",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "educación",
+    "articulo": 35,
+    "pagina": 14,
+    "etiquetas": [
+      "cultura",
+      "derechos humanos",
+      "educación",
+      "enfoque de género",
+      "justicia",
+      "naturaleza"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Educación 2020",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/26"
+      }
+    ]
+  },
+  {
+    "sobre": "Sistema Nacional de Educación",
+    "articulo": 36,
+    "pagina": 15,
+    "etiquetas": [
+      "cultura",
+      "discapacidad",
+      "educación",
+      "indígenas"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Educación 2020",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/26"
+      }
+    ]
+  },
+  {
+    "sobre": "educación superior",
+    "articulo": 37,
+    "pagina": 16,
+    "etiquetas": [
+      "educación",
+      "Fuerzas Armadas",
+      "investigación"
+    ]
+  },
+  {
+    "sobre": "educación permanente",
+    "articulo": 38,
+    "pagina": 16,
+    "etiquetas": [
+      "educación"
+    ]
+  },
+  {
+    "sobre": "educación ambiental",
+    "articulo": 39,
+    "pagina": 17,
+    "etiquetas": [
+      "educación",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "educación sexual integra",
+    "articulo": 40,
+    "pagina": 17,
+    "etiquetas": [
+      "educación"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Red Abortando Mitos de la Sexualidad",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/14"
+      }
+    ]
+  },
+  {
+    "sobre": "libertad de enseñanza",
+    "articulo": 41,
+    "pagina": 17,
+    "etiquetas": [
+      "educación"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Educación 2020",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/28"
+      }
+    ]
+  },
+  {
+    "sobre": "comunidades educativas",
+    "articulo": 42,
+    "pagina": 17,
+    "etiquetas": [
+      "educación"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Elige Educar",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/27"
+      }
+    ]
+  },
+  {
+    "sobre": "profesoras y profesores",
+    "articulo": 43,
+    "pagina": 17,
+    "etiquetas": [
+      "educación",
+      "investigación"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Elige Educar",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/27"
+      }
+    ]
+  },
+  {
+    "sobre": "salud",
+    "articulo": 44,
+    "pagina": 18,
+    "etiquetas": [
+      "cultura",
+      "enfoque de género",
+      "indígenas",
+      "salud"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Dr. Osvaldo Artaza, Decano Facultad Medicina y Cs. Sociales UDLA",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/79"
+      }
+    ]
+  },
+  {
+    "sobre": "seguridad social",
+    "articulo": 45,
+    "pagina": 19,
+    "etiquetas": [
+      "discapacidad",
+      "trabajo",
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Luis Vargas, Universidad de Oxford",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/59"
+      }
+    ]
+  },
+  {
+    "sobre": "trabajo",
+    "articulo": 46,
+    "pagina": 19,
+    "etiquetas": [
+      "derechos fundamentales",
+      "digital",
+      "familia",
+      "salud",
+      "trabajo",
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/35"
+      }
+    ]
+  },
+  {
+    "sobre": "sindicalización",
+    "articulo": 47,
+    "pagina": 20,
+    "etiquetas": [
+      "Fuerzas Armadas",
+      "salud"
+    ]
+  },
+  {
+    "sobre": "participación sindical",
+    "articulo": 48,
+    "pagina": 21,
+    "etiquetas": [
+      "trabajo"
+    ]
+  },
+  {
+    "sobre": "trabajo doméstico y de cuidados",
+    "articulo": 49,
+    "pagina": 21,
+    "etiquetas": [
+      "trabajo"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Núcleo Constitucional - Universidad Alberto Hurtado",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/49"
+      }
+    ]
+  },
+  {
+    "sobre": "cuidado",
+    "articulo": 50,
+    "pagina": 21,
+    "etiquetas": [
+      "cultura",
+      "derechos humanos",
+      "discapacidad",
+      "trabajo"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Familias: Ahora",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/4"
+      },
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Núcleo Constitucional - Universidad Alberto Hurtado",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/48"
+      },
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Humanas",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/86"
+      }
+    ]
+  },
+  {
+    "sobre": "vivienda",
+    "articulo": 51,
+    "pagina": 22,
+    "etiquetas": [
+      "accesibilidad",
+      "cultura",
+      "familia",
+      "vivienda",
+      "suelo",
+      "casa",
+      "derechos humanos",
+      "igualdad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "TECHO",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/10"
+      }
+    ]
+  },
+  {
+    "sobre": "ciudad y territorio",
+    "articulo": 52,
+    "pagina": 22,
+    "etiquetas": [
+      "accesibilidad",
+      "derechos humanos",
+      "suelo",
+      "territorio"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Ciudad Constituyente",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/9"
+      }
+    ]
+  },
+  {
+    "sobre": "seguridad",
+    "articulo": 53,
+    "pagina": 23,
+    "etiquetas": [
+      "condena",
+      "derechos humanos",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "soberanía alimentaria",
+    "articulo": 54,
+    "pagina": 23,
+    "etiquetas": [
+      "cultura",
+      "alimento"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "1"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "RIMISP",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/44"
+      }
+    ]
+  },
+  {
+    "sobre": "semillas",
+    "articulo": 55,
+    "pagina": 23,
+    "etiquetas": [
+      "indígenas"
+    ]
+  },
+  {
+    "sobre": "alimentación saludable",
+    "articulo": 56,
+    "pagina": 23,
+    "etiquetas": [
+      "cultura",
+      "salud"
+    ]
+  },
+  {
+    "sobre": "derecho humano al agua",
+    "articulo": 57,
+    "pagina": 24,
+    "etiquetas": [
+      "salud"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "RIMISP",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/43"
+      }
+    ]
+  },
+  {
+    "sobre": "aguas de pueblos originarios",
+    "articulo": 58,
+    "pagina": 24,
+    "etiquetas": [
+      "indígenas",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "energía",
+    "articulo": 59,
+    "pagina": 24,
+    "etiquetas": [
+      "energía"
+    ]
+  },
+  {
+    "sobre": "deporte",
+    "articulo": 60,
+    "pagina": 24,
+    "etiquetas": [
+      "cultura",
+      "democracia",
+      "salud"
+    ]
+  },
+  {
+    "sobre": "derechos sexuales y reproductivos",
+    "articulo": 61,
+    "pagina": 25,
+    "etiquetas": [
+      "cultura",
+      "educación",
+      "enfoque de género",
+      "salud",
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Red Abortando Mitos de la Sexualidad",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/15"
+      }
+    ]
+  },
+  {
+    "sobre": "autonomía personal",
+    "articulo": 62,
+    "pagina": 25,
+    "etiquetas": [
+      "libertad",
+      "identidad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Libera",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/53"
+      },
+      {
+        "etiqueta": "Evaluación",
+        "autor": "María Sotomayor, Instituto de Ciencia Política UC",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/75"
+      }
+    ]
+  },
+  {
+    "sobre": "ni esclavitud ni servidumbre",
+    "articulo": 63,
+    "pagina": 25,
+    "etiquetas": [
+      "trabajo",
+      "libertad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Libera",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/53"
+      },
+      {
+        "etiqueta": "Evaluación",
+        "autor": "María Sotomayor, Instituto de Ciencia Política UC",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/75"
+      }
+    ]
+  },
+  {
+    "sobre": "identidad",
+    "articulo": 64,
+    "pagina": 25,
+    "etiquetas": [
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Diversa Patagonia",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/16"
+      }
+    ]
+  },
+  {
+    "sobre": "identidad indígena",
+    "articulo": 65,
+    "pagina": 26,
+    "etiquetas": [
+      "cultura",
+      "indígenas"
+    ]
+  },
+  {
+    "sobre": "consulta indígena",
+    "articulo": 66,
+    "pagina": 26,
+    "etiquetas": [
+      "indígenas"
+    ]
+  },
+  {
+    "sobre": "libertad de pensamiento",
+    "articulo": 67,
+    "pagina": 26,
+    "etiquetas": [
+      "religión"
+    ]
+  },
+  {
+    "sobre": "muerte digna",
+    "articulo": 68,
+    "pagina": 26,
+    "etiquetas": [
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "María Sotomayor, Instituto de Ciencia Política UC",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/73"
+      }
+    ]
+  },
+  {
+    "sobre": "libertad ambulatoria",
+    "articulo": 69,
+    "pagina": 27,
+    "etiquetas": [
+      "territorio",
+      "libertad"
+    ]
+  },
+  {
+    "sobre": "privacidad",
+    "articulo": 70,
+    "pagina": 27,
+    "etiquetas": [
+      "familia",
+      "derechos",
+      "privacidad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "CODEPU",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/41"
+      }
+    ]
+  },
+  {
+    "sobre": "asilo y refugio",
+    "articulo": 71,
+    "pagina": 27,
+    "etiquetas": [
+      "derechos humanos"
+    ]
+  },
+  {
+    "sobre": "derecho a asociarse",
+    "articulo": 72,
+    "pagina": 27,
+    "etiquetas": [
+      "Fuerzas Armadas"
+    ]
+  },
+  {
+    "sobre": "cooperativas",
+    "articulo": 73,
+    "pagina": 27,
+    "etiquetas": [
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "colegios profesionales",
+    "articulo": 74,
+    "pagina": 28,
+    "etiquetas": []
+  },
+  {
+    "sobre": "derecho a reunión",
+    "articulo": 75,
+    "pagina": 28,
+    "etiquetas": [
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/81"
+      }
+    ]
+  },
+  {
+    "sobre": "derecho a petición",
+    "articulo": 76,
+    "pagina": 28,
+    "etiquetas": [
+      "derechos"
+    ]
+  },
+  {
+    "sobre": "información pública",
+    "articulo": 77,
+    "pagina": 28,
+    "etiquetas": []
+  },
+  {
+    "sobre": "propiedad",
+    "articulo": 78,
+    "pagina": 28,
+    "etiquetas": [
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "tierras y recursos indígenas",
+    "articulo": 79,
+    "pagina": 29,
+    "etiquetas": [
+      "indígenas",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "libertad de emprender",
+    "articulo": 80,
+    "pagina": 29,
+    "etiquetas": [
+      "naturaleza",
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "FOJUCC A.C",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/21"
+      }
+    ]
+  },
+  {
+    "sobre": "derecho del consumidor(a)",
+    "articulo": 81,
+    "pagina": 29,
+    "etiquetas": [
+      "educación",
+      "salud",
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "FOJUCC A.C",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/17"
+      }
+    ]
+  },
+  {
+    "sobre": "libertad de expresión",
+    "articulo": 82,
+    "pagina": 30,
+    "etiquetas": [
+      "libertad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/50"
+      }
+    ]
+  },
+  {
+    "sobre": "libertad de información ",
+    "articulo": 83,
+    "pagina": 30,
+    "etiquetas": [
+      "libertad",
+      "medios"
+    ]
+  },
+  {
+    "sobre": "medios locales y comunitarios",
+    "articulo": 84,
+    "pagina": 30,
+    "etiquetas": [
+      "medios"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Superación de la Pobreza",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/47"
+      }
+    ]
+  },
+  {
+    "sobre": "medios públicos",
+    "articulo": 85,
+    "pagina": 30,
+    "etiquetas": [
+      "cultura",
+      "medios"
+    ]
+  },
+  {
+    "sobre": "conectividad digital",
+    "articulo": 86,
+    "pagina": 30,
+    "etiquetas": [
+      "digital"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Multitudes",
+        "incisos": [
+          "1"
+        ],
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/70"
+      }
+    ]
+  },
+  {
+    "sobre": "protección de datos personales",
+    "articulo": 87,
+    "pagina": 30,
+    "etiquetas": [
+      "privacidad"
+    ]
+  },
+  {
+    "sobre": "seguridad informática",
+    "articulo": 88,
+    "pagina": 31,
+    "etiquetas": []
+  },
+  {
+    "sobre": "internet libre de violencia",
+    "articulo": 89,
+    "pagina": 31,
+    "etiquetas": [
+      "digital"
+    ]
+  },
+  {
+    "sobre": "educación digital",
+    "articulo": 90,
+    "pagina": 32,
+    "etiquetas": [
+      "lengua",
+      "educación",
+      "digital"
+    ]
+  },
+  {
+    "sobre": "ocio",
+    "articulo": 91,
+    "pagina": 32,
+    "etiquetas": [
+      "derechos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Superación de la Pobreza",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/18"
+      }
+    ]
+  },
+  {
+    "sobre": "cultura",
+    "articulo": 92,
+    "pagina": 32,
+    "etiquetas": [
+      "cultura"
+    ]
+  },
+  {
+    "sobre": "pueblo afrodescendiente",
+    "articulo": 93,
+    "pagina": 33,
+    "etiquetas": []
+  },
+  {
+    "sobre": "libro y lectura",
+    "articulo": 94,
+    "pagina": 33,
+    "etiquetas": [
+      "cultura"
+    ]
+  },
+  {
+    "sobre": "derechos de autor(a)",
+    "articulo": 95,
+    "pagina": 33,
+    "etiquetas": [
+      "cultura"
+    ]
+  },
+  {
+    "sobre": "sistemas de conocimiento",
+    "articulo": 96,
+    "pagina": 33,
+    "etiquetas": [
+      "indígenas"
+    ]
+  },
+  {
+    "sobre": "investigación científica",
+    "articulo": 97,
+    "pagina": 33,
+    "etiquetas": [
+      "salud",
+      "investigación",
+      "ciencia"
+    ]
+  },
+  {
+    "sobre": "bioética",
+    "articulo": 98,
+    "pagina": 34,
+    "etiquetas": [
+      "derechos humanos",
+      "naturaleza",
+      "ciencia"
+    ]
+  },
+  {
+    "sobre": "Consejo Nacional de Bioética",
+    "articulo": 99,
+    "pagina": 34,
+    "etiquetas": [
+      "naturaleza",
+      "ciencia"
+    ]
+  },
+  {
+    "sobre": "derecho al propio idioma y lengua",
+    "articulo": 100,
+    "pagina": 34,
+    "etiquetas": [
+      "lengua",
+      "derechos"
+    ]
+  },
+  {
+    "sobre": "patrimonios",
+    "articulo": 101,
+    "pagina": 34,
+    "etiquetas": [
+      "educación"
+    ]
+  },
+  {
+    "sobre": "patrimonio indígena",
+    "articulo": 102,
+    "pagina": 35,
+    "etiquetas": [
+      "indígenas",
+      "lengua",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "derechos de la naturaleza",
+    "articulo": 103,
+    "pagina": 35,
+    "etiquetas": [
+      "naturaleza"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "FIMA",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/2"
+      }
+    ]
+  },
+  {
+    "sobre": "ambiente sano",
+    "articulo": 104,
+    "pagina": 35,
+    "etiquetas": [],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "FIMA",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/2"
+      }
+    ]
+  },
+  {
+    "sobre": "aire limpio",
+    "articulo": 105,
+    "pagina": 35,
+    "etiquetas": []
+  },
+  {
+    "sobre": "protección al medio ambiente",
+    "articulo": 106,
+    "pagina": 35,
+    "etiquetas": [
+      "naturaleza"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "FIMA",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/8"
+      }
+    ]
+  },
+  {
+    "sobre": "acceso a la naturaleza",
+    "articulo": 107,
+    "pagina": 35,
+    "etiquetas": [
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "acceso a la justicia",
+    "articulo": 108,
+    "pagina": 36,
+    "etiquetas": [
+      "justicia"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "5"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Defensoría DDHH Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/52"
+      }
+    ]
+  },
+  {
+    "sobre": "debido proceso",
+    "articulo": 109,
+    "pagina": 36,
+    "etiquetas": [
+      "discapacidad"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "6"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Infancia Primero",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/1"
+      }
+    ]
+  },
+  {
+    "sobre": "libertad individual",
+    "articulo": 110,
+    "pagina": 37,
+    "etiquetas": []
+  },
+  {
+    "sobre": "garantías procesales",
+    "articulo": 111,
+    "pagina": 37,
+    "etiquetas": [
+      "condena",
+      "derechos humanos",
+      "investigación"
+    ]
+  },
+  {
+    "sobre": "principio de legalidad",
+    "articulo": 112,
+    "pagina": 38,
+    "etiquetas": [
+      "condena"
+    ]
+  },
+  {
+    "sobre": "Servicio Integral de Acceso a la Justicia",
+    "articulo": 113,
+    "pagina": 39,
+    "etiquetas": [
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "nacionalidad",
+    "articulo": 114,
+    "pagina": 39,
+    "etiquetas": [
+      "indígenas",
+      "nacionalidad",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "derecho a la nacionalidad",
+    "articulo": 115,
+    "pagina": 39,
+    "etiquetas": [
+      "nacionalidad",
+      "territorio",
+      "derechos",
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "pérdida de nacionalidad",
+    "articulo": 116,
+    "pagina": 40,
+    "etiquetas": [
+      "nacionalidad"
+    ]
+  },
+  {
+    "sobre": "ciudadanía",
+    "articulo": 117,
+    "pagina": 40,
+    "etiquetas": [
+      "discapacidad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Corporación Opción",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/39"
+      }
+    ]
+  },
+  {
+    "sobre": "personas en el exterior",
+    "articulo": 118,
+    "pagina": 40,
+    "etiquetas": [
+      "familia",
+      "territorio",
+      "elecciones"
+    ]
+  },
+  {
+    "sobre": "acciones cautelares",
+    "articulo": 119,
+    "pagina": 41,
+    "etiquetas": [
+      "Defensoría del Pueblo",
+      "derechos fundamentales",
+      "indígenas",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "detención ilegal",
+    "articulo": 120,
+    "pagina": 42,
+    "etiquetas": []
+  },
+  {
+    "sobre": "compensación por condena",
+    "articulo": 121,
+    "pagina": 42,
+    "etiquetas": [
+      "condena"
+    ]
+  },
+  {
+    "sobre": "fallo injusto",
+    "articulo": 122,
+    "pagina": 42,
+    "etiquetas": []
+  },
+  {
+    "sobre": "Defensoría del Pueblo",
+    "articulo": 123,
+    "pagina": 43,
+    "etiquetas": [
+      "Defensoría del Pueblo",
+      "derechos humanos"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "1"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Defensoría DDHH Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/33"
+      }
+    ]
+  },
+  {
+    "sobre": "atribuciones de la Defensoría del Pueblo",
+    "articulo": 124,
+    "pagina": 43,
+    "etiquetas": [
+      "Defensoría del Pueblo",
+      "derechos humanos",
+      "educación"
+    ]
+  },
+  {
+    "sobre": "dirección de la Defensoría del Pueblo",
+    "articulo": 125,
+    "pagina": 44,
+    "etiquetas": [
+      "elección popular",
+      "derechos humanos",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Defensoría del Pueblo"
+    ]
+  },
+  {
+    "sobre": "Defensoría de los Derechos de la Niñez",
+    "articulo": 126,
+    "pagina": 44,
+    "etiquetas": [
+      "Defensoría de los Derechos de la Niñez"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Capítulo Chileno del Ombudsman",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/42"
+      },
+      {
+        "incisos": [
+          "1"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Infancia Primero",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/6"
+      }
+    ]
+  },
+  {
+    "sobre": "protección de la naturaleza",
+    "articulo": 127,
+    "pagina": 45,
+    "etiquetas": [
+      "ambiental",
+      "educación",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "principios de la naturaleza",
+    "articulo": 128,
+    "pagina": 45,
+    "etiquetas": [
+      "ambiental",
+      "justicia",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "crisis y acción climática",
+    "articulo": 129,
+    "pagina": 45,
+    "etiquetas": [
+      "naturaleza",
+      "crisis climática"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Superación de la Pobreza",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/24"
+      }
+    ]
+  },
+  {
+    "sobre": "biodiversidad",
+    "articulo": 130,
+    "pagina": 45,
+    "etiquetas": [
+      "biodiversidad",
+      "especies nativas"
+    ]
+  },
+  {
+    "sobre": "derechos de los animales",
+    "articulo": 131,
+    "pagina": 45,
+    "etiquetas": [
+      "educación"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Vegetarianos Hoy",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/7"
+      }
+    ]
+  },
+  {
+    "sobre": "sistema de áreas protegidas",
+    "articulo": 132,
+    "pagina": 46,
+    "etiquetas": [
+      "áreas protegidas",
+      "comunidades locales"
+    ]
+  },
+  {
+    "sobre": "residuos",
+    "articulo": 133,
+    "pagina": 46,
+    "etiquetas": []
+  },
+  {
+    "sobre": "bienes comunes naturales",
+    "articulo": 134,
+    "pagina": 46,
+    "etiquetas": [
+      "agua",
+      "glaciares",
+      "naturaleza",
+      "suelo",
+      "humedal",
+      "playa",
+      "bosque",
+      "bienes comunes naturales"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "2",
+          "3"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Superación de la Pobreza",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/19"
+      }
+    ]
+  },
+  {
+    "sobre": "atmósfera y espacio",
+    "articulo": 135,
+    "pagina": 47,
+    "etiquetas": [
+      "investigación",
+      "atmósfera",
+      "cielo"
+    ]
+  },
+  {
+    "sobre": "ecosistemas",
+    "articulo": 136,
+    "pagina": 47,
+    "etiquetas": [
+      "bosque",
+      "humedal",
+      "suelo"
+    ]
+  },
+  {
+    "sobre": "glaciares",
+    "articulo": 137,
+    "pagina": 47,
+    "etiquetas": [
+      "glaciares",
+      "suelo"
+    ]
+  },
+  {
+    "sobre": "función ecológica y social de la tierra",
+    "articulo": 138,
+    "pagina": 47,
+    "etiquetas": []
+  },
+  {
+    "sobre": "maritorio",
+    "articulo": 139,
+    "pagina": 47,
+    "etiquetas": [
+      "ambiental",
+      "cultura",
+      "justicia",
+      "territorio"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "2"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Superación de la Pobreza",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/11"
+      }
+    ]
+  },
+  {
+    "sobre": "agua",
+    "articulo": 140,
+    "pagina": 48,
+    "etiquetas": [
+      "agua",
+      "derechos humanos",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "gestión comunitaria del agua",
+    "articulo": 141,
+    "pagina": 48,
+    "etiquetas": [
+      "agua",
+      "territorio",
+      "rural"
+    ]
+  },
+  {
+    "sobre": "usos de las aguas",
+    "articulo": 142,
+    "pagina": 48,
+    "etiquetas": [
+      "Agencia Nacional del Agua",
+      "agua"
+    ]
+  },
+  {
+    "sobre": "consejos de cuenca",
+    "articulo": 143,
+    "pagina": 48,
+    "etiquetas": [
+      "Agencia Nacional del Agua",
+      "agua"
+    ]
+  },
+  {
+    "sobre": "Agencia Nacional del Agua",
+    "articulo": 144,
+    "pagina": 48,
+    "etiquetas": [
+      "ambiental",
+      "justicia",
+      "patrimonio",
+      "Agencia Nacional del Agua",
+      "agua"
+    ]
+  },
+  {
+    "sobre": "minas y minerales",
+    "articulo": 145,
+    "pagina": 49,
+    "etiquetas": [
+      "ambiental",
+      "territorio",
+      "minería"
+    ]
+  },
+  {
+    "sobre": "minería en glaciares",
+    "articulo": 146,
+    "pagina": 50,
+    "etiquetas": [
+      "minería",
+      "glaciares"
+    ]
+  },
+  {
+    "sobre": "actividad minera",
+    "articulo": 147,
+    "pagina": 50,
+    "etiquetas": [
+      "ambiental",
+      "innovación",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "Defensoría de la Naturaleza",
+    "articulo": 148,
+    "pagina": 50,
+    "etiquetas": [
+      "ambiental",
+      "naturaleza",
+      "patrimonio"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Superación de la Pobreza",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/34"
+      }
+    ]
+  },
+  {
+    "sobre": "atribuciones Defensoría de la Naturaleza",
+    "articulo": 149,
+    "pagina": 50,
+    "etiquetas": [
+      "ambiental",
+      "educación",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "dirección de la Defensoría de la Naturaleza",
+    "articulo": 150,
+    "pagina": 51,
+    "etiquetas": [
+      "ambiental",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "democracia",
+    "articulo": 151,
+    "pagina": 52,
+    "etiquetas": [
+      "democracia",
+      "probidad",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "participación democrática",
+    "articulo": 152,
+    "pagina": 52,
+    "etiquetas": [
+      "accesibilidad",
+      "cultura",
+      "democracia",
+      "digital",
+      "sufragio",
+      "transparencia"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Ciudadanía Inteligente",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/64"
+      },
+      {
+        "incisos": [
+          "3"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Observa Ciudadanía",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/83"
+      }
+    ]
+  },
+  {
+    "sobre": "democracia directa",
+    "articulo": 153,
+    "pagina": 52,
+    "etiquetas": [
+      "democracia",
+      "democracia directa",
+      "discapacidad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Observa Ciudadanía",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/72"
+      }
+    ]
+  },
+  {
+    "sobre": "democracia ambiental",
+    "articulo": 154,
+    "pagina": 53,
+    "etiquetas": [
+      "democracia",
+      "ambiental"
+    ]
+  },
+  {
+    "sobre": "democracia regional y local",
+    "articulo": 155,
+    "pagina": 53,
+    "etiquetas": [
+      "democracia",
+      "democracia directa",
+      "iniciativas populares"
+    ]
+  },
+  {
+    "sobre": "referéndum regionales",
+    "articulo": 156,
+    "pagina": 53,
+    "etiquetas": [
+      "referéndum"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "RIMISP",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/51"
+      }
+    ]
+  },
+  {
+    "sobre": "iniciativa popular de ley",
+    "articulo": 157,
+    "pagina": 53,
+    "etiquetas": [
+      "derechos fundamentales",
+      "iniciativa popular de ley"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Ciudadanía Inteligente",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/13"
+      },
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Defensoría DDHH Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/82"
+      }
+    ]
+  },
+  {
+    "sobre": "iniciativa de derogación de ley",
+    "articulo": 158,
+    "pagina": 54,
+    "etiquetas": [
+      "referéndum"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Ciudadanía Inteligente",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/31"
+      }
+    ]
+  },
+  {
+    "sobre": "audiencias públicas",
+    "articulo": 159,
+    "pagina": 54,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "sufragio",
+    "articulo": 160,
+    "pagina": 54,
+    "etiquetas": [
+      "elecciones",
+      "sufragio"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "1",
+          "2"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Corporación Opción",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/39"
+      }
+    ]
+  },
+  {
+    "sobre": "sistema y registro electoral",
+    "articulo": 161,
+    "pagina": 55,
+    "etiquetas": [
+      "elecciones",
+      "igualdad",
+      "paridad"
+    ]
+  },
+  {
+    "sobre": "escaños reservados indígenas",
+    "articulo": 162,
+    "pagina": 55,
+    "etiquetas": [
+      "indígenas",
+      "territorio",
+      "escaños reservados"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Sergio Huerta, Universidad Católica de Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/68"
+      }
+    ]
+  },
+  {
+    "sobre": "organizaciones y elecciones paritarias",
+    "articulo": 163,
+    "pagina": 55,
+    "etiquetas": [
+      "igualdad",
+      "paridad"
+    ]
+  },
+  {
+    "sobre": "Servicio Electoral",
+    "articulo": 164,
+    "pagina": 56,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "democracia",
+      "educación",
+      "patrimonio",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "principios de la función pública",
+    "articulo": 165,
+    "pagina": 57,
+    "etiquetas": [
+      "cultura",
+      "probidad",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "probidad en la función pública",
+    "articulo": 166,
+    "pagina": 57,
+    "etiquetas": [
+      "patrimonio",
+      "probidad"
+    ]
+  },
+  {
+    "sobre": "transparencia pública",
+    "articulo": 167,
+    "pagina": 57,
+    "etiquetas": [
+      "accesibilidad",
+      "transparencia"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "María Sotomayor, Instituto de Ciencia Política UC",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/85"
+      }
+    ]
+  },
+  {
+    "sobre": "rendición de cuentas",
+    "articulo": 168,
+    "pagina": 58,
+    "etiquetas": []
+  },
+  {
+    "sobre": "Consejo para la Transparencia",
+    "articulo": 169,
+    "pagina": 58,
+    "etiquetas": [
+      "patrimonio",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "corrupción",
+    "articulo": 170,
+    "pagina": 58,
+    "etiquetas": [
+      "probidad"
+    ]
+  },
+  {
+    "sobre": "inmunidad ante denuncias",
+    "articulo": 171,
+    "pagina": 58,
+    "etiquetas": [
+      "probidad",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "imposibilidad de optar a cargos públicos",
+    "articulo": 172,
+    "pagina": 58,
+    "etiquetas": [
+      "condena",
+      "familia",
+      "crímen",
+      "delito"
+    ]
+  },
+  {
+    "sobre": "exigencias y estándares a autoridades",
+    "articulo": 173,
+    "pagina": 59,
+    "etiquetas": [
+      "probidad",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "remuneraciones de autoridades",
+    "articulo": 174,
+    "pagina": 59,
+    "etiquetas": []
+  },
+  {
+    "sobre": "administración pública",
+    "articulo": 175,
+    "pagina": 59,
+    "etiquetas": []
+  },
+  {
+    "sobre": "servicios públicos",
+    "articulo": 176,
+    "pagina": 59,
+    "etiquetas": [],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Internacional de Servicios Públicos (PSI) + GI-ESCR",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/54"
+      }
+    ]
+  },
+  {
+    "sobre": "funcionarios públicos",
+    "articulo": 177,
+    "pagina": 60,
+    "etiquetas": [
+      "naturaleza",
+      "probidad"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Fundación Multitudes",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/69"
+      }
+    ]
+  },
+  {
+    "sobre": "modernización del Estado",
+    "articulo": 178,
+    "pagina": 60,
+    "etiquetas": [
+      "cultura"
+    ]
+  },
+  {
+    "sobre": "Servicio Civil",
+    "articulo": 179,
+    "pagina": 60,
+    "etiquetas": [
+      "cultura",
+      "Servicio Civil"
+    ]
+  },
+  {
+    "sobre": "Dirección del Servicio Civil",
+    "articulo": 180,
+    "pagina": 61,
+    "etiquetas": [
+      "patrimonio",
+      "transparencia",
+      "Alta Dirección Pública"
+    ]
+  },
+  {
+    "sobre": "bomberos",
+    "articulo": 181,
+    "pagina": 61,
+    "etiquetas": [
+      "naturaleza",
+      "transparencia",
+      "bomberos"
+    ]
+  },
+  {
+    "sobre": "Estado empresario",
+    "articulo": 182,
+    "pagina": 61,
+    "etiquetas": [
+      "innovación",
+      "economía"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "2",
+          "3"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "FOJUCC A.C",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/30"
+      },
+      {
+        "incisos": [
+          "1",
+          "4"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "AFIICH",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/55"
+      },
+      {
+        "incisos": [
+          "5"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "FOJUCC A.C",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/21"
+      }
+    ]
+  },
+  {
+    "sobre": "responsabilidad fiscal",
+    "articulo": 183,
+    "pagina": 62,
+    "etiquetas": [
+      "finanzas",
+      "patrimonio"
+    ]
+  },
+  {
+    "sobre": "desarrollo sostenible",
+    "articulo": 184,
+    "pagina": 62,
+    "etiquetas": [
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "sistema tributario",
+    "articulo": 185,
+    "pagina": 63,
+    "etiquetas": [
+      "justicia",
+      "naturaleza",
+      "territorio",
+      "igualdad",
+      "transparencia"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "1"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "GI-ESCR",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/56"
+      }
+    ]
+  },
+  {
+    "sobre": "política portuaria",
+    "articulo": 186,
+    "pagina": 63,
+    "etiquetas": [
+      "naturaleza",
+      "territorio",
+      "trabajo"
+    ]
+  },
+  {
+    "sobre": "entidades territoriales autónomas",
+    "articulo": 187,
+    "pagina": 64,
+    "etiquetas": [
+      "cultura",
+      "derechos humanos",
+      "naturaleza",
+      "patrimonio",
+      "territorio"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "incisos": [
+          "2",
+          "4"
+        ],
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/88"
+      }
+    ]
+  },
+  {
+    "sobre": "vinculación territorial",
+    "articulo": 188,
+    "pagina": 64,
+    "etiquetas": [
+      "cultura"
+    ]
+  },
+  {
+    "sobre": "igualdad territorial",
+    "articulo": 189,
+    "pagina": 65,
+    "etiquetas": [
+      "rural",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "diversidad territorial",
+    "articulo": 190,
+    "pagina": 65,
+    "etiquetas": [
+      "cultura",
+      "nacionalidad",
+      "naturaleza",
+      "plurinacionalidad",
+      "interculturalidad"
+    ]
+  },
+  {
+    "sobre": "participación en entidades territoriales",
+    "articulo": 191,
+    "pagina": 65,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "participación en entidades territoriales II",
+    "articulo": 192,
+    "pagina": 65,
+    "etiquetas": [
+      "entidades territoriales"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "RIMISP",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/45"
+      }
+    ]
+  },
+  {
+    "sobre": "territorios sostenibles",
+    "articulo": 193,
+    "pagina": 65,
+    "etiquetas": [
+      "cultura",
+      "derechos humanos",
+      "entidades territoriales",
+      "interculturalidad",
+      "naturaleza"
+    ]
+  },
+  {
+    "sobre": "no tutela entre territorios",
+    "articulo": 194,
+    "pagina": 66,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "transferencia de competencias territoriales",
+    "articulo": 195,
+    "pagina": 66,
+    "etiquetas": [
+      "entidades territoriales",
+      "igualdad"
+    ]
+  },
+  {
+    "sobre": "transferencia de competencias territoriales II",
+    "articulo": 196,
+    "pagina": 66,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "planificación del territorio",
+    "articulo": 197,
+    "pagina": 66,
+    "etiquetas": [
+      "agua",
+      "ambiental",
+      "cultura",
+      "glaciares",
+      "justicia",
+      "suelo",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "conectividad territorial",
+    "articulo": 198,
+    "pagina": 67,
+    "etiquetas": [
+      "rural",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "zonas fronterizas",
+    "articulo": 199,
+    "pagina": 67,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "elecciones regionales",
+    "articulo": 200,
+    "pagina": 67,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "comunas autónomas",
+    "articulo": 201,
+    "pagina": 67,
+    "etiquetas": [
+      "ambiental",
+      "cultura",
+      "patrimonio",
+      "rural",
+      "comuna"
+    ]
+  },
+  {
+    "sobre": "competencias de las comunas",
+    "articulo": 202,
+    "pagina": 68,
+    "etiquetas": [
+      "ambiental",
+      "comuna",
+      "cultura",
+      "democracia",
+      "naturaleza",
+      "patrimonio",
+      "salud",
+      "territorio",
+      "vivienda"
+    ]
+  },
+  {
+    "sobre": "traspaso de competencias comunales",
+    "articulo": 203,
+    "pagina": 69,
+    "etiquetas": [
+      "comuna",
+      "igualdad"
+    ]
+  },
+  {
+    "sobre": "delegación de facultades comunales",
+    "articulo": 204,
+    "pagina": 69,
+    "etiquetas": [
+      "comuna"
+    ]
+  },
+  {
+    "sobre": "municipalidad",
+    "articulo": 205,
+    "pagina": 69,
+    "etiquetas": [
+      "comuna",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "alcalde(sa)",
+    "articulo": 206,
+    "pagina": 70,
+    "etiquetas": [
+      "comuna"
+    ]
+  },
+  {
+    "sobre": "Concejo municipal",
+    "articulo": 207,
+    "pagina": 70,
+    "etiquetas": [
+      "comuna",
+      "concejo municipal"
+    ]
+  },
+  {
+    "sobre": "estatuto comunal",
+    "articulo": 208,
+    "pagina": 70,
+    "etiquetas": [
+      "comuna",
+      "concejo municipal",
+      "democracia"
+    ]
+  },
+  {
+    "sobre": "asamblea comunal",
+    "articulo": 209,
+    "pagina": 70,
+    "etiquetas": [
+      "comuna",
+      "participación popular"
+    ]
+  },
+  {
+    "sobre": "unidades vecinales",
+    "articulo": 210,
+    "pagina": 71,
+    "etiquetas": [
+      "comuna",
+      "participación popular",
+      "rural",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "Consejo de Alcaldes(as)",
+    "articulo": 211,
+    "pagina": 71,
+    "etiquetas": [
+      "comuna"
+    ]
+  },
+  {
+    "sobre": "financiamiento municipal",
+    "articulo": 212,
+    "pagina": 71,
+    "etiquetas": [
+      "comuna"
+    ]
+  },
+  {
+    "sobre": "asociación de comunas",
+    "articulo": 213,
+    "pagina": 71,
+    "etiquetas": [
+      "comuna",
+      "probidad",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "empresas comunales",
+    "articulo": 214,
+    "pagina": 72,
+    "etiquetas": [
+      "comuna",
+      "patrimonio"
+    ]
+  },
+  {
+    "sobre": "fusión y división de comunas",
+    "articulo": 215,
+    "pagina": 72,
+    "etiquetas": [
+      "comuna",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "participación política comunal",
+    "articulo": 216,
+    "pagina": 72,
+    "etiquetas": [
+      "comuna",
+      "digital",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "unidades y personal comunales",
+    "articulo": 217,
+    "pagina": 72,
+    "etiquetas": []
+  },
+  {
+    "sobre": "provincia",
+    "articulo": 218,
+    "pagina": 72,
+    "etiquetas": [
+      "comuna",
+      "provincia"
+    ]
+  },
+  {
+    "sobre": "región autónoma",
+    "articulo": 219,
+    "pagina": 73,
+    "etiquetas": [
+      "patrimonio",
+      "región"
+    ]
+  },
+  {
+    "sobre": "competencias de la región autónoma",
+    "articulo": 220,
+    "pagina": 73,
+    "etiquetas": [
+      "agua",
+      "ambiental",
+      "bosque",
+      "comuna",
+      "cultura",
+      "digital",
+      "entidades territoriales",
+      "naturaleza",
+      "participación popular",
+      "patrimonio",
+      "salud",
+      "territorio",
+      "vivienda"
+    ]
+  },
+  {
+    "sobre": "traspaso de competencias regionales",
+    "articulo": 221,
+    "pagina": 74,
+    "etiquetas": [
+      "región"
+    ]
+  },
+  {
+    "sobre": "organización regional",
+    "articulo": 222,
+    "pagina": 74,
+    "etiquetas": []
+  },
+  {
+    "sobre": "gobierno regional",
+    "articulo": 223,
+    "pagina": 75,
+    "etiquetas": [
+      "gobierno regional",
+      "región"
+    ]
+  },
+  {
+    "sobre": "atribuciones del gobierno regional",
+    "articulo": 224,
+    "pagina": 75,
+    "etiquetas": [
+      "cultura",
+      "región",
+      "gobierno regional"
+    ]
+  },
+  {
+    "sobre": "asamblea regional",
+    "articulo": 225,
+    "pagina": 76,
+    "etiquetas": [
+      "asamblea regional"
+    ]
+  },
+  {
+    "sobre": "atribuciones de la asamblea regional",
+    "articulo": 226,
+    "pagina": 77,
+    "etiquetas": [
+      "ambiental",
+      "asamblea regional",
+      "Congreso de Diputadas y Diputados",
+      "gobierno regional",
+      "patrimonio",
+      "región"
+    ]
+  },
+  {
+    "sobre": "estatuto regional",
+    "articulo": 227,
+    "pagina": 78,
+    "etiquetas": [
+      "derechos fundamentales",
+      "región"
+    ]
+  },
+  {
+    "sobre": "creación del estatuto regional",
+    "articulo": 228,
+    "pagina": 78,
+    "etiquetas": [
+      "asamblea regional",
+      "gobierno regional",
+      "participación popular",
+      "región"
+    ]
+  },
+  {
+    "sobre": "consejo social regional",
+    "articulo": 229,
+    "pagina": 78,
+    "etiquetas": [
+      "gobierno regional",
+      "participación popular"
+    ]
+  },
+  {
+    "sobre": "Consejo de Gobernaciones",
+    "articulo": 230,
+    "pagina": 78,
+    "etiquetas": [
+      "entidades territoriales",
+      "justicia",
+      "región",
+      "trabajo"
+    ]
+  },
+  {
+    "sobre": "unidades y personal regionales",
+    "articulo": 231,
+    "pagina": 79,
+    "etiquetas": [
+      "asamblea regional",
+      "región"
+    ]
+  },
+  {
+    "sobre": "organismos centralizados",
+    "articulo": 232,
+    "pagina": 79,
+    "etiquetas": [
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "traspaso de competencias regionales II",
+    "articulo": 233,
+    "pagina": 79,
+    "etiquetas": [
+      "entidades territoriales",
+      "gobierno regional",
+      "igualdad",
+      "región"
+    ]
+  },
+  {
+    "sobre": "autonomía territorial indígena",
+    "articulo": 234,
+    "pagina": 80,
+    "etiquetas": [
+      "entidades territoriales",
+      "patrimonio"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Amnistía Internacional",
+        "incisos": [
+          "1"
+        ],
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/84"
+      }
+    ]
+  },
+  {
+    "sobre": "competencias de autonomías territoriales indígena",
+    "articulo": 235,
+    "pagina": 80,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "territorios especiales",
+    "articulo": 236,
+    "pagina": 80,
+    "etiquetas": [
+      "ambiental",
+      "cultura",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "Fondo para Territorios Especiales",
+    "articulo": 237,
+    "pagina": 80,
+    "etiquetas": [
+      "entidades territoriales",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "Rapa Nui",
+    "articulo": 238,
+    "pagina": 81,
+    "etiquetas": [
+      "territorio",
+      "territorio especial"
+    ]
+  },
+  {
+    "sobre": "archipiélago de Juan Fernández",
+    "articulo": 239,
+    "pagina": 81,
+    "etiquetas": [
+      "territorio",
+      "territorio especial"
+    ]
+  },
+  {
+    "sobre": "territorio chileno antártico",
+    "articulo": 240,
+    "pagina": 81,
+    "etiquetas": [
+      "territorio",
+      "territorio especial"
+    ]
+  },
+  {
+    "sobre": "ruralidad",
+    "articulo": 241,
+    "pagina": 81,
+    "etiquetas": [
+      "agua",
+      "rural",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "ruralidad e igualdad de género",
+    "articulo": 242,
+    "pagina": 82,
+    "etiquetas": [
+      "igualdad",
+      "rural"
+    ]
+  },
+  {
+    "sobre": "mercados y ferias rurales",
+    "articulo": 243,
+    "pagina": 82,
+    "etiquetas": [
+      "rural"
+    ]
+  },
+  {
+    "sobre": "finanzas territoriales",
+    "articulo": 244,
+    "pagina": 82,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "autonomía fiscal",
+    "articulo": 245,
+    "pagina": 82,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "criterios de autonomía fiscal",
+    "articulo": 246,
+    "pagina": 82,
+    "etiquetas": [
+      "entidades territoriales",
+      "finanzas",
+      "igualdad",
+      "territorio",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "ingresos de entidades territoriales",
+    "articulo": 247,
+    "pagina": 83,
+    "etiquetas": [
+      "entidades territoriales",
+      "patrimonio"
+    ]
+  },
+  {
+    "sobre": "ingresos regionales",
+    "articulo": 248,
+    "pagina": 83,
+    "etiquetas": [
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "equidad fiscal",
+    "articulo": 249,
+    "pagina": 83,
+    "etiquetas": [
+      "comuna",
+      "entidades territoriales",
+      "igualdad"
+    ]
+  },
+  {
+    "sobre": "deudas de entidades territoriales",
+    "articulo": 250,
+    "pagina": 84,
+    "etiquetas": [
+      "gobierno regional"
+    ]
+  },
+  {
+    "sobre": "Poder Legislativo",
+    "articulo": 251,
+    "pagina": 85,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "Cámara de las Regiones"
+    ]
+  },
+  {
+    "sobre": "Congreso de Diputadas y Diputados",
+    "articulo": 252,
+    "pagina": 85,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "paridad",
+      "plurinacionalidad",
+      "escaños reservados"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Sergio Huerta, Universidad Católica de Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/57"
+      }
+    ]
+  },
+  {
+    "sobre": "atribuciones del Congreso",
+    "articulo": 253,
+    "pagina": 85,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "delito",
+      "Fuerzas Armadas"
+    ]
+  },
+  {
+    "sobre": "Cámara de las Regiones",
+    "articulo": 254,
+    "pagina": 87,
+    "etiquetas": [
+      "asamblea regional",
+      "Cámara de las Regiones",
+      "comuna",
+      "escaños reservados",
+      "paridad",
+      "región"
+    ],
+    "referencias": [
+      {
+        "incisos": [
+          "1",
+          "2"
+        ],
+        "etiqueta": "Evaluación",
+        "autor": "Sergio Huerta, Universidad Católica de Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/58"
+      }
+    ]
+  },
+  {
+    "sobre": "atribuciones de la Cámara de las Regiones",
+    "articulo": 255,
+    "pagina": 88,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "delito"
+    ]
+  },
+  {
+    "sobre": "disposiciones comunes al legislativo",
+    "articulo": 256,
+    "pagina": 88,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "requisitos para ser legislador(a)",
+    "articulo": 257,
+    "pagina": 89,
+    "etiquetas": [
+      "sufragio",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "limitantes para ser legislador(a)",
+    "articulo": 258,
+    "pagina": 89,
+    "etiquetas": [
+      "comuna",
+      "Congreso de Diputadas y Diputados",
+      "militares",
+      "Cámara de las Regiones"
+    ]
+  },
+  {
+    "sobre": "incompatibilidad entre cargos legislativos",
+    "articulo": 259,
+    "pagina": 90,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "inmunidad parlamentaria",
+    "articulo": 260,
+    "pagina": 90,
+    "etiquetas": [
+      "delito",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "cesación en el cargo de legislador(a)",
+    "articulo": 261,
+    "pagina": 90,
+    "etiquetas": [
+      "naturaleza",
+      "transparencia",
+      "Congreso de Diputadas y Diputados",
+      "Cámara de las Regiones"
+    ]
+  },
+  {
+    "sobre": "renovación del Congreso y Cámara",
+    "articulo": 262,
+    "pagina": 91,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "sesiones conjuntas del poder legislativo",
+    "articulo": 263,
+    "pagina": 91,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "asuntos que deben ser leyes",
+    "articulo": 264,
+    "pagina": 92,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "entidades territoriales",
+      "naturaleza",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "decretos con fuerza de ley",
+    "articulo": 265,
+    "pagina": 93,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "derechos fundamentales",
+      "elecciones",
+      "nacionalidad",
+      "Cámara de las Regiones",
+      "Contraloría General de la República"
+    ]
+  },
+  {
+    "sobre": "leyes de concurrencia presidencial",
+    "articulo": 266,
+    "pagina": 94,
+    "etiquetas": [
+      "naturaleza",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "mociones de concurrencia presidencial",
+    "articulo": 267,
+    "pagina": 94,
+    "etiquetas": []
+  },
+  {
+    "sobre": "leyes de acuerdo regional",
+    "articulo": 268,
+    "pagina": 95,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "entidades territoriales",
+      "salud",
+      "vivienda"
+    ]
+  },
+  {
+    "sobre": "presentación de proyectos de ley",
+    "articulo": 269,
+    "pagina": 96,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "Cámara de las Regiones"
+    ]
+  },
+  {
+    "sobre": "tramitación de leyes comunes",
+    "articulo": 270,
+    "pagina": 97,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "leyes de mayoría de diputados(as) en ejercicio",
+    "articulo": 271,
+    "pagina": 97,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Contraloría General de la República"
+    ]
+  },
+  {
+    "sobre": "tramitación de leyes de acuerdo regional",
+    "articulo": 272,
+    "pagina": 97,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "requerimiento de la Cámara de conocer proyectos de ley",
+    "articulo": 273,
+    "pagina": 98,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "promulgación o devolución de leyes",
+    "articulo": 274,
+    "pagina": 98,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "urgencias para proyectos de ley",
+    "articulo": 275,
+    "pagina": 98,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "propuestas de las asambleas regionales",
+    "articulo": 276,
+    "pagina": 99,
+    "etiquetas": [
+      "asamblea regional",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Contraloría General de la República",
+      "elecciones",
+      "nacionalidad"
+    ]
+  },
+  {
+    "sobre": "tramitación de Ley de Presupuestos",
+    "articulo": 277,
+    "pagina": 99,
+    "etiquetas": [
+      "comuna",
+      "Congreso de Diputadas y Diputados",
+      "Contraloría General de la República",
+      "naturaleza",
+      "participación popular"
+    ]
+  },
+  {
+    "sobre": "Unidades Técnicas del Congreso",
+    "articulo": 278,
+    "pagina": 100,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "Gobierno y presidencia",
+    "articulo": 279,
+    "pagina": 101,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "requisitos para ser Presidente(a)",
+    "articulo": 280,
+    "pagina": 101,
+    "etiquetas": [
+      "nacionalidad",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "elección del Presidente(a)",
+    "articulo": 281,
+    "pagina": 101,
+    "etiquetas": [
+      "sufragio"
+    ]
+  },
+  {
+    "sobre": "proclamación del Presidente(a)",
+    "articulo": 282,
+    "pagina": 102,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "impedimento para asumir la Presidencia",
+    "articulo": 283,
+    "pagina": 102,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "duración del mandato presidencial",
+    "articulo": 284,
+    "pagina": 102,
+    "etiquetas": [
+      "Contraloría General de la República"
+    ]
+  },
+  {
+    "sobre": "subrogancia del Vicepresidente(a)",
+    "articulo": 285,
+    "pagina": 103,
+    "etiquetas": [
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "vacancia definitiva del Presidente(a)",
+    "articulo": 286,
+    "pagina": 103,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "atribuciones del Presidente(a)",
+    "articulo": 287,
+    "pagina": 104,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "delito",
+      "Fuerzas Armadas"
+    ]
+  },
+  {
+    "sobre": "potestades reglamentarias del Presidente(a)",
+    "articulo": 288,
+    "pagina": 105,
+    "etiquetas": []
+  },
+  {
+    "sobre": "ratificación de tratados internacionales",
+    "articulo": 289,
+    "pagina": 105,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "derechos fundamentales",
+      "derechos humanos",
+      "elecciones",
+      "nacionalidad",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "ministras y ministros de Estado",
+    "articulo": 290,
+    "pagina": 107,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "requisitos para ser ministro(a)",
+    "articulo": 291,
+    "pagina": 107,
+    "etiquetas": [
+      "sufragio"
+    ]
+  },
+  {
+    "sobre": "reglamentos y decretos con firma ministerial",
+    "articulo": 292,
+    "pagina": 107,
+    "etiquetas": []
+  },
+  {
+    "sobre": "asistencia de ministros(as) al Congreso",
+    "articulo": 293,
+    "pagina": 107,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "representantes ministeriales en regiones",
+    "articulo": 294,
+    "pagina": 108,
+    "etiquetas": [
+      "región"
+    ]
+  },
+  {
+    "sobre": "uso legítimo de la fuerza",
+    "articulo": 295,
+    "pagina": 108,
+    "etiquetas": [
+      "derechos humanos"
+    ]
+  },
+  {
+    "sobre": "seguridad pública",
+    "articulo": 296,
+    "pagina": 108,
+    "etiquetas": [
+      "cultura",
+      "derechos fundamentales",
+      "interculturalidad"
+    ]
+  },
+  {
+    "sobre": "policías",
+    "articulo": 297,
+    "pagina": 108,
+    "etiquetas": [
+      "derechos fundamentales",
+      "derechos humanos",
+      "militares",
+      "paridad",
+      "probidad",
+      "territorio",
+      "transparencia"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Paz Irarrázabal, Universidad de Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/66"
+      }
+    ]
+  },
+  {
+    "sobre": "Defensa Nacional",
+    "articulo": 298,
+    "pagina": 109,
+    "etiquetas": [
+      "cultura",
+      "derechos fundamentales",
+      "Fuerzas Armadas",
+      "igualdad",
+      "interculturalidad"
+    ]
+  },
+  {
+    "sobre": "Fuerzas Armadas",
+    "articulo": 299,
+    "pagina": 109,
+    "etiquetas": [
+      "derechos fundamentales",
+      "probidad",
+      "transparencia",
+      "Fuerzas Armadas",
+      "militares",
+      "perspectiva de género",
+      "paridad",
+      "derechos humanos"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "Paz Irarrázabal, Universidad de Chile",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/66"
+      }
+    ]
+  },
+  {
+    "sobre": "estados de excepción",
+    "articulo": 300,
+    "pagina": 110,
+    "etiquetas": []
+  },
+  {
+    "sobre": "estado de sitio y asamblea",
+    "articulo": 301,
+    "pagina": 110,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "trabajo"
+    ]
+  },
+  {
+    "sobre": "estado de catástrofe",
+    "articulo": 302,
+    "pagina": 111,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "declaración de estado de excepción",
+    "articulo": 303,
+    "pagina": 112,
+    "etiquetas": [
+      "comuna",
+      "Fuerzas Armadas"
+    ]
+  },
+  {
+    "sobre": "regulación del estado de excepción",
+    "articulo": 304,
+    "pagina": 112,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "fiscalización del estado de excepción",
+    "articulo": 305,
+    "pagina": 113,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "derechos humanos"
+    ]
+  },
+  {
+    "sobre": "revisión de medidas del estado de excepción",
+    "articulo": 306,
+    "pagina": 113,
+    "etiquetas": [
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "la jurisdicción",
+    "articulo": 307,
+    "pagina": 114,
+    "etiquetas": [
+      "derechos humanos",
+      "justicia",
+      "naturaleza",
+      "jurisdicción"
+    ]
+  },
+  {
+    "sobre": "tribunales de justicia",
+    "articulo": 308,
+    "pagina": 114,
+    "etiquetas": [
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "sistemas de justicia indígenas",
+    "articulo": 309,
+    "pagina": 114,
+    "etiquetas": [
+      "derechos fundamentales",
+      "derechos humanos",
+      "igualdad"
+    ]
+  },
+  {
+    "sobre": "independencia de la función jurisdiccional",
+    "articulo": 310,
+    "pagina": 114,
+    "etiquetas": [
+      "jurisdicción",
+      "juezas y jueces"
+    ]
+  },
+  {
+    "sobre": "principios de la función jurisdiccional",
+    "articulo": 311,
+    "pagina": 115,
+    "etiquetas": [
+      "derechos humanos",
+      "igualdad",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "principios de la función jurisdiccional II",
+    "articulo": 312,
+    "pagina": 115,
+    "etiquetas": [
+      "igualdad",
+      "jurisdicción",
+      "justicia",
+      "paridad",
+      "Sistema Nacional de Justicia"
+    ],
+    "referencias": [
+      {
+        "etiqueta": "Evaluación",
+        "autor": "ABOFEM",
+        "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/87"
+      }
+    ]
+  },
+  {
+    "sobre": "libertad de juezas y jueces",
+    "articulo": 313,
+    "pagina": 115,
+    "etiquetas": [
+      "delito",
+      "juezas y jueces"
+    ]
+  },
+  {
+    "sobre": "inamovilidad de juezas y jueces",
+    "articulo": 314,
+    "pagina": 116,
+    "etiquetas": [
+      "juezas y jueces"
+    ]
+  },
+  {
+    "sobre": "responsabilidad de juezas y jueces",
+    "articulo": 315,
+    "pagina": 116,
+    "etiquetas": [
+      "delito",
+      "justicia",
+      "juezas y jueces"
+    ]
+  },
+  {
+    "sobre": "duración de juezas y jueces",
+    "articulo": 316,
+    "pagina": 116,
+    "etiquetas": [
+      "juezas y jueces"
+    ]
+  },
+  {
+    "sobre": "inexcusabilidad de tribunales",
+    "articulo": 317,
+    "pagina": 116,
+    "etiquetas": [
+      "jurisdicción"
+    ]
+  },
+  {
+    "sobre": "obligaciones y facultades de tribunales",
+    "articulo": 318,
+    "pagina": 116,
+    "etiquetas": [
+      "derechos humanos",
+      "jurisdicción",
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "transparencia de las sentencias",
+    "articulo": 319,
+    "pagina": 116,
+    "etiquetas": [
+      "lengua"
+    ]
+  },
+  {
+    "sobre": "gratuidad y voluntariedad de la función jurisdiccional",
+    "articulo": 320,
+    "pagina": 117,
+    "etiquetas": [
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "justicia abierta",
+    "articulo": 321,
+    "pagina": 117,
+    "etiquetas": [
+      "democracia",
+      "justicia",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "justicia plurinacional e intercultural",
+    "articulo": 322,
+    "pagina": 117,
+    "etiquetas": [
+      "cultura",
+      "derechos humanos",
+      "interculturalidad",
+      "nacionalidad",
+      "plurinacionalidad"
+    ]
+  },
+  {
+    "sobre": "resolución de conflictos",
+    "articulo": 323,
+    "pagina": 117,
+    "etiquetas": []
+  },
+  {
+    "sobre": "juezas y jueces",
+    "articulo": 324,
+    "pagina": 117,
+    "etiquetas": [
+      "juezas y jueces",
+      "jurisdicción"
+    ]
+  },
+  {
+    "sobre": "presupuesto del Sistema Nacional de Justicia",
+    "articulo": 325,
+    "pagina": 118,
+    "etiquetas": [
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "proximidad e itinerancia de tribunales",
+    "articulo": 326,
+    "pagina": 118,
+    "etiquetas": [
+      "justicia",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "Sistema Nacional de Justicia",
+    "articulo": 327,
+    "pagina": 118,
+    "etiquetas": [
+      "justicia",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "Corte Suprema",
+    "articulo": 328,
+    "pagina": 118,
+    "etiquetas": [
+      "juezas y jueces",
+      "jurisdicción"
+    ]
+  },
+  {
+    "sobre": "supremacía de la Corte Suprema",
+    "articulo": 329,
+    "pagina": 118,
+    "etiquetas": [
+      "cultura",
+      "jurisdicción"
+    ]
+  },
+  {
+    "sobre": "cortes de apelaciones",
+    "articulo": 330,
+    "pagina": 118,
+    "etiquetas": [
+      "jurisdicción",
+      "región"
+    ]
+  },
+  {
+    "sobre": "tribunales de instancia",
+    "articulo": 331,
+    "pagina": 119,
+    "etiquetas": [
+      "ambiental",
+      "familia"
+    ]
+  },
+  {
+    "sobre": "tribunales administrativos",
+    "articulo": 332,
+    "pagina": 119,
+    "etiquetas": [
+      "región"
+    ]
+  },
+  {
+    "sobre": "tribunales ambientales",
+    "articulo": 333,
+    "pagina": 119,
+    "etiquetas": [
+      "ambiental",
+      "naturaleza",
+      "región"
+    ]
+  },
+  {
+    "sobre": "justicia vecinal",
+    "articulo": 334,
+    "pagina": 120,
+    "etiquetas": [
+      "comuna",
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "centros de justicia vecinal",
+    "articulo": 335,
+    "pagina": 120,
+    "etiquetas": [
+      "justicia",
+      "rural"
+    ]
+  },
+  {
+    "sobre": "ejecución de penas",
+    "articulo": 336,
+    "pagina": 120,
+    "etiquetas": [
+      "condena",
+      "derechos fundamentales",
+      "derechos humanos"
+    ]
+  },
+  {
+    "sobre": "cumplimiento de penas",
+    "articulo": 337,
+    "pagina": 120,
+    "etiquetas": [
+      "condena",
+      "derechos fundamentales",
+      "derechos humanos"
+    ]
+  },
+  {
+    "sobre": "cumplimiento de penas II",
+    "articulo": 338,
+    "pagina": 121,
+    "etiquetas": [
+      "cultura",
+      "trabajo"
+    ]
+  },
+  {
+    "sobre": "Tribunal Calificador de Elecciones",
+    "articulo": 339,
+    "pagina": 121,
+    "etiquetas": [
+      "elecciones",
+      "juezas y jueces"
+    ]
+  },
+  {
+    "sobre": "tribunales electorales regionales",
+    "articulo": 340,
+    "pagina": 121,
+    "etiquetas": [
+      "comuna",
+      "elecciones",
+      "juezas y jueces"
+    ]
+  },
+  {
+    "sobre": "gestión de tribunales electorales",
+    "articulo": 341,
+    "pagina": 122,
+    "etiquetas": []
+  },
+  {
+    "sobre": "Consejo de la Justicia",
+    "articulo": 342,
+    "pagina": 122,
+    "etiquetas": [
+      "nacionalidad",
+      "paridad",
+      "patrimonio",
+      "plurinacionalidad",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "Consejo de la Justicia",
+    "articulo": 342,
+    "pagina": 122,
+    "etiquetas": [
+      "nacionalidad",
+      "paridad",
+      "patrimonio",
+      "plurinacionalidad",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "atribuciones del Consejo de la Justicia",
+    "articulo": 343,
+    "pagina": 123,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "derechos humanos",
+      "justicia",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "composición del Consejo de la Justicia",
+    "articulo": 344,
+    "pagina": 124,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "nacionalidad",
+      "paridad",
+      "plurinacionalidad",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "procedimientos del Consejo de la Justicia",
+    "articulo": 345,
+    "pagina": 124,
+    "etiquetas": []
+  },
+  {
+    "sobre": "incompatibilidad de miembros del Consejo de la Justicia",
+    "articulo": 346,
+    "pagina": 124,
+    "etiquetas": []
+  },
+  {
+    "sobre": "cesación del cargo en el Consejo de la Justicia",
+    "articulo": 347,
+    "pagina": 125,
+    "etiquetas": [
+      "condena",
+      "delito"
+    ]
+  },
+  {
+    "sobre": "nombramiento de juezas y jueces",
+    "articulo": 348,
+    "pagina": 125,
+    "etiquetas": [
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "resoluciones disciplinarias del Consejo de la Justicia",
+    "articulo": 349,
+    "pagina": 125,
+    "etiquetas": [
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "Órganos autónomos constitucionales",
+    "articulo": 350,
+    "pagina": 126,
+    "etiquetas": [
+      "paridad"
+    ]
+  },
+  {
+    "sobre": "Contraloría General de la República",
+    "articulo": 351,
+    "pagina": 126,
+    "etiquetas": [
+      "comuna",
+      "Contraloría General de la República",
+      "patrimonio",
+      "probidad"
+    ]
+  },
+  {
+    "sobre": "atribuciones de la Contraloría General de la República",
+    "articulo": 352,
+    "pagina": 126,
+    "etiquetas": [
+      "asamblea regional",
+      "Congreso de Diputadas y Diputados",
+      "entidades territoriales"
+    ]
+  },
+  {
+    "sobre": "dirección de la Contraloría General de la República",
+    "articulo": 353,
+    "pagina": 127,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Contraloría General de la República"
+    ]
+  },
+  {
+    "sobre": "dictámenes de la Contraloría General de la República",
+    "articulo": 354,
+    "pagina": 127,
+    "etiquetas": [
+      "comuna",
+      "Contraloría General de la República"
+    ]
+  },
+  {
+    "sobre": "contralorías regionales",
+    "articulo": 355,
+    "pagina": 127,
+    "etiquetas": [
+      "Contraloría General de la República",
+      "entidades territoriales",
+      "territorio"
+    ]
+  },
+  {
+    "sobre": "gastos y pagos del Estado",
+    "articulo": 356,
+    "pagina": 128,
+    "etiquetas": []
+  },
+  {
+    "sobre": "Banco Central",
+    "articulo": 357,
+    "pagina": 128,
+    "etiquetas": [
+      "patrimonio",
+      "Banco Central"
+    ]
+  },
+  {
+    "sobre": "misión del Banco Central",
+    "articulo": 358,
+    "pagina": 128,
+    "etiquetas": [
+      "Banco Central",
+      "patrimonio"
+    ]
+  },
+  {
+    "sobre": "atribuciones del Banco Central",
+    "articulo": 359,
+    "pagina": 129,
+    "etiquetas": [
+      "Banco Central"
+    ]
+  },
+  {
+    "sobre": "operaciones del Banco Central",
+    "articulo": 360,
+    "pagina": 129,
+    "etiquetas": [
+      "Banco Central"
+    ]
+  },
+  {
+    "sobre": "rendición de cuentas del Banco Central",
+    "articulo": 361,
+    "pagina": 129,
+    "etiquetas": [
+      "Banco Central",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "Consejo del Banco Central",
+    "articulo": 362,
+    "pagina": 129,
+    "etiquetas": [
+      "Banco Central",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "Consejo del Banco Central II",
+    "articulo": 363,
+    "pagina": 130,
+    "etiquetas": [
+      "Banco Central",
+      "probidad"
+    ]
+  },
+  {
+    "sobre": "Consejo del Banco Central III",
+    "articulo": 364,
+    "pagina": 130,
+    "etiquetas": []
+  },
+  {
+    "sobre": "Ministerio Público",
+    "articulo": 365,
+    "pagina": 130,
+    "etiquetas": [
+      "delito",
+      "derechos humanos",
+      "justicia",
+      "patrimonio",
+      "probidad"
+    ]
+  },
+  {
+    "sobre": "atribuciones del Ministerio Público",
+    "articulo": 366,
+    "pagina": 131,
+    "etiquetas": [
+      "Ministerio Público"
+    ]
+  },
+  {
+    "sobre": "fiscalías regionales",
+    "articulo": 367,
+    "pagina": 131,
+    "etiquetas": [
+      "Ministerio Público",
+      "región"
+    ]
+  },
+  {
+    "sobre": "fiscal nacional",
+    "articulo": 368,
+    "pagina": 132,
+    "etiquetas": [
+      "asamblea regional",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Ministerio Público",
+      "sufragio"
+    ]
+  },
+  {
+    "sobre": "Comité del Ministerio Público",
+    "articulo": 369,
+    "pagina": 132,
+    "etiquetas": [
+      "derechos humanos",
+      "Ministerio Público",
+      "transparencia"
+    ]
+  },
+  {
+    "sobre": "fiscales adjuntos",
+    "articulo": 370,
+    "pagina": 133,
+    "etiquetas": [
+      "Ministerio Público"
+    ]
+  },
+  {
+    "sobre": "fiscal nacional y regionales: rendición de cuentas",
+    "articulo": 371,
+    "pagina": 133,
+    "etiquetas": [
+      "asamblea regional",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "fiscal nacional y regionales: proceso de remoción",
+    "articulo": 372,
+    "pagina": 133,
+    "etiquetas": [
+      "Congreso de Diputadas y Diputados",
+      "probidad"
+    ]
+  },
+  {
+    "sobre": "Defensoría Penal Pública",
+    "articulo": 373,
+    "pagina": 134,
+    "etiquetas": [
+      "delito",
+      "derechos humanos",
+      "patrimonio"
+    ]
+  },
+  {
+    "sobre": "defensoras y defensores penales",
+    "articulo": 374,
+    "pagina": 134,
+    "etiquetas": [
+      "Defensoría Penal Pública"
+    ]
+  },
+  {
+    "sobre": "defensor(a) nacional",
+    "articulo": 375,
+    "pagina": 134,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Defensoría Penal Pública"
+    ]
+  },
+  {
+    "sobre": "Agencia Nacional de Protección de Datos",
+    "articulo": 376,
+    "pagina": 134,
+    "etiquetas": [
+      "Protección de Datos"
+    ]
+  },
+  {
+    "sobre": "Corte Constitucional",
+    "articulo": 377,
+    "pagina": 135,
+    "etiquetas": [
+      "justicia",
+      "Corte Constitucional"
+    ]
+  },
+  {
+    "sobre": "composición de la Corte Constitucional",
+    "articulo": 378,
+    "pagina": 135,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Corte Constitucional",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "juezas y jueces de la Corte Constitucional II",
+    "articulo": 379,
+    "pagina": 135,
+    "etiquetas": [
+      "condena",
+      "Corte Constitucional"
+    ]
+  },
+  {
+    "sobre": "juezas y jueces de la Corte Constitucional II",
+    "articulo": 380,
+    "pagina": 136,
+    "etiquetas": [
+      "Corte Constitucional",
+      "Sistema Nacional de Justicia"
+    ]
+  },
+  {
+    "sobre": "atribuciones de la Corte Constitucional",
+    "articulo": 381,
+    "pagina": 136,
+    "etiquetas": [
+      "asamblea regional",
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "Contraloría General de la República",
+      "Corte Constitucional",
+      "entidades territoriales",
+      "justicia"
+    ]
+  },
+  {
+    "sobre": "sentencias de la Corte Constitucional",
+    "articulo": 382,
+    "pagina": 138,
+    "etiquetas": [
+      "Corte Constitucional"
+    ]
+  },
+  {
+    "sobre": "reforma constitucional",
+    "articulo": 383,
+    "pagina": 139,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados"
+    ]
+  },
+  {
+    "sobre": "referéndum ratificatorio de reformas",
+    "articulo": 384,
+    "pagina": 139,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "derechos fundamentales"
+    ]
+  },
+  {
+    "sobre": "propuesta de reforma ciudadana",
+    "articulo": 385,
+    "pagina": 140,
+    "etiquetas": [
+      "reforma constitucional",
+      "Poder Legislativo"
+    ]
+  },
+  {
+    "sobre": "nueva Constitución",
+    "articulo": 386,
+    "pagina": 140,
+    "etiquetas": [
+      "Cámara de las Regiones",
+      "Congreso de Diputadas y Diputados",
+      "sufragio",
+      "Asamblea Constituyente",
+      "referéndum"
+    ]
+  },
+  {
+    "sobre": "Asamblea Constituyente",
+    "articulo": 387,
+    "pagina": 141,
+    "etiquetas": [
+      "Asamblea Constituyente",
+      "igualdad",
+      "participación popular"
+    ]
+  },
+  {
+    "sobre": "referéndum de aprobación de nueva Constitución",
+    "articulo": 388,
+    "pagina": 141,
+    "etiquetas": [
+      "referéndum",
+      "referéndum",
+      "sufragio"
+    ]
+  },
+  {
+    "transitoria": 1,
+    "sobre": "entrada en vigencia de la nueva Constitución",
+    "pagina": 142
+  },
+  {
+    "transitoria": 2,
+    "sobre": "vigencia de normativas anteriores",
+    "pagina": 142
+  },
+  {
+    "transitoria": 3,
+    "sobre": "trámite legislativo",
+    "pagina": 142
+  },
+  {
+    "transitoria": 4,
+    "sobre": "actuales autoridades y nuevos nombramientos",
+    "pagina": 143
+  },
+  {
+    "transitoria": 5,
+    "sobre": "reelección de autoridades",
+    "pagina": 144
+  },
+  {
+    "transitoria": 6,
+    "sobre": "implementación de paridad de género",
+    "pagina": 144
+  },
+  {
+    "transitoria": 7,
+    "sobre": "quorum para reformar la Constitución",
+    "pagina": 145
+  },
+  {
+    "transitoria": 8,
+    "sobre": "entrada en vigencia de procedimiento legislativo",
+    "pagina": 145
+  },
+  {
+    "transitoria": 9,
+    "sobre": "traspaso de bienes, derechos y obligaciones a las Cámaras",
+    "pagina": 145
+  },
+  {
+    "transitoria": 10,
+    "sobre": "derecho a sufragio para chilenas y chilenos en el exterior",
+    "pagina": 146
+  },
+  {
+    "transitoria": 11,
+    "sobre": "vigencia de nombramientos y funciones en las Fuerzas Armadas",
+    "pagina": 146
+  },
+  {
+    "transitoria": 12,
+    "sobre": "vigencia de nombramientos y funciones en Carabineros",
+    "pagina": 146
+  },
+  {
+    "transitoria": 13,
+    "sobre": "término de período de autoridades en ejercicio",
+    "pagina": 146
+  },
+  {
+    "transitoria": 14,
+    "sobre": "implementación de iniciativas populares de ley",
+    "pagina": 147
+  },
+  {
+    "transitoria": 15,
+    "sobre": "adecuación de normativas sobre Estado regional",
+    "pagina": 147
+  },
+  {
+    "transitoria": 16,
+    "sobre": "continuidad de las regiones",
+    "pagina": 148
+  },
+  {
+    "transitoria": 17,
+    "sobre": "ley para normar entidades regionales",
+    "pagina": 148
+  },
+  {
+    "transitoria": 18,
+    "sobre": "creación de la Asamblea Territorial Rapa Nui",
+    "pagina": 148
+  },
+  {
+    "transitoria": 19,
+    "sobre": "creación de estatuto de Juan Fernández",
+    "pagina": 149
+  },
+  {
+    "transitoria": 20,
+    "sobre": "creación de regiones autónomas de Chiloé y de Aconcagua",
+    "pagina": 149
+  },
+  {
+    "transitoria": 21,
+    "pagina": 149
+  },
+  {
+    "transitoria": 22,
+    "pagina": 149
+  },
+  {
+    "transitoria": 23,
+    "pagina": 150
+  },
+  {
+    "transitoria": 24,
+    "pagina": 150
+  },
+  {
+    "transitoria": 25,
+    "pagina": 150
+  },
+  {
+    "transitoria": 26,
+    "pagina": 150
+  },
+  {
+    "transitoria": 27,
+    "pagina": 151
+  },
+  {
+    "transitoria": 28,
+    "pagina": 151
+  },
+  {
+    "transitoria": 29,
+    "pagina": 151
+  },
+  {
+    "transitoria": 30,
+    "pagina": 152
+  },
+  {
+    "transitoria": 31,
+    "pagina": 152
+  },
+  {
+    "transitoria": 32,
+    "pagina": 152
+  },
+  {
+    "transitoria": 33,
+    "pagina": 153
+  },
+  {
+    "transitoria": 34,
+    "pagina": 153
+  },
+  {
+    "transitoria": 35,
+    "pagina": 153
+  },
+  {
+    "transitoria": 36,
+    "pagina": 155
+  },
+  {
+    "transitoria": 37,
+    "pagina": 155
+  },
+  {
+    "transitoria": 38,
+    "pagina": 155
+  },
+  {
+    "transitoria": 39,
+    "pagina": 156
+  },
+  {
+    "transitoria": 40,
+    "pagina": 156
+  },
+  {
+    "transitoria": 41,
+    "pagina": 156
+  },
+  {
+    "transitoria": 42,
+    "pagina": 156
+  },
+  {
+    "transitoria": 43,
+    "pagina": 156
+  },
+  {
+    "transitoria": 44,
+    "pagina": 157
+  },
+  {
+    "transitoria": 45,
+    "pagina": 157
+  },
+  {
+    "transitoria": 46,
+    "pagina": 159
+  },
+  {
+    "transitoria": 47,
+    "pagina": 159
+  },
+  {
+    "transitoria": 48,
+    "pagina": 159
+  },
+  {
+    "transitoria": 49,
+    "pagina": 160
+  },
+  {
+    "transitoria": 50,
+    "pagina": 160
+  },
+  {
+    "transitoria": 51,
+    "pagina": 160
+  },
+  {
+    "transitoria": 52,
+    "pagina": 160
+  },
+  {
+    "transitoria": 53,
+    "pagina": 161
+  },
+  {
+    "transitoria": 54,
+    "pagina": 161
+  },
+  {
+    "transitoria": 55,
+    "pagina": 161
+  },
+  {
+    "transitoria": 56,
+    "pagina": 161
+  },
+  {
+    "transitoria": 57,
+    "pagina": 162
+  }
+]

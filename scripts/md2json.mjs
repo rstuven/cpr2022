@@ -3,6 +3,7 @@ import fs from "fs";
 const salida1 = "data/json/constitucion.json";
 const salida2 = "packages/data/src/constitucion.json";
 
+const metadatos = JSON.parse(fs.readFileSync("data/json/metadatos.json", "utf8"));
 const preambulo = fs.readFileSync("data/markdown/preambulo.md", "utf8");
 const capitulos = itemsDesdeMarkdown("data/markdown/capitulos.md");
 const transitorias = itemsDesdeMarkdown("data/markdown/transitorias.md");
@@ -52,10 +53,17 @@ function itemsDesdeMarkdown(entrada) {
         }
         capitulo.titulos.push(titulo);
       } else if (linea.startsWith("#### Artículo ")) {
+        const articuloNumeroActual = parseInt(linea.split(" ")[2])
+        const meta = metadatos.find(m => m.articulo == articuloNumeroActual);
         articulo = {
-          articulo: parseInt(linea.split(" ")[2]),
+          articulo: articuloNumeroActual,
           incisos: [],
+          pagina: meta.pagina,
+          etiquetas: meta.etiquetas || [],
+          referencias: meta.referencias,
+          sobre: meta.sobre,
         };
+
         incisoPrevio = null;
         incisoNivel = [];
         if (titulo == null) {
@@ -68,9 +76,14 @@ function itemsDesdeMarkdown(entrada) {
         }
       } else if (linea.startsWith("#### ")) {
         const parts = linea.match(/#### (.*)/);
+        const transitoriaNumeroActual = transitoriaNumero++
+        const meta = metadatos.find(m => m.transitoria == transitoriaNumeroActual);
         transitoria = {
           transitoria: parts[1],
-          numero: transitoriaNumero++,
+          numero: transitoriaNumeroActual,
+          pagina: meta.pagina,
+          etiquetas: meta.etiquetas || [],
+          sobre: meta.sobre,
         };
         incisoPrevio = null;
         incisoNivel = [];

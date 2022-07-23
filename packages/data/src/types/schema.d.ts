@@ -17,15 +17,29 @@ export type Titulo = {
   readonly articulos: ReadonlyArray<Articulo>;
 };
 
+export type Referencia = {
+  readonly etiqueta: string;
+  readonly url: string;
+  readonly autor: string;
+  readonly incisos?: ReadonlyArray<string>;
+};
+
 export type Articulo = {
   readonly articulo: number;
   readonly incisos: ReadonlyArray<Inciso>;
+  readonly pagina: number;
+  readonly etiquetas: ReadonlyArray<string>;
+  readonly sobre: string;
+  readonly referencias?: ReadonlyArray<Referencia>;
 };
 
 export type Transitoria = {
   readonly transitoria: string;
   readonly numero: number;
   readonly incisos: ReadonlyArray<Inciso>;
+  readonly pagina: number;
+  readonly etiquetas: ReadonlyArray<string>;
+  readonly sobre?: string;
 };
 
 export type Inciso = {

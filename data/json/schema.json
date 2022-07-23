@@ -8,16 +8,37 @@
         "articulo": {
           "type": "number"
         },
+        "etiquetas": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "incisos": {
           "items": {
             "$ref": "#/definitions/Inciso"
           },
           "type": "array"
+        },
+        "pagina": {
+          "type": "number"
+        },
+        "referencias": {
+          "items": {
+            "$ref": "#/definitions/Referencia"
+          },
+          "type": "array"
+        },
+        "sobre": {
+          "type": "string"
         }
       },
       "required": [
         "articulo",
-        "incisos"
+        "incisos",
+        "pagina",
+        "etiquetas",
+        "sobre"
       ],
       "type": "object"
     },
@@ -36,6 +57,9 @@
         "nombre": {
           "type": "string"
         },
+        "numero": {
+          "type": "number"
+        },
         "titulos": {
           "items": {
             "$ref": "#/definitions/Titulo"
@@ -44,7 +68,9 @@
         }
       },
       "required": [
-        "nombre"
+        "capitulo",
+        "nombre",
+        "numero"
       ],
       "type": "object"
     },
@@ -102,6 +128,32 @@
       ],
       "type": "object"
     },
+    "Referencia": {
+      "additionalProperties": false,
+      "properties": {
+        "autor": {
+          "type": "string"
+        },
+        "etiqueta": {
+          "type": "string"
+        },
+        "incisos": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "etiqueta",
+        "url",
+        "autor"
+      ],
+      "type": "object"
+    },
     "Titulo": {
       "additionalProperties": false,
       "properties": {
@@ -124,11 +176,26 @@
     "Transitoria": {
       "additionalProperties": false,
       "properties": {
+        "etiquetas": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "incisos": {
           "items": {
             "$ref": "#/definitions/Inciso"
           },
           "type": "array"
+        },
+        "numero": {
+          "type": "number"
+        },
+        "pagina": {
+          "type": "number"
+        },
+        "sobre": {
+          "type": "string"
         },
         "transitoria": {
           "type": "string"
@@ -136,7 +203,10 @@
       },
       "required": [
         "transitoria",
-        "incisos"
+        "numero",
+        "incisos",
+        "pagina",
+        "etiquetas"
       ],
       "type": "object"
     }

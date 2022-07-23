@@ -22,7 +22,7 @@ type Box = {
   bottom: number;
 };
 
-export async function createFragmentImage(
+export function createFragmentImage(
   fragmentoId: string,
   fragmento: FragmentoContext
 ) {

@@ -7,8 +7,8 @@ import Transitorias from "./Transitorias";
 
 export default function Constitucion() {
   return (
-    <div className="prose px-10">
-      <p className="text-2xl">{constitucion.preambulo}</p>
+    <div className="prose px-10 font-ConvencionFJ">
+      <p className="text-2xl italic">{constitucion.preambulo}</p>
 
       {constitucion.capitulos.map((capitulo: CapituloSchema) => (
         <Capitulo key={capitulo.nombre} {...capitulo} />

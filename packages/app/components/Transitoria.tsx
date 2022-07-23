@@ -10,7 +10,7 @@ export default function Transitoria(transitoria: TransitoriaSchema) {
     <div className="border border-solid rounded-md p-3 mb-3">
       <a id={path} />
       <h3 className={"my-0" + (path == hash ? " bg-amber-100" : "")}>
-        <HashLink hash={path}>¶</HashLink> {transitoria.transitoria}
+        <HashLink hash={path} anchor /> {transitoria.transitoria}
       </h3>
       {transitoria.incisos.map((inciso, incisoIndex) => (
         <Inciso key={incisoIndex} {...inciso} path={path} />

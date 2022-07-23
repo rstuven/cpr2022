@@ -18,7 +18,7 @@ export default function App() {
       >
         <article className="pb-10">
           <header className="fixed bg-white prose">
-            <h1 className="p-5">
+            <h1 className="p-5 font-ConvencionFJ">
               Propuesta de Constitución Política de la República de Chile 2022
             </h1>
           </header>

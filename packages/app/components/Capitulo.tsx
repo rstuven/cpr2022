@@ -10,9 +10,11 @@ export default function Capitulo(capitulo: CapituloSchema) {
   return (
     <div className="">
       <a id={path} />
-      <h2 className={path == hash ? "bg-amber-100" : ""}>
-        <HashLink hash={path}>¶</HashLink> Capítulo {capitulo.capitulo}{" "}
-        {capitulo.nombre}
+      <h2 className={"text-center " + (path == hash ? "bg-amber-100" : "")}>
+        <HashLink hash={path} anchor />{" "}
+        <TitleCase text={"Capítulo " + capitulo.capitulo} />
+        <br />
+        <TitleCase text={capitulo.nombre} />
       </h2>
       {capitulo.articulos && <Articulos articulos={capitulo.articulos} />}
       {capitulo.titulos?.map((titulo, tituloIndex) => (
@@ -24,4 +26,23 @@ export default function Capitulo(capitulo: CapituloSchema) {
       ))}
     </div>
   );
+}
+
+function TitleCase(props: { text: string }) {
+  const chars = props.text.split("");
+  return (
+    <>
+      {chars.map((char, index) => {
+        return (
+          <span key={index} className={isLowerCase(char) ? "text-lg" : ""}>
+            {char.toUpperCase()}
+          </span>
+        );
+      })}
+    </>
+  );
+}
+
+function isLowerCase(text: string) {
+  return text == text.toLowerCase() && text != text.toUpperCase();
 }

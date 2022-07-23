@@ -4,7 +4,8 @@ import { useCallback } from "react";
 type HashLinkProps = {
   hash: string;
   className?: string;
-  children: any;
+  anchor?: boolean;
+  children?: any;
 };
 
 export default function HashLink(props: HashLinkProps) {
@@ -16,6 +17,17 @@ export default function HashLink(props: HashLinkProps) {
     },
     [props.hash, updateHash]
   );
+  if (props.anchor) {
+    return (
+      <a
+        className={"font-sans text-gray-300"}
+        href={"#" + props.hash}
+        onClick={onClick}
+      >
+        ¶
+      </a>
+    );
+  }
   return (
     <a
       className={props.className ?? "text-gray-300"}

@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,7 +7,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ConvencionFJ: ["ConvencionFJ", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

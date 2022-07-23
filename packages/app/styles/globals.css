@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ConvencionFJ';
+  src: url('/fonts/ConvencionFJ-Regular.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

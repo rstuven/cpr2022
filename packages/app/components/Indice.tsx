@@ -13,7 +13,7 @@ export default function Indice() {
   const path = "dt";
   const fragmento = parseFragmento(hash);
   return (
-    <div className="prose text-xs">
+    <div className="prose text-xs font-ConvencionFJ">
       <ul className="list-none">
         {constitucion.capitulos.map((capitulo: CapituloSchema) => (
           <Capitulo key={capitulo.nombre} {...capitulo} />

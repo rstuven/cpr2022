@@ -17,14 +17,15 @@ export default function Articulo(articulo: ArticuloSchema) {
     >
       <a id={path} />
       <div>
-        <HashLink hash={path}>¶</HashLink> <b>Artículo {articulo.articulo}</b>{" "}
-        <span className="rounded-md bg-gray-300 text-black px-2 py-1">
+        <HashLink hash={path} anchor />{" "}
+        <b className="text-black">Artículo {articulo.articulo}</b>{" "}
+        <span className="font-sans rounded-md bg-gray-300 text-black px-2 py-1">
           {firstToUpperCase(articulo.sobre)}
         </span>{" "}
         {articulo.etiquetas.map((etiqueta) => (
           <span key={etiqueta}>
             {" "}
-            <span className="rounded-md bg-orange-400 text-white px-2 py-1 mb-1">
+            <span className="font-sans rounded-md bg-orange-400 text-white px-2 py-1 mb-1">
               {etiqueta.replace(/ /g, "\u00a0")}
             </span>
           </span>

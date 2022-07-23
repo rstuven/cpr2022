@@ -10,7 +10,7 @@ export default function Titulo(titulo: TituloProps) {
     <div>
       <a id={titulo.path} />
       <h3 className={titulo.path == hash ? "bg-amber-100" : undefined}>
-        <HashLink hash={titulo.path}>¶</HashLink> {titulo.titulo}
+        <HashLink hash={titulo.path} anchor /> {titulo.titulo}
       </h3>
       {titulo.articulos && <Articulos articulos={titulo.articulos} />}
     </div>

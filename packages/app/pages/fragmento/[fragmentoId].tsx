@@ -35,7 +35,7 @@ export async function getStaticProps(context) {
     };
   }
 
-  createFragmentImage(fragmentoId, fragmento);
+  await createFragmentImage(fragmentoId, fragmento);
 
   return {
     props: {},

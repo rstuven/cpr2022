@@ -1,5 +1,10 @@
-import fs from "fs";
-import { createCanvas, registerFont, CanvasRenderingContext2D } from "canvas";
+import fs from "fs/promises";
+import {
+  createCanvas,
+  loadImage,
+  registerFont,
+  CanvasRenderingContext2D,
+} from "canvas";
 import {
   ArticuloContext,
   CapituloContext,
@@ -22,7 +27,7 @@ type Box = {
   bottom: number;
 };
 
-export function createFragmentImage(
+export async function createFragmentImage(
   fragmentoId: string,
   fragmento: FragmentoContext
 ) {
@@ -36,7 +41,7 @@ export function createFragmentImage(
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  const { bottom: headerBottom } = renderHeader(ctx);
+  const { bottom: headerBottom } = await renderHeader(ctx);
 
   const padding = 20;
   const box: Box = {
@@ -51,22 +56,26 @@ export function createFragmentImage(
     : "capitulo" in fragmento && renderCapitulo(ctx, fragmento, box);
 
   const buffer = canvas.toBuffer("image/png");
-  fs.writeFileSync(`public/images/fragmentos/${fragmentoId}.png`, buffer);
+  await fs.writeFile(`public/images/fragmentos/${fragmentoId}.png`, buffer);
 }
 
-function renderHeader(ctx: CanvasRenderingContext2D) {
+async function renderHeader(ctx: CanvasRenderingContext2D) {
   const height = 70;
+  const logoSize = height;
 
   ctx.fillStyle = accentColor;
   ctx.fillRect(0, 0, ctx.canvas.width, height);
 
+  const logo = await loadImage("public/images/logo.png");
+  ctx.drawImage(logo, 0, 0, height, height);
+
   ctx.fillStyle = "white";
-  ctx.font = '1.77rem "ConvencionFJ"';
+  ctx.font = '1.65rem "ConvencionFJ"';
 
   renderText({
     ctx,
     text: "Propuesta de Constitución Política de la República de Chile 2022",
-    left: 20,
+    left: logoSize + 15,
     top: 10,
     width: ctx.canvas.width,
   });
@@ -200,7 +209,7 @@ function renderCapitulo(
       ctx,
       text: "...y más",
       left: contentLeft + 5,
-      top: lastContentPositionY + 33,
+      top: lastContentPositionY + 35,
       width: box.width,
       lineHeight,
     });

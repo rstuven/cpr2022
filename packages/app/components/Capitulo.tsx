@@ -1,13 +1,13 @@
-import { Capitulo as CapituloSchema } from "cpr2022-data/src/types/schema";
+import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import { useHashPath } from "hooks/useHash";
-import { getCapituloFragmentoId } from "lib/helpers";
-import Articulos from "./Articulos";
-import HashLink from "./HashLink";
+import { getChildrenOfType, getItemFragmentoId } from "lib/helpers";
 import Titulo from "./Titulo";
+import HashLink from "./HashLink";
+import Articulo from "./Articulo";
 
-export default function Capitulo(capitulo: CapituloSchema) {
+export default function Capitulo({ item }: { item: ItemObject }) {
   const [hash, _] = useHashPath();
-  const path = getCapituloFragmentoId(capitulo);
+  const path = getItemFragmentoId(item);
   const isHighlighted = path == hash;
   return (
     <div className="">
@@ -18,15 +18,17 @@ export default function Capitulo(capitulo: CapituloSchema) {
         }
       >
         <HashLink hash={path} anchor visible={!isHighlighted} />{" "}
-        <TitleCase text={"Capítulo " + capitulo.capitulo} />
+        <TitleCase text={"Capítulo " + item.key} />
         <br />
-        <TitleCase text={capitulo.nombre} />
+        <TitleCase text={item.label ?? ""} />
       </h2>
-      {capitulo.articulos && <Articulos articulos={capitulo.articulos} />}
-      {capitulo.titulos?.map((titulo, tituloIndex) => (
+      {getChildrenOfType(item, "articulo").map((item) => (
+        <Articulo key={item.oid} item={item} />
+      ))}
+      {getChildrenOfType(item, "titulo").map((child, tituloIndex) => (
         <Titulo
           key={tituloIndex}
-          {...titulo}
+          item={child}
           path={`${path}.${tituloIndex + 1}`}
         />
       ))}

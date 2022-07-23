@@ -1,24 +1,52 @@
 import fs from "fs";
 
-const salida1 = "data/json/constitucion.json";
-const salida2 = "packages/data/src/constitucion.json";
+const outputDirData = "data/json/";
+const outputDirSrc = "packages/data/src/";
+const outputFormatNest = "constitucion.nested.json";
+const outputFormatShallow = "constitucion.shallow.json";
 
-const metadatos = JSON.parse(fs.readFileSync("data/json/metadatos.json", "utf8"));
+let nextId = 0;
+
+const metadatos = JSON.parse(
+  fs.readFileSync("data/json/metadatos.json", "utf8")
+);
 const preambulo = fs.readFileSync("data/markdown/preambulo.md", "utf8");
-const capitulos = itemsDesdeMarkdown("data/markdown/capitulos.md");
-const transitorias = itemsDesdeMarkdown("data/markdown/transitorias.md");
-const constitucion = {
+const [capitulos, capitulosShallow] = itemsDesdeMarkdown(
+  "data/markdown/capitulos.md"
+);
+const [transitorias, transitoriasShallow] = itemsDesdeMarkdown(
+  "data/markdown/transitorias.md"
+);
+const constitucionNested = {
   preambulo,
   capitulos,
   transitorias,
 };
-fs.writeFileSync(salida1, JSON.stringify(constitucion, null, 2));
-fs.writeFileSync(salida2, JSON.stringify(constitucion, null, 2));
+
+const constitucionShallow = {
+  ["0"]: {
+    oid: "0",
+    type: "preambulo",
+    level: 0,
+    content: preambulo,
+  },
+  ...capitulosShallow,
+  ...transitoriasShallow,
+};
+
+saveJson(outputDirData + outputFormatNest, constitucionNested);
+saveJson(outputDirSrc + outputFormatNest, constitucionNested);
+saveJson(outputDirData + outputFormatShallow, constitucionShallow);
+saveJson(outputDirSrc + outputFormatShallow, constitucionShallow);
+
+function saveJson(file, data) {
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
+}
 
 function itemsDesdeMarkdown(entrada) {
   const markdown = fs.readFileSync(entrada, "utf8");
 
-  const items = [];
+  const nestedRoots = [];
   let capitulo = null;
   let capituloNumero = 1;
   let transitoria = null;
@@ -27,7 +55,12 @@ function itemsDesdeMarkdown(entrada) {
   let articulo = null;
   let incisoNivel = [];
   let incisoPrevio = null;
-  let incisos = [];
+
+  /** @type {{ oid: number, type: string, level: number, key?: string, parent?: string, label?: string, data?: object }[]} */
+  const shallowItems = {};
+
+  /** @type {object | undefined} */
+  let parentIncisos;
 
   markdown
     .split("\n")
@@ -39,30 +72,57 @@ function itemsDesdeMarkdown(entrada) {
           capitulo: parts[1],
           nombre: parts[2],
           numero: capituloNumero++,
+          __oid: String(++nextId),
         };
         titulo = null;
-        items.push(capitulo);
+        nestedRoots.push(capitulo);
+        shallowItems[capitulo.__oid] = {
+          oid: capitulo.__oid,
+          type: "capitulo",
+          level: 0,
+          key: capitulo.capitulo,
+          ordinal: capitulo.numero,
+          label: capitulo.nombre,
+        };
       } else if (linea.startsWith("### ")) {
         const parts = linea.match(/### (.*)/);
         titulo = {
           titulo: parts[1],
           articulos: [],
+          __oid: String(++nextId),
         };
         if (capitulo.titulos == null) {
           capitulo.titulos = [];
         }
         capitulo.titulos.push(titulo);
+        shallowItems[titulo.__oid] = {
+          oid: titulo.__oid,
+          type: "titulo",
+          level: 1,
+          parent: capitulo.__oid,
+          label: titulo.titulo,
+        };
       } else if (linea.startsWith("#### Artículo ")) {
-        const articuloNumeroActual = parseInt(linea.split(" ")[2])
-        const meta = metadatos.find(m => m.articulo == articuloNumeroActual);
-        articulo = {
-          articulo: articuloNumeroActual,
-          incisos: [],
+        const articuloNumeroActual = parseInt(linea.split(" ")[2]);
+        const meta = metadatos.find((m) => m.articulo == articuloNumeroActual);
+        const data = {
           pagina: meta.pagina,
           etiquetas: meta.etiquetas || [],
           referencias: meta.referencias,
           sobre: meta.sobre,
         };
+        articulo = {
+          articulo: articuloNumeroActual,
+          incisos: [],
+          ...data,
+          __oid: String(++nextId),
+        };
+        const item = (shallowItems[articulo.__oid] = {
+          oid: articulo.__oid,
+          type: "articulo",
+          key: articulo.articulo,
+          data,
+        });
 
         incisoPrevio = null;
         incisoNivel = [];
@@ -71,23 +131,41 @@ function itemsDesdeMarkdown(entrada) {
             capitulo.articulos = [];
           }
           capitulo.articulos.push(articulo);
+          item.parent = capitulo.__oid;
+          item.level = 1;
         } else {
           titulo.articulos.push(articulo);
+          item.parent = titulo.__oid;
+          item.level = 2;
         }
       } else if (linea.startsWith("#### ")) {
         const parts = linea.match(/#### (.*)/);
-        const transitoriaNumeroActual = transitoriaNumero++
-        const meta = metadatos.find(m => m.transitoria == transitoriaNumeroActual);
-        transitoria = {
-          transitoria: parts[1],
-          numero: transitoriaNumeroActual,
+        const transitoriaNumeroActual = transitoriaNumero++;
+        const meta = metadatos.find(
+          (m) => m.transitoria == transitoriaNumeroActual
+        );
+        const data = {
           pagina: meta.pagina,
           etiquetas: meta.etiquetas || [],
           sobre: meta.sobre,
         };
+        transitoria = {
+          transitoria: parts[1],
+          numero: transitoriaNumeroActual,
+          ...data,
+          __oid: String(++nextId),
+        };
         incisoPrevio = null;
         incisoNivel = [];
-        items.push(transitoria);
+        nestedRoots.push(transitoria);
+        shallowItems[transitoria.__oid] = {
+          oid: transitoria.__oid,
+          type: "transitoria",
+          level: 0,
+          key: transitoria.transitoria,
+          ordinal: transitoria.numero,
+          data,
+        };
       } else {
         const inciso = parseLinea(linea);
         const contenedor = articulo || transitoria;
@@ -97,27 +175,68 @@ function itemsDesdeMarkdown(entrada) {
             if (incisoPrevio.incisos == null) {
               incisoPrevio.incisos = [];
             }
-            incisos = incisoPrevio.incisos;
+            parentIncisos = incisoPrevio;
           } else if (inciso.nivel < incisoPrevio.nivel) {
             incisoPrevio = incisoNivel.pop();
             if (incisoNivel.length >= 1) {
-              incisos = incisoNivel[incisoNivel.length - 1].incisos;
+              parentIncisos = incisoNivel[incisoNivel.length - 1];
             } else {
-              incisos = contenedor.incisos;
+              parentIncisos = contenedor;
             }
           }
         } else if (incisoNivel.length == 0) {
           if (contenedor.incisos == null) {
             contenedor.incisos = [];
           }
-          incisos = contenedor.incisos;
+          parentIncisos = contenedor;
         }
         inciso.texto = inciso.texto.replace(/<br>/g, "\n");
-        incisos.push(inciso);
+        inciso.__oid = String(++nextId);
+        parentIncisos.incisos.push(inciso);
+        shallowItems[inciso.__oid] = {
+          oid: inciso.__oid,
+          type: "inciso",
+          key: inciso.inciso,
+          level: shallowItems[parentIncisos.__oid].level + 1,
+          parent: parentIncisos.__oid,
+          content: inciso.texto,
+        };
         incisoPrevio = inciso;
       }
     });
-  return items;
+
+  nestedRoots.forEach((root) => {
+    delete root.__oid;
+    const articulos = root.articulos;
+    cleanArticulos(articulos);
+    cleanIncisos(root.incisos);
+    root.titulos?.forEach((titulo) => {
+      delete titulo.__oid;
+      cleanArticulos(titulo.articulos);
+    });
+  });
+
+  return [nestedRoots, shallowItems];
+}
+
+function cleanArticulos(articulos) {
+  articulos?.forEach((art) => {
+    delete art.__oid;
+    const incisos = art.incisos;
+    cleanIncisos(incisos);
+  });
+}
+
+function cleanIncisos(incisos) {
+  incisos?.forEach((i) => {
+    delete i.__oid;
+    i.incisos?.forEach((i2) => {
+      delete i2.__oid;
+      i2.incisos?.forEach((i3) => {
+        delete i3.__oid;
+      });
+    });
+  });
 }
 
 function parseLinea(linea) {

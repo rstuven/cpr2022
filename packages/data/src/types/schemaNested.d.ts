@@ -1,4 +1,4 @@
-export type Constitucion = {
+export type ConstitucionNested = {
   readonly preambulo: string;
   readonly capitulos: ReadonlyArray<Capitulo>;
   readonly transitorias: ReadonlyArray<Transitoria>;

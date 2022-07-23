@@ -1,0 +1,153 @@
+{
+  "$ref": "#/definitions/ConstitucionShallow",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ArticuloData": {
+      "additionalProperties": false,
+      "properties": {
+        "etiquetas": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "pagina": {
+          "type": "number"
+        },
+        "referencias": {
+          "items": {
+            "$ref": "#/definitions/Referencia"
+          },
+          "type": "array"
+        },
+        "sobre": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pagina",
+        "etiquetas",
+        "sobre"
+      ],
+      "type": "object"
+    },
+    "ConstitucionShallow": {
+      "$ref": "#/definitions/Record%3Cstring%2CItemObject%3E"
+    },
+    "ItemObject": {
+      "additionalProperties": false,
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "data": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ArticuloData"
+            },
+            {
+              "$ref": "#/definitions/TransitoriaData"
+            }
+          ]
+        },
+        "key": {
+          "description": "Unique among the same with the same parent.",
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "level": {
+          "type": "number"
+        },
+        "oid": {
+          "type": "string"
+        },
+        "ordinal": {
+          "type": "number"
+        },
+        "parent": {
+          "description": "Parent oid",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/ItemType"
+        }
+      },
+      "required": [
+        "oid",
+        "type",
+        "level"
+      ],
+      "type": "object"
+    },
+    "ItemType": {
+      "enum": [
+        "preambulo",
+        "capitulo",
+        "titulo",
+        "articulo",
+        "inciso",
+        "transitoria"
+      ],
+      "type": "string"
+    },
+    "Record<string,ItemObject>": {
+      "additionalProperties": {
+        "$ref": "#/definitions/ItemObject"
+      },
+      "type": "object"
+    },
+    "Referencia": {
+      "additionalProperties": false,
+      "properties": {
+        "autor": {
+          "type": "string"
+        },
+        "etiqueta": {
+          "type": "string"
+        },
+        "incisos": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "etiqueta",
+        "url",
+        "autor"
+      ],
+      "type": "object"
+    },
+    "TransitoriaData": {
+      "additionalProperties": false,
+      "properties": {
+        "etiquetas": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "pagina": {
+          "type": "number"
+        },
+        "sobre": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pagina",
+        "etiquetas"
+      ],
+      "type": "object"
+    }
+  }
+}

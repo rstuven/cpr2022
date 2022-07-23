@@ -11,11 +11,11 @@ import {
   FragmentoContext,
   getArticuloContextCapituloTituloLabel,
   getArticuloIncisosLines,
-  getArticuloLabel,
   getCapituloArticulosDescription,
-  getCapituloLabel,
   getCapituloSobreLines,
+  getItemLabel,
 } from "./helpers";
+import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
 
 const accentColor = "#34005f";
 const dimmedColor = "#89744f";
@@ -107,7 +107,7 @@ function renderArticulo(
 
   const { lastWidth: titleLastWidth } = renderText({
     ctx,
-    text: getArticuloLabel(fragmento.articulo),
+    text: getItemLabel(fragmento.articulo),
     left: box.left,
     top: titleTop,
     width: box.width,
@@ -119,7 +119,7 @@ function renderArticulo(
 
   const { bottom: titleBottom } = renderText({
     ctx,
-    text: `sobre ${fragmento.articulo.sobre}`,
+    text: `sobre ${(fragmento.articulo.data as ArticuloData).sobre}`,
     left: box.left + titleLastWidth + 10,
     top: titleTop + 13,
     width: box.width - titleLastWidth - 20,
@@ -169,7 +169,7 @@ function renderCapitulo(
 
   const { bottom: titleBottom } = renderText({
     ctx,
-    text: getCapituloLabel(fragmento.capitulo),
+    text: getItemLabel(fragmento.capitulo),
     left: box.left,
     top: box.top,
     width: box.width,

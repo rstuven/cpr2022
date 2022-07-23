@@ -1,29 +1,149 @@
-import { constitucion } from "cpr2022-data";
+import { constitucionShallow as constitucion } from "cpr2022-data";
 import {
-  Articulo as ArticuloSchema,
-  Capitulo as CapituloSchema,
-  Inciso as IncisoSchema,
-  Titulo as TituloSchema,
-  Transitoria as TransitoriaSchema,
-} from "cpr2022-data/src/types/schema";
+  ArticuloData,
+  ItemObject,
+  ItemType,
+} from "cpr2022-data/src/types/schemaShallow";
+
+export function firstToUpperCase(text: string) {
+  return text[0].toUpperCase() + text.substring(1);
+}
+
+const items = Object.values(constitucion);
+
+export function getItemsOfType(type: ItemType) {
+  return items.filter((o) => o.type == type);
+}
+
+export function getChildren(parent: ItemObject) {
+  return items.filter((o) => o.parent == parent.oid);
+}
+
+export function getChildrenOfType(parent: ItemObject, childrenType: ItemType) {
+  return items.filter((o) => o.type == childrenType && o.parent == parent.oid);
+}
+
+export function getParentOfType(item: ItemObject, parentType: ItemType) {
+  let current = item;
+  while (true) {
+    if (!current.parent) {
+      return undefined;
+    }
+    const parent = constitucion[current.parent];
+    if (!parent) {
+      return undefined;
+    }
+    if (parent.type == parentType) {
+      return parent;
+    }
+    current = parent;
+  }
+}
+
+export function isAncestorOf(ancestor: ItemObject, of: ItemObject) {
+  let current = of;
+  while (true) {
+    if (!current.parent) {
+      return false;
+    }
+    const parent = constitucion[current.parent];
+    if (!parent) {
+      return false;
+    }
+    if (parent.oid == ancestor.oid) {
+      return true;
+    }
+    current = parent;
+  }
+}
+
+export function getDescendantsOfType(
+  parent: ItemObject,
+  childrenType: ItemType
+) {
+  const candidates = getItemsOfType(childrenType);
+  return candidates.filter((candidate) => isAncestorOf(parent, candidate));
+}
+
+export function getItemFragmentoId(item: ItemObject) {
+  return (
+    item.type.substring(0, 3) + ":" + (item.ordinal ?? item.key ?? item.oid)
+  );
+}
+
+export function getItemLabel(item: ItemObject, withPrefix = true) {
+  if (item.type == "capitulo") {
+    return (withPrefix ? `Capítulo ${item.key} - ` : "") + item.label;
+  } else if (item.type == "titulo") {
+    return (withPrefix ? "Título: " : "") + item.label;
+  } else if (item.type == "articulo") {
+    return (withPrefix ? "Artículo " : "") + item.key;
+  }
+  throw Error("Not implemented type " + item.type);
+}
+
+export function getArticuloContextCapituloTituloLabel(
+  fragmento: ArticuloContext
+) {
+  return `${getItemLabel(fragmento.capitulo)}${
+    fragmento.titulo ? " - " + getItemLabel(fragmento.titulo) : ""
+  }`;
+}
+
+export function getCapituloArticulosDescription(capitulo: ItemObject) {
+  const articulos = getDescendantsOfType(capitulo, "articulo");
+  return `Artículos ${articulos[0].key} al ${
+    articulos[articulos.length - 1].key
+  }`;
+}
+
+export const NON_BREAKING_SPACE = "\u00a0";
+
+export function getIncisoBullet(item: ItemObject, baseItem: ItemObject) {
+  if (!item.key) {
+    return "";
+  }
+  const level = item.level - baseItem.level - 1;
+  return NON_BREAKING_SPACE.repeat(level * 4) + item.key + ".))"[level] + " ";
+}
+
+export function getArticuloIncisosLines(articulo: ItemObject) {
+  return getDescendantsOfType(articulo, "inciso").map(
+    (inciso) => getIncisoBullet(inciso, articulo) + inciso.content
+  );
+}
+
+export function getCapituloSobreLines(capitulo: ItemObject) {
+  return getDescendantsOfType(capitulo, "articulo").map(
+    (articulo) =>
+      `${articulo.key}. ${firstToUpperCase(
+        (articulo.data as ArticuloData).sobre
+      )}`
+  );
+}
+
+export function getPreambulo() {
+  const item = items.find((o) => o.type == "preambulo");
+  return item?.content ?? "";
+}
 
 export type ArticuloContext = {
-  articulo: ArticuloSchema;
-  capitulo: CapituloSchema;
-  titulo?: TituloSchema;
+  articulo: ItemObject;
+  capitulo: ItemObject;
+  titulo?: ItemObject;
 };
 
 export type TituloContext = {
-  capitulo: CapituloSchema;
-  titulo: TituloSchema;
+  capitulo: ItemObject;
+  titulo: ItemObject;
 };
 
 export type CapituloContext = {
-  capitulo: CapituloSchema;
+  capitulo: ItemObject;
 };
 
 export type TransitoriaContext = {
-  transitoria?: TransitoriaSchema;
+  transitoria?: ItemObject;
 };
 
 export type FragmentoContext =
@@ -42,165 +162,45 @@ export function parseFragmento(
 
   if (parts[0] == "cap") {
     const subparts = parts[1].split(".");
-    const capitulo = constitucion.capitulos.find(
-      (c) => c.numero.toString() == subparts[0]
+
+    const capitulo = items.find(
+      (o) => o.type == "capitulo" && String(o.ordinal) == subparts[0]
     );
     if (!capitulo) {
       throw new Error(`Not found fragmentoId ${fragmentoId}`);
     }
-
-    const titulo =
-      capitulo.titulos && capitulo.titulos[parseInt(subparts[1]) - 1];
+    const titulo = getParentOfType(capitulo, "titulo");
 
     return { capitulo, titulo };
   }
 
   if (parts[0] == "art") {
-    const numero = parseInt(parts[1]);
-    const data = getArticuloContext(numero);
-    if (!data) {
+    const subparts = parts[1].split(".");
+
+    const articulo = items.find(
+      (o) => o.type == "articulo" && String(o.key) == subparts[0]
+    );
+    if (!articulo) {
       throw new Error(`Not found fragmentoId ${fragmentoId}`);
     }
-    return data;
+
+    const capitulo = getParentOfType(articulo, "capitulo");
+    if (!capitulo) {
+      throw new Error(`Not found capitulo for ${fragmentoId}`);
+    }
+    const titulo = getParentOfType(articulo, "titulo");
+
+    return { articulo, capitulo, titulo };
   }
 
   if (parts[0] == "dt") {
-    const numero = parseInt(parts[1]);
-    const transitoria = getTransitoria(numero);
+    const subparts = parts[1].split(".");
+
+    const transitoria = items.find(
+      (o) => o.type == "transitoria" && String(o.ordinal) == subparts[0]
+    );
     return { transitoria };
   }
 
   throw new Error(`Can't parse fragmentoId ${fragmentoId}`);
-}
-
-export function getTransitoria(numero: number) {
-  return constitucion.transitorias.find((dt) => dt.numero == numero);
-}
-
-export function getArticuloContext(numero: number) {
-  return getArticuloContexts().find(
-    (context) => context.articulo.articulo == numero
-  );
-}
-
-export function getArticuloContexts() {
-  return constitucion.capitulos.flatMap((capitulo) =>
-    getCapituloArticulos(capitulo)
-  );
-}
-
-export function getCapituloArticulos(capitulo: CapituloSchema) {
-  const result: ArticuloContext[] = [];
-  result.push(
-    ...(capitulo.articulos || []).map((articulo) => ({
-      articulo,
-      capitulo,
-    }))
-  );
-  capitulo.titulos?.forEach((titulo) => {
-    result.push(
-      ...titulo.articulos.map((articulo) => ({
-        articulo,
-        titulo,
-        capitulo,
-      }))
-    );
-  });
-  return result;
-}
-
-export function firstToUpperCase(text: string) {
-  return text[0].toUpperCase() + text.substring(1);
-}
-
-export function getCapituloArticulosDescription(capitulo: CapituloSchema) {
-  const articulos = getCapituloArticulos(capitulo);
-  return `Artículos ${articulos[0].articulo.articulo} al ${
-    articulos[articulos.length - 1].articulo.articulo
-  }`;
-}
-
-export const NON_BREAKING_SPACE = "\u00a0";
-
-export function getIncisoBullet(inciso: IncisoSchema) {
-  return inciso.inciso
-    ? NON_BREAKING_SPACE.repeat((inciso.nivel - 1) * 4) +
-        inciso.inciso +
-        ".))"[inciso.nivel - 1] +
-        " "
-    : "";
-}
-
-let articulosCache: ArticuloSchema[];
-
-export function getArticulos() {
-  if (articulosCache == null) {
-    articulosCache = constitucion.capitulos.flatMap((cap) => [
-      ...(cap.articulos ?? []),
-      ...(cap.titulos?.flatMap((titulo) => titulo.articulos) ?? []),
-    ]);
-  }
-  return articulosCache;
-}
-
-export function getCapituloFragmentoId(capitulo: CapituloSchema) {
-  return "cap:" + capitulo.numero;
-}
-
-export function getArticuloFragmentoId(articulo: ArticuloSchema) {
-  return "art:" + articulo.articulo;
-}
-
-export function getArticuloIncisosLines(articulo: ArticuloSchema) {
-  return getIncisosLines(articulo.incisos);
-}
-
-export function getIncisosLines(
-  incisos?: ReadonlyArray<IncisoSchema>
-): string[] {
-  if (!incisos) return [];
-  return incisos.flatMap((inciso) => [
-    getIncisoBullet(inciso) + inciso.texto,
-    ...getIncisosLines(inciso.incisos),
-  ]);
-}
-
-export function getCapituloSobreLines(capitulo: CapituloSchema) {
-  return [
-    getCapituloArticulosSobreLines(capitulo.articulos),
-    ...(!capitulo.titulos
-      ? []
-      : capitulo.titulos?.flatMap((titulo) =>
-          getCapituloArticulosSobreLines(titulo.articulos)
-        )),
-  ].flat();
-}
-
-export function getCapituloArticulosSobreLines(
-  articulos?: ReadonlyArray<ArticuloSchema>
-) {
-  if (!articulos) return [];
-  return articulos.map(
-    (articulo) => `${articulo.articulo}. ${firstToUpperCase(articulo.sobre)}`
-  );
-}
-
-export function getArticuloContextCapituloTituloLabel(
-  fragmento: ArticuloContext
-) {
-  return `${getCapituloLabel(fragmento.capitulo)}${
-    fragmento.titulo ? " - " + getTituloLabel(fragmento.titulo) : ""
-  }`;
-}
-
-export function getCapituloLabel(capitulo: CapituloSchema) {
-  return `Capítulo ${capitulo.capitulo} - ${capitulo.nombre}`;
-}
-
-export function getTituloLabel(titulo: TituloSchema) {
-  return `Título: ${titulo.titulo}`;
-}
-
-export function getArticuloLabel(articulo: ArticuloSchema) {
-  return `Artículo ${articulo.articulo}`;
 }

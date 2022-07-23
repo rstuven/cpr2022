@@ -1,23 +1,22 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { constitucion } from "cpr2022-data";
 import MetaTags from "components/MetaTags";
 import { useScrollToHash } from "hooks/useScrollToHash";
 import { useHashPath } from "hooks/useHash";
+import { createFragmentImage } from "lib/images";
 import {
   ArticuloContext,
   CapituloContext,
   firstToUpperCase,
   getArticuloContextCapituloTituloLabel,
-  getCapituloFragmentoId,
-  getArticuloLabel,
   getCapituloArticulosDescription,
-  getCapituloLabel,
-  parseFragmento as parseFragmento,
-  getArticuloFragmentoId,
+  getItemFragmentoId,
+  getItemLabel,
+  getItemsOfType,
+  parseFragmento,
 } from "lib/helpers";
-import { createFragmentImage } from "lib/images";
+import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
 
 const Capitulo = dynamic(() => import("../../components/Capitulo"), {
   ssr: false,
@@ -43,24 +42,18 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const ids: string[] = [];
-  constitucion.capitulos.forEach((cap) => {
-    ids.push(getCapituloFragmentoId(cap));
-    cap.articulos?.forEach((art) => {
-      ids.push(getArticuloFragmentoId(art));
-    });
-    cap.titulos?.forEach((titulo) => {
-      titulo.articulos.forEach((art) => {
-        ids.push(getArticuloFragmentoId(art));
-      });
-    });
-  });
-
-  const paths = ids.map((fragmentoId) => ({
+  const paths = getFragmentoIds().map((fragmentoId) => ({
     params: { fragmentoId },
   }));
 
   return { paths, fallback: "blocking" };
+}
+
+function getFragmentoIds() {
+  // return ["art:1". "cap:1"];
+  return getItemsOfType("capitulo")
+    .concat(getItemsOfType("articulo"))
+    .map((item) => getItemFragmentoId(item));
 }
 
 export default function Fragmento() {
@@ -106,25 +99,29 @@ function getFragmento(fragmentoId: string) {
 
 function getCapitulo(fragmento: CapituloContext) {
   const capitulo = fragmento.capitulo;
-  const title = getCapituloLabel(capitulo);
+  const title = getItemLabel(capitulo);
   const description = getCapituloArticulosDescription(capitulo);
   const Component = function Component() {
-    return <Capitulo {...capitulo} />;
+    return <Capitulo item={capitulo} />;
   };
   return { Component, title, description };
 }
 
-function getArticulo(data: ArticuloContext) {
-  const title = `${getArticuloLabel(
-    data.articulo
-  )} (${getArticuloContextCapituloTituloLabel(data)})`;
-  const description = firstToUpperCase(data.articulo.sobre);
+function getArticulo(fragmento: ArticuloContext) {
+  const title = `${getItemLabel(
+    fragmento.articulo
+  )} (${getArticuloContextCapituloTituloLabel(fragmento)})`;
+  const description = firstToUpperCase(
+    (fragmento.articulo.data as ArticuloData).sobre
+  );
   const Component = function Component() {
     return (
       <div>
-        <h2 className="my-3">{getCapituloLabel(data.capitulo)}</h2>
-        {data.titulo && <h3 className="my-3">{data.titulo.titulo}</h3>}
-        <Articulo {...data.articulo} />
+        <h2 className="my-3">{getItemLabel(fragmento.capitulo)}</h2>
+        {fragmento.titulo && (
+          <h3 className="my-3">{getItemLabel(fragmento.titulo, false)}</h3>
+        )}
+        <Articulo item={fragmento.articulo} />
       </div>
     );
   };

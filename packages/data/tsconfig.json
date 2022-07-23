@@ -20,7 +20,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/constitucion.json"
+    "src/constitucion.*.json"
   ],
   "exclude": [
     "node_modules/**"

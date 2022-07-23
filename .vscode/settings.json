@@ -1,10 +1,16 @@
 {
-    "json.schemas": [
-      {
-        "url": "./data/json/schema.json",
-        "fileMatch": [
-          "data/json/constitucion.json"
-        ],
-      }
-    ],
-  }
+  "json.schemas": [
+    {
+      "url": "./data/json/schemaNested.json",
+      "fileMatch": [
+        "data/json/constitucion.nested.json"
+      ],
+    },
+    {
+      "url": "./data/json/schemaShallow.json",
+      "fileMatch": [
+        "data/json/constitucion.shallow.json"
+      ],
+    }
+  ],
+}

@@ -1,21 +1,23 @@
 import { Badge, Dropdown } from "flowbite-react";
-import { Articulo as ArticuloSchema } from "cpr2022-data/src/types/schema";
-import {
-  firstToUpperCase,
-  getArticuloFragmentoId,
-  getArticuloLabel,
-  getArticulos,
-} from "lib/helpers";
 import { useHashPath } from "hooks/useHash";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
 import Pagina from "./Pagina";
 import { useState } from "react";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import { ArticuloData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
+import {
+  getChildrenOfType,
+  getItemFragmentoId,
+  getItemsOfType,
+  getItemLabel,
+  firstToUpperCase,
+} from "lib/helpers";
 
-export default function Articulo(articulo: ArticuloSchema) {
-  const path = getArticuloFragmentoId(articulo);
+export default function Articulo({ item }: { item: ItemObject }) {
+  const path = getItemFragmentoId(item);
   const [hash, _] = useHashPath();
+  const articulo = item.data as ArticuloData;
   const referencias = articulo.referencias?.filter((r) => !r.incisos);
   const isHighlighted = path == hash;
   return (
@@ -31,12 +33,10 @@ export default function Articulo(articulo: ArticuloSchema) {
       </div>
       <span className="font-sans flex flex-wrap gap-1 text-base">
         <HashLink hash={path} anchor visible={!isHighlighted} />
-        <b className="text-black mx-1 font-ConvencionFJ">
-          {getArticuloLabel(articulo)}
-        </b>
+        <b className="text-black mx-1 font-ConvencionFJ">{getItemLabel(item)}</b>
         <Badge color="gray"> {firstToUpperCase(articulo.sobre)}</Badge>
         {articulo.etiquetas.map((etiqueta, index) => (
-          <BadgeEtiquetas key={index} {...{ etiqueta, articulo }} />
+          <BadgeEtiquetas key={index} etiqueta={etiqueta} item={item} />
         ))}
         {referencias?.map((referencia, index) => (
           <Badge color="info" key={index}>
@@ -52,8 +52,8 @@ export default function Articulo(articulo: ArticuloSchema) {
           </Badge>
         ))}
       </span>
-      {articulo.incisos.map((inciso, incisoIndex) => (
-        <Inciso key={incisoIndex} {...inciso} path={path} />
+      {getChildrenOfType(item, "inciso").map((inciso, incisoIndex) => (
+        <Inciso key={incisoIndex} item={inciso} baseItem={item} path={path} />
       ))}
     </div>
   );
@@ -61,7 +61,7 @@ export default function Articulo(articulo: ArticuloSchema) {
 
 function BadgeEtiquetas(props: {
   etiqueta: string;
-  articulo: ArticuloSchema;
+  item: ItemObject;
 }): JSX.Element {
   const [open, setOpen] = useState(false);
   const label = props.etiqueta.replace(/ /g, "\u00a0");
@@ -75,19 +75,19 @@ function BadgeEtiquetas(props: {
           </div>
         ) : (
           <Dropdown inline label={label}>
-            {getArticulos()
+            {getItemsOfType("articulo")
               .filter(
-                (art, i) =>
-                  art.articulo != props.articulo.articulo &&
-                  art.etiquetas.includes(props.etiqueta)
+                (art) =>
+                  art.oid != props.item.oid &&
+                  (art.data as ArticuloData).etiquetas.includes(props.etiqueta)
               )
               .map((articulo, index) => {
                 return (
                   <Dropdown.Item key={index}>
-                    <a
-                      href={"#" + getArticuloFragmentoId(articulo)}
-                    >{`${getArticuloLabel(articulo)} (${firstToUpperCase(
-                      articulo.sobre
+                    <a href={"#" + getItemFragmentoId(articulo)}>{`${getItemLabel(
+                      articulo
+                    )} (${firstToUpperCase(
+                      (articulo.data as ArticuloData).sobre
                     )})`}</a>
                   </Dropdown.Item>
                 );

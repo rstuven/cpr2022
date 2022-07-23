@@ -1,20 +1,24 @@
-import { Titulo as TituloSchema } from "cpr2022-data/src/types/schema";
+import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import { useHashPath } from "hooks/useHash";
-import Articulos from "./Articulos";
+import { getChildrenOfType } from "lib/helpers";
+import Articulo from "./Articulo";
 import HashLink from "./HashLink";
 
-type TituloProps = TituloSchema & { path: string };
-export default function Titulo(titulo: TituloProps) {
+type TituloProps = { item: ItemObject; path: string };
+
+export default function Titulo(props: TituloProps) {
   const [hash, _] = useHashPath();
-  const isHighlighted = titulo.path == hash;
+  const isHighlighted = props.path == hash;
   return (
     <div>
-      <a data-id={titulo.path} />
+      <a data-id={props.path} />
       <h3 className={isHighlighted ? "bg-amber-100 rounded" : ""}>
-        <HashLink hash={titulo.path} anchor visible={!isHighlighted} />{" "}
-        {titulo.titulo}
+        <HashLink hash={props.path} anchor visible={!isHighlighted} />{" "}
+        {props.item.label}
       </h3>
-      {titulo.articulos && <Articulos articulos={titulo.articulos} />}
+      {getChildrenOfType(props.item, "articulo").map((item) => (
+        <Articulo key={item.oid} item={item} />
+      ))}
     </div>
   );
 }

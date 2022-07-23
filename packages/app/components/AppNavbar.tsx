@@ -1,10 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Navbar, Avatar } from "flowbite-react";
 import { useNavbarContext } from "flowbite-react/lib/esm/components/Navbar/NavbarContext";
-import { getCapituloFragmentoId, getCapituloLabel } from "lib/helpers";
-import { constitucion } from "cpr2022-data";
 import useMediaQuery from "hooks/useMediaQuery";
-import { Capitulo as CapituloSchema } from "cpr2022-data/src/types/schema";
+import { getItemFragmentoId, getItemsOfType, getItemLabel } from "lib/helpers";
+import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 
 export function AppNavbar({
   onMenuOpenChange,
@@ -45,10 +44,10 @@ export function AppNavbar({
         </Navbar.Link>
         <Navbar.Link href="/acerca-de">¿Qué es esto?</Navbar.Link>
         {!isMediumMinWidth &&
-          constitucion.capitulos.map((capitulo, index) => (
+          getItemsOfType("capitulo").map((capitulo, index) => (
             <CapituloNavLink
               key={index}
-              capitulo={capitulo}
+              item={capitulo}
               onMenuOpenChange={onMenuOpenChangeHere}
             />
           ))}
@@ -58,10 +57,10 @@ export function AppNavbar({
 }
 
 function CapituloNavLink({
-  capitulo,
+  item,
   onMenuOpenChange,
 }: {
-  capitulo: CapituloSchema;
+  item: ItemObject;
   onMenuOpenChange: (newValue: boolean) => void;
 }) {
   const { isOpen, setIsOpen } = useNavbarContext();
@@ -78,11 +77,11 @@ function CapituloNavLink({
 
   return (
     <Navbar.Link
-      href={"/#" + getCapituloFragmentoId(capitulo)}
+      href={"/#" + getItemFragmentoId(item)}
       onClick={onNavbarLinkClick}
       onTouchEnd={onNavbarLinkClick}
     >
-      {getCapituloLabel(capitulo)}
+      <span className="font-ConvencionFJ">{getItemLabel(item)}</span>
     </Navbar.Link>
   );
 }

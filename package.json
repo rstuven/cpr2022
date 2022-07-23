@@ -7,9 +7,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build-schema && node scripts/md2json.mjs && npm run validate-schema",
-    "build-schema": "ts-json-schema-generator --path packages/data/src/types/schema.d.ts --type Constitucion --expose all --out data/json/schema.json",
-    "validate-schema": "ajv validate -s data/json/schema.json -d data/json/constitucion.json --allow-union-types"
+    "build": "npm run build-schemas && node scripts/md2json.mjs && npm run validate-schemas && npm run build -w cpr2022-data && npm run build -w cpr2022-app",
+    "build-schemas": "bash scripts/build-schemas.sh",
+    "validate-schemas": "bash scripts/validate-schemas.sh"
   },
   "author": "",
   "license": "ISC",

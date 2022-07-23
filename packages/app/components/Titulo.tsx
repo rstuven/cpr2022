@@ -9,7 +9,7 @@ export default function Titulo(titulo: TituloProps) {
   const isHighlighted = titulo.path == hash;
   return (
     <div>
-      <a id={titulo.path} />
+      <a data-id={titulo.path} />
       <h3 className={isHighlighted ? "bg-amber-100 rounded" : ""}>
         <HashLink hash={titulo.path} anchor visible={!isHighlighted} />{" "}
         {titulo.titulo}

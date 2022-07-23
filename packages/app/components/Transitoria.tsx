@@ -11,9 +11,8 @@ export default function Transitoria(transitoria: TransitoriaSchema) {
   const isHighlighted = path == hash;
   return (
     <div className="border border-solid rounded-md p-3 mb-3">
-      <a id={path} />
-      <div className="float-right">
-        &nbsp;
+      <a data-id={path} />
+      <div className="float-right ml-1">
         <Pagina pagina={transitoria.pagina} />
       </div>
       <h3 className={"my-0" + (isHighlighted ? " bg-amber-100 rounded" : "")}>

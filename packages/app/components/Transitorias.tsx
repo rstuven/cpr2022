@@ -14,7 +14,7 @@ export default function Transitorias(props: TransitoriasProps) {
   const path = "dt";
   return (
     <>
-      <a id={path}></a>
+      <a data-id={path}></a>
       <h2 className={path == hash ? "bg-amber-100 rounded" : undefined}>
         <HashLink hash={path} anchor /> Disposiciones Transitorias
       </h2>

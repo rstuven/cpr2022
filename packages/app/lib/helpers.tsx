@@ -133,6 +133,26 @@ export function getIncisoBullet(inciso: IncisoSchema) {
     : "";
 }
 
+let articulosCache: ArticuloSchema[];
+
+export function getArticulos() {
+  if (articulosCache == null) {
+    articulosCache = constitucion.capitulos.flatMap((cap) => [
+      ...(cap.articulos ?? []),
+      ...(cap.titulos?.flatMap((titulo) => titulo.articulos) ?? []),
+    ]);
+  }
+  return articulosCache;
+}
+
+export function getCapituloFragmentoId(capitulo: CapituloSchema) {
+  return "cap:" + capitulo.numero;
+}
+
+export function getArticuloFragmentoId(articulo: ArticuloSchema) {
+  return "art:" + articulo.articulo;
+}
+
 export function getArticuloIncisosLines(articulo: ArticuloSchema) {
   return getIncisosLines(articulo.incisos);
 }

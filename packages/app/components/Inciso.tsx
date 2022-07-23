@@ -11,7 +11,7 @@ export default function Inciso(inciso: IncisoProps) {
   const isHighlighted = path == hash;
   return (
     <div className={"mt-2 leading-6 " + (isHighlighted ? " bg-amber-100" : "")}>
-      <a id={path} />
+      <a data-id={path} />
       <HashLink hash={path} anchor visible={!isHighlighted} /> <b>{bullet}</b>
       {inciso.texto}
       {inciso.incisos?.map((subinciso, index) => (

@@ -10,10 +10,12 @@ import {
   CapituloContext,
   firstToUpperCase,
   getArticuloContextCapituloTituloLabel,
+  getCapituloFragmentoId,
   getArticuloLabel,
   getCapituloArticulosDescription,
   getCapituloLabel,
   parseFragmento as parseFragmento,
+  getArticuloFragmentoId,
 } from "lib/helpers";
 import { createFragmentImage } from "lib/images";
 
@@ -43,13 +45,13 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   const ids: string[] = [];
   constitucion.capitulos.forEach((cap) => {
-    ids.push("cap:" + cap.numero);
+    ids.push(getCapituloFragmentoId(cap));
     cap.articulos?.forEach((art) => {
-      ids.push("art:" + art.articulo);
+      ids.push(getArticuloFragmentoId(art));
     });
     cap.titulos?.forEach((titulo) => {
       titulo.articulos.forEach((art) => {
-        ids.push("art:" + art.articulo);
+        ids.push(getArticuloFragmentoId(art));
       });
     });
   });

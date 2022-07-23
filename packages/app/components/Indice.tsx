@@ -6,7 +6,7 @@ import {
 import { constitucion } from "cpr2022-data";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
-import { getCapituloLabel, parseFragmento } from "lib/helpers";
+import { getCapituloFragmentoId, getCapituloLabel, parseFragmento } from "lib/helpers";
 
 export default function Indice() {
   const [hash, _] = useHashPath();
@@ -40,7 +40,7 @@ export default function Indice() {
 
 function Capitulo(capitulo: CapituloSchema) {
   const [hash, _] = useHashPath();
-  const path = "cap:" + capitulo.numero;
+  const path = getCapituloFragmentoId(capitulo);
   const isHighlighted = path == hash;
   const fragmento = parseFragmento(hash);
   const isCapitulo =

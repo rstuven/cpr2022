@@ -66,8 +66,8 @@ export function parseFragmento(
 
   if (parts[0] == "dt") {
     const numero = parseInt(parts[1]);
-    const data = getTransitoria(numero);
-    return { transitoria: data };
+    const transitoria = getTransitoria(numero);
+    return { transitoria };
   }
 
   throw new Error(`Can't parse fragmentoId ${fragmentoId}`);
@@ -84,11 +84,9 @@ export function getArticuloContext(numero: number) {
 }
 
 export function getArticuloContexts() {
-  const result: ArticuloContext[] = [];
-  constitucion.capitulos.forEach((capitulo) => {
-    result.push(...getCapituloArticulos(capitulo));
-  });
-  return result;
+  return constitucion.capitulos.flatMap((capitulo) =>
+    getCapituloArticulos(capitulo)
+  );
 }
 
 export function getCapituloArticulos(capitulo: CapituloSchema) {

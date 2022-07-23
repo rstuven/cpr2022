@@ -1,6 +1,6 @@
 import { Capitulo as CapituloSchema } from "cpr2022-data/src/types/schema";
 import { useHashPath } from "hooks/useHash";
-import { getCapituloFragmentoId } from "lib/helpers"
+import { getCapituloFragmentoId } from "lib/helpers";
 import Articulos from "./Articulos";
 import HashLink from "./HashLink";
 import Titulo from "./Titulo";
@@ -14,7 +14,7 @@ export default function Capitulo(capitulo: CapituloSchema) {
       <a data-id={path} />
       <h2
         className={
-          "text-center " + (isHighlighted ? "bg-amber-100 rounded" : "")
+          "text-center mt-1 " + (isHighlighted ? "bg-amber-100 rounded" : "")
         }
       >
         <HashLink hash={path} anchor visible={!isHighlighted} />{" "}

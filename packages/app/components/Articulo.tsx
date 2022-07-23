@@ -29,9 +29,11 @@ export default function Articulo(articulo: ArticuloSchema) {
       <div className="ml-1 float-right">
         <Pagina pagina={articulo.pagina} />
       </div>
-      <span className="flex flex-wrap gap-1 text-base">
+      <span className="font-sans flex flex-wrap gap-1 text-base">
         <HashLink hash={path} anchor visible={!isHighlighted} />
-        <b className="text-black mx-1">{getArticuloLabel(articulo)}</b>
+        <b className="text-black mx-1 font-ConvencionFJ">
+          {getArticuloLabel(articulo)}
+        </b>
         <Badge color="gray"> {firstToUpperCase(articulo.sobre)}</Badge>
         {articulo.etiquetas.map((etiqueta, index) => (
           <BadgeEtiquetas key={index} {...{ etiqueta, articulo }} />

@@ -25,8 +25,8 @@ export default function HashLink(props: HashLinkProps) {
           "font-sans text-gray-300" +
           (props.visible === false ? " invisible" : "")
         }
-        href={"#" + props.hash}
-        onClick={onClick}
+        href={"/#" + props.hash}
+        // onClick={onClick}
       >
         ¶
       </a>
@@ -37,8 +37,8 @@ export default function HashLink(props: HashLinkProps) {
       className={
         (props.className ?? "") + (props.visible === false ? " invisible" : "")
       }
-      href={"#" + props.hash}
-      onClick={onClick}
+      href={"/#" + props.hash}
+      // onClick={onClick}
     >
       {props.children}
     </a>

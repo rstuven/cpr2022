@@ -23,7 +23,7 @@ export function getChildrenOfType(parent: ItemObject, childrenType: ItemType) {
   return items.filter((o) => o.type == childrenType && o.parent == parent.oid);
 }
 
-export function getParentOfType(item: ItemObject, parentType: ItemType) {
+export function getParentOfType(item: ItemObject, ...parentTypes: ItemType[]) {
   let current = item;
   while (true) {
     if (!current.parent) {
@@ -33,7 +33,7 @@ export function getParentOfType(item: ItemObject, parentType: ItemType) {
     if (!parent) {
       return undefined;
     }
-    if (parent.type == parentType) {
+    if (parentTypes.includes(parent.type)) {
       return parent;
     }
     current = parent;
@@ -65,10 +65,48 @@ export function getDescendantsOfType(
   return candidates.filter((candidate) => isAncestorOf(parent, candidate));
 }
 
-export function getItemFragmentoId(item: ItemObject) {
-  return (
-    item.type.substring(0, 3) + ":" + (item.ordinal ?? item.key ?? item.oid)
-  );
+export function getItemFragmentoId(item: ItemObject, appendSuffix = true) {
+  let result = "";
+
+  if (item.type == "inciso") {
+    const parent = getParentOfType(item, "articulo", "transitoria");
+    if (parent) {
+      result = parent.type + ":" + (parent.ordinal ?? parent.key ?? item.oid);
+    }
+    const incisoUp1 = getParentOfType(item, "inciso");
+    if (incisoUp1) {
+      const incisoUp2 = getParentOfType(incisoUp1, "inciso");
+      if (incisoUp2) {
+        result += "." + (incisoUp2.key ?? "");
+      }
+      result += "." + (incisoUp1.key ?? "");
+    }
+    result += "." + (item.key ?? "");
+  } else {
+    result = item.type + ":" + (item.ordinal ?? item.key ?? item.oid);
+  }
+
+  if (appendSuffix && (item.type == "articulo" || item.type == "inciso")) {
+    const capitulo = getParentOfType(item, "capitulo");
+    const titulo = getParentOfType(item, "titulo");
+    if (capitulo) {
+      let suffix = "@capitulo:" + capitulo.ordinal;
+      if (titulo) {
+        suffix += "." + titulo.ordinal;
+      }
+      result += suffix;
+    }
+  }
+
+  return result;
+}
+
+export function isFragmentoIdMatch(fragmentoId: string, hash: string) {
+  const parts = fragmentoId.split("@");
+  if (fragmentoId.length > 1) {
+    return hash == fragmentoId || hash == parts[0];
+  }
+  return hash == fragmentoId;
 }
 
 export function getItemLabel(item: ItemObject, withPrefix = true) {
@@ -158,9 +196,14 @@ export function parseFragmento(
   if (!fragmentoId.trim()) {
     return undefined;
   }
-  const parts = fragmentoId.split(":");
+  let parts: string[];
+  if (fragmentoId.lastIndexOf("@") != -1) {
+    parts = fragmentoId.split("@")[0].split(":");
+  } else {
+    parts = fragmentoId.split(":");
+  }
 
-  if (parts[0] == "cap") {
+  if (parts[0] == "capitulo") {
     const subparts = parts[1].split(".");
 
     const capitulo = items.find(
@@ -174,7 +217,7 @@ export function parseFragmento(
     return { capitulo, titulo };
   }
 
-  if (parts[0] == "art") {
+  if (parts[0] == "articulo") {
     const subparts = parts[1].split(".");
 
     const articulo = items.find(
@@ -193,14 +236,14 @@ export function parseFragmento(
     return { articulo, capitulo, titulo };
   }
 
-  if (parts[0] == "dt") {
+  if (parts[0] == "transitoria") {
     const transitoria = items.find(
       (o) => o.type == "transitoria" && String(o.ordinal) == parts[1]
     );
     return { transitoria };
   }
 
-  if (parts[0] == "preambulo") {
+  if (["inicio", "preambulo"].includes(parts[0])) {
     return undefined;
   }
 

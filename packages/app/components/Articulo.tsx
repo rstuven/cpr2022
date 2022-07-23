@@ -12,6 +12,7 @@ import {
   getItemsOfType,
   getItemLabel,
   firstToUpperCase,
+  isFragmentoIdMatch,
 } from "lib/helpers";
 
 export default function Articulo({ item }: { item: ItemObject }) {
@@ -19,7 +20,7 @@ export default function Articulo({ item }: { item: ItemObject }) {
   const [hash, _] = useHashPath();
   const articulo = item.data as ArticuloData;
   const referencias = articulo.referencias?.filter((r) => !r.incisos);
-  const isHighlighted = path == hash;
+  const isHighlighted = isFragmentoIdMatch(path, hash);
   return (
     <div
       className={
@@ -27,7 +28,6 @@ export default function Articulo({ item }: { item: ItemObject }) {
         (isHighlighted ? " bg-amber-100" : "")
       }
     >
-      <a data-id={path} />
       <div className="ml-1 float-right">
         <Pagina pagina={articulo.pagina} />
       </div>
@@ -53,7 +53,7 @@ export default function Articulo({ item }: { item: ItemObject }) {
         ))}
       </span>
       {getChildrenOfType(item, "inciso").map((inciso, incisoIndex) => (
-        <Inciso key={incisoIndex} item={inciso} baseItem={item} path={path} />
+        <Inciso key={incisoIndex} item={inciso} baseItem={item} />
       ))}
     </div>
   );

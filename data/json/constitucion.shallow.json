@@ -4700,6 +4700,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "50",
+    "ordinal": 1,
     "label": "Nacionalidad y ciudadanía"
   },
   "441": {
@@ -4959,6 +4960,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "50",
+    "ordinal": 2,
     "label": "Acciones constitucionales"
   },
   "468": {
@@ -5149,6 +5151,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "50",
+    "ordinal": 3,
     "label": "Defensoría del Pueblo"
   },
   "489": {
@@ -5630,6 +5633,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "515",
+    "ordinal": 1,
     "label": "Bienes comunes naturales"
   },
   "535": {
@@ -5864,6 +5868,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "515",
+    "ordinal": 2,
     "label": "Estatuto de las aguas"
   },
   "556": {
@@ -6117,6 +6122,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "515",
+    "ordinal": 3,
     "label": "Estatuto de los minerales"
   },
   "583": {
@@ -6218,6 +6224,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "515",
+    "ordinal": 4,
     "label": "Defensoría de la Naturaleza"
   },
   "593": {
@@ -6407,6 +6414,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "606",
+    "ordinal": 1,
     "label": "Participación y representación democrática"
   },
   "612": {
@@ -8271,6 +8279,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "739",
+    "ordinal": 1,
     "label": "Comuna autónoma"
   },
   "785": {
@@ -8951,6 +8960,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "739",
+    "ordinal": 2,
     "label": "Provincia"
   },
   "855": {
@@ -8980,6 +8990,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "739",
+    "ordinal": 3,
     "label": "Región autónoma"
   },
   "858": {
@@ -9966,6 +9977,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "739",
+    "ordinal": 4,
     "label": "Autonomía territorial indígena"
   },
   "967": {
@@ -10035,6 +10047,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "739",
+    "ordinal": 5,
     "label": "Territorios especiales"
   },
   "973": {
@@ -10179,6 +10192,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "739",
+    "ordinal": 6,
     "label": "Ruralidad"
   },
   "987": {
@@ -10261,6 +10275,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "739",
+    "ordinal": 7,
     "label": "Autonomía fiscal"
   },
   "995": {
@@ -10657,6 +10672,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1034",
+    "ordinal": 1,
     "label": "Congreso de Diputadas y Diputados"
   },
   "1038": {
@@ -10847,6 +10863,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1034",
+    "ordinal": 2,
     "label": "Cámara de las Regiones"
   },
   "1059": {
@@ -10979,6 +10996,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1034",
+    "ordinal": 3,
     "label": "Disposiciones comunes al Poder Legislativo"
   },
   "1072": {
@@ -11372,6 +11390,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1034",
+    "ordinal": 4,
     "label": "Sesiones conjuntas del Congreso de Diputadas y Diputados y de la Cámara de las Regiones"
   },
   "1115": {
@@ -11457,6 +11476,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1034",
+    "ordinal": 5,
     "label": "La ley"
   },
   "1125": {
@@ -12006,6 +12026,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1034",
+    "ordinal": 6,
     "label": "Procedimiento legislativo"
   },
   "1189": {
@@ -15016,6 +15037,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1378",
+    "ordinal": 1,
     "label": "Consejo de la Justicia"
   },
   "1499": {
@@ -15452,6 +15474,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1542",
+    "ordinal": 1,
     "label": "Contraloría General de la República"
   },
   "1546": {
@@ -15718,6 +15741,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1542",
+    "ordinal": 2,
     "label": "Banco Central"
   },
   "1574": {
@@ -16000,6 +16024,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1542",
+    "ordinal": 3,
     "label": "Ministerio Público"
   },
   "1603": {
@@ -16427,6 +16452,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1542",
+    "ordinal": 4,
     "label": "Defensoría Penal Pública"
   },
   "1649": {
@@ -16536,6 +16562,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1542",
+    "ordinal": 5,
     "label": "Agencia Nacional de Protección de Datos"
   },
   "1660": {
@@ -16564,6 +16591,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1542",
+    "ordinal": 6,
     "label": "Corte Constitucional"
   },
   "1663": {
@@ -16921,6 +16949,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1700",
+    "ordinal": 1,
     "label": "Reforma constitucional"
   },
   "1702": {
@@ -17094,6 +17123,7 @@
     "type": "titulo",
     "level": 1,
     "parent": "1700",
+    "ordinal": 2,
     "label": "Procedimiento para elaborar una nueva Constitución"
   },
   "1721": {

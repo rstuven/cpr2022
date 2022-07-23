@@ -3269,6 +3269,7 @@
       "titulos": [
         {
           "titulo": "Nacionalidad y ciudadanía",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 114,
@@ -3447,6 +3448,7 @@
         },
         {
           "titulo": "Acciones constitucionales",
+          "numero": 2,
           "articulos": [
             {
               "articulo": 119,
@@ -3571,6 +3573,7 @@
         },
         {
           "titulo": "Defensoría del Pueblo",
+          "numero": 3,
           "articulos": [
             {
               "articulo": 123,
@@ -3910,6 +3913,7 @@
       "titulos": [
         {
           "titulo": "Bienes comunes naturales",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 134,
@@ -4076,6 +4080,7 @@
         },
         {
           "titulo": "Estatuto de las aguas",
+          "numero": 2,
           "articulos": [
             {
               "articulo": 140,
@@ -4246,6 +4251,7 @@
         },
         {
           "titulo": "Estatuto de los minerales",
+          "numero": 3,
           "articulos": [
             {
               "articulo": 145,
@@ -4315,6 +4321,7 @@
         },
         {
           "titulo": "Defensoría de la Naturaleza",
+          "numero": 4,
           "articulos": [
             {
               "articulo": 148,
@@ -4450,6 +4457,7 @@
       "titulos": [
         {
           "titulo": "Participación y representación democrática",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 152,
@@ -5753,6 +5761,7 @@
       "titulos": [
         {
           "titulo": "Comuna autónoma",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 201,
@@ -6209,6 +6218,7 @@
         },
         {
           "titulo": "Provincia",
+          "numero": 2,
           "articulos": [
             {
               "articulo": 218,
@@ -6229,6 +6239,7 @@
         },
         {
           "titulo": "Región autónoma",
+          "numero": 3,
           "articulos": [
             {
               "articulo": 219,
@@ -6882,6 +6893,7 @@
         },
         {
           "titulo": "Autonomía territorial indígena",
+          "numero": 4,
           "articulos": [
             {
               "articulo": 234,
@@ -6932,6 +6944,7 @@
         },
         {
           "titulo": "Territorios especiales",
+          "numero": 5,
           "articulos": [
             {
               "articulo": 236,
@@ -7030,6 +7043,7 @@
         },
         {
           "titulo": "Ruralidad",
+          "numero": 6,
           "articulos": [
             {
               "articulo": 241,
@@ -7086,6 +7100,7 @@
         },
         {
           "titulo": "Autonomía fiscal",
+          "numero": 7,
           "articulos": [
             {
               "articulo": 244,
@@ -7354,6 +7369,7 @@
       "titulos": [
         {
           "titulo": "Congreso de Diputadas y Diputados",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 252,
@@ -7486,6 +7502,7 @@
         },
         {
           "titulo": "Cámara de las Regiones",
+          "numero": 2,
           "articulos": [
             {
               "articulo": 254,
@@ -7578,6 +7595,7 @@
         },
         {
           "titulo": "Disposiciones comunes al Poder Legislativo",
+          "numero": 3,
           "articulos": [
             {
               "articulo": 256,
@@ -7840,6 +7858,7 @@
         },
         {
           "titulo": "Sesiones conjuntas del Congreso de Diputadas y Diputados y de la Cámara de las Regiones",
+          "numero": 4,
           "articulos": [
             {
               "articulo": 263,
@@ -7897,6 +7916,7 @@
         },
         {
           "titulo": "La ley",
+          "numero": 5,
           "articulos": [
             {
               "articulo": 264,
@@ -8256,6 +8276,7 @@
         },
         {
           "titulo": "Procedimiento legislativo",
+          "numero": 6,
           "articulos": [
             {
               "articulo": 269,
@@ -10272,6 +10293,7 @@
       "titulos": [
         {
           "titulo": "Consejo de la Justicia",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 342,
@@ -10567,6 +10589,7 @@
       "titulos": [
         {
           "titulo": "Contraloría General de la República",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 351,
@@ -10744,6 +10767,7 @@
         },
         {
           "titulo": "Banco Central",
+          "numero": 2,
           "articulos": [
             {
               "articulo": 357,
@@ -10932,6 +10956,7 @@
         },
         {
           "titulo": "Ministerio Público",
+          "numero": 3,
           "articulos": [
             {
               "articulo": 365,
@@ -11218,6 +11243,7 @@
         },
         {
           "titulo": "Defensoría Penal Pública",
+          "numero": 4,
           "articulos": [
             {
               "articulo": 373,
@@ -11292,6 +11318,7 @@
         },
         {
           "titulo": "Agencia Nacional de Protección de Datos",
+          "numero": 5,
           "articulos": [
             {
               "articulo": 376,
@@ -11311,6 +11338,7 @@
         },
         {
           "titulo": "Corte Constitucional",
+          "numero": 6,
           "articulos": [
             {
               "articulo": 377,
@@ -11552,6 +11580,7 @@
       "titulos": [
         {
           "titulo": "Reforma constitucional",
+          "numero": 1,
           "articulos": [
             {
               "articulo": 383,
@@ -11666,6 +11695,7 @@
         },
         {
           "titulo": "Procedimiento para elaborar una nueva Constitución",
+          "numero": 2,
           "articulos": [
             {
               "articulo": 386,

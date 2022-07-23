@@ -50,15 +50,15 @@ export async function getStaticPaths() {
 }
 
 function getFragmentoIds() {
-  // return ["art:1". "cap:1"];
+  // return ["articulo:1". "capitulo:1"];
   return getItemsOfType("capitulo")
     .concat(getItemsOfType("articulo"))
-    .map((item) => getItemFragmentoId(item));
+    .map((item) => getItemFragmentoId(item, false));
 }
 
 export default function Fragmento() {
   const router = useRouter();
-  useScrollToHash(150);
+  useScrollToHash(150, "auto");
   const [hash, _] = useHashPath();
 
   const { fragmentoId } = router.query;

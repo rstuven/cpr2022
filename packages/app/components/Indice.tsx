@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
@@ -7,20 +7,21 @@ import {
   getItemFragmentoId,
   getItemLabel,
   getItemsOfType,
+  isFragmentoIdMatch,
   parseFragmento,
 } from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
-import tituloImage from "public/images/titulo.png";
-import escudoImage from "public/images/escudo.png";
+import tituloImage from "../public/images/titulo.png";
+import escudoImage from "../public/images/escudo.png";
 
 export default function Indice() {
   const [hash, _] = useHashPath();
   const pathPreambulo = "preambulo";
-  const pathTransitorias = "dt";
+  const pathTransitorias = "transitoria";
   const fragmento = parseFragmento(hash);
   return (
     <div className="prose text-xs font-ConvencionFJ">
-      <div className="pl-6">
+      <HashLink className="pl-6" hash="inicio">
         <Image
           src={tituloImage}
           width={296}
@@ -28,7 +29,7 @@ export default function Indice() {
           alt="Propuesta de Constitución Política de la República de Chile 2022"
           aria-label="Título"
         />
-      </div>
+      </HashLink>
       <ul className="list-none">
         <li>
           <HashLink
@@ -72,7 +73,7 @@ export default function Indice() {
 function Capitulo({ capitulo }: { capitulo: ItemObject }) {
   const [hash, _] = useHashPath();
   const path = getItemFragmentoId(capitulo);
-  const isHighlighted = path == hash;
+  const isHighlighted = isFragmentoIdMatch(path, hash);
   const fragmento = parseFragmento(hash);
   const isSelected =
     fragmento &&

@@ -26,6 +26,7 @@ export default function HashLink(props: HashLinkProps) {
           (props.visible === false ? " invisible" : "")
         }
         href={"/#" + props.hash}
+        data-id={props.hash}
         // onClick={onClick}
       >
         ¶
@@ -38,6 +39,7 @@ export default function HashLink(props: HashLinkProps) {
         (props.className ?? "") + (props.visible === false ? " invisible" : "")
       }
       href={"/#" + props.hash}
+      data-id={props.hash}
       // onClick={onClick}
     >
       {props.children}

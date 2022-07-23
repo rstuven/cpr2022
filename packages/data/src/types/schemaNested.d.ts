@@ -14,6 +14,7 @@ export type Capitulo = {
 
 export type Titulo = {
   readonly titulo: string;
+  readonly numero: number;
   readonly articulos: ReadonlyArray<Articulo>;
 };
 

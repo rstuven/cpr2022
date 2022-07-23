@@ -6,7 +6,9 @@ import { AppNavbar } from "./AppNavbar";
 
 export default function App() {
   const main = useRef<HTMLDivElement>(null);
-  useScrollToHash(350, main);
+  const indice = useRef<HTMLDivElement>(null);
+  useScrollToHash(350, "auto", main);
+  useScrollToHash(350, "smooth", indice, true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const onMenuOpenChange = useCallback((newValue: boolean) => {
     setIsMenuOpen(newValue);
@@ -19,7 +21,10 @@ export default function App() {
           "grid grid-cols-1 md:grid-cols-7 " + (isMenuOpen ? "hidden" : "")
         }
       >
-        <aside className="bg-[#34005f] hidden md:block md:col-span-2 overflow-y-scroll overscroll-contain h-screen pt-5 pb-20 pr-5">
+        <aside
+          ref={indice}
+          className="bg-[#34005f] hidden md:block md:col-span-2 overflow-y-scroll overscroll-contain h-screen pt-5 pb-20 pr-5"
+        >
           <Indice />
         </aside>
         <main

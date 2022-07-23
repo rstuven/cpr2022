@@ -52,6 +52,7 @@ function itemsDesdeMarkdown(entrada) {
   let transitoria = null;
   let transitoriaNumero = 1;
   let titulo = null;
+  let tituloNumero = 1;
   let articulo = null;
   let incisoNivel = [];
   let incisoPrevio = null;
@@ -75,6 +76,7 @@ function itemsDesdeMarkdown(entrada) {
           __oid: String(++nextId),
         };
         titulo = null;
+        tituloNumero = 1;
         nestedRoots.push(capitulo);
         shallowItems[capitulo.__oid] = {
           oid: capitulo.__oid,
@@ -88,6 +90,7 @@ function itemsDesdeMarkdown(entrada) {
         const parts = linea.match(/### (.*)/);
         titulo = {
           titulo: parts[1],
+          numero: tituloNumero++,
           articulos: [],
           __oid: String(++nextId),
         };
@@ -100,6 +103,7 @@ function itemsDesdeMarkdown(entrada) {
           type: "titulo",
           level: 1,
           parent: capitulo.__oid,
+          ordinal: titulo.numero,
           label: titulo.titulo,
         };
       } else if (linea.startsWith("#### Artículo ")) {

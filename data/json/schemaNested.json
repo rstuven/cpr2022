@@ -163,12 +163,16 @@
           },
           "type": "array"
         },
+        "numero": {
+          "type": "number"
+        },
         "titulo": {
           "type": "string"
         }
       },
       "required": [
         "titulo",
+        "numero",
         "articulos"
       ],
       "type": "object"

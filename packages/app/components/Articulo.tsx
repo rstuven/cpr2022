@@ -1,5 +1,4 @@
 import { Badge, Dropdown } from "flowbite-react";
-import { useHashPath } from "hooks/useHash";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
 import Pagina from "./Pagina";
@@ -12,28 +11,22 @@ import {
   getItemsOfType,
   getItemLabel,
   firstToUpperCase,
-  isFragmentoIdMatch,
 } from "lib/helpers";
 
 export default function Articulo({ item }: { item: ItemObject }) {
   const path = getItemFragmentoId(item);
-  const [hash, _] = useHashPath();
   const articulo = item.data as ArticuloData;
   const referencias = articulo.referencias?.filter((r) => !r.incisos);
-  const isHighlighted = isFragmentoIdMatch(path, hash);
   return (
-    <div
-      className={
-        "border border-solid rounded-md p-3 mb-3" +
-        (isHighlighted ? " bg-amber-100" : "")
-      }
-    >
+    <div data-hash={path} className="border border-solid rounded-md p-3 mb-3">
       <div className="ml-1 float-right">
         <Pagina pagina={articulo.pagina} />
       </div>
       <span className="font-sans flex flex-wrap gap-1 text-base">
-        <HashLink hash={path} anchor visible={!isHighlighted} />
-        <b className="text-black mx-1 font-ConvencionFJ">{getItemLabel(item)}</b>
+        <HashLink hash={path} anchor="artículo" />
+        <b className="text-black mx-1 font-ConvencionFJ">
+          {getItemLabel(item)}
+        </b>
         <Badge color="gray"> {firstToUpperCase(articulo.sobre)}</Badge>
         {articulo.etiquetas.map((etiqueta, index) => (
           <BadgeEtiquetas key={index} etiqueta={etiqueta} item={item} />
@@ -75,23 +68,29 @@ function BadgeEtiquetas(props: {
           </div>
         ) : (
           <Dropdown inline label={label}>
-            {getItemsOfType("articulo")
-              .filter(
-                (art) =>
-                  art.oid != props.item.oid &&
-                  (art.data as ArticuloData).etiquetas.includes(props.etiqueta)
-              )
-              .map((articulo, index) => {
-                return (
-                  <Dropdown.Item key={index}>
-                    <a href={"#" + getItemFragmentoId(articulo)}>{`${getItemLabel(
-                      articulo
-                    )} (${firstToUpperCase(
-                      (articulo.data as ArticuloData).sobre
-                    )})`}</a>
-                  </Dropdown.Item>
-                );
-              })}
+            <Dropdown.Item>
+              <div className="max-h-[200px] overflow-y-scroll overscroll-contain">
+                {getItemsOfType("articulo")
+                  .filter(
+                    (art) =>
+                      art.oid != props.item.oid &&
+                      (art.data as ArticuloData).etiquetas.includes(
+                        props.etiqueta
+                      )
+                  )
+                  .map((articulo, index) => {
+                    return (
+                      <div key={index}>
+                        <a
+                          href={"/#" + getItemFragmentoId(articulo)}
+                        >{`${getItemLabel(articulo)} (${firstToUpperCase(
+                          (articulo.data as ArticuloData).sobre
+                        )})`}</a>
+                      </div>
+                    );
+                  })}
+              </div>
+            </Dropdown.Item>
           </Dropdown>
         )}
       </Badge>

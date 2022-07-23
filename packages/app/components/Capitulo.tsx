@@ -1,27 +1,16 @@
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
-import { useHashPath } from "hooks/useHash";
-import {
-  getChildrenOfType,
-  getItemFragmentoId,
-  isFragmentoIdMatch,
-} from "lib/helpers";
+import { getChildrenOfType, getItemFragmentoId } from "lib/helpers";
 import Titulo from "./Titulo";
 import HashLink from "./HashLink";
 import Articulo from "./Articulo";
 import TitleCase from "./TitleCase";
 
 export default function Capitulo({ item }: { item: ItemObject }) {
-  const [hash, _] = useHashPath();
   const path = getItemFragmentoId(item);
-  const isHighlighted = isFragmentoIdMatch(path, hash);
   return (
-    <div className="">
-      <h2
-        className={
-          "text-center mt-1 " + (isHighlighted ? "bg-amber-100 rounded" : "")
-        }
-      >
-        <HashLink hash={path} anchor visible={!isHighlighted} />{" "}
+    <div>
+      <h2 data-hash={path} className="text-center mt-1 rounded">
+        <HashLink hash={path} anchor="capítulo" />{" "}
         <TitleCase lowercaseClass="text-lg" text={"Capítulo " + item.key} />
         <br />
         <TitleCase lowercaseClass="text-lg" text={item.label ?? ""} />

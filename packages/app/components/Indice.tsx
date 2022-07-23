@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image, { ImageLoader } from "next/image";
 import HashLink from "./HashLink";
-import { useHashPath } from "hooks/useHash";
 import {
   classNames,
   getChildrenOfType,
@@ -14,6 +13,7 @@ import {
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import tituloImage from "public/images/titulo.png";
 import escudoImage from "public/images/escudo.png";
+import { HashContext } from "./HashProvider";
 
 const capituloItem = () => classNames("mt-2 mb-0");
 
@@ -48,7 +48,7 @@ export default function Indice() {
   };
   return (
     <div className="prose text-xs font-ConvencionFJ pl-3 pr-4 pt-5 pb-20">
-      <HashLink hash="inicio">
+      <HashLink hash="inicio" title="Ir al inicio">
         <Image
           src={tituloImage}
           loader={imageLoader}
@@ -79,7 +79,7 @@ export default function Indice() {
 }
 
 function Capitulo({ capitulo }: { capitulo: ItemObject }) {
-  const [hash, _] = useHashPath();
+  const hash = useContext(HashContext);
   const path = getItemFragmentoId(capitulo);
   const fragmento = parseFragmento(hash);
   const isHighlighted =
@@ -119,7 +119,7 @@ function Capitulo({ capitulo }: { capitulo: ItemObject }) {
 type TituloProps = { titulo: ItemObject; path: string; highlight: boolean };
 
 function Titulo(props: TituloProps) {
-  const [hash, _] = useHashPath();
+  const hash = useContext(HashContext);
   const isHighlighted = props.path == hash || props.highlight;
   return (
     <li className={tituloItem(isHighlighted)}>

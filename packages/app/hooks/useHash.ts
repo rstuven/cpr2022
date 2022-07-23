@@ -1,36 +1,109 @@
-import React from "react";
+import { useEffect, RefObject } from "react";
 
-export const useHash = (): [string, (newHash: string) => void] => {
-  const csr = typeof window != "undefined";
-  const intialValue = csr ? window.location.hash : "";
-  const [hash, setHash] = React.useState(() => intialValue);
+export function useHashScrolling(
+  offset = 0,
+  defaultBehavior: ScrollBehavior,
+  target?: RefObject<HTMLElement>,
+  index?: boolean
+) {
+  useEffect(() => {
+    const scroll = (behavior: ScrollBehavior) => {
+      if (target && !target.current) return false;
 
-  const hashChangeHandler = React.useCallback(() => {
-    setHash(csr ? window.location.hash : "");
-  }, [csr]);
+      const element = getElement("data-id", target, index);
 
-  React.useEffect(() => {
-    csr && window.addEventListener("hashchange", hashChangeHandler);
-    return () => {
-      csr && window.removeEventListener("hashchange", hashChangeHandler);
+      if (!element || element.offsetTop == 0) return false;
+
+      (target ? target.current : window)?.scrollTo({
+        top: element.offsetTop - offset,
+        behavior,
+      });
+
+      return true;
     };
-  }, [csr, hashChangeHandler]);
 
-  const updateHash = React.useCallback(
-    (newHash: string) => {
-      if (newHash == hash) {
-        return;
+    retry(() => scroll("auto"));
+
+    const onHashChange = () => retry(() => scroll(defaultBehavior));
+    window.addEventListener("hashchange", onHashChange);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+    };
+  }, [defaultBehavior, index, offset, target]);
+}
+
+export function useHashHighlighting(
+  className: string,
+  target?: RefObject<HTMLElement>,
+  index?: boolean
+) {
+  useEffect(() => {
+    const highlight = () => {
+      if (target && !target.current) return false;
+
+      const element = getElement("data-hash", target, index);
+      if (!element) return false;
+      const elements = (target ? target.current : document)?.querySelectorAll(
+        `.${className}[data-hash]`
+      );
+      elements?.forEach((el) => el.classList.remove(className));
+      element.classList.add(className);
+
+      return true;
+    };
+
+    const onHashChange = () => retry(() => highlight());
+    onHashChange();
+    window.addEventListener("hashchange", onHashChange);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+    };
+  }, [index, target]);
+}
+
+function getElement(
+  attribute: string,
+  target?: RefObject<HTMLElement>,
+  index?: boolean
+) {
+  const hash = window.location.hash?.substring(1);
+
+  let element: HTMLElement | null | undefined;
+  let hashTry = hash;
+  if (index && hash.indexOf("@") != -1) {
+    hashTry = hash.split("@")[1];
+  }
+  while (true) {
+    element = (target ? target.current : document)?.querySelector(
+      `[${attribute}^="${hashTry}"]`
+    );
+    if (element) break;
+
+    let lastIndex = hashTry.lastIndexOf(".");
+    if (lastIndex == -1) {
+      lastIndex = hashTry.lastIndexOf(":");
+      if (lastIndex == -1) {
+        lastIndex = hashTry.lastIndexOf("@");
+        if (lastIndex == -1) {
+          break;
+        } else if (!index) {
+          lastIndex++;
+        }
       }
-      csr && history.pushState({}, "", newHash);
-      csr && window.dispatchEvent(new Event("hashchange"));
-    },
-    [hash, csr]
-  );
+    }
+    hashTry = hashTry.substring(0, lastIndex);
+  }
+  return element;
+}
 
-  return [hash, updateHash];
-};
-
-export function useHashPath(): [string, (newHash: string) => void] {
-  const [hash, updateHash] = useHash();
-  return [hash.substring(1), (newHash: string) => updateHash("#" + newHash)];
+function retry(action: () => boolean) {
+  if (!action()) {
+    setTimeout(() => {
+      if (!action()) {
+        setTimeout(() => {
+          action();
+        }, 100);
+      }
+    }, 100);
+  }
 }

@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { GetStaticPropsContext } from "next/types";
+import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
+import { HashContext, HashProvider } from "components/HashProvider";
 import MetaTags from "components/MetaTags";
-import { useScrollToHash } from "hooks/useScrollToHash";
-import { useHashPath } from "hooks/useHash";
+import { useHashScrolling } from "hooks/useHash";
 import { createFragmentImage } from "lib/images";
 import {
   ArticuloContext,
@@ -16,8 +19,6 @@ import {
   getItemsOfType,
   parseFragmento,
 } from "lib/helpers";
-import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
-import { GetStaticPropsContext } from "next/types";
 
 const Capitulo = dynamic(() => import("../../components/Capitulo"), {
   ssr: false,
@@ -29,7 +30,7 @@ const Articulo = dynamic(() => import("../../components/Articulo"), {
 export async function getStaticProps(context: GetStaticPropsContext) {
   const fragmentoId = context.params?.fragmentoId;
   if (typeof fragmentoId != "string") {
-    throw Error("context.params.fragmentoId")
+    throw Error("context.params.fragmentoId");
   }
   const fragmento = parseFragmento(fragmentoId);
   if (!fragmento) {
@@ -62,8 +63,8 @@ function getFragmentoIds() {
 
 export default function Fragmento() {
   const router = useRouter();
-  useScrollToHash(150, "auto");
-  const [hash, _] = useHashPath();
+  useHashScrolling(150, "auto");
+  const hash = useContext(HashContext);
 
   const { fragmentoId } = router.query;
   if (!fragmentoId || fragmentoId instanceof Array) {
@@ -80,9 +81,11 @@ export default function Fragmento() {
         type="article"
       />
       <Link href={"/#" + (hash || fragmentoId)}>📘 Inicio</Link>
-      <div className="prose">
-        <Component />
-      </div>
+      <HashProvider>
+        <div className="prose font-ConvencionFJ">
+          <Component />
+        </div>
+      </HashProvider>
     </div>
   );
 }

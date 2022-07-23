@@ -1,37 +1,32 @@
-// import { useHashPath } from "hooks/useHash";
-// import { useCallback } from "react";
+import { Tooltip } from "flowbite-react";
+import { PropsWithChildren } from "react";
 
-type HashLinkProps = {
+type HashLinkProps = PropsWithChildren<{
   hash: string;
   className?: string;
-  anchor?: boolean;
+  title?: string;
+  anchor?: string;
   visible?: boolean;
-  children?: any;
-};
+}>;
 
 export default function HashLink(props: HashLinkProps) {
-  // const [_, updateHash] = useHashPath();
-  // const onClick = useCallback(
-  //   (e: any) => {
-  //     e.preventDefault();
-  //     updateHash(props.hash);
-  //   },
-  //   [props.hash, updateHash]
-  // );
   if (props.anchor) {
+    const title = props.title ?? "Vínculo a " + props.anchor;
     return (
-      <a
-        className={
-          (props.className ?? "") +
-          "font-sans text-gray-300" +
-          (props.visible === false ? " invisible" : "")
-        }
-        href={"/#" + props.hash}
-        data-id={props.hash}
-        // onClick={onClick}
-      >
-        ¶
-      </a>
+      <div className="inline-block">
+        <a
+          className={
+            (props.className ?? "") +
+            "font-sans text-gray-300" +
+            (props.visible === false ? " invisible" : "")
+          }
+          href={"/#" + props.hash}
+          title={title}
+          data-id={props.hash}
+        >
+          <Tooltip content={title}>¶</Tooltip>
+        </a>
+      </div>
     );
   }
   return (
@@ -40,8 +35,8 @@ export default function HashLink(props: HashLinkProps) {
         (props.className ?? "") + (props.visible === false ? " invisible" : "")
       }
       href={"/#" + props.hash}
+      title={props.title}
       data-id={props.hash}
-      // onClick={onClick}
     >
       {props.children}
     </a>

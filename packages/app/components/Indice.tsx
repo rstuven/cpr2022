@@ -3,6 +3,7 @@ import Image, { ImageLoader } from "next/image";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
 import {
+  classNames,
   getChildrenOfType,
   getItemFragmentoId,
   getItemLabel,
@@ -14,16 +15,39 @@ import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import tituloImage from "public/images/titulo.png";
 import escudoImage from "public/images/escudo.png";
 
+const capituloItem = () => classNames("mt-2 mb-0");
+
+const capituloLink = (highlight: boolean, hasChildren: boolean) =>
+  classNames(
+    "no-underline p-1 block my-0",
+    "hover:text-white",
+    "rounded",
+    hasChildren && "rounded-bl-none",
+    highlight ? "text-white bg-[#9035da]" : "text-[#d0a2f5]"
+  );
+
+const tituloItem = (highlight: boolean) =>
+  classNames(
+    "border-l-[3px] border-solid",
+    "my-0 pt-1 -mx-[19.5px] pr-6 pl-3",
+    "-indent-1 pl-2",
+    "hover:border-[#730ac8]",
+    highlight ? "border-[#9035da]" : "border-[#400472]"
+  );
+
+const tituloLink = (highlight: boolean) =>
+  classNames(
+    "no-underline p-1 my-0",
+    "hover:text-[#d0b0ef]",
+    highlight ? "text-white" : "text-[#bf77fa]"
+  );
+
 export default function Indice() {
-  const [hash, _] = useHashPath();
-  const pathPreambulo = "preambulo";
-  const pathTransitorias = "transitoria";
-  const fragmento = parseFragmento(hash);
   const imageLoader: ImageLoader = (props) => {
     return props.src;
   };
   return (
-    <div className="prose text-xs font-ConvencionFJ px-6 pt-5 pb-20">
+    <div className="prose text-xs font-ConvencionFJ pl-3 pr-4 pt-5 pb-20">
       <HashLink hash="inicio">
         <Image
           src={tituloImage}
@@ -34,38 +58,12 @@ export default function Indice() {
           aria-label="Título"
         />
       </HashLink>
-      <ul className="list-none pl-0">
-        <li>
-          <HashLink
-            className={
-              "no-underline p-1 rounded " +
-              (pathPreambulo == hash
-                ? " bg-amber-100 text-black"
-                : "text-white")
-            }
-            hash={pathPreambulo}
-          >
-            Preámbulo
-          </HashLink>
-        </li>
-        {getItemsOfType("capitulo").map((capitulo) => (
-          <Capitulo key={capitulo.oid} capitulo={capitulo} />
-        ))}
-
-        <li>
-          <HashLink
-            className={
-              "no-underline p-1 rounded " +
-              (pathTransitorias == hash ||
-              (fragmento && "transitoria" in fragmento)
-                ? " bg-amber-100 text-black"
-                : "text-white")
-            }
-            hash={pathTransitorias}
-          >
-            Disposiciones Transitorias
-          </HashLink>
-        </li>
+      <ul className="list-none mt-0 mb-6 pl-0 -ml-1">
+        {getItemsOfType("preambulo", "capitulo", "transitorias").map(
+          (capitulo) => (
+            <Capitulo key={capitulo.oid} capitulo={capitulo} />
+          )
+        )}
       </ul>
       <div className="text-center">
         <Image
@@ -83,28 +81,25 @@ export default function Indice() {
 function Capitulo({ capitulo }: { capitulo: ItemObject }) {
   const [hash, _] = useHashPath();
   const path = getItemFragmentoId(capitulo);
-  const isHighlighted = isFragmentoIdMatch(path, hash);
   const fragmento = parseFragmento(hash);
-  const isSelected =
-    fragmento &&
-    "capitulo" in fragmento &&
-    fragmento.capitulo.oid == capitulo.oid;
-
+  const isHighlighted =
+    isFragmentoIdMatch(path, hash) ||
+    Boolean(
+      fragmento &&
+        "capitulo" in fragmento &&
+        fragmento.capitulo.oid == capitulo.oid
+    );
+  const titulos = getChildrenOfType(capitulo, "titulo");
   return (
-    <li>
+    <li className={capituloItem()}>
       <HashLink
-        className={
-          "no-underline p-1 rounded " +
-          (isHighlighted || isSelected
-            ? " bg-amber-100 text-black"
-            : "text-white")
-        }
+        className={capituloLink(isHighlighted, titulos.length > 0)}
         hash={path}
       >
         {getItemLabel(capitulo)}
       </HashLink>
-      <ul className="list-disc list-outside">
-        {getChildrenOfType(capitulo, "titulo").map((titulo, tituloIndex) => (
+      <ul className="list-none my-0">
+        {titulos.map((titulo, tituloIndex) => (
           <Titulo
             key={titulo.oid}
             titulo={titulo}
@@ -125,18 +120,10 @@ type TituloProps = { titulo: ItemObject; path: string; highlight: boolean };
 
 function Titulo(props: TituloProps) {
   const [hash, _] = useHashPath();
-  const isHighlighted = props.path == hash;
+  const isHighlighted = props.path == hash || props.highlight;
   return (
-    <li>
-      <HashLink
-        hash={props.path}
-        className={
-          "no-underline p-1 rounded " +
-          (isHighlighted || props.highlight
-            ? "bg-amber-100 text-black"
-            : "text-[#bf77fa]")
-        }
-      >
+    <li className={tituloItem(isHighlighted)}>
+      <HashLink hash={props.path} className={tituloLink(isHighlighted)}>
         {props.titulo.label}
       </HashLink>
     </li>

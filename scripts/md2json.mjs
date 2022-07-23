@@ -5,15 +5,21 @@ const outputDirSrc = "packages/data/src/";
 const outputFormatNest = "constitucion.nested.json";
 const outputFormatShallow = "constitucion.shallow.json";
 
-let nextId = 0;
+let nextOid = 0;
+const getNextOid = () => String(++nextOid);
+const preambuloOid = getNextOid();
 
 const metadatos = JSON.parse(
   fs.readFileSync("data/json/metadatos.json", "utf8")
 );
 const preambulo = fs.readFileSync("data/markdown/preambulo.md", "utf8");
+
 const [capitulos, capitulosShallow] = itemsDesdeMarkdown(
   "data/markdown/capitulos.md"
 );
+
+const transitoriasOid = getNextOid();
+
 const [transitorias, transitoriasShallow] = itemsDesdeMarkdown(
   "data/markdown/transitorias.md"
 );
@@ -24,13 +30,21 @@ const constitucionNested = {
 };
 
 const constitucionShallow = {
-  ["0"]: {
-    oid: "0",
+  [preambuloOid]: {
+    oid: preambuloOid,
     type: "preambulo",
+    label: "Preámbulo",
     level: 0,
     content: preambulo,
   },
   ...capitulosShallow,
+  [transitoriasOid]: {
+    oid: transitoriasOid,
+    type: "transitorias",
+    label: "Disposiciones Transitorias",
+    level: 0,
+    content: preambulo,
+  },
   ...transitoriasShallow,
 };
 
@@ -73,7 +87,7 @@ function itemsDesdeMarkdown(entrada) {
           capitulo: parts[1],
           nombre: parts[2],
           numero: capituloNumero++,
-          __oid: String(++nextId),
+          __oid: getNextOid(),
         };
         titulo = null;
         tituloNumero = 1;
@@ -92,7 +106,7 @@ function itemsDesdeMarkdown(entrada) {
           titulo: parts[1],
           numero: tituloNumero++,
           articulos: [],
-          __oid: String(++nextId),
+          __oid: getNextOid(),
         };
         if (capitulo.titulos == null) {
           capitulo.titulos = [];
@@ -119,7 +133,7 @@ function itemsDesdeMarkdown(entrada) {
           articulo: articuloNumeroActual,
           incisos: [],
           ...data,
-          __oid: String(++nextId),
+          __oid: getNextOid(),
         };
         const item = (shallowItems[articulo.__oid] = {
           oid: articulo.__oid,
@@ -157,7 +171,7 @@ function itemsDesdeMarkdown(entrada) {
           transitoria: parts[1],
           numero: transitoriaNumeroActual,
           ...data,
-          __oid: String(++nextId),
+          __oid: getNextOid(),
         };
         incisoPrevio = null;
         incisoNivel = [];
@@ -165,7 +179,8 @@ function itemsDesdeMarkdown(entrada) {
         shallowItems[transitoria.__oid] = {
           oid: transitoria.__oid,
           type: "transitoria",
-          level: 0,
+          parent: transitoriasOid,
+          level: 1,
           key: transitoria.transitoria,
           ordinal: transitoria.numero,
           data,
@@ -195,7 +210,7 @@ function itemsDesdeMarkdown(entrada) {
           parentIncisos = contenedor;
         }
         inciso.texto = inciso.texto.replace(/<br>/g, "\n");
-        inciso.__oid = String(++nextId);
+        inciso.__oid = getNextOid();
         parentIncisos.incisos.push(inciso);
         shallowItems[inciso.__oid] = {
           oid: inciso.__oid,

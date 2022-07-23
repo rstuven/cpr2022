@@ -7,7 +7,7 @@ import { getItemsOfType, isFragmentoIdMatch } from "lib/helpers";
 
 export default function Transitorias() {
   const [hash, _] = useHashPath();
-  const path = "transitoria";
+  const path = "transitorias";
   const isHighlighted = isFragmentoIdMatch(path, hash);
   return (
     <>

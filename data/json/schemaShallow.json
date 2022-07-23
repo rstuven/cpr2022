@@ -91,6 +91,7 @@
         "titulo",
         "articulo",
         "inciso",
+        "transitorias",
         "transitoria"
       ],
       "type": "string"

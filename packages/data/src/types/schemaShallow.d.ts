@@ -6,6 +6,7 @@ export type ItemType =
   | 'titulo'
   | 'articulo'
   | 'inciso'
+  | 'transitorias'
   | 'transitoria';
 
 export type ItemObject = {

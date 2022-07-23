@@ -11,8 +11,8 @@ export function firstToUpperCase(text: string) {
 
 const items = Object.values(constitucion);
 
-export function getItemsOfType(type: ItemType) {
-  return items.filter((o) => o.type == type);
+export function getItemsOfType(...types: ItemType[]) {
+  return items.filter((o) => types.includes(o.type));
 }
 
 export function getChildren(parent: ItemObject) {
@@ -82,6 +82,8 @@ export function getItemFragmentoId(item: ItemObject, appendSuffix = true) {
       result += "." + (incisoUp1.key ?? "");
     }
     result += "." + (item.key ?? "");
+  } else if (["preambulo", "transitorias"].includes(item.type)) {
+    result = item.type;
   } else {
     result = item.type + ":" + (item.ordinal ?? item.key ?? item.oid);
   }
@@ -116,6 +118,10 @@ export function getItemLabel(item: ItemObject, withPrefix = true) {
     return (withPrefix ? "Título: " : "") + item.label;
   } else if (item.type == "articulo") {
     return (withPrefix ? "Artículo " : "") + item.key;
+  } else if (item.type == "preambulo") {
+    return item.label as string;
+  } else if (item.type == "transitorias") {
+    return item.label as string;
   }
   throw Error("Not implemented type " + item.type);
 }
@@ -243,9 +249,18 @@ export function parseFragmento(
     return { transitoria };
   }
 
-  if (["inicio", "preambulo"].includes(parts[0])) {
+  if (["inicio", "preambulo", "transitorias"].includes(parts[0])) {
     return undefined;
   }
 
   throw new Error(`Can't parse fragmentoId ${fragmentoId}`);
+}
+
+export function classNames(
+  ...classNames: (string | false | undefined | null)[]
+) {
+  return classNames
+    .filter((c) => typeof c == "string")
+    .flatMap((c) => String(c).split(" "))
+    .join(" ");
 }

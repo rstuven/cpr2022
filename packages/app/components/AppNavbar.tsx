@@ -44,10 +44,10 @@ export function AppNavbar({
         </Navbar.Link>
         <Navbar.Link href="/acerca-de">¿Qué es esto?</Navbar.Link>
         {!isMediumMinWidth &&
-          getItemsOfType("capitulo").map((capitulo, index) => (
-            <CapituloNavLink
+          getItemsOfType("preambulo", "capitulo", "transitorias").map((item, index) => (
+            <ItemNavLink
               key={index}
-              item={capitulo}
+              item={item}
               onMenuOpenChange={onMenuOpenChangeHere}
             />
           ))}
@@ -56,7 +56,7 @@ export function AppNavbar({
   );
 }
 
-function CapituloNavLink({
+function ItemNavLink({
   item,
   onMenuOpenChange,
 }: {

@@ -4,8 +4,11 @@ import {
   ArticuloContext,
   CapituloContext,
   FragmentoContext,
+  getArticuloContextCapituloTituloLabel,
   getArticuloIncisosLines,
+  getArticuloLabel,
   getCapituloArticulosDescription,
+  getCapituloLabel,
   getCapituloSobreLines,
 } from "./helpers";
 
@@ -81,9 +84,7 @@ function renderArticulo(
 
   const { bottom: containerBottom } = renderText({
     ctx,
-    text: `Capítulo ${fragmento.capitulo.capitulo} ${
-      fragmento.capitulo.nombre
-    }${fragmento.titulo ? " - Título: " + fragmento.titulo.titulo : ""}`,
+    text: getArticuloContextCapituloTituloLabel(fragmento),
     left: box.left + 2,
     top: box.top,
     width: box.width,
@@ -97,7 +98,7 @@ function renderArticulo(
 
   const { lastWidth: titleLastWidth } = renderText({
     ctx,
-    text: `Artículo ${fragmento.articulo.articulo}`,
+    text: getArticuloLabel(fragmento.articulo),
     left: box.left,
     top: titleTop,
     width: box.width,
@@ -159,7 +160,7 @@ function renderCapitulo(
 
   const { bottom: titleBottom } = renderText({
     ctx,
-    text: `Capítulo ${fragmento.capitulo.capitulo} ${fragmento.capitulo.nombre}`,
+    text: getCapituloLabel(fragmento.capitulo),
     left: box.left,
     top: box.top,
     width: box.width,

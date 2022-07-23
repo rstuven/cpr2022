@@ -8,10 +8,11 @@ export default function Inciso(inciso: IncisoProps) {
   const [hash, _] = useHashPath();
   const bullet = getIncisoBullet(inciso);
   const path = inciso.path + "." + (inciso.inciso ?? "");
+  const isHighlighted = path == hash;
   return (
-    <div className={"mt-2" + (path == hash ? " bg-amber-100" : "")}>
+    <div className={"mt-2 leading-6 " + (isHighlighted ? " bg-amber-100" : "")}>
       <a id={path} />
-      <HashLink hash={path} anchor /> <b>{bullet}</b>
+      <HashLink hash={path} anchor visible={!isHighlighted} /> <b>{bullet}</b>
       {inciso.texto}
       {inciso.incisos?.map((subinciso, index) => (
         <Inciso key={index} {...subinciso} path={path} />

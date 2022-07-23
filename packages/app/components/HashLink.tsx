@@ -5,6 +5,7 @@ type HashLinkProps = {
   hash: string;
   className?: string;
   anchor?: boolean;
+  visible?: boolean;
   children?: any;
 };
 
@@ -20,7 +21,10 @@ export default function HashLink(props: HashLinkProps) {
   if (props.anchor) {
     return (
       <a
-        className={"font-sans text-gray-300"}
+        className={
+          "font-sans text-gray-300" +
+          (props.visible === false ? " invisible" : "")
+        }
         href={"#" + props.hash}
         onClick={onClick}
       >
@@ -30,7 +34,10 @@ export default function HashLink(props: HashLinkProps) {
   }
   return (
     <a
-      className={props.className ?? "text-gray-300"}
+      className={
+        (props.className ?? "text-gray-300") +
+        (props.visible === false ? " invisible" : "")
+      }
       href={"#" + props.hash}
       onClick={onClick}
     >

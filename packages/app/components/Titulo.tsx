@@ -6,11 +6,13 @@ import HashLink from "./HashLink";
 type TituloProps = TituloSchema & { path: string };
 export default function Titulo(titulo: TituloProps) {
   const [hash, _] = useHashPath();
+  const isHighlighted = titulo.path == hash;
   return (
     <div>
       <a id={titulo.path} />
-      <h3 className={titulo.path == hash ? "bg-amber-100" : undefined}>
-        <HashLink hash={titulo.path} anchor /> {titulo.titulo}
+      <h3 className={isHighlighted ? "bg-amber-100 rounded" : ""}>
+        <HashLink hash={titulo.path} anchor visible={!isHighlighted} />{" "}
+        {titulo.titulo}
       </h3>
       {titulo.articulos && <Articulos articulos={titulo.articulos} />}
     </div>

@@ -126,7 +126,7 @@ export const NON_BREAKING_SPACE = "\u00a0";
 
 export function getIncisoBullet(inciso: IncisoSchema) {
   return inciso.inciso
-    ? NON_BREAKING_SPACE.repeat(inciso.nivel * 4) +
+    ? NON_BREAKING_SPACE.repeat((inciso.nivel - 1) * 4) +
         inciso.inciso +
         ".))"[inciso.nivel - 1] +
         " "
@@ -162,5 +162,27 @@ export function getCapituloArticulosSobreLines(
   articulos?: ReadonlyArray<ArticuloSchema>
 ) {
   if (!articulos) return [];
-  return articulos.map((articulo) => `${articulo.articulo}. ${firstToUpperCase(articulo.sobre)}`);
+  return articulos.map(
+    (articulo) => `${articulo.articulo}. ${firstToUpperCase(articulo.sobre)}`
+  );
+}
+
+export function getArticuloContextCapituloTituloLabel(
+  fragmento: ArticuloContext
+) {
+  return `${getCapituloLabel(fragmento.capitulo)}${
+    fragmento.titulo ? " - " + getTituloLabel(fragmento.titulo) : ""
+  }`;
+}
+
+export function getCapituloLabel(capitulo: CapituloSchema) {
+  return `Capítulo ${capitulo.capitulo} - ${capitulo.nombre}`;
+}
+
+export function getTituloLabel(titulo: TituloSchema) {
+  return `Título: ${titulo.titulo}`;
+}
+
+export function getArticuloLabel(articulo: ArticuloSchema) {
+  return `Artículo ${articulo.articulo}`;
 }

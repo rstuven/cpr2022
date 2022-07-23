@@ -6,7 +6,7 @@ import {
 import { constitucion } from "cpr2022-data";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
-import { parseFragmento } from "lib/helpers";
+import { getCapituloLabel, parseFragmento } from "lib/helpers";
 
 export default function Indice() {
   const [hash, _] = useHashPath();
@@ -55,7 +55,7 @@ function Capitulo(capitulo: CapituloSchema) {
         }
         hash={path}
       >
-        Capítulo {capitulo.capitulo} {capitulo.nombre}
+        {getCapituloLabel(capitulo)}
       </HashLink>
       <ul className="list-disc list-outside">
         {capitulo.titulos?.map((titulo, tituloIndex) => (

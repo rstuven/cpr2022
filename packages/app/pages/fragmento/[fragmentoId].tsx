@@ -9,7 +9,10 @@ import {
   ArticuloContext,
   CapituloContext,
   firstToUpperCase,
+  getArticuloContextCapituloTituloLabel,
+  getArticuloLabel,
   getCapituloArticulosDescription,
+  getCapituloLabel,
   parseFragmento as parseFragmento,
 } from "lib/helpers";
 import { createFragmentImage } from "lib/images";
@@ -101,7 +104,7 @@ function getFragmento(fragmentoId: string) {
 
 function getCapitulo(fragmento: CapituloContext) {
   const capitulo = fragmento.capitulo;
-  const title = `Capítulo ${capitulo.capitulo} ${capitulo.nombre}`;
+  const title = getCapituloLabel(capitulo);
   const description = getCapituloArticulosDescription(capitulo);
   const Component = function Component() {
     return <Capitulo {...capitulo} />;
@@ -110,18 +113,14 @@ function getCapitulo(fragmento: CapituloContext) {
 }
 
 function getArticulo(data: ArticuloContext) {
-  const title = `Artículo ${data.articulo.articulo} (Capítulo ${
-    data.capitulo.capitulo
-  } ${data.capitulo.nombre}${
-    data.titulo ? ` - Título: ${data.titulo.titulo}` : ""
-  })`;
+  const title = `${getArticuloLabel(
+    data.articulo
+  )} (${getArticuloContextCapituloTituloLabel(data)})`;
   const description = firstToUpperCase(data.articulo.sobre);
   const Component = function Component() {
     return (
       <div>
-        <h2 className="my-3">
-          Capítulo {data.capitulo.capitulo} {data.capitulo.nombre}
-        </h2>
+        <h2 className="my-3">{getCapituloLabel(data.capitulo)}</h2>
         {data.titulo && <h3 className="my-3">{data.titulo.titulo}</h3>}
         <Articulo {...data.articulo} />
       </div>

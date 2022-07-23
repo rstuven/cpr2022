@@ -7,11 +7,16 @@ import Titulo from "./Titulo";
 export default function Capitulo(capitulo: CapituloSchema) {
   const [hash, _] = useHashPath();
   const path = "cap:" + capitulo.numero;
+  const isHighlighted = path == hash;
   return (
     <div className="">
       <a id={path} />
-      <h2 className={"text-center " + (path == hash ? "bg-amber-100" : "")}>
-        <HashLink hash={path} anchor />{" "}
+      <h2
+        className={
+          "text-center " + (isHighlighted ? "bg-amber-100 rounded" : "")
+        }
+      >
+        <HashLink hash={path} anchor visible={!isHighlighted} />{" "}
         <TitleCase text={"Capítulo " + capitulo.capitulo} />
         <br />
         <TitleCase text={capitulo.nombre} />

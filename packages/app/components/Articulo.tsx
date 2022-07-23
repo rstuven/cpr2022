@@ -1,5 +1,5 @@
 import { Articulo as ArticuloSchema } from "cpr2022-data/src/types/schema";
-import { firstToUpperCase } from "lib/helpers";
+import { firstToUpperCase, getArticuloLabel } from "lib/helpers";
 import { useHashPath } from "hooks/useHash";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
@@ -8,17 +8,18 @@ export default function Articulo(articulo: ArticuloSchema) {
   const path = "art:" + articulo.articulo;
   const [hash, _] = useHashPath();
   const referencias = articulo.referencias?.filter((r) => !r.incisos);
+  const isHighlighted = path == hash;
   return (
     <div
       className={
         "border border-solid rounded-md p-3 mb-3" +
-        (path == hash ? " bg-amber-100" : "")
+        (isHighlighted ? " bg-amber-100" : "")
       }
     >
       <a id={path} />
       <div>
-        <HashLink hash={path} anchor />{" "}
-        <b className="text-black">Artículo {articulo.articulo}</b>{" "}
+        <HashLink hash={path} anchor visible={!isHighlighted} />{" "}
+        <b className="text-black">{getArticuloLabel(articulo)}</b>{" "}
         <span className="font-sans rounded-md bg-gray-300 text-black px-2 py-1">
           {firstToUpperCase(articulo.sobre)}
         </span>{" "}

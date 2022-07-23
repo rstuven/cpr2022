@@ -28,8 +28,8 @@ export default function Articulo(articulo: ArticuloSchema) {
         <span className="font-sans rounded-md bg-gray-300 text-black px-2 py-1">
           {firstToUpperCase(articulo.sobre)}
         </span>{" "}
-        {articulo.etiquetas.map((etiqueta) => (
-          <span key={etiqueta}>
+        {articulo.etiquetas.map((etiqueta, index) => (
+          <span key={index}>
             {" "}
             <span className="font-sans rounded-md bg-orange-400 text-white px-2 py-1 mb-1">
               {etiqueta.replace(/ /g, "\u00a0")}
@@ -37,10 +37,9 @@ export default function Articulo(articulo: ArticuloSchema) {
           </span>
         ))}{" "}
         {referencias?.map((referencia, index) => (
-          <>
+          <span key={index}>
             {" "}
             <a
-              key={index}
               className="rounded-md bg-blue-700 text-white px-2 py-1 mb-1"
               href={referencia.url}
               target="_blank"
@@ -50,7 +49,7 @@ export default function Articulo(articulo: ArticuloSchema) {
               {referencia.etiqueta}
               {referencias.length > 1 ? " " + (index + 1) : ""}
             </a>
-          </>
+          </span>
         ))}
       </div>
       {articulo.incisos.map((inciso, incisoIndex) => (

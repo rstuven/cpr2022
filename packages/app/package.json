@@ -5,6 +5,7 @@
   "scripts": {
     "start": "next",
     "build": "next build && next export",
+    "build-open": "bun run build && open public/images/fragmentos/art:1.png && open public/images/fragmentos/cap:1.png",
     "deploy": "npm run build && gh-pages --dist ./out --dotfiles"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@types/react": "18.0.1",
     "autoprefixer": "^10.4.7",
     "bun-framework-next": "^12",
+    "canvas": "^2.9.3",
     "eslint": "^8.20.0",
     "eslint-config-next": "^12.2.2",
     "gh-pages": "^4.0.0",

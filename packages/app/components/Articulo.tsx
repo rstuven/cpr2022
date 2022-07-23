@@ -1,5 +1,5 @@
 import { Articulo as ArticuloSchema } from "cpr2022-data/src/types/schema";
-import { firstToUpperCase } from "helpers";
+import { firstToUpperCase } from "lib/helpers";
 import { useHashPath } from "hooks/useHash";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";

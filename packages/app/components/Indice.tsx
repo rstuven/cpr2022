@@ -6,12 +6,12 @@ import {
 import { constitucion } from "cpr2022-data";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
-import { parseFragment } from "helpers";
+import { parseFragmento } from "lib/helpers";
 
 export default function Indice() {
   const [hash, _] = useHashPath();
   const path = "dt";
-  const fragment = parseFragment(hash);
+  const fragmento = parseFragmento(hash);
   return (
     <div className="prose text-xs">
       <ul className="list-none">
@@ -23,7 +23,7 @@ export default function Indice() {
           <HashLink
             className={
               "text-black" +
-              (hash == path || (fragment && "transitoria" in fragment)
+              (hash == path || (fragmento && "transitoria" in fragmento)
                 ? " bg-amber-100"
                 : "")
             }
@@ -41,11 +41,11 @@ function Capitulo(capitulo: CapituloSchema) {
   const [hash, _] = useHashPath();
   const path = "cap:" + capitulo.numero;
 
-  const fragment = parseFragment(hash);
+  const fragmento = parseFragmento(hash);
   const isCapitulo =
-    fragment &&
-    "capitulo" in fragment &&
-    fragment.capitulo.numero == capitulo.numero;
+    fragmento &&
+    "capitulo" in fragmento &&
+    fragmento.capitulo.numero == capitulo.numero;
 
   return (
     <li>
@@ -63,9 +63,9 @@ function Capitulo(capitulo: CapituloSchema) {
             key={tituloIndex}
             {...titulo}
             highlight={
-              fragment &&
-              "titulo" in fragment &&
-              fragment.titulo?.titulo == titulo.titulo
+              fragmento &&
+              "titulo" in fragmento &&
+              fragmento.titulo?.titulo == titulo.titulo
             }
             path={`${path}.${tituloIndex + 1}`}
           />

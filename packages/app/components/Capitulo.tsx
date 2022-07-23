@@ -4,6 +4,7 @@ import { getChildrenOfType, getItemFragmentoId } from "lib/helpers";
 import Titulo from "./Titulo";
 import HashLink from "./HashLink";
 import Articulo from "./Articulo";
+import TitleCase from "./TitleCase";
 
 export default function Capitulo({ item }: { item: ItemObject }) {
   const [hash, _] = useHashPath();
@@ -18,9 +19,9 @@ export default function Capitulo({ item }: { item: ItemObject }) {
         }
       >
         <HashLink hash={path} anchor visible={!isHighlighted} />{" "}
-        <TitleCase text={"Capítulo " + item.key} />
+        <TitleCase lowercaseClass="text-lg" text={"Capítulo " + item.key} />
         <br />
-        <TitleCase text={item.label ?? ""} />
+        <TitleCase lowercaseClass="text-lg" text={item.label ?? ""} />
       </h2>
       {getChildrenOfType(item, "articulo").map((item) => (
         <Articulo key={item.oid} item={item} />
@@ -34,23 +35,4 @@ export default function Capitulo({ item }: { item: ItemObject }) {
       ))}
     </div>
   );
-}
-
-function TitleCase(props: { text: string }) {
-  const chars = props.text.split("");
-  return (
-    <>
-      {chars.map((char, index) => {
-        return (
-          <span key={index} className={isLowerCase(char) ? "text-lg" : ""}>
-            {char.toUpperCase()}
-          </span>
-        );
-      })}
-    </>
-  );
-}
-
-function isLowerCase(text: string) {
-  return text == text.toLowerCase() && text != text.toUpperCase();
 }

@@ -194,12 +194,14 @@ export function parseFragmento(
   }
 
   if (parts[0] == "dt") {
-    const subparts = parts[1].split(".");
-
     const transitoria = items.find(
-      (o) => o.type == "transitoria" && String(o.ordinal) == subparts[0]
+      (o) => o.type == "transitoria" && String(o.ordinal) == parts[1]
     );
     return { transitoria };
+  }
+
+  if (parts[0] == "preambulo") {
+    return undefined;
   }
 
   throw new Error(`Can't parse fragmentoId ${fragmentoId}`);

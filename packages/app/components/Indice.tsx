@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
 import {
@@ -9,15 +10,39 @@ import {
   parseFragmento,
 } from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
+import tituloImage from "public/images/titulo.png";
+import escudoImage from "public/images/escudo.png";
 
 export default function Indice() {
   const [hash, _] = useHashPath();
-  const path = "dt";
+  const pathPreambulo = "preambulo";
+  const pathTransitorias = "dt";
   const fragmento = parseFragmento(hash);
-  const isHighlighted = path == hash;
   return (
     <div className="prose text-xs font-ConvencionFJ">
+      <div className="pl-6">
+        <Image
+          src={tituloImage}
+          width={296}
+          height={148}
+          alt="Propuesta de Constitución Política de la República de Chile 2022"
+          aria-label="Título"
+        />
+      </div>
       <ul className="list-none">
+        <li>
+          <HashLink
+            className={
+              "no-underline p-1 rounded " +
+              (pathPreambulo == hash
+                ? " bg-amber-100 text-black"
+                : "text-white")
+            }
+            hash={pathPreambulo}
+          >
+            Preámbulo
+          </HashLink>
+        </li>
         {getItemsOfType("capitulo").map((capitulo) => (
           <Capitulo key={capitulo.oid} capitulo={capitulo} />
         ))}
@@ -26,16 +51,20 @@ export default function Indice() {
           <HashLink
             className={
               "no-underline p-1 rounded " +
-              (isHighlighted || (fragmento && "transitoria" in fragmento)
+              (pathTransitorias == hash ||
+              (fragmento && "transitoria" in fragmento)
                 ? " bg-amber-100 text-black"
                 : "text-white")
             }
-            hash={path}
+            hash={pathTransitorias}
           >
             Disposiciones Transitorias
           </HashLink>
         </li>
       </ul>
+      <div className="text-center">
+        <Image src={escudoImage} width={160} height={123} aria-label="Escudo" />
+      </div>
     </div>
   );
 }

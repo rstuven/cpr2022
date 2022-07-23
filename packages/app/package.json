@@ -5,13 +5,14 @@
   "scripts": {
     "start": "next",
     "build": "next build && next export",
-    "build-open": "bun run build && open public/images/fragmentos/art:1.png && open public/images/fragmentos/cap:1.png",
+    "build-server": "npm run build && cd ./out && python -m http.server",
+    "build-open": "npm run build && open public/images/fragmentos/capitulo:1.png && open public/images/fragmentos/articulo:1.png",
     "deploy": "npm run build && gh-pages --dist ./out --dotfiles"
   },
   "dependencies": {
     "flowbite": "^1.5.1",
     "flowbite-react": "github:themesberg/flowbite-react",
-    "next": "12.1.3",
+    "next": "^12.2.3",
     "react": "^17",
     "react-dom": "^17",
     "react-is": "^17.0.2",

@@ -1,9 +1,8 @@
 import React from "react";
 
-import Transitoria from "./Transitoria";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
-import { getItemsOfType, getPreambulo, isFragmentoIdMatch } from "lib/helpers";
+import { getPreambulo, isFragmentoIdMatch } from "lib/helpers";
 
 export default function Preambulo() {
   const [hash, _] = useHashPath();

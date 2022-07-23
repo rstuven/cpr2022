@@ -6,7 +6,7 @@ const AcercaDe = dynamic(() => import("../components/AcercaDe"), {
   ssr: false,
 });
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps() {
   return {
     props: {},
   };

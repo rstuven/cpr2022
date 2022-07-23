@@ -17,6 +17,7 @@ import {
   parseFragmento,
 } from "lib/helpers";
 import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
+import { GetStaticPropsContext } from "next/types";
 
 const Capitulo = dynamic(() => import("../../components/Capitulo"), {
   ssr: false,
@@ -25,8 +26,11 @@ const Articulo = dynamic(() => import("../../components/Articulo"), {
   ssr: false,
 });
 
-export async function getStaticProps(context) {
-  const fragmentoId = context.params.fragmentoId;
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const fragmentoId = context.params?.fragmentoId;
+  if (typeof fragmentoId != "string") {
+    throw Error("context.params.fragmentoId")
+  }
   const fragmento = parseFragmento(fragmentoId);
   if (!fragmento) {
     return {

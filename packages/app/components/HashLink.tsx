@@ -1,5 +1,5 @@
-import { useHashPath } from "hooks/useHash";
-import { useCallback } from "react";
+// import { useHashPath } from "hooks/useHash";
+// import { useCallback } from "react";
 
 type HashLinkProps = {
   hash: string;
@@ -10,18 +10,19 @@ type HashLinkProps = {
 };
 
 export default function HashLink(props: HashLinkProps) {
-  const [_, updateHash] = useHashPath();
-  const onClick = useCallback(
-    (e: any) => {
-      e.preventDefault();
-      updateHash(props.hash);
-    },
-    [props.hash, updateHash]
-  );
+  // const [_, updateHash] = useHashPath();
+  // const onClick = useCallback(
+  //   (e: any) => {
+  //     e.preventDefault();
+  //     updateHash(props.hash);
+  //   },
+  //   [props.hash, updateHash]
+  // );
   if (props.anchor) {
     return (
       <a
         className={
+          (props.className ?? "") +
           "font-sans text-gray-300" +
           (props.visible === false ? " invisible" : "")
         }

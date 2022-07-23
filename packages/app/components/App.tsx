@@ -23,7 +23,7 @@ export default function App() {
       >
         <aside
           ref={indice}
-          className="bg-[#34005f] hidden md:block md:col-span-2 overflow-y-scroll overscroll-contain h-screen pt-5 pb-20 pr-5"
+          className="bg-[#34005f] hidden md:block md:col-span-2 overflow-y-scroll overscroll-contain h-screen"
         >
           <Indice />
         </aside>

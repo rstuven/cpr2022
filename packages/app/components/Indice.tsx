@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import Image from "next/image";
+import React from "react";
+import Image, { ImageLoader } from "next/image";
 import HashLink from "./HashLink";
 import { useHashPath } from "hooks/useHash";
 import {
@@ -11,26 +11,30 @@ import {
   parseFragmento,
 } from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
-import tituloImage from "../public/images/titulo.png";
-import escudoImage from "../public/images/escudo.png";
+import tituloImage from "public/images/titulo.png";
+import escudoImage from "public/images/escudo.png";
 
 export default function Indice() {
   const [hash, _] = useHashPath();
   const pathPreambulo = "preambulo";
   const pathTransitorias = "transitoria";
   const fragmento = parseFragmento(hash);
+  const imageLoader: ImageLoader = (props) => {
+    return props.src;
+  };
   return (
-    <div className="prose text-xs font-ConvencionFJ">
-      <HashLink className="pl-6" hash="inicio">
+    <div className="prose text-xs font-ConvencionFJ px-6 pt-5 pb-20">
+      <HashLink hash="inicio">
         <Image
           src={tituloImage}
+          loader={imageLoader}
           width={296}
           height={148}
           alt="Propuesta de Constitución Política de la República de Chile 2022"
           aria-label="Título"
         />
       </HashLink>
-      <ul className="list-none">
+      <ul className="list-none pl-0">
         <li>
           <HashLink
             className={
@@ -64,7 +68,13 @@ export default function Indice() {
         </li>
       </ul>
       <div className="text-center">
-        <Image src={escudoImage} width={160} height={123} aria-label="Escudo" />
+        <Image
+          src={escudoImage}
+          loader={imageLoader}
+          width={160}
+          height={123}
+          aria-label="Escudo"
+        />
       </div>
     </div>
   );

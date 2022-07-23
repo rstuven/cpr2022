@@ -15,7 +15,7 @@ export default function Transitorias(props: TransitoriasProps) {
   return (
     <>
       <a id={path}></a>
-      <h2 className={path == hash ? "bg-amber-100" : undefined}>
+      <h2 className={path == hash ? "bg-amber-100 rounded" : undefined}>
         <HashLink hash={path} anchor /> Disposiciones Transitorias
       </h2>
       {props.transitorias.map((transitoria: TransitoriaSchema) => (

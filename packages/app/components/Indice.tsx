@@ -12,6 +12,7 @@ export default function Indice() {
   const [hash, _] = useHashPath();
   const path = "dt";
   const fragmento = parseFragmento(hash);
+  const isHighlighted = path == hash;
   return (
     <div className="prose text-xs font-ConvencionFJ">
       <ul className="list-none">
@@ -22,10 +23,10 @@ export default function Indice() {
         <li>
           <HashLink
             className={
-              "text-black" +
-              (hash == path || (fragmento && "transitoria" in fragmento)
-                ? " bg-amber-100"
-                : "")
+              "no-underline p-1 rounded " +
+              (isHighlighted || (fragmento && "transitoria" in fragmento)
+                ? " bg-amber-100 text-black"
+                : "text-white")
             }
             hash={path}
           >
@@ -40,7 +41,7 @@ export default function Indice() {
 function Capitulo(capitulo: CapituloSchema) {
   const [hash, _] = useHashPath();
   const path = "cap:" + capitulo.numero;
-
+  const isHighlighted = path == hash;
   const fragmento = parseFragmento(hash);
   const isCapitulo =
     fragmento &&
@@ -51,7 +52,10 @@ function Capitulo(capitulo: CapituloSchema) {
     <li>
       <HashLink
         className={
-          "text-black" + (hash == path || isCapitulo ? " bg-amber-100" : "")
+          "no-underline p-1 rounded " +
+          (isHighlighted || isCapitulo
+            ? " bg-amber-100 text-black"
+            : "text-white")
         }
         hash={path}
       >
@@ -78,11 +82,18 @@ function Capitulo(capitulo: CapituloSchema) {
 type TituloProps = TituloSchema & { path: string; highlight: boolean };
 function Titulo(titulo: TituloProps) {
   const [hash, _] = useHashPath();
+  const isHighlighted = titulo.path == hash;
   return (
-    <li
-      className={hash == titulo.path || titulo.highlight ? " bg-amber-100" : ""}
-    >
-      <HashLink className="text-black" hash={titulo.path}>
+    <li>
+      <HashLink
+        hash={titulo.path}
+        className={
+          "no-underline p-1 rounded " +
+          (isHighlighted || titulo.highlight
+            ? "bg-amber-100 text-black"
+            : "text-[#bf77fa]")
+        }
+      >
         {titulo.titulo}
       </HashLink>
     </li>

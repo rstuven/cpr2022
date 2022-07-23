@@ -15,6 +15,8 @@ export default function Constitucion() {
       ))}
 
       <Transitorias transitorias={constitucion.transitorias} />
+
+      <div className={"text-center text-2xl mt-10"}>********</div>
     </div>
   );
 }

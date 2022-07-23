@@ -9,12 +9,12 @@ export default function App() {
   useScrollToHash(350, main);
   return (
     <div className="grid grid-cols-1 md:grid-cols-7">
-      <aside className="hidden md:block md:col-span-2 overflow-y-scroll h-screen py-5 pr-5">
+      <aside className="bg-[#34005f] hidden md:block md:col-span-2 overflow-y-scroll overscroll-contain h-screen py-5 pr-5">
         <Indice />
       </aside>
       <main
         ref={main}
-        className="md:col-span-5 overflow-y-scroll h-screen grid justify-center"
+        className="md:col-span-5 overflow-y-scroll overscroll-contain h-screen grid justify-center"
       >
         <article className="pb-10">
           <header className="fixed bg-white prose">

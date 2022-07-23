@@ -3,6 +3,7 @@ import { firstToUpperCase, getArticuloLabel } from "lib/helpers";
 import { useHashPath } from "hooks/useHash";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
+import Pagina from "./Pagina";
 
 export default function Articulo(articulo: ArticuloSchema) {
   const path = "art:" + articulo.articulo;
@@ -17,6 +18,10 @@ export default function Articulo(articulo: ArticuloSchema) {
       }
     >
       <a id={path} />
+      <div className="float-right">
+        &nbsp;
+        <Pagina pagina={articulo.pagina} />
+      </div>
       <div>
         <HashLink hash={path} anchor visible={!isHighlighted} />{" "}
         <b className="text-black">{getArticuloLabel(articulo)}</b>{" "}

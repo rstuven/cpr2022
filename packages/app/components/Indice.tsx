@@ -47,7 +47,7 @@ export default function Indice() {
     return props.src;
   };
   return (
-    <div className="prose text-xs font-ConvencionFJ pl-3 pr-4 pt-5 pb-20">
+    <div className="prose text-xs font-ConvencionFJ pl-3 pr-4 py-5">
       <HashLink hash="inicio" title="Ir al inicio">
         <Image
           src={tituloImage}

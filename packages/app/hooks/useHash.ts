@@ -25,6 +25,7 @@ export function useHashScrolling(
     retry(() => scroll("auto"));
 
     const onHashChange = () => retry(() => scroll(defaultBehavior));
+
     window.addEventListener("hashchange", onHashChange);
     return () => {
       window.removeEventListener("hashchange", onHashChange);
@@ -52,7 +53,8 @@ export function useHashHighlighting(
       return true;
     };
 
-    const onHashChange = () => retry(() => highlight());
+    const onHashChange = () => retry(highlight);
+
     onHashChange();
     window.addEventListener("hashchange", onHashChange);
     return () => {

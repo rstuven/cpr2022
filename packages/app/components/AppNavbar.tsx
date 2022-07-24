@@ -44,13 +44,15 @@ export function AppNavbar({
         </Navbar.Link>
         <Navbar.Link href="/acerca-de">¿Qué es esto?</Navbar.Link>
         {!isMediumMinWidth &&
-          getItemsOfType("preambulo", "capitulo", "transitorias").map((item, index) => (
-            <ItemNavLink
-              key={index}
-              item={item}
-              onMenuOpenChange={onMenuOpenChangeHere}
-            />
-          ))}
+          getItemsOfType("preambulo", "capitulo", "transitorias").map(
+            (item, index) => (
+              <ItemNavLink
+                key={index}
+                item={item}
+                onMenuOpenChange={onMenuOpenChangeHere}
+              />
+            )
+          )}
       </Navbar.Collapse>
     </Navbar>
   );
@@ -70,9 +72,7 @@ function ItemNavLink({
   }, [isOpen, onMenuOpenChange]);
 
   const onNavbarLinkClick = useCallback(() => {
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 100);
+    setIsOpen(false);
   }, [setIsOpen]);
 
   return (

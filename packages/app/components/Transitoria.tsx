@@ -6,17 +6,21 @@ import {
   firstToUpperCase,
   getChildrenOfType,
   getItemFragmentoId,
+  getItemLabel,
 } from "lib/helpers";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
+import ItemToolbar from "./ItemToolbar"
 
 export default function Transitoria({ item }: { item: ItemObject }) {
   const path = getItemFragmentoId(item);
   const transitoria = item.data as TransitoriaData;
   return (
-    <div className="border border-solid rounded-md p-3 mb-3">
-      <h3 data-hash={path} className="my-0 rounded">
-        <HashLink hash={path} anchor="disposición transitoria" /> {item.key}{" "}
+    <div data-hash={path} className="border border-solid rounded-md p-3 mb-3">
+      <ItemToolbar path={path} item={item} />
+      <h3 className="my-0 rounded">
+        <HashLink hash={path} anchor="disposición transitoria" />{" "}
+        {getItemLabel(item)}{" "}
         {transitoria.sobre && (
           <span className="font-sans rounded-md text-sm font-normal  bg-gray-300 text-black px-2 py-1">
             {firstToUpperCase(transitoria.sobre)}

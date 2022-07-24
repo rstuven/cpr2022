@@ -3,7 +3,10 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { GetStaticPropsContext } from "next/types";
-import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
+import {
+  ArticuloData,
+  TransitoriaData,
+} from "cpr2022-data/src/types/schemaShallow";
 import { HashContext, HashProvider } from "components/HashProvider";
 import MetaTags from "components/MetaTags";
 import { useHashHighlighting, useHashScrolling } from "hooks/useHash";
@@ -18,12 +21,16 @@ import {
   getItemLabel,
   getItemsOfType,
   parseFragmento,
+  TransitoriaContext,
 } from "lib/helpers";
 
 const Capitulo = dynamic(() => import("../../components/Capitulo"), {
   ssr: false,
 });
 const Articulo = dynamic(() => import("../../components/Articulo"), {
+  ssr: false,
+});
+const Transitoria = dynamic(() => import("../../components/Transitoria"), {
   ssr: false,
 });
 
@@ -55,10 +62,10 @@ export async function getStaticPaths() {
 }
 
 function getFragmentoIds() {
-  // return ["articulo:1". "capitulo:1"];
-  return getItemsOfType("capitulo")
-    .concat(getItemsOfType("articulo"))
-    .map((item) => getItemFragmentoId(item, false));
+  // return ["articulo:1", "capitulo:1", "transitoria:1"];
+  return getItemsOfType("capitulo", "articulo", "transitoria").map((item) =>
+    getItemFragmentoId(item, false)
+  );
 }
 
 export default function Fragmento() {
@@ -102,6 +109,10 @@ function getFragmento(fragmentoId: string) {
     return getCapitulo(fragmento);
   }
 
+  if (fragmento && "transitoria" in fragmento) {
+    return getTransitoria(fragmento);
+  }
+
   throw new Error(`Can't handle fragmentoId ${fragmentoId}`);
 }
 
@@ -130,6 +141,22 @@ function getArticulo(fragmento: ArticuloContext) {
           <h3 className="my-3">{getItemLabel(fragmento.titulo, false)}</h3>
         )}
         <Articulo item={fragmento.articulo} />
+      </div>
+    );
+  };
+  return { Component, title, description };
+}
+
+function getTransitoria(fragmento: TransitoriaContext) {
+  const title = getItemLabel(fragmento.transitoria);
+  const description = firstToUpperCase(
+    (fragmento.transitoria.data as TransitoriaData).sobre
+  );
+  const Component = function Component() {
+    return (
+      <div>
+        <h2 className="my-3">Disposiciones Transitorias</h2>
+        <Transitoria item={fragmento.transitoria} />
       </div>
     );
   };

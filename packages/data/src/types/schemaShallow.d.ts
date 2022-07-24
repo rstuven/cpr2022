@@ -31,10 +31,13 @@ export type ItemObject = {
   readonly data?: ArticuloData | TransitoriaData;
 };
 
-export type ArticuloData = {
+export type CommonData = {
   readonly pagina: number;
-  readonly etiquetas: ReadonlyArray<string>;
   readonly sobre: string;
+}
+
+export type ArticuloData = CommonData & {
+  readonly etiquetas: ReadonlyArray<string>;
   readonly referencias?: ReadonlyArray<Referencia>;
 };
 
@@ -45,8 +48,6 @@ export type Referencia = {
   readonly incisos?: ReadonlyArray<string>;
 };
 
-export type TransitoriaData = {
-  readonly pagina: number;
+export type TransitoriaData = CommonData & {
   readonly etiquetas: ReadonlyArray<string>;
-  readonly sobre?: string;
 };

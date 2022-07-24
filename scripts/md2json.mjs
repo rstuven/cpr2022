@@ -165,7 +165,7 @@ function itemsDesdeMarkdown(entrada) {
         const data = {
           pagina: meta.pagina,
           etiquetas: meta.etiquetas || [],
-          sobre: meta.sobre,
+          sobre: meta.sobre ?? "",
         };
         transitoria = {
           transitoria: parts[1],

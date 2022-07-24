@@ -6,7 +6,7 @@
     "start": "next",
     "build": "next build && next export",
     "build-server": "npm run build && cd ./out && python -m http.server",
-    "build-open": "npm run build && open public/images/fragmentos/capitulo:1.png && open public/images/fragmentos/articulo:1.png",
+    "build-open": "npm run build && open public/images/fragmentos/capitulo:1.png && open public/images/fragmentos/transitoria:1.png && open public/images/fragmentos/articulo:1.png",
     "deploy": "npm run build && gh-pages --dist ./out --dotfiles"
   },
   "dependencies": {

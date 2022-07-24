@@ -10,12 +10,16 @@ import {
   CapituloContext,
   FragmentoContext,
   getArticuloContextCapituloTituloLabel,
-  getArticuloIncisosLines,
+  getItemIncisosLines,
   getCapituloArticulosDescription,
   getCapituloSobreLines,
   getItemLabel,
+  TransitoriaContext,
 } from "./helpers";
-import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
+import {
+  ArticuloData,
+  TransitoriaData,
+} from "cpr2022-data/src/types/schemaShallow";
 
 const accentColor = "#34005f";
 const dimmedColor = "#89744f";
@@ -53,7 +57,9 @@ export async function createFragmentImage(
 
   "articulo" in fragmento
     ? renderArticulo(ctx, fragmento, box)
-    : "capitulo" in fragmento && renderCapitulo(ctx, fragmento, box);
+    : "capitulo" in fragmento
+    ? renderCapitulo(ctx, fragmento, box)
+    : "transitoria" in fragmento && renderTransitoria(ctx, fragmento, box);
 
   const buffer = canvas.toBuffer("image/png");
   await fs.writeFile(`public/images/fragmentos/${fragmentoId}.png`, buffer);
@@ -136,7 +142,7 @@ function renderArticulo(
     lastPositionY: lastContentPositionY,
   } = renderText({
     ctx,
-    text: getArticuloIncisosLines(fragmento.articulo).join("\n"),
+    text: getItemIncisosLines(fragmento.articulo).join("\n"),
     left: box.left,
     top: titleBottom + 20,
     width: box.width,
@@ -156,7 +162,87 @@ function renderArticulo(
     });
   }
 
-  renderFooter(ctx, "artículo", incomplete, box);
+  renderFooter(ctx, "artículo", false, incomplete, box);
+}
+
+function renderTransitoria(
+  ctx: CanvasRenderingContext2D,
+  fragmento: TransitoriaContext,
+  box: Box
+) {
+  ctx.fillStyle = accentColor;
+  ctx.font = '1rem "ConvencionFJ"';
+
+  const { bottom: containerBottom } = renderText({
+    ctx,
+    text: "Disposiciones Transitorias",
+    left: box.left + 2,
+    top: box.top,
+    width: box.width,
+    lineHeight: 30,
+  });
+
+  const titleTop = containerBottom + 5;
+
+  ctx.fillStyle = "black";
+  ctx.font = '2rem "ConvencionFJ"';
+
+  let { lastWidth: titleLastWidth, bottom: titleBottom } = renderText({
+    ctx,
+    text: getItemLabel(fragmento.transitoria),
+    left: box.left,
+    top: titleTop,
+    width: box.width,
+    lineHeight: 40,
+  });
+
+  ctx.fillStyle = dimmedColor;
+  ctx.font = '1.4rem "ConvencionFJ"';
+
+  const sobre = (fragmento.transitoria.data as TransitoriaData).sobre;
+  if (sobre) {
+    const { bottom: sobreBottom } = renderText({
+      ctx,
+      text: `sobre ${sobre}`,
+      left: box.left + titleLastWidth + 10,
+      top: titleTop + 13,
+      width: box.width - titleLastWidth - 20,
+      lineHeight: 40,
+    });
+    titleBottom = sobreBottom;
+  }
+
+  const lineHeight = 36;
+
+  ctx.fillStyle = "black";
+  ctx.font = '1.3rem "ConvencionFJ"';
+  const {
+    incomplete,
+    lastWidth: lastContentWidth,
+    lastPositionY: lastContentPositionY,
+  } = renderText({
+    ctx,
+    text: getItemIncisosLines(fragmento.transitoria).join("\n"),
+    left: box.left,
+    top: titleBottom + 20,
+    width: box.width,
+    lineHeight,
+    maxBottom: box.bottom,
+  });
+
+  if (incomplete) {
+    ctx.fillStyle = dimmedColor;
+    renderText({
+      ctx,
+      text: "(...)",
+      left: box.left + lastContentWidth,
+      top: lastContentPositionY,
+      width: box.width,
+      lineHeight,
+    });
+  }
+
+  renderFooter(ctx, "disposición transitoria", true, incomplete, box);
 }
 
 function renderCapitulo(
@@ -215,12 +301,13 @@ function renderCapitulo(
     });
   }
 
-  renderFooter(ctx, "capítulo", false, box);
+  renderFooter(ctx, "capítulo", false, false, box);
 }
 
 function renderFooter(
   ctx: CanvasRenderingContext2D,
   item: string,
+  feminine: boolean,
   incomplete: boolean,
   box: Box
 ) {
@@ -228,8 +315,8 @@ function renderFooter(
   ctx.font = '1.4rem "ConvencionFJ"';
 
   const lineHeight = 38;
-  const footerText = `Lee este ${item} ${
-    incomplete ? "completo y " : ""
+  const footerText = `Lee ${feminine ? "esta" : "este"} ${item} ${
+    incomplete ? `${feminine ? "completa" : "completo"} y ` : ""
   }en contexto visitando cpr2022.cl`;
 
   renderText({

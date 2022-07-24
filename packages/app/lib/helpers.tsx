@@ -6,6 +6,7 @@ import {
 } from "cpr2022-data/src/types/schemaShallow";
 
 export function firstToUpperCase(text: string) {
+  if (text == "") return "";
   return text[0].toUpperCase() + text.substring(1);
 }
 
@@ -105,22 +106,39 @@ export function getItemFragmentoId(item: ItemObject, appendSuffix = true) {
 export function isFragmentoIdMatch(fragmentoId: string, hash: string) {
   const parts = fragmentoId.split("@");
   if (parts.length > 1) {
-    return hash == fragmentoId || hash.startsWith(parts[0]);
+    return hash.startsWith(parts[0]);
   }
-  return hash == fragmentoId;
+  return hash.startsWith(fragmentoId);
+}
+
+const TYPE_LABELS: Record<ItemType, string> = {
+  capitulo: "capítulo",
+  articulo: "artículo",
+  titulo: "título",
+  preambulo: "preámbulo",
+  transitoria: "disposición transitoria",
+  transitorias: "disposiciones transitorias",
+  inciso: "inciso",
+};
+
+export function getItemTypeLabel(type: ItemType) {
+  return TYPE_LABELS[type];
 }
 
 export function getItemLabel(item: ItemObject, withPrefix = true) {
+  const label = firstToUpperCase(getItemTypeLabel(item.type));
   if (item.type == "capitulo") {
-    return (withPrefix ? `Capítulo ${item.key} - ` : "") + item.label;
+    return (withPrefix ? `${label} ${item.key} - ` : "") + item.label;
   } else if (item.type == "titulo") {
-    return (withPrefix ? "Título: " : "") + item.label;
+    return (withPrefix ? label + ": " : "") + item.label;
   } else if (item.type == "articulo") {
-    return (withPrefix ? "Artículo " : "") + item.key;
+    return (withPrefix ? label + " " : "") + item.key;
   } else if (item.type == "preambulo") {
     return item.label as string;
   } else if (item.type == "transitorias") {
     return item.label as string;
+  } else if (item.type == "transitoria") {
+    return item.key as string;
   }
   throw Error("Not implemented type " + item.type);
 }
@@ -150,9 +168,9 @@ export function getIncisoBullet(item: ItemObject, baseItem: ItemObject) {
   return NON_BREAKING_SPACE.repeat(level * 4) + item.key + ".))"[level] + " ";
 }
 
-export function getArticuloIncisosLines(articulo: ItemObject) {
-  return getDescendantsOfType(articulo, "inciso").map(
-    (inciso) => getIncisoBullet(inciso, articulo) + inciso.content
+export function getItemIncisosLines(item: ItemObject) {
+  return getDescendantsOfType(item, "inciso").map(
+    (inciso) => getIncisoBullet(inciso, item) + inciso.content
   );
 }
 
@@ -186,7 +204,7 @@ export type CapituloContext = {
 };
 
 export type TransitoriaContext = {
-  transitoria?: ItemObject;
+  transitoria: ItemObject;
 };
 
 export type FragmentoContext =
@@ -210,7 +228,6 @@ export function parseFragmento(
 
   if (parts[0] == "capitulo") {
     const subparts = parts[1].split(".");
-
     const capitulo = items.find(
       (o) => o.type == "capitulo" && String(o.ordinal) == subparts[0]
     );
@@ -224,7 +241,6 @@ export function parseFragmento(
 
   if (parts[0] == "articulo") {
     const subparts = parts[1].split(".");
-
     const articulo = items.find(
       (o) => o.type == "articulo" && String(o.key) == subparts[0]
     );
@@ -242,9 +258,13 @@ export function parseFragmento(
   }
 
   if (parts[0] == "transitoria") {
+    const subparts = parts[1].split(".");
     const transitoria = items.find(
-      (o) => o.type == "transitoria" && String(o.ordinal) == parts[1]
+      (o) => o.type == "transitoria" && String(o.ordinal) == subparts[0]
     );
+    if (!transitoria) {
+      throw new Error("Can't find transitoria " + parts[1]);
+    }
     return { transitoria };
   }
 

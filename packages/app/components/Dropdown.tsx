@@ -1,15 +1,24 @@
+import { useCallback, useState } from "react";
 import {
   Dropdown as FlowbiteDropdown,
   DropdownProps as FlowbiteDropdownProps,
 } from "flowbite-react";
-import { useState } from "react";
 import { HiOutlineChevronDown } from "react-icons/hi";
 
 type DropdownProps = FlowbiteDropdownProps & { className?: string };
+
+// Wrap flowbite's Dropdown to improve perfomance
 function Dropdown(props: DropdownProps) {
   const [render, setRender] = useState(false);
+  const onActivation = useCallback(() => {
+    setRender(true);
+  }, []);
   return (
-    <div className="cursor-pointer " onMouseOver={() => setRender(true)}>
+    <div
+      className="cursor-pointer "
+      onMouseOver={onActivation}
+      onTouchStart={onActivation}
+    >
       {render ? (
         <FlowbiteDropdown {...props}>
           <div className={"-m-5 -mr-2 pr-5 " + (props.className ?? "")}>

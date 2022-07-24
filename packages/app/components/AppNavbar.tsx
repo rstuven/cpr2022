@@ -72,9 +72,13 @@ function ItemNavLink({
   }, [isOpen, onMenuOpenChange]);
 
   const onNavbarLinkClick = useCallback(() => {
-    setIsOpen(false);
+    // this timeout avoids unmounting before the link follows through
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 0);
   }, [setIsOpen]);
 
+  console.log(getItemFragmentoId(item));
   return (
     <Navbar.Link
       href={"/#" + getItemFragmentoId(item)}

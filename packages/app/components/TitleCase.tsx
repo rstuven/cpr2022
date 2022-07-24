@@ -3,10 +3,17 @@ export default function TitleCase(props: {
   uppercaseClass?: string;
   lowercaseClass?: string;
 }) {
-  const chars = props.text.split("");
+  const words = props.text.split(" ");
+  const parts = words
+    .flatMap((part, index) => [
+      part[0],
+      part.substring(1),
+      index != words.length - 1 ? " " : "",
+    ])
+    .filter((part) => part != "");
   return (
     <>
-      {chars.map((char, index) => {
+      {parts.map((char, index) => {
         return (
           <span
             key={index}

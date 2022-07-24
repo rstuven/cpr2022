@@ -25,7 +25,7 @@ export default function Constitucion() {
 
       <Transitorias />
 
-      <div className={"text-center text-2xl mt-10"}>********</div>
+      <div className="text-center text-2xl mt-10">********</div>
     </div>
   );
 }

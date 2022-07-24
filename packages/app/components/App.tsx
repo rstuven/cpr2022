@@ -16,7 +16,7 @@ export default function App() {
   return (
     <HashProvider>
       {/* make sure highlightClass is noticed by tailwind compiler */}
-      <div className={"bg-amber-100 hidden"} />
+      <div className="bg-amber-100 hidden" />
       <div className="h-screen overflow-hidden">
         <div className="z-10 md:mr-4 relative">
           <AppNavbar />

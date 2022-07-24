@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
-import Tooltip from "./Tooltip"
+import { classNames } from "lib/helpers";
+import Tooltip from "./Tooltip";
 
 type HashLinkProps = PropsWithChildren<{
   hash: string;
@@ -15,11 +16,11 @@ export default function HashLink(props: HashLinkProps) {
     return (
       <div className="inline-block">
         <a
-          className={
-            (props.className ?? "") +
-            "font-sans text-gray-300" +
-            (props.visible === false ? " invisible" : "")
-          }
+          className={classNames(
+            props.className,
+            "font-sans text-gray-300",
+            props.visible === false && "invisible"
+          )}
           href={"/#" + props.hash}
           data-id={props.hash}
         >
@@ -30,9 +31,10 @@ export default function HashLink(props: HashLinkProps) {
   }
   return (
     <a
-      className={
-        (props.className ?? "") + (props.visible === false ? " invisible" : "")
-      }
+      className={classNames(
+        props.className,
+        props.visible === false && "invisible"
+      )}
       href={"/#" + props.hash}
       title={props.title}
       data-id={props.hash}

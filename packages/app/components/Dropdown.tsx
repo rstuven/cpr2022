@@ -4,6 +4,7 @@ import {
   DropdownProps as FlowbiteDropdownProps,
 } from "flowbite-react";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import { classNames } from "lib/helpers";
 
 type DropdownProps = FlowbiteDropdownProps & { className?: string };
 
@@ -21,7 +22,7 @@ function Dropdown(props: DropdownProps) {
     >
       {render ? (
         <FlowbiteDropdown {...props}>
-          <div className={"-m-5 -mr-2 pr-5 " + (props.className ?? "")}>
+          <div className={classNames("-m-5 -mr-2 pr-5", props.className)}>
             {props.children}
           </div>
         </FlowbiteDropdown>

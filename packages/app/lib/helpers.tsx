@@ -102,11 +102,10 @@ export function getItemFragmentoId(item: ItemObject, appendSuffix = true) {
 
   return result;
 }
-
 export function isFragmentoIdMatch(fragmentoId: string, hash: string) {
   const parts = fragmentoId.split("@");
-  if (fragmentoId.length > 1) {
-    return hash == fragmentoId || hash == parts[0];
+  if (parts.length > 1) {
+    return hash == fragmentoId || hash.startsWith(parts[0]);
   }
   return hash == fragmentoId;
 }

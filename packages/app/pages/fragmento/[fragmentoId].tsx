@@ -6,7 +6,7 @@ import { GetStaticPropsContext } from "next/types";
 import { ArticuloData } from "cpr2022-data/src/types/schemaShallow";
 import { HashContext, HashProvider } from "components/HashProvider";
 import MetaTags from "components/MetaTags";
-import { useHashScrolling } from "hooks/useHash";
+import { useHashHighlighting, useHashScrolling } from "hooks/useHash";
 import { createFragmentImage } from "lib/images";
 import {
   ArticuloContext,
@@ -64,6 +64,7 @@ function getFragmentoIds() {
 export default function Fragmento() {
   const router = useRouter();
   useHashScrolling(150, "auto");
+  useHashHighlighting();
   const hash = useContext(HashContext);
 
   const { fragmentoId } = router.query;

@@ -34,15 +34,15 @@ export function useHashScrolling(
 }
 
 export function useHashHighlighting(
-  className: string,
   target?: RefObject<HTMLElement>,
-  index?: boolean
+  className: string = "bg-amber-100"
 ) {
   useEffect(() => {
     const highlight = () => {
       if (target && !target.current) return false;
 
-      const element = getElement("data-hash", target, index);
+      const element = getElement("data-hash", target);
+      console.log(element);
       if (!element) return false;
       const elements = (target ? target.current : document)?.querySelectorAll(
         `.${className}[data-hash]`
@@ -60,7 +60,7 @@ export function useHashHighlighting(
     return () => {
       window.removeEventListener("hashchange", onHashChange);
     };
-  }, [index, target]);
+  }, [className, target]);
 }
 
 function getElement(

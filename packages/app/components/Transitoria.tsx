@@ -9,16 +9,12 @@ import {
 } from "lib/helpers";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
-import Pagina from "./Pagina";
 
 export default function Transitoria({ item }: { item: ItemObject }) {
   const path = getItemFragmentoId(item);
   const transitoria = item.data as TransitoriaData;
   return (
     <div className="border border-solid rounded-md p-3 mb-3">
-      <div className="float-right ml-1">
-        <Pagina pagina={transitoria.pagina} />
-      </div>
       <h3 data-hash={path} className="my-0 rounded">
         <HashLink hash={path} anchor="disposición transitoria" /> {item.key}{" "}
         {transitoria.sobre && (

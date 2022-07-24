@@ -7,15 +7,13 @@ import Constitucion from "./Constitucion";
 import { AppNavbar } from "./AppNavbar";
 import { HashProvider } from "./HashProvider";
 
-const highlightClass = "bg-amber-100";
-
 export default function App() {
   const main = useRef<HTMLDivElement>(null);
   const indice = useRef<HTMLDivElement>(null);
   const isMediumMinWidth = useMediaQuery("(min-width: 768px)");
   useHashScrolling(isMediumMinWidth ? 350 : 150, "auto", main);
   useHashScrolling(isMediumMinWidth ? 350 : 150, "smooth", indice, true);
-  useHashHighlighting(highlightClass, main);
+  useHashHighlighting(main);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const onMenuOpenChange = useCallback((newValue: boolean) => {
     setIsMenuOpen(newValue);
@@ -23,7 +21,7 @@ export default function App() {
   return (
     <HashProvider>
       {/* make sure highlightClass is noticed by tailwind compiler */}
-      <div className={highlightClass + " hidden"} />
+      <div className={"bg-amber-100 hidden"} />
       <div className={classNames("h-screen", !isMenuOpen && "overflow-hidden")}>
         <div className="z-10 md:mr-4 relative">
           <AppNavbar onMenuOpenChange={onMenuOpenChange} />

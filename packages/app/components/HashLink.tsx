@@ -21,7 +21,6 @@ export default function HashLink(props: HashLinkProps) {
             (props.visible === false ? " invisible" : "")
           }
           href={"/#" + props.hash}
-          title={title}
           data-id={props.hash}
         >
           <Tooltip content={title}>¶</Tooltip>

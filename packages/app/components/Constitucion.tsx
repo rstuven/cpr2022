@@ -8,7 +8,7 @@ import Preambulo from "./Preambulo";
 
 export default function Constitucion() {
   return (
-    <div className="prose px-10 font-ConvencionFJ">
+    <div className="prose px-3 sm:px-10 font-ConvencionFJ">
       <a data-id="inicio" />
       <h1 className="text-center">
         <TitleCase

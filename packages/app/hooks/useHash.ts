@@ -42,7 +42,6 @@ export function useHashHighlighting(
       if (target && !target.current) return false;
 
       const element = getElement("data-hash", target);
-      console.log(element);
       if (!element) return false;
       const elements = (target ? target.current : document)?.querySelectorAll(
         `.${className}[data-hash]`

@@ -1,20 +1,11 @@
 import { AppNavbar } from "components/AppNavbar";
-import { useCallback, useState } from "react";
 import Indice from "./Indice";
 
 export default function AcercaDe({}) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const onMenuOpenChange = useCallback((newValue: boolean) => {
-    setIsMenuOpen(newValue);
-  }, []);
   return (
     <>
-      <AppNavbar onMenuOpenChange={onMenuOpenChange} />
-      <div
-        className={
-          "grid grid-cols-1 md:grid-cols-7 " + (isMenuOpen ? "hidden" : "")
-        }
-      >
+      <AppNavbar />
+      <div className="grid grid-cols-1 md:grid-cols-7">
         <aside className="bg-[#34005f] hidden md:block md:col-span-2 overflow-y-scroll overscroll-contain h-screen py-5 pr-5">
           <Indice />
         </aside>
@@ -33,12 +24,12 @@ export default function AcercaDe({}) {
                     consectetur, from a Lorem Ipsum passage, and going through
                     the cites of the word in classical literature, discovered
                     the undoubtable source. Lorem Ipsum comes from sections
-                    1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The
-                    Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                    book is a treatise on the theory of ethics, very popular
-                    during the Renaissance. The first line of Lorem Ipsum,
-                    &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section
-                    1.10.32.
+                    1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et
+                    Malorum&quot; (The Extremes of Good and Evil) by Cicero,
+                    written in 45 BC. This book is a treatise on the theory of
+                    ethics, very popular during the Renaissance. The first line
+                    of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;,
+                    comes from a line in section 1.10.32.
                   </p>
                 </div>
                 <h2>Créditos</h2>
@@ -46,9 +37,10 @@ export default function AcercaDe({}) {
                   <p>
                     The standard chunk of Lorem Ipsum used since the 1500s is
                     reproduced below for those interested. Sections 1.10.32 and
-                    1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are
-                    also reproduced in their exact original form, accompanied by
-                    English versions from the 1914 translation by H. Rackham.
+                    1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by
+                    Cicero are also reproduced in their exact original form,
+                    accompanied by English versions from the 1914 translation by
+                    H. Rackham.
                   </p>
                 </div>
               </div>

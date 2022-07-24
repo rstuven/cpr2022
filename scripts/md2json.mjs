@@ -30,22 +30,25 @@ const constitucionNested = {
 };
 
 const constitucionShallow = {
-  [preambuloOid]: {
-    oid: preambuloOid,
-    type: "preambulo",
-    label: "Preámbulo",
-    level: 0,
-    content: preambulo,
+  enlaces: metadatos.enlaces,
+  items: {
+    [preambuloOid]: {
+      oid: preambuloOid,
+      type: "preambulo",
+      label: "Preámbulo",
+      level: 0,
+      content: preambulo,
+    },
+    ...capitulosShallow,
+    [transitoriasOid]: {
+      oid: transitoriasOid,
+      type: "transitorias",
+      label: "Disposiciones Transitorias",
+      level: 0,
+      content: preambulo,
+    },
+    ...transitoriasShallow,
   },
-  ...capitulosShallow,
-  [transitoriasOid]: {
-    oid: transitoriasOid,
-    type: "transitorias",
-    label: "Disposiciones Transitorias",
-    level: 0,
-    content: preambulo,
-  },
-  ...transitoriasShallow,
 };
 
 saveJson(outputDirData + outputFormatNest, constitucionNested);
@@ -122,11 +125,12 @@ function itemsDesdeMarkdown(entrada) {
         };
       } else if (linea.startsWith("#### Artículo ")) {
         const articuloNumeroActual = parseInt(linea.split(" ")[2]);
-        const meta = metadatos.find((m) => m.articulo == articuloNumeroActual);
+        const meta = metadatos.items.find(
+          (m) => m.articulo == articuloNumeroActual
+        );
         const data = {
           pagina: meta.pagina,
           etiquetas: meta.etiquetas || [],
-          referencias: meta.referencias,
           sobre: meta.sobre,
         };
         articulo = {
@@ -159,7 +163,7 @@ function itemsDesdeMarkdown(entrada) {
       } else if (linea.startsWith("#### ")) {
         const parts = linea.match(/#### (.*)/);
         const transitoriaNumeroActual = transitoriaNumero++;
-        const meta = metadatos.find(
+        const meta = metadatos.items.find(
           (m) => m.transitoria == transitoriaNumeroActual
         );
         const data = {

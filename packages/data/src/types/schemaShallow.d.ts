@@ -1,4 +1,7 @@
-export type ConstitucionShallow = Record<string, ItemObject>;
+export type ConstitucionShallow = {
+  readonly items: Record<string, ItemObject>;
+  readonly enlaces: ReadonlyArray<Enlace>;
+};
 
 export type ItemType =
   | 'preambulo'
@@ -28,26 +31,19 @@ export type ItemObject = {
   /** Unique among the same with the same parent. */
   readonly key?: number | string;
 
-  readonly data?: ArticuloData | TransitoriaData;
+  readonly data?: CommonData;
 };
 
 export type CommonData = {
   readonly pagina: number;
   readonly sobre: string;
-}
-
-export type ArticuloData = CommonData & {
   readonly etiquetas: ReadonlyArray<string>;
-  readonly referencias?: ReadonlyArray<Referencia>;
 };
 
-export type Referencia = {
-  readonly etiqueta: string;
-  readonly url: string;
-  readonly autor: string;
-  readonly incisos?: ReadonlyArray<string>;
-};
-
-export type TransitoriaData = CommonData & {
-  readonly etiquetas: ReadonlyArray<string>;
+export type Enlace = {
+  readonly desde: string;
+  readonly hacia?: string; // TODO: make required
+  readonly texto?: string;
+  readonly etiqueta?: string;
+  readonly autor?: string;
 };

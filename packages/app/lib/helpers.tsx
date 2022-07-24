@@ -1,6 +1,6 @@
 import { constitucionShallow as constitucion } from "cpr2022-data";
 import {
-  ArticuloData,
+  CommonData,
   ItemObject,
   ItemType,
 } from "cpr2022-data/src/types/schemaShallow";
@@ -10,7 +10,21 @@ export function firstToUpperCase(text: string) {
   return text[0].toUpperCase() + text.substring(1);
 }
 
-const items = Object.values(constitucion);
+const items = Object.values(constitucion.items);
+
+export function getEnlacesDesde(fragmentoId: string, external?: boolean) {
+  const result = constitucion.enlaces.filter((e) => e.desde == fragmentoId);
+  if (external != null) {
+    return result.filter(
+      (e) => (e.hacia ?? "").startsWith("http") === external
+    );
+  }
+  return result;
+}
+
+export function getEnlacesHacia(fragmentoId: string) {
+  return constitucion.enlaces.filter((e) => e.hacia == fragmentoId);
+}
 
 export function getItemsOfType(...types: ItemType[]) {
   return items.filter((o) => types.includes(o.type));
@@ -30,7 +44,7 @@ export function getParentOfType(item: ItemObject, ...parentTypes: ItemType[]) {
     if (!current.parent) {
       return undefined;
     }
-    const parent = constitucion[current.parent];
+    const parent = constitucion.items[current.parent];
     if (!parent) {
       return undefined;
     }
@@ -47,7 +61,7 @@ export function isAncestorOf(ancestor: ItemObject, of: ItemObject) {
     if (!current.parent) {
       return false;
     }
-    const parent = constitucion[current.parent];
+    const parent = constitucion.items[current.parent];
     if (!parent) {
       return false;
     }
@@ -178,7 +192,7 @@ export function getCapituloSobreLines(capitulo: ItemObject) {
   return getDescendantsOfType(capitulo, "articulo").map(
     (articulo) =>
       `${articulo.key}. ${firstToUpperCase(
-        (articulo.data as ArticuloData).sobre
+        (articulo.data as CommonData).sobre
       )}`
   );
 }

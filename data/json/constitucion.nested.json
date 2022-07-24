@@ -33,21 +33,6 @@
             "derechos humanos",
             "democracia"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Lucía Miranda Leibe, FLACSO",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/71"
-            },
-            {
-              "incisos": [
-                "1"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "Observatorio Ciudadano",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/80"
-            }
-          ],
           "sobre": "Estado"
         },
         {
@@ -67,13 +52,6 @@
           "pagina": 5,
           "etiquetas": [
             "derechos humanos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "CODEPU",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/46"
-            }
           ],
           "sobre": "soberanía"
         },
@@ -166,23 +144,6 @@
             "paridad",
             "enfoque de género"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Humanas",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/65"
-            },
-            {
-              "incisos": [
-                "1",
-                "2",
-                "3"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "Núcleo Constitucional - Universidad Alberto Hurtado",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/67"
-            }
-          ],
           "sobre": "igualdad sexogenérica"
         },
         {
@@ -212,13 +173,6 @@
           "etiquetas": [
             "naturaleza"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Superación de la Pobreza",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/36"
-            }
-          ],
           "sobre": "equilibrio con la naturaleza"
         },
         {
@@ -246,13 +200,6 @@
           "pagina": 7,
           "etiquetas": [
             "familia"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Familias: Ahora",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/3"
-            }
           ],
           "sobre": "familias"
         },
@@ -450,13 +397,6 @@
             "derechos fundamentales",
             "derechos"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "CODEPU",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/40"
-            }
-          ],
           "sobre": "titularidad de derechos"
         },
         {
@@ -503,16 +443,6 @@
             "derechos fundamentales",
             "derechos"
           ],
-          "referencias": [
-            {
-              "incisos": [
-                "2"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "Amnistía Internacional",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/74"
-            }
-          ],
           "sobre": "progresividad"
         },
         {
@@ -546,13 +476,6 @@
           "pagina": 10,
           "etiquetas": [
             "derechos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Amnistía Internacional",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/76"
-            }
           ],
           "sobre": "derecho a ser buscado(a)"
         },
@@ -606,16 +529,6 @@
             "investigación",
             "justicia"
           ],
-          "referencias": [
-            {
-              "incisos": [
-                "5"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "Amnistía Internacional",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/78"
-            }
-          ],
           "sobre": "verdad y justa reparación"
         },
         {
@@ -658,23 +571,6 @@
             "religión",
             "salud"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/22"
-            },
-            {
-              "incisos": [
-                "1",
-                "2",
-                "3"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "Humanas",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/12"
-            }
-          ],
           "sobre": "igualdad y no discriminación"
         },
         {
@@ -713,18 +609,6 @@
             "familia",
             "trabajo"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Infancia Primero",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/5"
-            },
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Corporación Opción",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/29"
-            }
-          ],
           "sobre": "niñas, niños y adolescentes"
         },
         {
@@ -745,18 +629,6 @@
           "etiquetas": [
             "cultura",
             "violencia de género"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Humanas",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/20"
-            },
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Red Chilena Contra la Violencia a las Mujeres",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/61"
-            }
           ],
           "sobre": "vida libre de violencia de género"
         },
@@ -849,13 +721,6 @@
             "trabajo",
             "libertad"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Red Acción Carcelaria",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
-            }
-          ],
           "sobre": "personas privadas de libertad"
         },
         {
@@ -876,13 +741,6 @@
           "etiquetas": [
             "libertad"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Red Acción Carcelaria",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
-            }
-          ],
           "sobre": "personas privadas de libertad II"
         },
         {
@@ -902,13 +760,6 @@
           "pagina": 14,
           "etiquetas": [
             "libertad"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Red Acción Carcelaria",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
-            }
           ],
           "sobre": "reinserción social"
         },
@@ -932,13 +783,6 @@
             "cultura",
             "derechos humanos",
             "digital"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Gero Zoom",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/23"
-            }
           ],
           "sobre": "personas mayores"
         },
@@ -1007,13 +851,6 @@
             "justicia",
             "naturaleza"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Educación 2020",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/26"
-            }
-          ],
           "sobre": "educación"
         },
         {
@@ -1066,13 +903,6 @@
             "discapacidad",
             "educación",
             "indígenas"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Educación 2020",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/26"
-            }
           ],
           "sobre": "Sistema Nacional de Educación"
         },
@@ -1159,13 +989,6 @@
           "etiquetas": [
             "educación"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Red Abortando Mitos de la Sexualidad",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/14"
-            }
-          ],
           "sobre": "educación sexual integra"
         },
         {
@@ -1191,13 +1014,6 @@
           "etiquetas": [
             "educación"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Educación 2020",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/28"
-            }
-          ],
           "sobre": "libertad de enseñanza"
         },
         {
@@ -1211,13 +1027,6 @@
           "pagina": 17,
           "etiquetas": [
             "educación"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Elige Educar",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/27"
-            }
           ],
           "sobre": "comunidades educativas"
         },
@@ -1244,13 +1053,6 @@
           "etiquetas": [
             "educación",
             "investigación"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Elige Educar",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/27"
-            }
           ],
           "sobre": "profesoras y profesores"
         },
@@ -1320,13 +1122,6 @@
             "indígenas",
             "salud"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Dr. Osvaldo Artaza, Decano Facultad Medicina y Cs. Sociales UDLA",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/79"
-            }
-          ],
           "sobre": "salud"
         },
         {
@@ -1358,13 +1153,6 @@
             "discapacidad",
             "trabajo",
             "derechos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Luis Vargas, Universidad de Oxford",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/59"
-            }
           ],
           "sobre": "seguridad social"
         },
@@ -1420,13 +1208,6 @@
             "salud",
             "trabajo",
             "derechos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Amnistía Internacional",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/35"
-            }
           ],
           "sobre": "trabajo"
         },
@@ -1513,13 +1294,6 @@
           "etiquetas": [
             "trabajo"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Núcleo Constitucional - Universidad Alberto Hurtado",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/49"
-            }
-          ],
           "sobre": "trabajo doméstico y de cuidados"
         },
         {
@@ -1547,23 +1321,6 @@
             "derechos humanos",
             "discapacidad",
             "trabajo"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Familias: Ahora",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/4"
-            },
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Núcleo Constitucional - Universidad Alberto Hurtado",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/48"
-            },
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Humanas",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/86"
-            }
           ],
           "sobre": "cuidado"
         },
@@ -1607,13 +1364,6 @@
             "derechos humanos",
             "igualdad"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "TECHO",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/10"
-            }
-          ],
           "sobre": "vivienda"
         },
         {
@@ -1651,13 +1401,6 @@
             "derechos humanos",
             "suelo",
             "territorio"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Ciudad Constituyente",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/9"
-            }
           ],
           "sobre": "ciudad y territorio"
         },
@@ -1711,16 +1454,6 @@
           "etiquetas": [
             "cultura",
             "alimento"
-          ],
-          "referencias": [
-            {
-              "incisos": [
-                "1"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "RIMISP",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/44"
-            }
           ],
           "sobre": "soberanía alimentaria"
         },
@@ -1776,13 +1509,6 @@
           "pagina": 24,
           "etiquetas": [
             "salud"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "RIMISP",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/43"
-            }
           ],
           "sobre": "derecho humano al agua"
         },
@@ -1895,13 +1621,6 @@
             "salud",
             "derechos"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Red Abortando Mitos de la Sexualidad",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/15"
-            }
-          ],
           "sobre": "derechos sexuales y reproductivos"
         },
         {
@@ -1917,18 +1636,6 @@
             "libertad",
             "identidad"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Libera",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/53"
-            },
-            {
-              "etiqueta": "Evaluación",
-              "autor": "María Sotomayor, Instituto de Ciencia Política UC",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/75"
-            }
-          ],
           "sobre": "autonomía personal"
         },
         {
@@ -1943,18 +1650,6 @@
           "etiquetas": [
             "trabajo",
             "libertad"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Libera",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/53"
-            },
-            {
-              "etiqueta": "Evaluación",
-              "autor": "María Sotomayor, Instituto de Ciencia Política UC",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/75"
-            }
           ],
           "sobre": "ni esclavitud ni servidumbre"
         },
@@ -1975,13 +1670,6 @@
           "pagina": 25,
           "etiquetas": [
             "derechos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Diversa Patagonia",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/16"
-            }
           ],
           "sobre": "identidad"
         },
@@ -2078,13 +1766,6 @@
           "etiquetas": [
             "derechos"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "María Sotomayor, Instituto de Ciencia Política UC",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/73"
-            }
-          ],
           "sobre": "muerte digna"
         },
         {
@@ -2126,13 +1807,6 @@
             "familia",
             "derechos",
             "privacidad"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "CODEPU",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/41"
-            }
           ],
           "sobre": "privacidad"
         },
@@ -2235,13 +1909,6 @@
           "pagina": 28,
           "etiquetas": [
             "derechos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Amnistía Internacional",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/81"
-            }
           ],
           "sobre": "derecho a reunión"
         },
@@ -2367,13 +2034,6 @@
             "naturaleza",
             "derechos"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "FOJUCC A.C",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/21"
-            }
-          ],
           "sobre": "libertad de emprender"
         },
         {
@@ -2396,13 +2056,6 @@
             "salud",
             "derechos"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "FOJUCC A.C",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/17"
-            }
-          ],
           "sobre": "derecho del consumidor(a)"
         },
         {
@@ -2422,13 +2075,6 @@
           "pagina": 30,
           "etiquetas": [
             "libertad"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Amnistía Internacional",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/50"
-            }
           ],
           "sobre": "libertad de expresión"
         },
@@ -2469,13 +2115,6 @@
           "pagina": 30,
           "etiquetas": [
             "medios"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Superación de la Pobreza",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/47"
-            }
           ],
           "sobre": "medios locales y comunitarios"
         },
@@ -2542,16 +2181,6 @@
           "pagina": 30,
           "etiquetas": [
             "digital"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Multitudes",
-              "incisos": [
-                "1"
-              ],
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/70"
-            }
           ],
           "sobre": "conectividad digital"
         },
@@ -2634,13 +2263,6 @@
           "pagina": 32,
           "etiquetas": [
             "derechos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Superación de la Pobreza",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/18"
-            }
           ],
           "sobre": "ocio"
         },
@@ -2898,13 +2520,6 @@
           "etiquetas": [
             "naturaleza"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "FIMA",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/2"
-            }
-          ],
           "sobre": "derechos de la naturaleza"
         },
         {
@@ -2917,13 +2532,6 @@
           ],
           "pagina": 35,
           "etiquetas": [],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "FIMA",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/2"
-            }
-          ],
           "sobre": "ambiente sano"
         },
         {
@@ -2949,13 +2557,6 @@
           "pagina": 35,
           "etiquetas": [
             "naturaleza"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "FIMA",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/8"
-            }
           ],
           "sobre": "protección al medio ambiente"
         },
@@ -3027,16 +2628,6 @@
           "etiquetas": [
             "justicia"
           ],
-          "referencias": [
-            {
-              "incisos": [
-                "5"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "Defensoría DDHH Chile",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/52"
-            }
-          ],
           "sobre": "acceso a la justicia"
         },
         {
@@ -3091,16 +2682,6 @@
           "pagina": 36,
           "etiquetas": [
             "discapacidad"
-          ],
-          "referencias": [
-            {
-              "incisos": [
-                "6"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Infancia Primero",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/1"
-            }
           ],
           "sobre": "debido proceso"
         },
@@ -3408,13 +2989,6 @@
               "etiquetas": [
                 "discapacidad"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Corporación Opción",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/39"
-                }
-              ],
               "sobre": "ciudadanía"
             },
             {
@@ -3594,16 +3168,6 @@
                 "Defensoría del Pueblo",
                 "derechos humanos"
               ],
-              "referencias": [
-                {
-                  "incisos": [
-                    "1"
-                  ],
-                  "etiqueta": "Evaluación",
-                  "autor": "Defensoría DDHH Chile",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/33"
-                }
-              ],
               "sobre": "Defensoría del Pueblo"
             },
             {
@@ -3742,21 +3306,6 @@
               "etiquetas": [
                 "Defensoría de los Derechos de la Niñez"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Capítulo Chileno del Ombudsman",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/42"
-                },
-                {
-                  "incisos": [
-                    "1"
-                  ],
-                  "etiqueta": "Evaluación",
-                  "autor": "Fundación Infancia Primero",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/6"
-                }
-              ],
               "sobre": "Defensoría de los Derechos de la Niñez"
             }
           ]
@@ -3831,13 +3380,6 @@
             "naturaleza",
             "crisis climática"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Superación de la Pobreza",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/24"
-            }
-          ],
           "sobre": "crisis y acción climática"
         },
         {
@@ -3872,13 +3414,6 @@
           "pagina": 45,
           "etiquetas": [
             "educación"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Vegetarianos Hoy",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/7"
-            }
           ],
           "sobre": "derechos de los animales"
         },
@@ -3959,17 +3494,6 @@
                 "playa",
                 "bosque",
                 "bienes comunes naturales"
-              ],
-              "referencias": [
-                {
-                  "incisos": [
-                    "2",
-                    "3"
-                  ],
-                  "etiqueta": "Evaluación",
-                  "autor": "Fundación Superación de la Pobreza",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/19"
-                }
               ],
               "sobre": "bienes comunes naturales"
             },
@@ -4063,16 +3587,6 @@
                 "cultura",
                 "justicia",
                 "territorio"
-              ],
-              "referencias": [
-                {
-                  "incisos": [
-                    "2"
-                  ],
-                  "etiqueta": "Evaluación",
-                  "autor": "Fundación Superación de la Pobreza",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/11"
-                }
               ],
               "sobre": "maritorio"
             }
@@ -4343,13 +3857,6 @@
                 "naturaleza",
                 "patrimonio"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Fundación Superación de la Pobreza",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/34"
-                }
-              ],
               "sobre": "Defensoría de la Naturaleza"
             },
             {
@@ -4487,21 +3994,6 @@
                 "sufragio",
                 "transparencia"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Fundación Ciudadanía Inteligente",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/64"
-                },
-                {
-                  "incisos": [
-                    "3"
-                  ],
-                  "etiqueta": "Evaluación",
-                  "autor": "Observa Ciudadanía",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/83"
-                }
-              ],
               "sobre": "participación democrática"
             },
             {
@@ -4533,13 +4025,6 @@
                 "democracia",
                 "democracia directa",
                 "discapacidad"
-              ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Observa Ciudadanía",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/72"
-                }
               ],
               "sobre": "democracia directa"
             },
@@ -4592,13 +4077,6 @@
               "etiquetas": [
                 "referéndum"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "RIMISP",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/51"
-                }
-              ],
               "sobre": "referéndum regionales"
             },
             {
@@ -4625,18 +4103,6 @@
                 "derechos fundamentales",
                 "iniciativa popular de ley"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Fundación Ciudadanía Inteligente",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/13"
-                },
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Defensoría DDHH Chile",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/82"
-                }
-              ],
               "sobre": "iniciativa popular de ley"
             },
             {
@@ -4656,13 +4122,6 @@
               "pagina": 54,
               "etiquetas": [
                 "referéndum"
-              ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Fundación Ciudadanía Inteligente",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/31"
-                }
               ],
               "sobre": "iniciativa de derogación de ley"
             },
@@ -4720,17 +4179,6 @@
                 "elecciones",
                 "sufragio"
               ],
-              "referencias": [
-                {
-                  "incisos": [
-                    "1",
-                    "2"
-                  ],
-                  "etiqueta": "Evaluación",
-                  "autor": "Corporación Opción",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/39"
-                }
-              ],
               "sobre": "sufragio"
             },
             {
@@ -4779,13 +4227,6 @@
                 "indígenas",
                 "territorio",
                 "escaños reservados"
-              ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Sergio Huerta, Universidad Católica de Chile",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/68"
-                }
               ],
               "sobre": "escaños reservados indígenas"
             },
@@ -4935,13 +4376,6 @@
           "etiquetas": [
             "accesibilidad",
             "transparencia"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "María Sotomayor, Instituto de Ciencia Política UC",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/85"
-            }
           ],
           "sobre": "transparencia pública"
         },
@@ -5111,13 +4545,6 @@
           ],
           "pagina": 59,
           "etiquetas": [],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Internacional de Servicios Públicos (PSI) + GI-ESCR",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/54"
-            }
-          ],
           "sobre": "servicios públicos"
         },
         {
@@ -5143,13 +4570,6 @@
           "etiquetas": [
             "naturaleza",
             "probidad"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Fundación Multitudes",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/69"
-            }
           ],
           "sobre": "funcionarios públicos"
         },
@@ -5282,34 +4702,6 @@
             "innovación",
             "economía"
           ],
-          "referencias": [
-            {
-              "incisos": [
-                "2",
-                "3"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "FOJUCC A.C",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/30"
-            },
-            {
-              "incisos": [
-                "1",
-                "4"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "AFIICH",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/55"
-            },
-            {
-              "incisos": [
-                "5"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "FOJUCC A.C",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/21"
-            }
-          ],
           "sobre": "Estado empresario"
         },
         {
@@ -5400,16 +4792,6 @@
             "igualdad",
             "transparencia"
           ],
-          "referencias": [
-            {
-              "incisos": [
-                "1"
-              ],
-              "etiqueta": "Evaluación",
-              "autor": "GI-ESCR",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/56"
-            }
-          ],
           "sobre": "sistema tributario"
         },
         {
@@ -5466,17 +4848,6 @@
             "naturaleza",
             "patrimonio",
             "territorio"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Amnistía Internacional",
-              "incisos": [
-                "2",
-                "4"
-              ],
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/88"
-            }
           ],
           "sobre": "entidades territoriales autónomas"
         },
@@ -5589,13 +4960,6 @@
           "pagina": 65,
           "etiquetas": [
             "entidades territoriales"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "RIMISP",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/45"
-            }
           ],
           "sobre": "participación en entidades territoriales II"
         },
@@ -6914,16 +6278,6 @@
                 "entidades territoriales",
                 "patrimonio"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Amnistía Internacional",
-                  "incisos": [
-                    "1"
-                  ],
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/84"
-                }
-              ],
               "sobre": "autonomía territorial indígena"
             },
             {
@@ -7397,13 +6751,6 @@
                 "plurinacionalidad",
                 "escaños reservados"
               ],
-              "referencias": [
-                {
-                  "etiqueta": "Evaluación",
-                  "autor": "Sergio Huerta, Universidad Católica de Chile",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/57"
-                }
-              ],
               "sobre": "Congreso de Diputadas y Diputados"
             },
             {
@@ -7541,17 +6888,6 @@
                 "escaños reservados",
                 "paridad",
                 "región"
-              ],
-              "referencias": [
-                {
-                  "incisos": [
-                    "1",
-                    "2"
-                  ],
-                  "etiqueta": "Evaluación",
-                  "autor": "Sergio Huerta, Universidad Católica de Chile",
-                  "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/58"
-                }
               ],
               "sobre": "Cámara de las Regiones"
             },
@@ -9199,13 +8535,6 @@
             "territorio",
             "transparencia"
           ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Paz Irarrázabal, Universidad de Chile",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/66"
-            }
-          ],
           "sobre": "policías"
         },
         {
@@ -9276,13 +8605,6 @@
             "perspectiva de género",
             "paridad",
             "derechos humanos"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "Paz Irarrázabal, Universidad de Chile",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/66"
-            }
           ],
           "sobre": "Fuerzas Armadas"
         },
@@ -9638,13 +8960,6 @@
             "justicia",
             "paridad",
             "Sistema Nacional de Justicia"
-          ],
-          "referencias": [
-            {
-              "etiqueta": "Evaluación",
-              "autor": "ABOFEM",
-              "url": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/87"
-            }
           ],
           "sobre": "principios de la función jurisdiccional II"
         },
@@ -11990,7 +11305,7 @@
       "numero": 10,
       "pagina": 146,
       "etiquetas": [],
-      "sobre": "derecho a sufragio para chilenas y chilenos en el exterior",
+      "sobre": "derecho a sufragio para personas chilenas en el exterior",
       "incisos": [
         {
           "nivel": 1,

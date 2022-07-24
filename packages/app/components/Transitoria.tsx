@@ -1,6 +1,6 @@
 import {
   ItemObject,
-  TransitoriaData,
+  CommonData,
 } from "cpr2022-data/src/types/schemaShallow";
 import {
   firstToUpperCase,
@@ -14,16 +14,16 @@ import ItemToolbar from "./ItemToolbar"
 
 export default function Transitoria({ item }: { item: ItemObject }) {
   const path = getItemFragmentoId(item);
-  const transitoria = item.data as TransitoriaData;
+  const data = item.data as CommonData;
   return (
     <div data-hash={path} className="border border-solid rounded-md p-3 mb-3">
       <ItemToolbar path={path} item={item} />
       <h3 className="my-0 rounded">
         <HashLink hash={path} anchor="disposición transitoria" />{" "}
         {getItemLabel(item)}{" "}
-        {transitoria.sobre && (
+        {data.sobre && (
           <span className="font-sans rounded-md text-sm font-normal  bg-gray-300 text-black px-2 py-1">
-            {firstToUpperCase(transitoria.sobre)}
+            {firstToUpperCase(data.sobre)}
           </span>
         )}
       </h3>

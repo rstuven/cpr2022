@@ -3,10 +3,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { GetStaticPropsContext } from "next/types";
-import {
-  ArticuloData,
-  TransitoriaData,
-} from "cpr2022-data/src/types/schemaShallow";
+import { CommonData } from "cpr2022-data/src/types/schemaShallow";
 import { HashContext, HashProvider } from "components/HashProvider";
 import MetaTags from "components/MetaTags";
 import { useHashHighlighting, useHashScrolling } from "hooks/useHash";
@@ -131,7 +128,7 @@ function getArticulo(fragmento: ArticuloContext) {
     fragmento.articulo
   )} (${getArticuloContextCapituloTituloLabel(fragmento)})`;
   const description = firstToUpperCase(
-    (fragmento.articulo.data as ArticuloData).sobre
+    (fragmento.articulo.data as CommonData).sobre
   );
   const Component = function Component() {
     return (
@@ -150,7 +147,7 @@ function getArticulo(fragmento: ArticuloContext) {
 function getTransitoria(fragmento: TransitoriaContext) {
   const title = getItemLabel(fragmento.transitoria);
   const description = firstToUpperCase(
-    (fragmento.transitoria.data as TransitoriaData).sobre
+    (fragmento.transitoria.data as CommonData).sobre
   );
   const Component = function Component() {
     return (

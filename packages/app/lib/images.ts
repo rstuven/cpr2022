@@ -16,10 +16,7 @@ import {
   getItemLabel,
   TransitoriaContext,
 } from "./helpers";
-import {
-  ArticuloData,
-  TransitoriaData,
-} from "cpr2022-data/src/types/schemaShallow";
+import { CommonData } from "cpr2022-data/src/types/schemaShallow";
 
 const accentColor = "#34005f";
 const dimmedColor = "#89744f";
@@ -125,7 +122,7 @@ function renderArticulo(
 
   const { bottom: titleBottom } = renderText({
     ctx,
-    text: `sobre ${(fragmento.articulo.data as ArticuloData).sobre}`,
+    text: `sobre ${(fragmento.articulo.data as CommonData).sobre}`,
     left: box.left + titleLastWidth + 10,
     top: titleTop + 13,
     width: box.width - titleLastWidth - 20,
@@ -199,7 +196,7 @@ function renderTransitoria(
   ctx.fillStyle = dimmedColor;
   ctx.font = '1.4rem "ConvencionFJ"';
 
-  const sobre = (fragmento.transitoria.data as TransitoriaData).sobre;
+  const sobre = (fragmento.transitoria.data as CommonData).sobre;
   if (sobre) {
     const { bottom: sobreBottom } = renderText({
       ctx,

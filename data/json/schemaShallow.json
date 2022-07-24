@@ -2,7 +2,7 @@
   "$ref": "#/definitions/ConstitucionShallow",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "ArticuloData": {
+    "CommonData": {
       "additionalProperties": false,
       "properties": {
         "etiquetas": {
@@ -14,25 +14,59 @@
         "pagina": {
           "type": "number"
         },
-        "referencias": {
-          "items": {
-            "$ref": "#/definitions/Referencia"
-          },
-          "type": "array"
-        },
         "sobre": {
           "type": "string"
         }
       },
       "required": [
-        "etiquetas",
         "pagina",
-        "sobre"
+        "sobre",
+        "etiquetas"
       ],
       "type": "object"
     },
     "ConstitucionShallow": {
-      "$ref": "#/definitions/Record%3Cstring%2CItemObject%3E"
+      "additionalProperties": false,
+      "properties": {
+        "enlaces": {
+          "items": {
+            "$ref": "#/definitions/Enlace"
+          },
+          "type": "array"
+        },
+        "items": {
+          "$ref": "#/definitions/Record%3Cstring%2CItemObject%3E"
+        }
+      },
+      "required": [
+        "items",
+        "enlaces"
+      ],
+      "type": "object"
+    },
+    "Enlace": {
+      "additionalProperties": false,
+      "properties": {
+        "autor": {
+          "type": "string"
+        },
+        "desde": {
+          "type": "string"
+        },
+        "etiqueta": {
+          "type": "string"
+        },
+        "hacia": {
+          "type": "string"
+        },
+        "texto": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "desde"
+      ],
+      "type": "object"
     },
     "ItemObject": {
       "additionalProperties": false,
@@ -41,14 +75,7 @@
           "type": "string"
         },
         "data": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/ArticuloData"
-            },
-            {
-              "$ref": "#/definitions/TransitoriaData"
-            }
-          ]
+          "$ref": "#/definitions/CommonData"
         },
         "key": {
           "description": "Unique among the same with the same parent.",
@@ -100,55 +127,6 @@
       "additionalProperties": {
         "$ref": "#/definitions/ItemObject"
       },
-      "type": "object"
-    },
-    "Referencia": {
-      "additionalProperties": false,
-      "properties": {
-        "autor": {
-          "type": "string"
-        },
-        "etiqueta": {
-          "type": "string"
-        },
-        "incisos": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "url": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "etiqueta",
-        "url",
-        "autor"
-      ],
-      "type": "object"
-    },
-    "TransitoriaData": {
-      "additionalProperties": false,
-      "properties": {
-        "etiquetas": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "pagina": {
-          "type": "number"
-        },
-        "sobre": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "etiquetas",
-        "pagina",
-        "sobre"
-      ],
       "type": "object"
     }
   }

@@ -4,13 +4,14 @@ import HashLink from "./HashLink";
 import Inciso from "./Inciso";
 
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { ArticuloData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
+import { CommonData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import {
   getChildrenOfType,
   getItemFragmentoId,
   getItemsOfType,
   getItemLabel,
   firstToUpperCase,
+  getEnlacesDesde,
 } from "lib/helpers";
 import Tooltip from "./Tooltip";
 import Dropdown from "./Dropdown";
@@ -18,8 +19,8 @@ import ItemToolbar from "./ItemToolbar";
 
 export default function Articulo({ item }: { item: ItemObject }) {
   const path = getItemFragmentoId(item);
-  const articulo = item.data as ArticuloData;
-  const referencias = articulo.referencias?.filter((r) => !r.incisos);
+  const data = item.data as CommonData;
+  const enlaces = getEnlacesDesde(path, true);
   return (
     <div data-hash={path} className="border border-solid rounded-md p-3 mb-3">
       <ItemToolbar path={path} item={item} />
@@ -28,25 +29,25 @@ export default function Articulo({ item }: { item: ItemObject }) {
         <b className="text-black mx-1 font-ConvencionFJ">
           {getItemLabel(item)}
         </b>
-        <Badge color="gray"> {firstToUpperCase(articulo.sobre)}</Badge>
-        {articulo.etiquetas.map((etiqueta, index) => (
+        <Badge color="gray"> {firstToUpperCase(data.sobre)}</Badge>
+        {data.etiquetas.map((etiqueta, index) => (
           <BadgeEtiquetas key={index} etiqueta={etiqueta} item={item} />
         ))}
-        {referencias?.map((referencia, index) => (
+        {enlaces?.map((enlace, index) => (
           <Badge color="info" key={index}>
             <Tooltip
               content={
                 <>
-                  {"por " + referencia.autor}
+                  {"por " + enlace.autor}
                   <br />
-                  {"en " + extractDomain(referencia.url)}
+                  {"en " + extractDomain(enlace.hacia ?? "")}
                 </>
               }
             >
               <span className="flex">
-                <a href={referencia.url} target="_blank" rel="noreferrer">
-                  {referencia.etiqueta}
-                  {referencias.length > 1 ? " " + (index + 1) : ""}
+                <a href={enlace.hacia} target="_blank" rel="noreferrer">
+                  {enlace.etiqueta}
+                  {enlaces.length > 1 ? " " + (index + 1) : ""}
                 </a>
                 &nbsp;
                 <HiOutlineExternalLink size={14} />
@@ -78,7 +79,7 @@ function BadgeEtiquetas(props: {
           .filter(
             (art) =>
               art.oid != props.item.oid &&
-              (art.data as ArticuloData).etiquetas.includes(props.etiqueta)
+              (art.data as CommonData).etiquetas.includes(props.etiqueta)
           )
           .map((articulo, index) => {
             return (
@@ -87,7 +88,7 @@ function BadgeEtiquetas(props: {
                   className="no-underline hover:underline font-normal"
                   href={"/#" + getItemFragmentoId(articulo)}
                 >{`${getItemLabel(articulo)} sobre ${
-                  (articulo.data as ArticuloData).sobre
+                  (articulo.data as CommonData).sobre
                 }`}</a>
               </div>
             );

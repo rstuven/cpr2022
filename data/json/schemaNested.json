@@ -23,12 +23,6 @@
         "pagina": {
           "type": "number"
         },
-        "referencias": {
-          "items": {
-            "$ref": "#/definitions/Referencia"
-          },
-          "type": "array"
-        },
         "sobre": {
           "type": "string"
         }
@@ -125,32 +119,6 @@
       "required": [
         "nivel",
         "texto"
-      ],
-      "type": "object"
-    },
-    "Referencia": {
-      "additionalProperties": false,
-      "properties": {
-        "autor": {
-          "type": "string"
-        },
-        "etiqueta": {
-          "type": "string"
-        },
-        "incisos": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "url": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "etiqueta",
-        "url",
-        "autor"
       ],
       "type": "object"
     },

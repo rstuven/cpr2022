@@ -1,4 +1,4 @@
-import { Tooltip } from "flowbite-react";
+import Tooltip from "./Tooltip";
 
 export default function Pagina(props: { pagina: number }) {
   const title = "Ir a página en el PDF oficial";

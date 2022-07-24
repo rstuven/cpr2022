@@ -1,5 +1,5 @@
-import { Tooltip } from "flowbite-react";
 import { PropsWithChildren } from "react";
+import Tooltip from "./Tooltip"
 
 type HashLinkProps = PropsWithChildren<{
   hash: string;

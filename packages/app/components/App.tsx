@@ -9,9 +9,9 @@ import { HashProvider } from "./HashProvider";
 export default function App() {
   const main = useRef<HTMLDivElement>(null);
   const indice = useRef<HTMLDivElement>(null);
-  const isMediumMinWidth = useMediaQuery("(min-width: 768px)");
-  useHashScrolling(isMediumMinWidth ? 350 : 150, "auto", main);
-  useHashScrolling(isMediumMinWidth ? 350 : 150, "smooth", indice, true);
+  const isMediumMinHeight = useMediaQuery("(min-height: 600px)");
+  useHashScrolling(isMediumMinHeight ? 350 : 150, "auto", main);
+  useHashScrolling(isMediumMinHeight ? 350 : 150, "smooth", indice, true);
   useHashHighlighting(main);
   return (
     <HashProvider>

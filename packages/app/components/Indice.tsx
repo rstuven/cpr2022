@@ -69,8 +69,8 @@ export default function Indice() {
         <Image
           src={escudoImage}
           loader={imageLoader}
-          width={160}
-          height={123}
+          width={120}
+          height={93}
           aria-label="Escudo"
         />
       </div>

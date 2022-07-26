@@ -41,14 +41,18 @@ export function useHashHighlighting(
     const highlight = () => {
       if (target && !target.current) return false;
 
-      const element = getElement("data-hash", target);
-      if (!element) return false;
       const classes = className.split(" ");
       const elements = (target ? target.current : document)?.querySelectorAll(
         `.${classes[0]}[data-hash]`
       );
       classes.forEach((c) => {
         elements?.forEach((el) => el.classList.remove(c));
+      });
+
+      const element = getElement("data-hash", target);
+      if (!element) return false;
+
+      classes.forEach((c) => {
         element.classList.add(c);
       });
 

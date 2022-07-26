@@ -64,7 +64,8 @@
         }
       },
       "required": [
-        "desde"
+        "desde",
+        "hacia"
       ],
       "type": "object"
     },

@@ -692,9 +692,51 @@
       "hacia": "articulo:158@capitulo:4.1"
     },
     {
+      "texto": "187",
+      "desde": "transitoria:3.2.a",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1108229&idParte=9836519",
+      "etiqueta": "Ley Nº18.700 Órgánica Constitucional sobre Votaciones Populares y Escrutinios"
+    },
+    {
+      "texto": "188",
+      "desde": "transitoria:3.2.a",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1108229&idParte=9836520",
+      "etiqueta": "Ley Nº18.700 Órgánica Constitucional sobre Votaciones Populares y Escrutinios"
+    },
+    {
+      "texto": "artículos 29",
+      "desde": "transitoria:3.2.b",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=243771&idParte=8653205",
+      "etiqueta": "Ley Nº19.175 Orgánica Constitucional sobre Gobierno y Administracion Regional"
+    },
+    {
+      "texto": "29 bis",
+      "desde": "transitoria:3.2.b",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=243771&idParte=9360302",
+      "etiqueta": "Ley Nº19.175 Orgánica Constitucional sobre Gobierno y Administracion Regional"
+    },
+    {
+      "texto": "artículo 72",
+      "desde": "transitoria:3.2.b",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=251693&idParte=8402414",
+      "etiqueta": "Ley Nº18.695 Orgánica Constitucional de Municipalidades"
+    },
+    {
+      "texto": "artículo 190 de la ley Nº18.700",
+      "desde": "transitoria:3.2.c",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1108229&idParte=9836522",
+      "etiqueta": "Ley Nº18.700 Órgánica Constitucional sobre Votaciones Populares y Escrutinios"
+    },
+    {
       "texto": "artículo 161",
       "desde": "transitoria:3.2.d",
       "hacia": "articulo:161@capitulo:4.1"
+    },
+    {
+      "texto": "número 4 de la disposición transitoria trigésima primera de la Constitución anterior",
+      "desde": "transitoria:3.2.d",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=242302&idParte=10110017&idVersion=2022-04-29",
+      "etiqueta": "Decreto 100 Fija el texto refundido coordinado y sistematizado de la Constitución Política de la República de Chile"
     },
     {
       "texto": "artículo 6 inciso 2",
@@ -762,6 +804,12 @@
       "hacia": "articulo:157@capitulo:4.1"
     },
     {
+      "texto": "artículo 27 de la ley Nº18.918",
+      "desde": "transitoria:14.",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=30289&idParte=8535770",
+      "etiqueta": "Ley Nº18.918 Orgánica Constitucional del Congreso Nacional"
+    },
+    {
       "texto": "artículo 158",
       "desde": "transitoria:14.",
       "hacia": "articulo:158@capitulo:4.1"
@@ -780,6 +828,12 @@
       "texto": "artículo 197",
       "desde": "transitoria:26.",
       "hacia": "articulo:197@capitulo:6"
+    },
+    {
+      "texto": "artículo 7 del Convenio 169 de la Organización Internacional del Trabajo",
+      "desde": "transitoria:28.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=279441&idParte=8664277",
+      "etiqueta": "Decreto 236 del Ministerio de Relaciones Exteriores"
     },
     {
       "texto": "artículo 47",
@@ -837,6 +891,36 @@
       "hacia": "articulo:136@capitulo:3.1"
     },
     {
+      "texto": "disposiciones transitorias de la ley N°21.435, que reforma el Código de Aguas",
+      "desde": "transitoria:35.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1174443&idParte=10322785",
+      "etiqueta": "Ley Nº21.435 Reforma el Código de Aguas"
+    },
+    {
+      "texto": "incisos primero y cuarto del artículo segundo transitorio de dicho cuerpo legal",
+      "desde": "transitoria:35.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1174443&idParte=10322787",
+      "etiqueta": "Ley Nº21.435 Reforma el Código de Aguas"
+    },
+    {
+      "texto": "2,",
+      "desde": "transitoria:35.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=30620&idParte=8639819",
+      "etiqueta": "Ley Nº19.253 Establece normas sobre proteccion fomento y desarrollo de los indígenas y crea la Corporación Nacional De Desarrollo Indígena"
+    },
+    {
+      "texto": " 9 ",
+      "desde": "transitoria:35.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=30620&idParte=8639828",
+      "etiqueta": "Ley Nº19.253 Establece normas sobre proteccion fomento y desarrollo de los indígenas y crea la Corporación Nacional De Desarrollo Indígena"
+    },
+    {
+      "texto": "36",
+      "desde": "transitoria:35.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=30620&idParte=8639867",
+      "etiqueta": "Ley Nº19.253 Establece normas sobre proteccion fomento y desarrollo de los indígenas y crea la Corporación Nacional De Desarrollo Indígena"
+    },
+    {
       "texto": "57",
       "desde": "transitoria:35.2.a",
       "hacia": "articulo:57@capitulo:2"
@@ -845,6 +929,12 @@
       "texto": "142",
       "desde": "transitoria:35.2.a",
       "hacia": "articulo:142@capitulo:3.2"
+    },
+    {
+      "texto": "artículo 112 del Código de Aguas",
+      "desde": "transitoria:35.2.a",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=5605&idParte=8628083",
+      "etiqueta": "DFL 1122 Fija texto del Codigo de Aguas"
     },
     {
       "texto": "artículo 113",
@@ -857,9 +947,33 @@
       "hacia": "articulo:57@capitulo:2"
     },
     {
+      "texto": "artículo segundo transitorio de la ley N°21.435",
+      "desde": "transitoria:35.3",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1174443&idParte=10322787",
+      "etiqueta": "Ley Nº21.435 Reforma el Código de Aguas"
+    },
+    {
       "texto": "artículo 328 inciso 3",
       "desde": "transitoria:40.1",
       "hacia": "articulo:328.3@capitulo:9"
+    },
+    {
+      "texto": "artículo 219 del Código Orgánico de Tribunales",
+      "desde": "transitoria:40.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=25563&idParte=9783156",
+      "etiqueta": "Codigo Orgánico De Tribunales"
+    },
+    {
+      "texto": "215",
+      "desde": "transitoria:40.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=25563&idParte=9783152",
+      "etiqueta": "Codigo Orgánico De Tribunales"
+    },
+    {
+      "texto": "217",
+      "desde": "transitoria:40.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=25563&idParte=9783154",
+      "etiqueta": "Codigo Orgánico De Tribunales"
     },
     {
       "texto": "inciso 2 del artículo 374",
@@ -907,6 +1021,18 @@
       "hacia": "articulo:343@capitulo:9.1"
     },
     {
+      "texto": "artículos 473 y siguientes del Código Procesal Penal",
+      "desde": "transitoria:52.",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1984&idParte=9672765",
+      "etiqueta": "Código Penal"
+    },
+    {
+      "texto": "artículo 103 del Código Penal",
+      "desde": "transitoria:54.",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=1984&idParte=9672318",
+      "etiqueta": "Código Penal"
+    },
+    {
       "texto": "artículo 24",
       "desde": "transitoria:54.",
       "hacia": "articulo:24@capitulo:2"
@@ -915,6 +1041,60 @@
       "texto": "artículo 365 inciso 3",
       "desde": "transitoria:56.1",
       "hacia": "articulo:365.3@capitulo:10.3"
+    },
+    {
+      "texto": "artículo 62 del decreto ley Nº211",
+      "desde": "transitoria:56.1",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=9725605",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "inciso primero del artículo 63",
+      "desde": "transitoria:56.1",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=9725606",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "inciso primero de dicho artículo",
+      "desde": "transitoria:56.1",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=9725606",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "39 bis",
+      "desde": "transitoria:56.1",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=8741626",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "63, inciso primero",
+      "desde": "transitoria:56.1",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=9725606",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "inciso tercero del artículo 62 del decreto ley Nº 211",
+      "desde": "transitoria:56.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=9725605",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "inciso cuarto del artículo 63 del mismo cuerpo legal",
+      "desde": "transitoria:56.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=9725606",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "39 bis",
+      "desde": "transitoria:56.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=8741626",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
+    },
+    {
+      "texto": "63, inciso cuarto",
+      "desde": "transitoria:56.2",
+      "hacia": "https://www.bcn.cl/leychile/navegar?idNorma=236106&idParte=9725606",
+      "etiqueta": "DFL 1 del Ministerio de Economía, Fomento y Reconstrucción"
     },
     {
       "texto": "artículo 365 inciso 3",

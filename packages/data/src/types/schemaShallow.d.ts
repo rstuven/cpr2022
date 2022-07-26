@@ -42,7 +42,7 @@ export type CommonData = {
 
 export type Enlace = {
   readonly desde: string;
-  readonly hacia?: string; // TODO: make required
+  readonly hacia: string;
   readonly texto?: string;
   readonly etiqueta?: string;
   readonly autor?: string;

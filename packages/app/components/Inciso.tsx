@@ -3,6 +3,9 @@ import {
   Enlace,
   ItemObject,
 } from "cpr2022-data/src/types/schemaShallow";
+import { IconType } from "react-icons/lib/cjs";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import extractDomain from "extract-domain";
 import {
   ArticuloContext,
   getChildrenOfType,
@@ -14,6 +17,7 @@ import {
   parseFragmento,
   TransitoriaContext,
 } from "lib/helpers";
+import { AnchorHTMLAttributes } from "react";
 import HashLink from "./HashLink";
 import Tooltip from "./Tooltip";
 
@@ -22,25 +26,37 @@ type IncisoProps = { item: ItemObject; baseItem: ItemObject };
 export default function Inciso(props: IncisoProps) {
   const bullet = getIncisoBullet(props.item, props.baseItem);
   const path = getItemFragmentoId(props.item);
-  const enlaces = getEnlacesDesde(path, false).filter((e) => e.texto);
+  const enlaces = getEnlacesDesde(path).filter((e) => e.texto);
   return (
     <div data-hash={path} className="mt-2 leading-6 rounded">
       <HashLink hash={path} anchor="inciso" /> <b>{bullet}</b>
       <>
         {injectEnlaces(props.item.content ?? "", enlaces, (enlace, key) => {
-          const fragmento = parseFragmento(enlace.hacia ?? "");
-          let content: JSX.Element | undefined;
+          let content: JSX.Element;
+          let attrs: AnchorHTMLAttributes<HTMLAnchorElement>;
+          let icon: JSX.Element | undefined = undefined;
 
-          if (fragmento && "inciso" in fragmento)
-            content = tooltipContent(fragmento);
-
-          if (!content) {
-            return undefined;
+          const fragmento = parseFragmento(enlace.hacia);
+          if (fragmento && "inciso" in fragmento) {
+            content = tooltipContentFragmento(fragmento);
+            attrs = {
+              href: `/#${enlace.hacia}`,
+            };
+          } else {
+            content = tooltipContentEnlace(enlace);
+            attrs = {
+              href: enlace.hacia,
+              target: "_blank",
+              rel: "noreferrer",
+            };
+            icon = <HiOutlineExternalLink className="inline" size={14} />;
           }
 
           return (
-            <a key={key} className="text-blue-800" href={`/#${enlace.hacia}`}>
-              <Tooltip placement="bottom" content={content}>{enlace.texto}</Tooltip>
+            <a key={key} className="text-blue-800" {...attrs}>
+              <Tooltip placement="bottom" content={content}>
+                {enlace.texto} {icon}
+              </Tooltip>
             </a>
           );
         })}
@@ -52,7 +68,9 @@ export default function Inciso(props: IncisoProps) {
   );
 }
 
-function tooltipContent(fragmento: ArticuloContext | TransitoriaContext) {
+function tooltipContentFragmento(
+  fragmento: ArticuloContext | TransitoriaContext
+) {
   let parent =
     "articulo" in fragmento ? fragmento.articulo : fragmento.transitoria;
 
@@ -107,6 +125,15 @@ function tooltipContent(fragmento: ArticuloContext | TransitoriaContext) {
           &quot;
         </div>
       )}
+    </div>
+  );
+}
+
+function tooltipContentEnlace(enlace: Enlace) {
+  return (
+    <div className="max-w-md font-sans">
+      {enlace.etiqueta && <div>{enlace.etiqueta}</div>}
+      <div className="flex">en {extractDomain(enlace.hacia)}</div>
     </div>
   );
 }

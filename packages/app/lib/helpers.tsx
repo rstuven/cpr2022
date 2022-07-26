@@ -15,9 +15,7 @@ const items = Object.values(constitucion.items);
 export function getEnlacesDesde(fragmentoId: string, external?: boolean) {
   const result = constitucion.enlaces.filter((e) => e.desde == fragmentoId);
   if (external != null) {
-    return result.filter(
-      (e) => (e.hacia ?? "").startsWith("http") === external
-    );
+    return result.filter((e) => e.hacia.startsWith("http") === external);
   }
   return result;
 }
@@ -302,11 +300,7 @@ export function parseFragmento(
     return { transitoria, inciso };
   }
 
-  if (["inicio", "preambulo", "transitorias"].includes(parts[0])) {
-    return undefined;
-  }
-
-  throw new Error(`Can't parse fragmentoId ${fragmentoId}`);
+  return undefined;
 }
 
 function findInciso(

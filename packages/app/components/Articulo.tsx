@@ -40,7 +40,7 @@ export default function Articulo({ item }: { item: ItemObject }) {
                 <>
                   {"por " + enlace.autor}
                   <br />
-                  {"en " + extractDomain(enlace.hacia ?? "")}
+                  {"en " + extractDomain(enlace.hacia)}
                 </>
               }
             >

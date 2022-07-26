@@ -38,6 +38,10 @@ export function getChildrenOfType(parent: ItemObject, childrenType: ItemType) {
   return items.filter((o) => o.type == childrenType && o.parent == parent.oid);
 }
 
+export function getItemByOid(oid: string) {
+  return constitucion.items[oid];
+}
+
 export function getParentOfType(item: ItemObject, ...parentTypes: ItemType[]) {
   let current = item;
   while (true) {
@@ -174,12 +178,21 @@ export function getCapituloArticulosDescription(capitulo: ItemObject) {
 
 export const NON_BREAKING_SPACE = "\u00a0";
 
-export function getIncisoBullet(item: ItemObject, baseItem: ItemObject) {
+export function getIncisoBullet(
+  item: ItemObject,
+  baseItem: ItemObject,
+  indent = true
+) {
   if (!item.key) {
     return "";
   }
   const level = item.level - baseItem.level - 1;
-  return NON_BREAKING_SPACE.repeat(level * 4) + item.key + ".))"[level] + " ";
+  return (
+    (indent ? NON_BREAKING_SPACE.repeat(level * 4) : "") +
+    item.key +
+    ".))"[level] +
+    " "
+  );
 }
 
 export function getItemIncisosLines(item: ItemObject) {
@@ -206,6 +219,7 @@ export type ArticuloContext = {
   articulo: ItemObject;
   capitulo: ItemObject;
   titulo?: ItemObject;
+  inciso?: ItemObject;
 };
 
 export type TituloContext = {
@@ -219,6 +233,7 @@ export type CapituloContext = {
 
 export type TransitoriaContext = {
   transitoria: ItemObject;
+  inciso?: ItemObject;
 };
 
 export type FragmentoContext =
@@ -262,13 +277,15 @@ export function parseFragmento(
       throw new Error(`Not found fragmentoId ${fragmentoId}`);
     }
 
+    let inciso = findInciso(articulo, subparts, fragmentoId);
+
     const capitulo = getParentOfType(articulo, "capitulo");
     if (!capitulo) {
       throw new Error(`Not found capitulo for ${fragmentoId}`);
     }
     const titulo = getParentOfType(articulo, "titulo");
 
-    return { articulo, capitulo, titulo };
+    return { articulo, capitulo, titulo, inciso };
   }
 
   if (parts[0] == "transitoria") {
@@ -279,7 +296,10 @@ export function parseFragmento(
     if (!transitoria) {
       throw new Error("Can't find transitoria " + parts[1]);
     }
-    return { transitoria };
+
+    let inciso = findInciso(transitoria, subparts, fragmentoId);
+
+    return { transitoria, inciso };
   }
 
   if (["inicio", "preambulo", "transitorias"].includes(parts[0])) {
@@ -287,6 +307,26 @@ export function parseFragmento(
   }
 
   throw new Error(`Can't parse fragmentoId ${fragmentoId}`);
+}
+
+function findInciso(
+  parent: ItemObject,
+  subparts: string[],
+  fragmentoId: string
+) {
+  let inciso: ItemObject | undefined;
+  subparts.shift();
+  while (subparts.length > 0) {
+    const subpart = subparts.shift();
+    inciso = getChildrenOfType(parent, "inciso").find(
+      (i) => String(i.key ?? "") == (subpart ?? "")
+    );
+    if (!inciso) {
+      throw new Error(`Not found inciso for ${fragmentoId}`);
+    }
+    parent = inciso;
+  }
+  return inciso;
 }
 
 export function classNames(

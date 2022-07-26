@@ -9,3 +9,7 @@
   font-style: normal;
   font-display: block;
 }
+
+[data-testid="tooltip-target"] {
+  display: inline;
+}

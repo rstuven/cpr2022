@@ -9,7 +9,7 @@ export default function Tooltip(props: TooltipProps): JSX.Element {
   }, []);
   return (
     <div
-      className="block-inline"
+      className="inline"
       onMouseOver={onActivation}
       onTouchStart={onActivation}
     >

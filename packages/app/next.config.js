@@ -1,10 +1,12 @@
+const withPWA = require("next-pwa");
+
 const REPO_NAME = "cpr2022";
 const CUSTOM_DOMAIN = true;
 
 const isProduction = process.env.NODE_ENV === "production";
 const useRepoName = isProduction && !CUSTOM_DOMAIN;
 
-module.exports = {
+module.exports = withPWA({
   reactStrictMode: true,
   typescript: {
     // !! WARN !!
@@ -15,4 +17,9 @@ module.exports = {
   },
   basePath: useRepoName ? `/${REPO_NAME}` : undefined,
   assetPrefix: useRepoName ? `/${REPO_NAME}/` : undefined,
-};
+  pwa: {
+    dest: "public",
+    disable: !isProduction,
+    publicExcludes: ["!images/fragmentos/*"],
+  },
+});

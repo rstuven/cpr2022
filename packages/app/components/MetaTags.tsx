@@ -6,13 +6,17 @@ type MetaTagsProps = {
   image?: string;
   url?: string;
   locale?: string;
-  type?: string
+  type?: string;
 };
 
 export default function MetaTags(props: MetaTagsProps) {
   return (
     <Head>
       {props.title && <title>{props.title}</title>}
+      {props.title && <meta name="application-name" content={props.title} />}
+      {props.title && (
+        <meta name="apple-mobile-web-app-title" content={props.title} />
+      )}
       {props.description && (
         <meta name="description" content={props.description} />
       )}

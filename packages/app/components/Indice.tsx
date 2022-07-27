@@ -15,9 +15,9 @@ import tituloImage from "public/images/titulo.png";
 import escudoImage from "public/images/escudo.png";
 import { HashContext } from "./HashProvider";
 
-const capituloItem = () => classNames("mt-2 mb-0");
+const rootItem = () => classNames("mt-2 mb-0");
 
-const capituloLink = (highlight: boolean, hasChildren: boolean) =>
+const rootLink = (highlight: boolean, hasChildren: boolean) =>
   classNames(
     "no-underline p-1 block my-0",
     "hover:text-white",
@@ -59,11 +59,9 @@ export default function Indice() {
         />
       </HashLink>
       <ul className="list-none mt-0 mb-6 pl-0 -ml-1">
-        {getItemsOfType("preambulo", "capitulo", "transitorias").map(
-          (capitulo) => (
-            <Capitulo key={capitulo.oid} capitulo={capitulo} />
-          )
-        )}
+        {getItemsOfType("preambulo", "capitulo", "transitorias").map((item) => (
+          <RootItem key={item.oid} item={item} />
+        ))}
       </ul>
       <div className="text-center">
         <Image
@@ -82,25 +80,23 @@ export default function Indice() {
   );
 }
 
-function Capitulo({ capitulo }: { capitulo: ItemObject }) {
+function RootItem({ item }: { item: ItemObject }) {
   const hash = useContext(HashContext);
-  const path = getItemFragmentoId(capitulo);
+  const path = getItemFragmentoId(item);
   const fragmento = parseFragmento(hash);
   const isHighlighted =
     isFragmentoIdMatch(path, hash) ||
     Boolean(
-      fragmento &&
-        "capitulo" in fragmento &&
-        fragmento.capitulo.oid == capitulo.oid
+      fragmento && "capitulo" in fragmento && fragmento.capitulo.oid == item.oid
     );
-  const titulos = getChildrenOfType(capitulo, "titulo");
+  const titulos = getChildrenOfType(item, "titulo");
   return (
-    <li className={capituloItem()}>
+    <li className={rootItem()}>
       <HashLink
-        className={capituloLink(isHighlighted, titulos.length > 0)}
+        className={rootLink(isHighlighted, titulos.length > 0)}
         hash={path}
       >
-        {getItemLabel(capitulo)}
+        {getItemLabel(item)}
       </HashLink>
       <ul className="list-none my-0">
         {titulos.map((titulo, tituloIndex) => (

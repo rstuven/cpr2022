@@ -10,7 +10,7 @@ export default function Constitucion() {
   return (
     <div className="prose px-3 sm:px-10 font-ConvencionFJ">
       <a data-id="inicio" />
-      <h1 className="text-center">
+      <h1 className="text-center font-normal">
         <TitleCase
           lowercaseClass="text-3xl"
           text="Constitución Política de la República de Chile"

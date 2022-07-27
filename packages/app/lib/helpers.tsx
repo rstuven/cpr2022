@@ -366,3 +366,7 @@ export function classNames(
     .flatMap((c) => String(c).split(" "))
     .join(" ");
 }
+
+export function getCurrentHash() {
+  return decodeURIComponent(window.location.hash).substring(1)
+}

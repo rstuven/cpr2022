@@ -5,24 +5,23 @@ import React, {
   useEffect,
   useState,
 } from "react";
+import { getCurrentHash } from "lib/helpers";
 
 export const HashContext = createContext("");
 
 export const HashProvider = (props: PropsWithChildren<{}>) => {
-  const csr = typeof window != "undefined";
-  const intialValue = csr ? window.location.hash.substring(1) : "";
-  const [hash, setHash] = useState(() => intialValue);
+  const [hash, setHash] = useState(() => getCurrentHash());
 
   const onHashChange = useCallback(() => {
-    setHash(csr ? window.location.hash.substring(1) : "");
-  }, [csr]);
+    setHash(getCurrentHash());
+  }, []);
 
   useEffect(() => {
-    csr && window.addEventListener("hashchange", onHashChange);
+    window.addEventListener("hashchange", onHashChange);
     return () => {
-      csr && window.removeEventListener("hashchange", onHashChange);
+      window.removeEventListener("hashchange", onHashChange);
     };
-  }, [csr, onHashChange]);
+  }, [onHashChange]);
 
   return (
     <HashContext.Provider value={hash}>{props.children}</HashContext.Provider>

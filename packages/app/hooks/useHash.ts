@@ -1,4 +1,5 @@
 import { useEffect, RefObject } from "react";
+import { getCurrentHash } from "lib/helpers";
 
 export function useHashScrolling(
   offset = 0,
@@ -79,7 +80,7 @@ function getElement(
   target?: RefObject<HTMLElement>,
   index?: boolean
 ) {
-  const hash = window.location.hash?.substring(1);
+  const hash = getCurrentHash();
 
   let element: HTMLElement | null | undefined;
   let hashTry = hash;
@@ -99,7 +100,8 @@ function getElement(
         lastIndex = hashTry.lastIndexOf("@");
         if (lastIndex == -1) {
           break;
-        } else if (!index) {
+        }
+        if (!index) {
           lastIndex++;
         }
       }

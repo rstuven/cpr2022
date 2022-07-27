@@ -3,7 +3,7 @@ import extractDomain from "extract-domain";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
 
-import { HiOutlineExternalLink } from "react-icons/hi";
+import { CgExternal } from "react-icons/cg";
 import { CommonData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import {
   getChildrenOfType,
@@ -16,11 +16,12 @@ import {
 import Tooltip from "./Tooltip";
 import Dropdown from "./Dropdown";
 import ItemToolbar from "./ItemToolbar";
+import EnlacesHacia from "./EnlacesHacia"
 
 export default function Articulo({ item }: { item: ItemObject }) {
   const path = getItemFragmentoId(item);
   const data = item.data as CommonData;
-  const enlaces = getEnlacesDesde(path, true);
+  const enlacesDesde = getEnlacesDesde(path, true);
   return (
     <div data-hash={path} className="border border-solid rounded-md p-3 mb-3">
       <ItemToolbar path={path} item={item} />
@@ -33,7 +34,8 @@ export default function Articulo({ item }: { item: ItemObject }) {
         {data.etiquetas.map((etiqueta, index) => (
           <BadgeEtiquetas key={index} etiqueta={etiqueta} item={item} />
         ))}
-        {enlaces?.map((enlace, index) => (
+        <EnlacesHacia path={path} />
+        {enlacesDesde.map((enlace, index) => (
           <Badge color="info" key={index}>
             <Tooltip
               content={
@@ -44,13 +46,12 @@ export default function Articulo({ item }: { item: ItemObject }) {
                 </>
               }
             >
-              <span className="flex">
+              <span className="flex gap-1">
                 <a href={enlace.hacia} target="_blank" rel="noreferrer">
                   {enlace.etiqueta}
-                  {enlaces.length > 1 ? " " + (index + 1) : ""}
+                  {enlacesDesde.length > 1 ? " " + (index + 1) : ""}
                 </a>
-                &nbsp;
-                <HiOutlineExternalLink size={14} />
+                <CgExternal size={16} />
               </span>
             </Tooltip>
           </Badge>

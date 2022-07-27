@@ -20,8 +20,17 @@ export function getEnlacesDesde(fragmentoId: string, external?: boolean) {
   return result;
 }
 
-export function getEnlacesHacia(fragmentoId: string) {
-  return constitucion.enlaces.filter((e) => e.hacia == fragmentoId);
+export function getEnlacesHacia(fragmentoId: string, strict = true) {
+  if (strict) {
+    return constitucion.enlaces.filter(
+      (e) => fragmentoId == e.hacia && fragmentoId != e.desde
+    );
+  }
+  return constitucion.enlaces.filter(
+    (e) =>
+      isFragmentoIdMatch(fragmentoId, e.hacia) &&
+      !isFragmentoIdMatch(fragmentoId, e.desde)
+  );
 }
 
 export function getItemsOfType(...types: ItemType[]) {
@@ -119,12 +128,18 @@ export function getItemFragmentoId(item: ItemObject, appendSuffix = true) {
 
   return result;
 }
+
 export function isFragmentoIdMatch(fragmentoId: string, hash: string) {
+  if (fragmentoId == "transitorias") {
+    return fragmentoId == hash || hash.startsWith("transitoria:");
+  }
   const parts = fragmentoId.split("@");
   if (parts.length > 1) {
-    return hash.startsWith(parts[0]);
+    return (
+      hash == fragmentoId || hash == parts[0] || hash.startsWith(parts[0] + ".")
+    );
   }
-  return hash.startsWith(fragmentoId);
+  return hash == fragmentoId || hash.startsWith(fragmentoId + ".");
 }
 
 const TYPE_LABELS: Record<ItemType, string> = {
@@ -155,8 +170,28 @@ export function getItemLabel(item: ItemObject, withPrefix = true) {
     return item.label as string;
   } else if (item.type == "transitoria") {
     return item.key as string;
+  } else if (item.type == "inciso") {
+    return item.key
+      ? typeof item.key == "string"
+        ? `letra ${item.key})`
+        : "inciso " + item.key
+      : "";
   }
   throw Error("Not implemented type " + item.type);
+}
+
+export function IncisoContextLabel(
+  fragmento: ArticuloContext | TransitoriaContext
+) {
+  if (!fragmento.inciso) return "";
+  if ("articulo" in fragmento) {
+    return `${getItemLabel(fragmento.articulo)} ${getItemLabel(
+      fragmento.inciso
+    )}`;
+  }
+  return `${getItemLabel(fragmento.transitoria)} ${getItemLabel(
+    fragmento.inciso
+  )}`;
 }
 
 export function getArticuloContextCapituloTituloLabel(

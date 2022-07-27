@@ -1,5 +1,5 @@
 import { IconType } from "react-icons/lib/cjs";
-import { HiOutlineArrowsExpand, HiOutlineDotsVertical } from "react-icons/hi";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 import {
   BsFileEarmarkPdf,
   BsWhatsapp,
@@ -28,14 +28,8 @@ export default function ItemToolbar({
   path: string;
   item: ItemObject;
 }) {
-  const inFragmento = location.pathname.startsWith("/fragmento/");
   return (
     <div className="ml-1 float-right flex gap-2 font-sans">
-      {inFragmento && (
-        <a href={`/${location.hash.length > 1 ? location.hash : "#" + path}`}>
-          <HiOutlineArrowsExpand size={20} />
-        </a>
-      )}
       <Dropdown
         arrowIcon={false}
         inline
@@ -53,10 +47,10 @@ export default function ItemToolbar({
 
 function ItemDropdown({ path, item }: { path: string; item: ItemObject }) {
   const data = item.data as CommonData;
-  let url = `${location.origin}/fragmento/${path.split("@")[0]}`;
+  let url = `${location.origin}/compartir/${path.split("@")[0]}`;
 
   // TODO: remove in stable version
-  url += "?test=1";
+  url += "?" + process.env.NEXT_PUBLIC_VERSION;
 
   const hash = useContext(HashContext);
   if (isFragmentoIdMatch(path, hash) && hash.lastIndexOf(".") != -1) {

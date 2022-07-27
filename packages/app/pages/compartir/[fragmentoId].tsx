@@ -1,19 +1,13 @@
-import { useContext } from "react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { GetStaticPropsContext } from "next/types";
 import { CommonData } from "cpr2022-data/src/types/schemaShallow";
-import { HashContext, HashProvider } from "components/HashProvider";
 import MetaTags from "components/MetaTags";
-import { useHashHighlighting, useHashScrolling } from "hooks/useHash";
 import { createFragmentImage } from "lib/images";
 import {
   ArticuloContext,
-  CapituloContext,
   firstToUpperCase,
   getArticuloContextCapituloTituloLabel,
-  getCapituloArticulosDescription,
   getItemFragmentoId,
   getItemLabel,
   getItemsOfType,
@@ -21,15 +15,12 @@ import {
   TransitoriaContext,
 } from "lib/helpers";
 
-const Capitulo = dynamic(() => import("../../components/Capitulo"), {
-  ssr: false,
-});
-const Articulo = dynamic(() => import("../../components/Articulo"), {
-  ssr: false,
-});
-const Transitoria = dynamic(() => import("../../components/Transitoria"), {
-  ssr: false,
-});
+const ShareRedirect = dynamic(
+  () => import("../../components/ShareRedirect"),
+  {
+    ssr: false,
+  }
+);
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const fragmentoId = context.params?.fragmentoId;
@@ -59,24 +50,22 @@ export async function getStaticPaths() {
 }
 
 function getFragmentoIds() {
-  // return ["articulo:1", "capitulo:1", "transitoria:1"];
-  return getItemsOfType("capitulo", "articulo", "transitoria").map((item) =>
+  // return ["articulo:1", "transitoria:1"];
+  return getItemsOfType("articulo", "transitoria").map((item) =>
     getItemFragmentoId(item, false)
   );
 }
 
 export default function Fragmento() {
   const router = useRouter();
-  useHashScrolling(150, "auto");
-  useHashHighlighting();
-  const hash = useContext(HashContext);
 
   const { fragmentoId } = router.query;
   if (!fragmentoId || fragmentoId instanceof Array) {
     return null;
   }
 
-  const { Component, title, description } = getFragmento(fragmentoId);
+  const { title, description, fragmentoIdFull } = getFragmento(fragmentoId);
+
   return (
     <div className="grid justify-center">
       <MetaTags
@@ -85,12 +74,7 @@ export default function Fragmento() {
         image={`https://cpr2022.cl/images/fragmentos/${fragmentoId}.png?${new Date().getTime()}`}
         type="article"
       />
-      <Link href={"/#" + (hash || fragmentoId)}>📘 Inicio</Link>
-      <HashProvider>
-        <div className="prose font-ConvencionFJ">
-          <Component />
-        </div>
-      </HashProvider>
+      <ShareRedirect fragmentoId={fragmentoIdFull} />
     </div>
   );
 }
@@ -102,25 +86,11 @@ function getFragmento(fragmentoId: string) {
     return getArticulo(fragmento);
   }
 
-  if (fragmento && "capitulo" in fragmento) {
-    return getCapitulo(fragmento);
-  }
-
   if (fragmento && "transitoria" in fragmento) {
     return getTransitoria(fragmento);
   }
 
   throw new Error(`Can't handle fragmentoId ${fragmentoId}`);
-}
-
-function getCapitulo(fragmento: CapituloContext) {
-  const capitulo = fragmento.capitulo;
-  const title = getItemLabel(capitulo);
-  const description = getCapituloArticulosDescription(capitulo);
-  const Component = function Component() {
-    return <Capitulo item={capitulo} />;
-  };
-  return { Component, title, description };
 }
 
 function getArticulo(fragmento: ArticuloContext) {
@@ -130,18 +100,8 @@ function getArticulo(fragmento: ArticuloContext) {
   const description = firstToUpperCase(
     (fragmento.articulo.data as CommonData).sobre
   );
-  const Component = function Component() {
-    return (
-      <div>
-        <h2 className="my-3">{getItemLabel(fragmento.capitulo)}</h2>
-        {fragmento.titulo && (
-          <h3 className="my-3">{getItemLabel(fragmento.titulo, false)}</h3>
-        )}
-        <Articulo item={fragmento.articulo} />
-      </div>
-    );
-  };
-  return { Component, title, description };
+  const fragmentoIdFull = getItemFragmentoId(fragmento.articulo);
+  return { title, description, fragmentoIdFull };
 }
 
 function getTransitoria(fragmento: TransitoriaContext) {
@@ -149,13 +109,6 @@ function getTransitoria(fragmento: TransitoriaContext) {
   const description = firstToUpperCase(
     (fragmento.transitoria.data as CommonData).sobre
   );
-  const Component = function Component() {
-    return (
-      <div>
-        <h2 className="my-3">Disposiciones Transitorias</h2>
-        <Transitoria item={fragmento.transitoria} />
-      </div>
-    );
-  };
-  return { Component, title, description };
+  const fragmentoIdFull = getItemFragmentoId(fragmento.transitoria);
+  return { title, description, fragmentoIdFull };
 }

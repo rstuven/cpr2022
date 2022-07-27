@@ -74,6 +74,10 @@ export default function Indice() {
           aria-label="Escudo"
         />
       </div>
+
+      <div className="pt-3 text-sm text-center text-[#603484]">
+        Versión: {process.env.NEXT_PUBLIC_VERSION}
+      </div>
     </div>
   );
 }

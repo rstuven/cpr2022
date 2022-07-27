@@ -1,7 +1,12 @@
 import React, { AnchorHTMLAttributes, useCallback } from "react";
 import { usePWAInstall } from "react-use-pwa-install";
+import { IconType } from "react-icons";
 import { MdAddToHomeScreen } from "react-icons/md";
-import { AiOutlineHome, AiOutlineInfoCircle } from "react-icons/ai";
+import {
+  AiOutlineHome,
+  AiOutlineInfoCircle,
+  AiOutlineBook,
+} from "react-icons/ai";
 import { Navbar, Avatar } from "flowbite-react";
 import { useNavbarContext } from "flowbite-react/lib/esm/components/Navbar/NavbarContext";
 import useMediaQuery from "hooks/useMediaQuery";
@@ -35,7 +40,7 @@ export function AppNavbar() {
       <Navbar.Collapse>
         {isMediumMinWidth ? (
           <>
-            <Navbar.Link href="/#inicio" active={true}>
+            <Navbar.Link href="/#inicio">
               <div className="flex gap-1">
                 <AiOutlineHome size={20} />
                 Inicio
@@ -50,17 +55,11 @@ export function AppNavbar() {
           </>
         ) : (
           <div className="flex flex-col w-full h-screen pr-5 pb-[70px] absolute bg-white overflow-scroll">
-            <NavLink href="/#inicio">
-              <div className="flex gap-1">
-                <AiOutlineHome size={20} />
-                Inicio
-              </div>
+            <NavLink href="/#inicio" icon={AiOutlineHome}>
+              Inicio
             </NavLink>
-            <NavLink href="/acerca-de">
-              <div className="flex gap-1">
-                <AiOutlineInfoCircle size={20} />
-                ¿Qué es esto?
-              </div>
+            <NavLink href="/acerca-de" icon={AiOutlineInfoCircle}>
+              ¿Qué es esto?
             </NavLink>
             {install && (
               <div className="p-1">
@@ -75,6 +74,9 @@ export function AppNavbar() {
                 <ItemNavLink key={index} item={item} />
               )
             )}
+            <div className="text-sm text-gray-300 pt-5 pl-7">
+              Versión: {process.env.NEXT_PUBLIC_VERSION}
+            </div>
           </div>
         )}
       </Navbar.Collapse>
@@ -82,7 +84,11 @@ export function AppNavbar() {
   );
 }
 
-function NavLink(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
+type NavLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  icon: IconType;
+};
+
+function NavLink(props: NavLinkProps) {
   const { setIsOpen } = useNavbarContext();
 
   const onNavbarLinkClick = useCallback(() => {
@@ -93,10 +99,12 @@ function NavLink(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
   }, [setIsOpen]);
   return (
     <div
-      className="hover:bg-gray-200 p-1"
+      className="hover:bg-gray-200 p-1 flex gap-1"
       onClick={onNavbarLinkClick}
       onTouchEnd={onNavbarLinkClick}
     >
+      <props.icon size={20} />
+
       <a className="block align-middle" {...props} />
     </div>
   );
@@ -104,7 +112,7 @@ function NavLink(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
 
 function ItemNavLink({ item }: { item: ItemObject }) {
   return (
-    <NavLink href={"/#" + getItemFragmentoId(item)}>
+    <NavLink href={"/#" + getItemFragmentoId(item)} icon={AiOutlineBook}>
       <span className="font-ConvencionFJ">{getItemLabel(item)}</span>
     </NavLink>
   );

@@ -17,6 +17,9 @@ module.exports = withPWA({
   },
   basePath: useRepoName ? `/${REPO_NAME}` : undefined,
   assetPrefix: useRepoName ? `/${REPO_NAME}/` : undefined,
+  env: {
+    NEXT_PUBLIC_VERSION: new Date().toISOString(),
+  },
   pwa: {
     dest: "public",
     disable: !isProduction,

@@ -18,13 +18,15 @@ export default function HashLink(props: HashLinkProps) {
         <a
           className={classNames(
             props.className,
-            "font-sans text-gray-300",
+            "font-sans text-gray-300 no-underline",
             props.visible === false && "invisible"
           )}
           href={"/#" + props.hash}
           data-id={props.hash}
         >
-          <Tooltip content={title}>¶</Tooltip>
+          <Tooltip content={title}>
+            <div className="-ml-3 pl-3">¶</div>
+          </Tooltip>
         </a>
       </div>
     );

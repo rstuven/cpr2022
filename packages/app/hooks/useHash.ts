@@ -14,10 +14,15 @@ export function useHashScrolling(
 
       if (!element || element.offsetTop == 0) return false;
 
-      (target ? target.current : window)?.scrollTo({
-        top: element.offsetTop - offset,
-        behavior,
-      });
+      if (defaultBehavior == "auto") {
+        element.focus();
+        element.blur();
+      } else {
+        (target ? target.current : window)?.scrollTo({
+          top: element.offsetTop - offset,
+          behavior,
+        });
+      }
 
       return true;
     };

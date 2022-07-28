@@ -1,8 +1,11 @@
-import Image from "next/image";
+import Image, { ImageLoader } from "next/image";
 import { AppNavbar } from "components/AppNavbar";
 import Indice from "./Indice";
 
 export default function AcercaDe({}) {
+  const imageLoader: ImageLoader = (props) => {
+    return props.src;
+  };
   return (
     <>
       <div className="h-screen overflow-hidden">
@@ -44,6 +47,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de enlace a párrafo"
                     src="/images/screenshot-anchor-link.png"
+                    loader={imageLoader}
                     width={323}
                     height={297}
                   />
@@ -63,6 +67,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de Twitter con imagen de extracto de artículo"
                     src="/images/screenshot-social-articulo.png"
+                    loader={imageLoader}
                     width={697 * 0.6}
                     height={479 * 0.6}
                   />
@@ -91,6 +96,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de enlace a párrafo"
                     src="/images/screenshot-actions-menu.png"
+                    loader={imageLoader}
                     width={376}
                     height={333}
                   />
@@ -107,6 +113,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de vista previa de inciso"
                     src="/images/screenshot-cross-reference-1.png"
+                    loader={imageLoader}
                     width={488}
                     height={252}
                   />
@@ -121,6 +128,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de vista previa de inciso"
                     src="/images/screenshot-cross-reference-2.png"
+                    loader={imageLoader}
                     width={494}
                     height={270}
                   />
@@ -135,6 +143,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de enlace a ley"
                     src="/images/screenshot-link-law.png"
+                    loader={imageLoader}
                     width={491}
                     height={180}
                   />
@@ -155,6 +164,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de enlace a párrafo"
                     src="/images/screenshot-reference.png"
+                    loader={imageLoader}
                     width={268}
                     height={122}
                   />
@@ -172,6 +182,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de enlace a párrafo"
                     src="/images/screenshot-tag-links.png"
+                    loader={imageLoader}
                     width={396}
                     height={247}
                   />
@@ -194,6 +205,7 @@ export default function AcercaDe({}) {
                   <Image
                     alt="Pantallazo de opción para instalar app"
                     src="/images/screenshot-install-app.png"
+                    loader={imageLoader}
                     width={317}
                     height={203}
                   />

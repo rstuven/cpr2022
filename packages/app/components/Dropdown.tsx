@@ -16,9 +16,11 @@ function Dropdown(props: DropdownProps) {
   }, []);
   return (
     <div
-      className="cursor-pointer "
+      tabIndex={0}
+      className="cursor-pointer"
       onMouseOver={onActivation}
       onTouchStart={onActivation}
+      onFocus={onActivation}
     >
       {render ? (
         <FlowbiteDropdown {...props}>

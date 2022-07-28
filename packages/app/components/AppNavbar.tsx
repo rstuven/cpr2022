@@ -136,6 +136,7 @@ function NavLinkTools(props: { setToolsOpen: (value: boolean) => void }) {
 
 function NavLink(props: NavLinkProps) {
   const { setIsOpen } = useNavbarContext();
+  const {icon: Icon, ...rest} = props
 
   const onNavbarLinkClick = useCallback(() => {
     // this timeout avoids unmounting before the link follows through
@@ -149,9 +150,9 @@ function NavLink(props: NavLinkProps) {
       onClick={onNavbarLinkClick}
       onTouchEnd={onNavbarLinkClick}
     >
-      <props.icon size={20} />
+      <Icon size={20} />
 
-      <a className="block align-middle" {...props} />
+      <a className="block align-middle" {...rest} />
     </div>
   );
 }

@@ -7,18 +7,16 @@ import {
   BsTelegram,
   BsFacebook,
 } from "react-icons/bs";
-import {
-  ItemObject,
-  CommonData,
-} from "cpr2022-data/src/types/schemaShallow";
+import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
 import {
   getItemLabel,
   isFragmentoIdMatch,
   getItemTypeLabel,
+  classNames,
 } from "lib/helpers";
 import Tooltip from "./Tooltip";
 import Dropdown from "./Dropdown";
-import { useContext } from "react";
+import { useCallback, useContext, useRef } from "react";
 import { HashContext } from "./HashProvider";
 
 export default function ItemToolbar({
@@ -61,50 +59,71 @@ function ItemDropdown({ path, item }: { path: string; item: ItemObject }) {
 
   return (
     <>
-      {buildExternalLinkItem(
-        BsFileEarmarkPdf,
-        `Página ${data.pagina} en el PDF oficial`,
-        "https://www.chileconvencion.cl/wp-content/uploads/2022/07/Texto-CPR-2022.pdf#page=" +
+      <ExternalLinkItem
+        icon={BsFileEarmarkPdf}
+        label={`Página ${data.pagina} en el PDF oficial`}
+        url={
+          "https://www.chileconvencion.cl/wp-content/uploads/2022/07/Texto-CPR-2022.pdf#page=" +
           (data.pagina + 4)
-      )}
+        }
+      />
 
-      {buildExternalLinkItem(
-        BsTwitter,
-        "Compartir en Twitter",
-        "https://twitter.com/intent/tweet?text=" + encodeURIComponent(message)
-      )}
-      {buildExternalLinkItem(
-        BsFacebook,
-        "Compartir en Facebook",
-        "https://www.facebook.com/sharer/sharer.php?display=page&u=" +
+      <ExternalLinkItem
+        icon={BsTwitter}
+        label="Compartir en Twitter"
+        url={
+          "https://twitter.com/intent/tweet?text=" + encodeURIComponent(message)
+        }
+      />
+      <ExternalLinkItem
+        icon={BsFacebook}
+        label="Compartir en Facebook"
+        url={
+          "https://www.facebook.com/sharer/sharer.php?display=page&u=" +
           encodeURIComponent(url)
-      )}
+        }
+      />
 
-      {buildExternalLinkItem(
-        BsWhatsapp,
-        "Compartir vía WhatsApp",
-        `https://api.whatsapp.com/send/?text=${encodeURIComponent(message)}`
-      )}
+      <ExternalLinkItem
+        icon={BsWhatsapp}
+        label="Compartir vía WhatsApp"
+        url={`https://api.whatsapp.com/send/?text=${encodeURIComponent(
+          message
+        )}`}
+      />
 
-      {buildExternalLinkItem(
-        BsTelegram,
-        "Compartir vía Telegram",
-        `https://telegram.me/share/url?url=${encodeURIComponent(url)}`
-      )}
+      <ExternalLinkItem
+        icon={BsTelegram}
+        label="Compartir vía Telegram"
+        url={`https://telegram.me/share/url?url=${encodeURIComponent(url)}`}
+      />
     </>
   );
 }
 
-function buildExternalLinkItem(Icon: IconType, label: string, url: string) {
+function ExternalLinkItem({
+  icon: Icon,
+  label,
+  url,
+}: {
+  icon: IconType;
+  label: string;
+  url: string;
+}) {
   return (
-    <Dropdown.Item>
+    <li className={classNames("block", "py-1", "text-sm text-gray-700")}>
       <div className="flex">
         <Icon size={20} />
         &nbsp;
-        <a href={url} target="_blank" rel="noreferrer">
+        <a
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          className="no-underline hover:underline w-full"
+        >
           {label}
         </a>
       </div>
-    </Dropdown.Item>
+    </li>
   );
 }

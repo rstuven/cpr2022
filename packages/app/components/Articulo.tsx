@@ -4,6 +4,8 @@ import HashLink from "./HashLink";
 import Inciso from "./Inciso";
 
 import { CgExternal } from "react-icons/cg";
+import { HiOutlineChevronDown } from "react-icons/hi";
+import { HoverCard } from "@mantine/core";
 import { CommonData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import {
   getChildrenOfType,
@@ -15,9 +17,9 @@ import {
   ItemFilter,
 } from "lib/helpers";
 import Tooltip from "./Tooltip";
-import Dropdown from "./Dropdown";
 import ItemToolbar from "./ItemToolbar";
 import EnlacesHacia from "./EnlacesHacia";
+import { useCallback, useState } from "react";
 
 export default function Articulo({
   item,
@@ -86,30 +88,76 @@ function BadgeEtiquetas(props: {
   const label = props.etiqueta.replace(/ /g, "\u00a0");
   return (
     <Badge color="pink">
-      <Dropdown
-        inline
-        label={label}
-        className="max-h-[210px] overflow-y-scroll overscroll-contain"
-      >
-        {getItemsOfType("articulo")
-          .filter(
-            (art) =>
-              art.oid != props.item.oid &&
-              (art.data as CommonData).etiquetas.includes(props.etiqueta)
-          )
-          .map((articulo, index) => {
-            return (
-              <div key={index}>
-                <a
-                  className="no-underline hover:underline font-normal"
-                  href={"/#" + getItemFragmentoId(articulo)}
-                >{`${getItemLabel(articulo)} sobre ${
-                  (articulo.data as CommonData).sobre
-                }`}</a>
-              </div>
-            );
-          })}
-      </Dropdown>
+      <HoverCardWrapper
+        target={
+          <div className="cursor-pointer">
+            <div className="flex">
+              {label}
+              <HiOutlineChevronDown size={5} className="ml-1 h-4 w-4" />
+            </div>
+          </div>
+        }
+        dropdown={
+          <div className="max-h-[202px] overflow-y-scroll overscroll-contain">
+            {getItemsOfType("articulo")
+              .filter(
+                (art) =>
+                  art.oid != props.item.oid &&
+                  (art.data as CommonData).etiquetas.includes(props.etiqueta)
+              )
+              .map((articulo, index) => {
+                return (
+                  <div key={index}>
+                    <a
+                      className="no-underline hover:underline font-normal"
+                      href={"/#" + getItemFragmentoId(articulo)}
+                    >{`${getItemLabel(articulo)} sobre ${
+                      (articulo.data as CommonData).sobre
+                    }`}</a>
+                  </div>
+                );
+              })}
+          </div>
+        }
+      />
     </Badge>
+  );
+}
+
+// Wrap to defer dropdown rendering and improve perfomance
+function HoverCardWrapper({
+  target,
+  dropdown,
+}: {
+  target: JSX.Element;
+  dropdown: JSX.Element;
+}) {
+  const [render, setRender] = useState(false);
+  const onActivation = useCallback(() => {
+    setRender(true);
+  }, []);
+
+  return render ? (
+    <HoverCard
+      width={330}
+      shadow="md"
+      withArrow
+      openDelay={200}
+      closeDelay={400}
+      initiallyOpened
+    >
+      <HoverCard.Target>{target}</HoverCard.Target>
+      <HoverCard.Dropdown>{dropdown}</HoverCard.Dropdown>
+    </HoverCard>
+  ) : (
+    <div
+      tabIndex={0}
+      className="cursor-pointer"
+      onMouseOver={onActivation}
+      onTouchStart={onActivation}
+      onFocus={onActivation}
+    >
+      {target}
+    </div>
   );
 }

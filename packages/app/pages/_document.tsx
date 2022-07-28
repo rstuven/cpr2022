@@ -3,15 +3,15 @@ import Document, {
   Head,
   Main,
   NextScript,
-  DocumentContext,
 } from "next/document";
 import Script from "next/script";
+import { createGetInitialProps } from '@mantine/next';
+
+const getInitialProps = createGetInitialProps();
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return initialProps;
-  }
+  static getInitialProps = getInitialProps;
+
   render() {
     return (
       <Html lang="en">

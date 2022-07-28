@@ -16,5 +16,10 @@
   "devDependencies": {
     "ajv-cli": "^5.0.0",
     "ts-json-schema-generator": "^1.0.0"
+  },
+  "dependencies": {
+    "@mantine/core": "^5.0.0",
+    "@mantine/hooks": "^5.0.0",
+    "@mantine/next": "^5.0.0"
   }
 }

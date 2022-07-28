@@ -1,3 +1,4 @@
+import { ReactNode, useCallback, useContext, useState } from "react";
 import { IconType } from "react-icons/lib/cjs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import {
@@ -7,6 +8,7 @@ import {
   BsTelegram,
   BsFacebook,
 } from "react-icons/bs";
+import { Popover } from "@mantine/core";
 import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
 import {
   getItemLabel,
@@ -15,8 +17,6 @@ import {
   classNames,
 } from "lib/helpers";
 import Tooltip from "./Tooltip";
-import Dropdown from "./Dropdown";
-import { useCallback, useContext, useRef } from "react";
 import { HashContext } from "./HashProvider";
 
 export default function ItemToolbar({
@@ -28,17 +28,46 @@ export default function ItemToolbar({
 }) {
   return (
     <div className="ml-1 float-right flex gap-2 font-sans">
-      <Dropdown
-        arrowIcon={false}
-        inline
-        label={
-          <Tooltip content={"Acciones sobre " + getItemTypeLabel(item.type)}>
-            <HiOutlineDotsVertical size={20} />
-          </Tooltip>
+      <PopoverWrapper
+        target={
+          <div className="cursor-pointer">
+            <Tooltip content={"Acciones sobre " + getItemTypeLabel(item.type)}>
+              <HiOutlineDotsVertical size={20} />
+            </Tooltip>
+          </div>
         }
-      >
-        <ItemDropdown path={path} item={item} />
-      </Dropdown>
+        dropdown={<ItemDropdown path={path} item={item} />}
+      />
+    </div>
+  );
+}
+
+// Wrap to defer dropdown rendering and improve perfomance
+function PopoverWrapper({
+  target,
+  dropdown,
+}: {
+  target: ReactNode;
+  dropdown: ReactNode;
+}) {
+  const [render, setRender] = useState(false);
+  const onActivation = useCallback(() => {
+    setRender(true);
+  }, []);
+  return render ? (
+    <Popover width={230} shadow="md" withArrow>
+      <Popover.Target>{target}</Popover.Target>
+      <Popover.Dropdown>{dropdown}</Popover.Dropdown>
+    </Popover>
+  ) : (
+    <div
+      tabIndex={0}
+      className="cursor-pointer"
+      onMouseOver={onActivation}
+      onTouchStart={onActivation}
+      onFocus={onActivation}
+    >
+      {target}
     </div>
   );
 }

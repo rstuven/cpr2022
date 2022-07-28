@@ -6,7 +6,7 @@ import { AppNavbar } from "./AppNavbar";
 import { HashProvider } from "./HashProvider";
 import { SmallMediaProvider } from "./SmallMediaProvider";
 import BrowsingTools from "./BrowsingTools";
-import { filterItems, ItemFilter } from "lib/helpers";
+import { prepareRegex, filterItems, ItemFilter } from "lib/helpers";
 import useMediaQuery from "hooks/useMediaQuery";
 
 export default function App() {
@@ -85,9 +85,12 @@ function getItemFilter(filter: string) {
       foundItems: 0,
     };
   } else {
+    const regex = new RegExp(prepareRegex(filter), "ig");
     const filterResult = filterItems((item) => {
+      if (filter.length < 4) return 0;
       const content = item.content ?? "";
-      return filter.length < 4 ? 0 : content.split(filter).length - 1;
+      const matches = Array.from(content.matchAll(regex));
+      return matches.length;
     });
     itemFilter = {
       text: filter.length < 4 ? "" : filter,

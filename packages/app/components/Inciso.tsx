@@ -3,6 +3,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import extractDomain from "extract-domain";
 import {
   classNames,
+  prepareRegex,
   getChildrenOfType,
   getEnlacesDesde,
   getIncisoBullet,
@@ -37,12 +38,19 @@ export default function Inciso(props: IncisoProps) {
   const path = getItemFragmentoId(props.item);
   const enlaces = getEnlacesDesde(path).filter((e) => e.texto);
   const injections: Injection[] = enlaces.map(
-    (e) => ({ text: e.texto, value: e, render: renderEnlace } as Injection)
+    (e) =>
+      ({
+        text: e.texto,
+        value: e,
+        ignoreCase: false,
+        render: renderEnlace,
+      } as Injection)
   );
   if (props.filter.text) {
     injections.push({
       text: props.filter.text,
       value: props.filter.text,
+      ignoreCase: true,
       render: renderHighlight,
     });
   }
@@ -75,18 +83,27 @@ export default function Inciso(props: IncisoProps) {
 interface Injection {
   text: string;
   value: any;
-  render: (value: any, key: number) => JSX.Element;
+  ignoreCase: boolean;
+  render: (value: any, match: string, key: number) => JSX.Element;
 }
 
-const renderHighlight = (text: string, key: number): JSX.Element => {
+const renderHighlight = (
+  text: string,
+  match: string,
+  key: number
+): JSX.Element => {
   return (
     <span key={key} className="bg-amber-400">
-      {text}
+      {match}
     </span>
   );
 };
 
-const renderEnlace = (enlace: Enlace, key: number): JSX.Element => {
+const renderEnlace = (
+  enlace: Enlace,
+  match: string,
+  key: number
+): JSX.Element => {
   let content: JSX.Element;
   let attrs: AnchorHTMLAttributes<HTMLAnchorElement>;
   let icon: JSX.Element | undefined = undefined;
@@ -134,10 +151,23 @@ function inject(text: string, injections: Injection[]) {
       if (typeof result != "string") {
         return [result];
       }
+      const escapedRegExp = prepareRegex(injection.text);
+      const regexFlags = (injection.ignoreCase ? "i" : "") + "g";
+
+      const matches = result.match(new RegExp(escapedRegExp, regexFlags));
+      if (matches == null) {
+        return result;
+      }
+      const separator = injection.ignoreCase
+        ? new RegExp(escapedRegExp, regexFlags)
+        : injection.text;
+
       return result
-        .split(injection.text as string)
+        .split(separator)
         .flatMap((part, i) => [
-          i != 0 ? injection.render(injection.value, key++) : undefined,
+          i != 0
+            ? injection.render(injection.value, matches[i - 1], key++)
+            : undefined,
           part,
         ])
         .filter((x) => !!x) as (string | JSX.Element)[];

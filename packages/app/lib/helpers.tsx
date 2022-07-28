@@ -74,6 +74,23 @@ export function filterItems(
   };
 }
 
+export function prepareRegex(text: string) {
+  return ignoreAccentRegex(escapeRegex(text));
+}
+
+export function escapeRegex(text: string) {
+  return text.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+}
+
+export function ignoreAccentRegex(text: string) {
+  return text
+    .replace(/[aá]/g, "[aá]")
+    .replace(/[eé]/g, "[eé]")
+    .replace(/[ií]/g, "[ií]")
+    .replace(/[oó]/g, "[oó]")
+    .replace(/[uú]/g, "[uú]");
+}
+
 export function getItemsOfType(...types: ItemType[]) {
   return items.filter((o) => types.includes(o.type));
 }

@@ -2,6 +2,7 @@ import { Enlace, ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import extractDomain from "extract-domain";
 import {
+  classNames,
   getChildrenOfType,
   getEnlacesDesde,
   getIncisoBullet,
@@ -9,11 +10,12 @@ import {
   ItemFilter,
   parseFragmento,
 } from "lib/helpers";
-import { AnchorHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, useContext } from "react";
 import HashLink from "./HashLink";
 import Tooltip from "./Tooltip";
 import EnlacesHacia from "./EnlacesHacia";
 import FragmentoTooltipContent from "./FragmentoTooltipContent";
+import { SmallMediaContext } from "./SmallMediaProvider";
 
 type IncisoProps = {
   item: ItemObject;
@@ -22,13 +24,16 @@ type IncisoProps = {
 };
 
 export default function Inciso(props: IncisoProps) {
+  const isSmallMedia = useContext(SmallMediaContext);
   if (
     props.filter.oids.length > 0 &&
     !props.filter.oids.includes(props.item.oid)
   ) {
     return null;
   }
-  const bullet = getIncisoBullet(props.item, props.baseItem);
+
+  const bullet = getIncisoBullet(props.item, props.baseItem, !isSmallMedia);
+  const indent = isSmallMedia && bullet != "";
   const path = getItemFragmentoId(props.item);
   const enlaces = getEnlacesDesde(path).filter((e) => e.texto);
   const injections: Injection[] = enlaces.map(
@@ -42,8 +47,16 @@ export default function Inciso(props: IncisoProps) {
     });
   }
   return (
-    <div data-hash={path} className="mt-2 leading-6 rounded">
-      <HashLink hash={path} anchor="inciso" /> <b>{bullet}</b>
+    <div
+      data-hash={path}
+      className={classNames(
+        `mt-2 leading-6 rounded`,
+        indent && `pl-[43px]`,
+        indent && `-indent-[30px]`
+      )}
+    >
+      <HashLink indent={indent} hash={path} anchor="inciso" /> <b>{bullet}</b>
+      &nbsp;&nbsp;
       {inject(props.item.content ?? "", injections)}
       <div className="flex gap-1">
         <EnlacesHacia path={path} />

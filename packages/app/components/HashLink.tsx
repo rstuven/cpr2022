@@ -8,11 +8,16 @@ type HashLinkProps = PropsWithChildren<{
   title?: string;
   anchor?: string;
   visible?: boolean;
+  indent?: boolean;
 }>;
 
 export default function HashLink(props: HashLinkProps) {
   if (props.anchor) {
-    const title = props.title ?? "Vínculo a " + props.anchor;
+    const title = (
+      <div className="indent-0">
+        {props.title ?? "Vínculo a " + props.anchor}
+      </div>
+    );
     return (
       <div className="inline-block">
         <a
@@ -24,8 +29,8 @@ export default function HashLink(props: HashLinkProps) {
           href={"/#" + props.hash}
           data-id={props.hash}
         >
-          <Tooltip content={title}>
-            <div className="-ml-3 pl-3">¶</div>
+          <Tooltip placement="right" content={title}>
+            <div className={props.indent ? "-indent-3" : ""}>¶</div>
           </Tooltip>
         </a>
       </div>

@@ -27,7 +27,9 @@ export default function EnlacesHacia(props: { path: string }) {
             >
               <span className="flex gap-1 font-sans">
                 <CgInternal size={14} />
-                <a href={"#" + enlace.desde}>{label}</a>
+                <a className="indent-0" href={"#" + enlace.desde}>
+                  {label}
+                </a>
               </span>
             </Tooltip>
           </Badge>

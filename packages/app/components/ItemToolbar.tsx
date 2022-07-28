@@ -55,7 +55,7 @@ function PopoverWrapper({
     setRender(true);
   }, []);
   return render ? (
-    <Popover width={230} shadow="md" withArrow>
+    <Popover width={240} shadow="md" withArrow>
       <Popover.Target>{target}</Popover.Target>
       <Popover.Dropdown>{dropdown}</Popover.Dropdown>
     </Popover>

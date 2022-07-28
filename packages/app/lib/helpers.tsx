@@ -5,12 +5,25 @@ import {
   ItemType,
 } from "cpr2022-data/src/types/schemaShallow";
 
+export type ItemFilterResult = {
+  oids: string[];
+  totalMatches: number;
+  foundItems: number;
+};
+
+export type ItemFilter = ItemFilterResult & {
+  text: string;
+};
+
 export function firstToUpperCase(text: string) {
   if (text == "") return "";
   return text[0].toUpperCase() + text.substring(1);
 }
 
 const items = Object.values(constitucion.items);
+
+export const preambulo = getItemsOfType("preambulo")[0];
+export const transitorias = getItemsOfType("transitorias")[0];
 
 export function getEnlacesDesde(fragmentoId: string, external?: boolean) {
   const result = constitucion.enlaces.filter((e) => e.desde == fragmentoId);
@@ -31,6 +44,34 @@ export function getEnlacesHacia(fragmentoId: string, strict = true) {
       isFragmentoIdMatch(fragmentoId, e.hacia) &&
       !isFragmentoIdMatch(fragmentoId, e.desde)
   );
+}
+
+export function filterItems(
+  predicate: (item: ItemObject) => number
+): ItemFilterResult {
+  const selected: Record<string, ItemObject> = {};
+  let totalMatches = 0;
+  items.forEach((item) => {
+    const matches = predicate(item);
+    if (matches > 0) {
+      totalMatches += matches;
+      selected[item.oid] = item;
+    }
+  });
+  const foundItems = Object.values(selected).length;
+  Object.values(selected).forEach((item) => {
+    let parentOid = item.parent;
+    while (parentOid) {
+      const parent = constitucion.items[parentOid];
+      selected[parentOid] = parent;
+      parentOid = parent.parent;
+    }
+  });
+  return {
+    totalMatches,
+    foundItems,
+    oids: Object.keys(selected),
+  };
 }
 
 export function getItemsOfType(...types: ItemType[]) {
@@ -243,11 +284,6 @@ export function getCapituloSobreLines(capitulo: ItemObject) {
   );
 }
 
-export function getPreambulo() {
-  const item = items.find((o) => o.type == "preambulo");
-  return item?.content ?? "";
-}
-
 export type ArticuloContext = {
   articulo: ItemObject;
   capitulo: ItemObject;
@@ -368,5 +404,14 @@ export function classNames(
 }
 
 export function getCurrentHash() {
-  return decodeURIComponent(window.location.hash).substring(1)
+  return decodeURIComponent(window.location.hash).substring(1);
+}
+
+export function debounce<T extends Function>(func: T, wait = 100) {
+  let h: NodeJS.Timeout | undefined;
+  const callable = (...args: any) => {
+    h && clearTimeout(h);
+    h = setTimeout(() => func(...args), wait);
+  };
+  return callable as unknown as T;
 }

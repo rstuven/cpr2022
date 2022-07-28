@@ -1,13 +1,22 @@
 import React from "react";
 
 import HashLink from "./HashLink";
-import { getPreambulo } from "lib/helpers";
+import { ItemFilter, preambulo } from "lib/helpers";
 
-export default function Preambulo() {
-  const path = "preambulo";
+export default function Preambulo(props: { filter: ItemFilter }) {
+  if (
+    props.filter.oids.length > 0 &&
+    !props.filter.oids.includes(preambulo.oid)
+  ) {
+    return null;
+  }
+  const path = preambulo.type;
   return (
-    <div data-hash={path} className="mb-8 text-xl text-center italic py-4 px-2 rounded">
-      <HashLink hash={path} anchor="preámbulo" /> {getPreambulo()}
+    <div
+      data-hash={path}
+      className="mb-8 text-xl text-center italic py-4 px-2 rounded"
+    >
+      <HashLink hash={path} anchor="preámbulo" /> {preambulo.content}
     </div>
   );
 }

@@ -2,11 +2,11 @@ import React from "react";
 
 import Capitulo from "./Capitulo";
 import Transitorias from "./Transitorias";
-import { getItemsOfType } from "lib/helpers";
+import { getItemsOfType, ItemFilter } from "lib/helpers";
 import TitleCase from "./TitleCase";
 import Preambulo from "./Preambulo";
 
-export default function Constitucion() {
+export default function Constitucion({ filter }: { filter: ItemFilter }) {
   return (
     <div className="prose px-3 sm:px-10 font-ConvencionFJ">
       <a data-id="inicio" />
@@ -17,13 +17,13 @@ export default function Constitucion() {
         />
       </h1>
 
-      <Preambulo />
+      <Preambulo filter={filter} />
 
       {getItemsOfType("capitulo").map((item) => (
-        <Capitulo key={item.oid} item={item} />
+        <Capitulo key={item.oid} item={item} filter={filter} />
       ))}
 
-      <Transitorias />
+      <Transitorias filter={filter} />
 
       <div className="text-center text-2xl mt-10">********</div>
     </div>

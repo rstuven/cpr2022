@@ -12,13 +12,23 @@ import {
   getItemLabel,
   firstToUpperCase,
   getEnlacesDesde,
+  ItemFilter,
 } from "lib/helpers";
 import Tooltip from "./Tooltip";
 import Dropdown from "./Dropdown";
 import ItemToolbar from "./ItemToolbar";
-import EnlacesHacia from "./EnlacesHacia"
+import EnlacesHacia from "./EnlacesHacia";
 
-export default function Articulo({ item }: { item: ItemObject }) {
+export default function Articulo({
+  item,
+  filter,
+}: {
+  item: ItemObject;
+  filter: ItemFilter;
+}) {
+  if (filter.oids.length > 0 && !filter.oids.includes(item.oid)) {
+    return null;
+  }
   const path = getItemFragmentoId(item);
   const data = item.data as CommonData;
   const enlacesDesde = getEnlacesDesde(path, true);
@@ -58,7 +68,12 @@ export default function Articulo({ item }: { item: ItemObject }) {
         ))}
       </span>
       {getChildrenOfType(item, "inciso").map((inciso, incisoIndex) => (
-        <Inciso key={incisoIndex} item={inciso} baseItem={item} />
+        <Inciso
+          key={incisoIndex}
+          item={inciso}
+          baseItem={item}
+          filter={filter}
+        />
       ))}
     </div>
   );

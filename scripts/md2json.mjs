@@ -45,7 +45,6 @@ const constitucionShallow = {
       type: "transitorias",
       label: "Disposiciones Transitorias",
       level: 0,
-      content: preambulo,
     },
     ...transitoriasShallow,
   },

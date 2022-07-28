@@ -1,4 +1,4 @@
-import React, { AnchorHTMLAttributes, useCallback } from "react";
+import React, { AnchorHTMLAttributes, useCallback, useEffect } from "react";
 import { usePWAInstall } from "react-use-pwa-install";
 import { IconType } from "react-icons";
 import { MdAddToHomeScreen } from "react-icons/md";
@@ -7,15 +7,33 @@ import {
   AiOutlineInfoCircle,
   AiOutlineBook,
 } from "react-icons/ai";
+import { BiSearchAlt } from "react-icons/bi";
+
 import { Navbar, Avatar } from "flowbite-react";
 import { useNavbarContext } from "flowbite-react/lib/esm/components/Navbar/NavbarContext";
 import useMediaQuery from "hooks/useMediaQuery";
 import { getItemFragmentoId, getItemsOfType, getItemLabel } from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 
-export function AppNavbar() {
+export function AppNavbar(props: {
+  onToolsToggle?: () => void;
+  setToolsOpen: (value: boolean) => void;
+}) {
   const isMediumMinWidth = useMediaQuery("(min-width: 768px)");
   const install = usePWAInstall();
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "b") {
+        e.preventDefault();
+        e.stopPropagation();
+        props.onToolsToggle && props.onToolsToggle();
+      }
+    };
+    document.addEventListener("keydown", handler, false);
+    return () => document.removeEventListener("keydown", handler);
+  });
+
   return (
     <Navbar border rounded>
       <Navbar.Brand href="/#inicio">
@@ -34,24 +52,28 @@ export function AppNavbar() {
           Propuesta de Constitución Política de la República de Chile 2022
         </span>
       </Navbar.Brand>
-      <div className="flex md:order-2">
-        <Navbar.Toggle />
-      </div>
+      <Navbar.Toggle />
       <Navbar.Collapse>
         {isMediumMinWidth ? (
           <>
-            <Navbar.Link href="/#inicio">
-              <div className="flex gap-1">
-                <AiOutlineHome size={20} />
-                Inicio
-              </div>
-            </Navbar.Link>
             <Navbar.Link href="/acerca-de">
               <div className="flex gap-1">
                 <AiOutlineInfoCircle size={20} />
                 ¿Qué es esto?
               </div>
             </Navbar.Link>
+
+            {props.onToolsToggle && (
+              <div className="block p-0  hover:bg-transparent hover:text-blue-700 dark:hover:bg-transparent dark:hover:text-white">
+                <div className="flex gap-1">
+                  <BiSearchAlt
+                    className="cursor-pointer"
+                    size={20}
+                    onClick={props.onToolsToggle}
+                  />
+                </div>
+              </div>
+            )}
           </>
         ) : (
           <div className="flex flex-col w-full h-screen pr-5 pb-[70px] absolute bg-white overflow-scroll">
@@ -61,6 +83,11 @@ export function AppNavbar() {
             <NavLink href="/acerca-de" icon={AiOutlineInfoCircle}>
               ¿Qué es esto?
             </NavLink>
+
+            {props.onToolsToggle && (
+              <NavLinkTools setToolsOpen={props.setToolsOpen} />
+            )}
+
             {install && (
               <div className="p-1">
                 <button onClick={install} className="flex gap-1">
@@ -69,6 +96,7 @@ export function AppNavbar() {
                 </button>
               </div>
             )}
+            <hr className="my-1" />
             {getItemsOfType("preambulo", "capitulo", "transitorias").map(
               (item, index) => (
                 <ItemNavLink key={index} item={item} />
@@ -87,6 +115,24 @@ export function AppNavbar() {
 type NavLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   icon: IconType;
 };
+
+function NavLinkTools(props: { setToolsOpen: (value: boolean) => void }) {
+  const { setIsOpen } = useNavbarContext();
+
+  const onToolsToggleAndClose = useCallback(() => {
+    props.setToolsOpen(true);
+    setIsOpen(false);
+  }, [props, setIsOpen]);
+
+  return (
+    <div className="hover:bg-gray-200 p-1">
+      <button onClick={onToolsToggleAndClose} className="flex gap-1 w-full">
+        <BiSearchAlt size={20} />
+        Buscar
+      </button>
+    </div>
+  );
+}
 
 function NavLink(props: NavLinkProps) {
   const { setIsOpen } = useNavbarContext();

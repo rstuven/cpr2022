@@ -8,6 +8,7 @@ import {
   getItemLabel,
   getItemsOfType,
   isFragmentoIdMatch,
+  ItemFilter,
   parseFragmento,
 } from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
@@ -30,19 +31,19 @@ const tituloItem = (highlight: boolean) =>
   classNames(
     "border-l-[3px] border-solid",
     "my-0 pt-1 -mx-[19.5px] pr-6 pl-3",
-    "-indent-1 pl-2",
+    "pl-2",
     "hover:border-[#730ac8]",
     highlight ? "border-[#9035da]" : "border-[#400472]"
   );
 
 const tituloLink = (highlight: boolean) =>
   classNames(
-    "no-underline p-1 my-0",
+    "no-underline block",
     "hover:text-[#d0b0ef]",
     highlight ? "text-white" : "text-[#bf77fa]"
   );
 
-export default function Indice() {
+export default function Indice(props: { filter: ItemFilter }) {
   const imageLoader: ImageLoader = (props) => {
     return props.src;
   };
@@ -60,7 +61,7 @@ export default function Indice() {
       </HashLink>
       <ul className="list-none mt-0 mb-6 pl-0 -ml-1">
         {getItemsOfType("preambulo", "capitulo", "transitorias").map((item) => (
-          <RootItem key={item.oid} item={item} />
+          <RootItem key={item.oid} item={item} filter={props.filter} />
         ))}
       </ul>
       <div className="text-center">
@@ -80,8 +81,11 @@ export default function Indice() {
   );
 }
 
-function RootItem({ item }: { item: ItemObject }) {
+function RootItem({ item, filter }: { item: ItemObject; filter: ItemFilter }) {
   const hash = useContext(HashContext);
+  if (filter.oids.length > 0 && !filter.oids.includes(item.oid)) {
+    return null;
+  }
   const path = getItemFragmentoId(item);
   const fragmento = parseFragmento(hash);
   const isHighlighted =
@@ -109,6 +113,7 @@ function RootItem({ item }: { item: ItemObject }) {
                 fragmento.titulo?.oid == titulo.oid
             )}
             path={`${path}.${tituloIndex + 1}`}
+            filter={filter}
           />
         ))}
       </ul>
@@ -116,11 +121,22 @@ function RootItem({ item }: { item: ItemObject }) {
   );
 }
 
-type TituloProps = { titulo: ItemObject; path: string; highlight: boolean };
+type TituloProps = {
+  titulo: ItemObject;
+  path: string;
+  highlight: boolean;
+  filter: ItemFilter;
+};
 
 function Titulo(props: TituloProps) {
   const hash = useContext(HashContext);
   const isHighlighted = props.path == hash || props.highlight;
+  if (
+    props.filter.oids.length > 0 &&
+    !props.filter.oids.includes(props.titulo.oid)
+  ) {
+    return null;
+  }
   return (
     <li className={tituloItem(isHighlighted)}>
       <HashLink hash={props.path} className={tituloLink(isHighlighted)}>

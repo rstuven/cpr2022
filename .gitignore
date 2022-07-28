@@ -7,6 +7,7 @@ out/
 .nyc_output/
 test/
 coverage/
+packages/app/public/sw.js
 *.log
 .DS_Store
 .env.local

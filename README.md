@@ -14,10 +14,10 @@ Se aceptan contribuciones para convertir desde el formato JSON a otros formatos 
 
 - Extender el modelo con:
 
-  - [ ] Referencias cruzadas.
+  - [x] Referencias cruzadas.
   - [x] Etiquetas temáticas.
-  - [ ] Referencias a leyes existentes cuando una norma remite a la ley.
-  - [ ] Catálogo de Preguntas Frecuentes con referencias internas (normas) y externas (por ejemplo, sitios de fact checking).
+  - [x] Referencias a leyes existentes cuando una norma remite a la ley.
+  - [x] Referencias externas (por ejemplo, sitios de fact checking).
 
 - Visualizaciones basadas en extensiones del modelo.
   - [x] Sitio estático.

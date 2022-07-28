@@ -15,7 +15,7 @@ export default function HashLink(props: HashLinkProps) {
   if (props.anchor) {
     const title = (
       <div className="indent-0">
-        {props.title ?? "Vínculo a " + props.anchor}
+        {props.title ?? "Enlace a " + props.anchor}
       </div>
     );
     return (
@@ -29,7 +29,7 @@ export default function HashLink(props: HashLinkProps) {
           href={"/#" + props.hash}
           data-id={props.hash}
         >
-          <Tooltip placement="right" content={title}>
+          <Tooltip placement="left" content={title}>
             <div className={props.indent ? "-indent-3" : ""}>¶</div>
           </Tooltip>
         </a>

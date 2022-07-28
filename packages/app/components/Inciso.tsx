@@ -66,7 +66,7 @@ export default function Inciso(props: IncisoProps) {
       <HashLink indent={indent} hash={path} anchor="inciso" /> <b>{bullet}</b>
       &nbsp;&nbsp;
       {inject(props.item.content ?? "", injections)}
-      <div className="flex gap-1">
+      <div className="flex gap-1 indent-0">
         <EnlacesHacia path={path} />
       </div>
       {getChildrenOfType(props.item, "inciso").map((subinciso, index) => (

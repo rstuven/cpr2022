@@ -17,7 +17,7 @@ import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 
 export function AppNavbar(props: {
   onToolsToggle?: () => void;
-  setToolsOpen: (value: boolean) => void;
+  setToolsOpen?: (value: boolean) => void;
 }) {
   const isMediumMinWidth = useMediaQuery("(min-width: 768px)");
   const install = usePWAInstall();
@@ -84,7 +84,7 @@ export function AppNavbar(props: {
               ¿Qué es esto?
             </NavLink>
 
-            {props.onToolsToggle && (
+            {props.setToolsOpen && (
               <NavLinkTools setToolsOpen={props.setToolsOpen} />
             )}
 
@@ -136,7 +136,7 @@ function NavLinkTools(props: { setToolsOpen: (value: boolean) => void }) {
 
 function NavLink(props: NavLinkProps) {
   const { setIsOpen } = useNavbarContext();
-  const {icon: Icon, ...rest} = props
+  const { icon: Icon, ...rest } = props;
 
   const onNavbarLinkClick = useCallback(() => {
     // this timeout avoids unmounting before the link follows through

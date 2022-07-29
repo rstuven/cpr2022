@@ -8,6 +8,8 @@ import {
   AiOutlineBook,
 } from "react-icons/ai";
 import { BiSearchAlt } from "react-icons/bi";
+import { BsTwitter } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 import { Navbar, Avatar } from "flowbite-react";
 import { useNavbarContext } from "flowbite-react/lib/esm/components/Navbar/NavbarContext";
@@ -63,6 +65,14 @@ export function AppNavbar(props: {
               </div>
             </Navbar.Link>
 
+            <Navbar.Link href="mailto:cpr2022.cl@gmail.com">
+              <MdEmail size={20} />
+            </Navbar.Link>
+
+            <Navbar.Link href="https://twitter.com/cpr2022cl">
+              <BsTwitter size={20} />
+            </Navbar.Link>
+
             {props.onToolsToggle && (
               <div className="block p-0  hover:bg-transparent hover:text-blue-700 dark:hover:bg-transparent dark:hover:text-white">
                 <div className="flex gap-1">
@@ -102,7 +112,17 @@ export function AppNavbar(props: {
                 <ItemNavLink key={index} item={item} />
               )
             )}
-            <div className="text-sm text-gray-300 pt-5 pl-7">
+            <hr className="my-1" />
+            <div className="flex py-1 gap-6 justify-center">
+              <a href="mailto:cpr2022.cl@gmail.com">
+                <MdEmail size={20} />
+              </a>
+              <a href="https://twitter.com/cpr2022cl">
+                <BsTwitter size={20} />
+              </a>
+            </div>
+            <hr className="my-1" />
+            <div className="text-sm text-gray-300 pt-2 w-full text-center">
               Versión: {process.env.NEXT_PUBLIC_VERSION}
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useContext, useState } from "react";
+import { ReactNode, useContext } from "react";
 import { IconType } from "react-icons/lib/cjs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import {
@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs";
 import { Popover } from "@mantine/core";
 import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
+import useRenderOnActivation from "hooks/useRenderOnActivation"
 import {
   getItemLabel,
   isFragmentoIdMatch,
@@ -50,10 +51,8 @@ function PopoverWrapper({
   target: ReactNode;
   dropdown: ReactNode;
 }) {
-  const [render, setRender] = useState(false);
-  const onActivation = useCallback(() => {
-    setRender(true);
-  }, []);
+  const { render, onMouseOver, onTouchMove, onTouchEnd, onFocus } =
+    useRenderOnActivation();
   return render ? (
     <Popover width={240} shadow="md" withArrow>
       <Popover.Target>{target}</Popover.Target>
@@ -63,9 +62,10 @@ function PopoverWrapper({
     <div
       tabIndex={0}
       className="cursor-pointer"
-      onMouseOver={onActivation}
-      onTouchStart={onActivation}
-      onFocus={onActivation}
+      onMouseOver={onMouseOver}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      onFocus={onFocus}
     >
       {target}
     </div>

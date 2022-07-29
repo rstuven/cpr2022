@@ -39,7 +39,7 @@ export default function BrowsingTools(props: {
         "border-[1px] border-gray-200 rounded-lg",
         "justify-center",
         "items-center",
-        "shadow-2xl shadow-gray-300"
+        "shadow-2xl shadow-black/20"
       )}
     >
       <div className="w-full">

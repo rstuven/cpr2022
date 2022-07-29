@@ -39,16 +39,16 @@ export function AppNavbar(props: {
       <Navbar.Brand href="/#inicio">
         <Avatar alt="Inicio" img="/images/logo.png" />
         &nbsp;
-        <span className="p-1 text-lg sm:hidden">
+        <span className="p-1 text-md sm:hidden">
           Propuesta de Nueva Constitución
         </span>
         <span className="p-1 text-lg hidden sm:block md:hidden">
           Propuesta de Nueva Constitución para Chile 2022
         </span>
-        <span className="p-1 font-ConvencionFJ text-lg hidden md:block lg:hidden ">
-          Propuesta de Constitución Política de la República de Chile
+        <span className="p-1 text-md hidden md:block lg:hidden ">
+          Propuesta de Nueva Constitución para Chile 2022
         </span>
-        <span className="p-1 font-ConvencionFJ text-lg hidden lg:block">
+        <span className="p-1 text-lg hidden lg:block">
           Propuesta de Constitución Política de la República de Chile 2022
         </span>
       </Navbar.Brand>

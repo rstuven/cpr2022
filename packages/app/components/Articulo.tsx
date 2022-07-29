@@ -7,6 +7,7 @@ import { CgExternal } from "react-icons/cg";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { HoverCard } from "@mantine/core";
 import { CommonData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
+import useRenderOnActivation from "hooks/useRenderOnActivation";
 import {
   getChildrenOfType,
   getItemFragmentoId,
@@ -19,7 +20,6 @@ import {
 import Tooltip from "./Tooltip";
 import ItemToolbar from "./ItemToolbar";
 import EnlacesHacia from "./EnlacesHacia";
-import { useCallback, useState } from "react";
 
 export default function Articulo({
   item,
@@ -132,10 +132,8 @@ function HoverCardWrapper({
   target: JSX.Element;
   dropdown: JSX.Element;
 }) {
-  const [render, setRender] = useState(false);
-  const onActivation = useCallback(() => {
-    setRender(true);
-  }, []);
+  const { render, onMouseOver, onTouchMove, onTouchEnd, onFocus } =
+    useRenderOnActivation();
 
   return render ? (
     <HoverCard
@@ -153,9 +151,10 @@ function HoverCardWrapper({
     <div
       tabIndex={0}
       className="cursor-pointer"
-      onMouseOver={onActivation}
-      onTouchStart={onActivation}
-      onFocus={onActivation}
+      onMouseOver={onMouseOver}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      onFocus={onFocus}
     >
       {target}
     </div>

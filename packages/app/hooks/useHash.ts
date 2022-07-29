@@ -1,4 +1,4 @@
-import { useEffect, RefObject } from "react";
+import { useEffect, RefObject, useRef } from "react";
 import { getCurrentHash } from "lib/helpers";
 
 export function useHashScrolling(
@@ -7,9 +7,17 @@ export function useHashScrolling(
   target?: RefObject<HTMLElement>,
   index?: boolean
 ) {
+  const hash = useRef<string | undefined>();
+
   useEffect(() => {
     const scroll = (behavior: ScrollBehavior) => {
       if (target && !target.current) return false;
+
+      // fix search input losing focus on mobile.
+      if (hash.current != null && hash.current === window.location.hash) {
+        return true;
+      }
+      hash.current = window.location.hash;
 
       const element = getElement("data-id", target, index);
 

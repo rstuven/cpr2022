@@ -248,6 +248,8 @@ export default function AcercaDe({}) {
                 Contacto:{" "}
                 <a href="mailto:cpr2022.cl@gmail.com">cpr2022.cl@gmail.com</a>
               </p>
+
+              <hr />
             </div>
           </div>
         </div>

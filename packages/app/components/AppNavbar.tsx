@@ -16,6 +16,7 @@ import { useNavbarContext } from "flowbite-react/lib/esm/components/Navbar/Navba
 import useMediaQuery from "hooks/useMediaQuery";
 import { getItemFragmentoId, getItemsOfType, getItemLabel } from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
+import Tooltip from "./Tooltip";
 
 export function AppNavbar(props: {
   onToolsToggle?: () => void;
@@ -76,11 +77,23 @@ export function AppNavbar(props: {
             {props.onToolsToggle && (
               <div className="block p-0  hover:bg-transparent hover:text-blue-700 dark:hover:bg-transparent dark:hover:text-white">
                 <div className="flex gap-1">
-                  <BiSearchAlt
-                    className="cursor-pointer"
-                    size={20}
-                    onClick={props.onToolsToggle}
-                  />
+                  <Tooltip
+                    placement="bottom"
+                    content={
+                      <>
+                        Buscar{" "}
+                        <span className="text-gray-400">
+                          {modifierKeyPrefix}B
+                        </span>
+                      </>
+                    }
+                  >
+                    <BiSearchAlt
+                      className="cursor-pointer"
+                      size={20}
+                      onClick={props.onToolsToggle}
+                    />
+                  </Tooltip>
                 </div>
               </div>
             )}
@@ -135,6 +148,13 @@ export function AppNavbar(props: {
 type NavLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   icon: IconType;
 };
+
+const modifierKeyPrefix =
+  navigator.userAgent.includes("Macintosh") ||
+  navigator.userAgent.includes("iPhone") ||
+  navigator.userAgent.includes("iPad")
+    ? "⌘"
+    : "Ctrl+";
 
 function NavLinkTools(props: { setToolsOpen: (value: boolean) => void }) {
   const { setIsOpen } = useNavbarContext();

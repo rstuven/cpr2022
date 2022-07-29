@@ -86,6 +86,14 @@ function BadgeEtiquetas(props: {
   item: ItemObject;
 }): JSX.Element {
   const label = props.etiqueta.replace(/ /g, "\u00a0");
+  const etiquetas = getItemsOfType("articulo").filter(
+    (art) =>
+      art.oid != props.item.oid &&
+      (art.data as CommonData).etiquetas.includes(props.etiqueta)
+  );
+  if (etiquetas.length == 0) {
+    return <Badge color="pink">{label}</Badge>;
+  }
   return (
     <Badge color="pink">
       <HoverCardWrapper
@@ -99,24 +107,18 @@ function BadgeEtiquetas(props: {
         }
         dropdown={
           <div className="max-h-[202px] overflow-y-scroll overscroll-contain">
-            {getItemsOfType("articulo")
-              .filter(
-                (art) =>
-                  art.oid != props.item.oid &&
-                  (art.data as CommonData).etiquetas.includes(props.etiqueta)
-              )
-              .map((articulo, index) => {
-                return (
-                  <div key={index}>
-                    <a
-                      className="no-underline hover:underline font-normal"
-                      href={"/#" + getItemFragmentoId(articulo)}
-                    >{`${getItemLabel(articulo)} sobre ${
-                      (articulo.data as CommonData).sobre
-                    }`}</a>
-                  </div>
-                );
-              })}
+            {etiquetas.map((articulo, index) => {
+              return (
+                <div key={index}>
+                  <a
+                    className="no-underline hover:underline font-normal"
+                    href={"/#" + getItemFragmentoId(articulo)}
+                  >{`${getItemLabel(articulo)} sobre ${
+                    (articulo.data as CommonData).sobre
+                  }`}</a>
+                </div>
+              );
+            })}
           </div>
         }
       />

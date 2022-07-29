@@ -15,12 +15,9 @@ import {
   TransitoriaContext,
 } from "lib/helpers";
 
-const ShareRedirect = dynamic(
-  () => import("../../components/ShareRedirect"),
-  {
-    ssr: false,
-  }
-);
+const ShareRedirect = dynamic(() => import("../../components/ShareRedirect"), {
+  ssr: false,
+});
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const fragmentoId = context.params?.fragmentoId;
@@ -96,10 +93,8 @@ function getFragmento(fragmentoId: string) {
 function getArticulo(fragmento: ArticuloContext) {
   const title = `${getItemLabel(
     fragmento.articulo
-  )} (${getArticuloContextCapituloTituloLabel(fragmento)})`;
-  const description = firstToUpperCase(
-    (fragmento.articulo.data as CommonData).sobre
-  );
+  )} / ${getArticuloContextCapituloTituloLabel(fragmento)}`;
+  const description = `Sobre ${(fragmento.articulo.data as CommonData).sobre}`;
   const fragmentoIdFull = getItemFragmentoId(fragmento.articulo);
   return { title, description, fragmentoIdFull };
 }

@@ -83,7 +83,7 @@ function ItemDropdown({ path, item }: { path: string; item: ItemObject }) {
   if (isFragmentoIdMatch(path, hash) && hash.lastIndexOf(".") != -1) {
     url += "#" + hash;
   }
-  const text = `${getItemLabel(item)} sobre ${data.sobre}`;
+  const text = `${getItemLabel(item)} (sobre ${data.sobre})`;
   const message = `${text}:\n${url}\n`;
 
   return (

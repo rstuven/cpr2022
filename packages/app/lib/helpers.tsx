@@ -256,7 +256,7 @@ export function getArticuloContextCapituloTituloLabel(
   fragmento: ArticuloContext
 ) {
   return `${getItemLabel(fragmento.capitulo)}${
-    fragmento.titulo ? " - " + getItemLabel(fragmento.titulo) : ""
+    fragmento.titulo ? " / " + getItemLabel(fragmento.titulo) : ""
   }`;
 }
 

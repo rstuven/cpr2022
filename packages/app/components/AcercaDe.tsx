@@ -1,11 +1,57 @@
 import Image, { ImageLoader } from "next/image";
+import { IconType } from "react-icons";
+import { BsWhatsapp, BsTwitter, BsTelegram, BsFacebook } from "react-icons/bs";
 import { AppNavbar } from "components/AppNavbar";
 import Indice from "./Indice";
+import * as ga from "lib/ga";
+
+const shareUrl = "https://cpr2022.cl";
+const shareMessage =
+  "Versión interactiva de la propuesta de nueva Constitución. " +
+  "Optimizada para leer el texto de forma contextualizada " +
+  "y para usarla como insumo de conversaciones y debates. " +
+  "Explora y comparte.";
+
+if (shareMessage.length > 255) {
+  throw new Error("Message too long for Twitter");
+}
+
+const shareMessageUrl = `${shareMessage} ${shareUrl}`;
+
+const shareTwitter =
+  "https://twitter.com/intent/tweet?text=" +
+  encodeURIComponent(shareMessageUrl);
+
+const shareFacebook =
+  "https://www.facebook.com/sharer/sharer.php?display=page&u=" +
+  encodeURIComponent(shareUrl);
+
+const shareWhatsapp =
+  "https://api.whatsapp.com/send/?text=" + encodeURIComponent(shareMessageUrl);
+
+const shareTelegram =
+  "https://telegram.me/share/url?url=" +
+  encodeURIComponent(shareUrl) +
+  "&text=" +
+  encodeURIComponent(shareMessage);
+
+const buildShareLink = (title: string, Icon: IconType, href: string) => (
+  <a
+    title={title}
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    onClick={() => ga.event({ action: "share", params: { title } })}
+  >
+    <Icon size={18} />
+  </a>
+);
+
+const imageLoader: ImageLoader = (props) => {
+  return props.src;
+};
 
 export default function AcercaDe({}) {
-  const imageLoader: ImageLoader = (props) => {
-    return props.src;
-  };
   return (
     <>
       <div className="h-screen overflow-hidden">
@@ -19,15 +65,25 @@ export default function AcercaDe({}) {
             />
           </aside>
           <div className="bg-gray-100 h-screen overflow-y-scroll overscroll-contain mt-[-62px] pt-20 pb-10 md:col-span-5 grid justify-center">
-            <div className="prose px-10">
+            <div className="prose px-10 leading-6">
               <h1 className="font-normal">¿Qué es esto?</h1>
-              <p>
-                Esta es una versión interactiva de la propuesta de Nueva
-                Constitución. Su objetivo es ser una herramienta práctica para
-                leer la propuesta de forma contextualizada, aprovechando al
-                máximo las ventajas del hipertexto, y para ser usada como insumo
-                de conversaciones y debates.
-              </p>
+
+              <div className="rounded-xl bg-white p-5 pb-10 drop-shadow-xl">
+                <div className="text-lg">
+                  Este sitio es una versión interactiva de la propuesta de nueva
+                  Constitución. Su objetivo es ser una herramienta práctica para
+                  leer la propuesta de forma contextualizada, aprovechando al
+                  máximo las ventajas del hipertexto, y para usar como insumo de
+                  conversaciones y debates.
+                </div>
+                <div className="float-right pt-2 text-sm flex gap-2">
+                  Compartir en:
+                  {buildShareLink("Twitter", BsTwitter, shareTwitter)}
+                  {buildShareLink("Facebook", BsFacebook, shareFacebook)}
+                  {buildShareLink("WhatsApp", BsWhatsapp, shareWhatsapp)}
+                  {buildShareLink("Telegram", BsTelegram, shareTelegram)}
+                </div>
+              </div>
 
               <h2>Funcionalidades</h2>
 

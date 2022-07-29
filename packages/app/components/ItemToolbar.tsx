@@ -1,4 +1,4 @@
-import { ReactNode, useContext } from "react";
+import { ReactNode, useCallback, useContext } from "react";
 import { IconType } from "react-icons/lib/cjs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import {
@@ -10,13 +10,14 @@ import {
 } from "react-icons/bs";
 import { Popover } from "@mantine/core";
 import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
-import useRenderOnActivation from "hooks/useRenderOnActivation"
+import useRenderOnActivation from "hooks/useRenderOnActivation";
 import {
   getItemLabel,
   isFragmentoIdMatch,
   getItemTypeLabel,
   classNames,
 } from "lib/helpers";
+import * as ga from "lib/ga";
 import Tooltip from "./Tooltip";
 import { HashContext } from "./HashProvider";
 
@@ -139,6 +140,9 @@ function ExternalLinkItem({
   label: string;
   url: string;
 }) {
+  const onClick = useCallback(() => {
+    ga.event({ action: "external_link", params: { label } });
+  }, [label]);
   return (
     <li className={classNames("block", "py-1", "text-sm text-gray-700")}>
       <div className="flex">
@@ -146,6 +150,7 @@ function ExternalLinkItem({
         &nbsp;
         <a
           href={url}
+          onClick={onClick}
           target="_blank"
           rel="noreferrer"
           className="no-underline hover:underline w-full"

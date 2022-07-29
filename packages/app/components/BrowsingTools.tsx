@@ -1,6 +1,12 @@
 import { useCallback, useEffect, useRef } from "react";
 import { GrFormClose } from "react-icons/gr";
-import { classNames, debounce, ItemFilter } from "lib/helpers";
+import {
+  classNames,
+  debounce,
+  getItemByOid,
+  getItemFragmentoId,
+  ItemFilter,
+} from "lib/helpers";
 
 export default function BrowsingTools(props: {
   open: boolean;
@@ -22,6 +28,16 @@ export default function BrowsingTools(props: {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         props.onClose();
+      }
+      if (e.key === "Enter") {
+        const articulo = props.filter.oids
+          .map((oid) => getItemByOid(oid))
+          .find((item) => item.type == "articulo");
+        if (articulo) {
+          const hash = getItemFragmentoId(articulo);
+          props.onClose();
+          location.hash = hash;
+        }
       }
     };
     document.addEventListener("keydown", handler, false);
@@ -50,7 +66,7 @@ export default function BrowsingTools(props: {
           ref={filterInput}
           autoFocus
           tabIndex={0}
-          placeholder="Filtro (mínimo 4 caracteres)"
+          placeholder="Artículo o texto (mín. 4 caracteres)"
           className="border rounded p-2 h-8 w-full placeholder:text-sm placeholder:text-gray-400"
           type="text"
           onChange={onFilterChange}

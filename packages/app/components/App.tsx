@@ -6,7 +6,12 @@ import { AppNavbar } from "./AppNavbar";
 import { HashProvider } from "./HashProvider";
 import { SmallMediaProvider } from "./SmallMediaProvider";
 import BrowsingTools from "./BrowsingTools";
-import { prepareRegex, filterItems, ItemFilter } from "lib/helpers";
+import {
+  prepareRegex,
+  filterItems,
+  ItemFilter,
+  getParentOfType,
+} from "lib/helpers";
 import useMediaQuery from "hooks/useMediaQuery";
 
 export default function App() {
@@ -87,7 +92,16 @@ function getItemFilter(filter: string) {
   } else {
     const regex = new RegExp(prepareRegex(filter), "ig");
     const filterResult = filterItems((item) => {
-      if (filter.length < 4) return 0;
+      if (filter.length < 4) {
+        const articulo =
+          item.type == "articulo"
+            ? item
+            : item.type == "inciso" && getParentOfType(item, "articulo");
+        if (articulo && filter == String(articulo.key)) {
+          return 1;
+        }
+        return 0;
+      }
       const content = item.content ?? "";
       const matches = Array.from(content.matchAll(regex));
       return matches.length;

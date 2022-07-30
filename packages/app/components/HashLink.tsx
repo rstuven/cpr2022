@@ -13,11 +13,7 @@ type HashLinkProps = PropsWithChildren<{
 
 export default function HashLink(props: HashLinkProps) {
   if (props.anchor) {
-    const title = (
-      <div className="indent-0">
-        {props.title ?? "Enlace a " + props.anchor}
-      </div>
-    );
+    const title = props.title ?? "Enlace a " + props.anchor;
     return (
       <div className="inline-block">
         <a

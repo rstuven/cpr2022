@@ -7,7 +7,7 @@ export default function Tooltip(props: TooltipProps): JSX.Element {
     useRenderOnActivation();
   return (
     <div
-      className="inline"
+      className="inline indent-0"
       onMouseOver={onMouseOver}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}

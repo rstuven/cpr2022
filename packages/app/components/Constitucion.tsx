@@ -11,7 +11,7 @@ export default function Constitucion({ filter }: { filter: ItemFilter }) {
   return (
     <AudioProvider>
       <div className="prose px-3 sm:px-10 font-ConvencionFJ">
-        <a data-id="inicio" />
+        <a data-id="inicio" tabIndex={0} />
         <h1 className="text-center font-normal">
           <TitleCase
             lowercaseClass="text-3xl"

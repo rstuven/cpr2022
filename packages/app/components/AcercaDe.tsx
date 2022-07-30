@@ -116,9 +116,9 @@ export default function AcercaDe({}) {
               <h3>Compartir en redes sociales</h3>
               <p>
                 Si bien es posible compartir un enlace directo, al usar la
-                funcionalidad para compartir en redes, se incluye también una
-                imagen con un extracto del artículo o de la disposición
-                transitoria enlazada.
+                opción &ldquo;Copiar enlace&rdquo; o &ldquo;Compartir
+                en...&rdquo;, se incluye también una imagen con un extracto del
+                artículo o de la disposición transitoria enlazada.
               </p>
 
               <div className="text-center">
@@ -137,8 +137,9 @@ export default function AcercaDe({}) {
               </div>
 
               <p>
-                Si un inciso está resaltado en el artículo o la disposición
-                transitoria, se compartirá un enlace directo a ese inciso.
+                Además, si un inciso está resaltado en el artículo o la
+                disposición transitoria, se compartirá un enlace directo a ese
+                inciso.
               </p>
 
               <h3>Número de página y enlace a página en el PDF oficial</h3>

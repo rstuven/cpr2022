@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useContext } from "react";
+import { ReactNode, useCallback, useContext, useState } from "react";
 import { IconType } from "react-icons/lib/cjs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import {
@@ -8,6 +8,8 @@ import {
   BsTelegram,
   BsFacebook,
 } from "react-icons/bs";
+import { VscCopy } from "react-icons/vsc";
+
 import { Popover } from "@mantine/core";
 import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
 import useRenderOnActivation from "hooks/useRenderOnActivation";
@@ -87,6 +89,18 @@ function ItemDropdown({ path, item }: { path: string; item: ItemObject }) {
   const text = `${getItemLabel(item)} (sobre ${data.sobre})`;
   const message = `${text}:\n${url}\n`;
 
+  const copyLabelDefault = "Copiar enlace";
+  const [copyLabel, setCopyLabel] = useState(copyLabelDefault);
+
+  const onClickCopy = useCallback(() => {
+    navigator.clipboard.writeText(url).then(() => {
+      setCopyLabel("¡Copiado!");
+      setTimeout(() => {
+        setCopyLabel(copyLabelDefault);
+      }, 1000);
+    });
+  }, [url]);
+
   return (
     <>
       <ExternalLinkItem
@@ -97,7 +111,11 @@ function ItemDropdown({ path, item }: { path: string; item: ItemObject }) {
           (data.pagina + 4)
         }
       />
-
+      <ExternalLinkItem
+        icon={VscCopy}
+        label={copyLabel}
+        onClick={onClickCopy}
+      />
       <ExternalLinkItem
         icon={BsTwitter}
         label="Compartir en Twitter"
@@ -113,18 +131,16 @@ function ItemDropdown({ path, item }: { path: string; item: ItemObject }) {
           encodeURIComponent(url)
         }
       />
-
       <ExternalLinkItem
         icon={BsWhatsapp}
-        label="Compartir vía WhatsApp"
+        label="Compartir en WhatsApp"
         url={`https://api.whatsapp.com/send/?text=${encodeURIComponent(
           message
         )}`}
       />
-
       <ExternalLinkItem
         icon={BsTelegram}
-        label="Compartir vía Telegram"
+        label="Compartir en Telegram"
         url={`https://telegram.me/share/url?url=${encodeURIComponent(url)}`}
       />
     </>
@@ -135,14 +151,17 @@ function ExternalLinkItem({
   icon: Icon,
   label,
   url,
+  onClick,
 }: {
   icon: IconType;
   label: string;
-  url: string;
+  url?: string;
+  onClick?: () => void;
 }) {
-  const onClick = useCallback(() => {
+  const onClick2 = useCallback(() => {
+    onClick && onClick();
     ga.event({ action: "external_link", params: { label } });
-  }, [label]);
+  }, [label, onClick]);
   return (
     <li className={classNames("block", "py-1", "text-sm text-gray-700")}>
       <div className="flex">
@@ -150,10 +169,10 @@ function ExternalLinkItem({
         &nbsp;
         <a
           href={url}
-          onClick={onClick}
+          onClick={onClick2}
           target="_blank"
           rel="noreferrer"
-          className="no-underline hover:underline w-full"
+          className="no-underline hover:underline w-full cursor-pointer"
         >
           {label}
         </a>

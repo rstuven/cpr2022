@@ -38,7 +38,7 @@ export default function Articulo({
   return (
     <div
       data-hash={path}
-      className="border border-solid rounded-md p-3 px-0 mb-3"
+      className="border border-solid rounded-lg p-3 pb-0 px-0 mb-3"
     >
       <ItemToolbar path={path} item={item} />
       <HashLink hash={path} anchor="artículo" classNameOuter="float-left" />

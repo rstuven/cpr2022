@@ -59,8 +59,8 @@ export default function Inciso(props: IncisoProps) {
       data-hash={path}
       className={classNames(
         `mt-1 leading-6 rounded-lg pr-2 py-1`,
-        indent ? "pl-[3.4rem]" : "pl-8",
-        indent ? "-indent-10" : "-indent-8"
+        indent ? "pl-[3.4rem]" : "pl-9",
+        indent ? "-indent-10" : "-indent-9"
       )}
     >
       <HashLink

@@ -298,6 +298,10 @@ export default function AcercaDe({}) {
                 página del PDF.
               </p>
               <p>
+                Audios generados por{" "}
+                <a href="https://github.com/rmaureira">Robinson Maureira</a>.
+              </p>
+              <p>
                 Proyecto desarrollado con ❤️ por Ricardo Stuven. Código fuente
                 disponible en{" "}
                 <a href="https://github.com/rstuven/cpr2022">GitHub</a>.

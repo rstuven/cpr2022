@@ -1,3 +1,4 @@
+import { Badge } from "flowbite-react";
 import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
 import {
   firstToUpperCase,
@@ -9,6 +10,7 @@ import {
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
 import ItemToolbar from "./ItemToolbar";
+import AudioBadge from "./AudioBadge";
 
 export default function Transitoria({
   item,
@@ -25,15 +27,16 @@ export default function Transitoria({
   return (
     <div data-hash={path} className="border border-solid rounded-md p-3 mb-3">
       <ItemToolbar path={path} item={item} />
-      <h3 className="my-0 rounded">
+      <span className="font-sans flex flex-wrap gap-1 text-base">
         <HashLink hash={path} anchor="disposición transitoria" />{" "}
-        {getItemLabel(item)}{" "}
+        <b className="text-black mx-1 font-ConvencionFJ">
+          {getItemLabel(item)}
+        </b>
+        <AudioBadge fragmentoId={path} />
         {data.sobre && (
-          <span className="font-sans rounded-md text-sm font-normal  bg-gray-300 text-black px-2 py-1">
-            {firstToUpperCase(data.sobre)}
-          </span>
+          <Badge color="purple"> {firstToUpperCase(data.sobre)}</Badge>
         )}
-      </h3>
+      </span>
 
       {getChildrenOfType(item, "inciso").map((inciso, incisoIndex) => (
         <Inciso

@@ -17,6 +17,7 @@
     "next-pwa": "^5.5.4",
     "react": "^17",
     "react-dom": "^17",
+    "react-howler": "^5.2.0",
     "react-is": "^17.0.2",
     "react-use-pwa-install": "^0.2.1",
     "tslib": "^2.4.0"
@@ -26,6 +27,7 @@
     "@types/extract-domain": "^2.3.1",
     "@types/node": "^18.0.5",
     "@types/react": "18.0.1",
+    "@types/react-howler": "^5.2.0",
     "autoprefixer": "^10.4.7",
     "bun-framework-next": "^12",
     "canvas": "^2.9.3",

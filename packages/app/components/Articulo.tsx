@@ -20,6 +20,7 @@ import {
 import Tooltip from "./Tooltip";
 import ItemToolbar from "./ItemToolbar";
 import EnlacesHacia from "./EnlacesHacia";
+import AudioBadge from "./AudioBadge";
 
 export default function Articulo({
   item,
@@ -42,7 +43,8 @@ export default function Articulo({
         <b className="text-black mx-1 font-ConvencionFJ">
           {getItemLabel(item)}
         </b>
-        <Badge color="gray"> {firstToUpperCase(data.sobre)}</Badge>
+        <AudioBadge fragmentoId={path} />
+        <Badge color="purple"> {firstToUpperCase(data.sobre)}</Badge>
         {data.etiquetas.map((etiqueta, index) => (
           <BadgeEtiquetas key={index} etiqueta={etiqueta} item={item} />
         ))}

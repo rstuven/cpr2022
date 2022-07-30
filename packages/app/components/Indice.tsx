@@ -97,7 +97,7 @@ function RootItem({ item, filter }: { item: ItemObject; filter: ItemFilter }) {
   return (
     <li className={rootItem()}>
       <HashLink
-        className={rootLink(isHighlighted, titulos.length > 0)}
+        classNameLink={rootLink(isHighlighted, titulos.length > 0)}
         hash={path}
       >
         {getItemLabel(item)}
@@ -139,7 +139,7 @@ function Titulo(props: TituloProps) {
   }
   return (
     <li className={tituloItem(isHighlighted)}>
-      <HashLink hash={props.path} className={tituloLink(isHighlighted)}>
+      <HashLink hash={props.path} classNameLink={tituloLink(isHighlighted)}>
         {props.titulo.label}
       </HashLink>
     </li>

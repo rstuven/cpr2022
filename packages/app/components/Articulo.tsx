@@ -36,11 +36,14 @@ export default function Articulo({
   const data = item.data as CommonData;
   const enlacesDesde = getEnlacesDesde(path, true);
   return (
-    <div data-hash={path} className="border border-solid rounded-md p-3 mb-3">
+    <div
+      data-hash={path}
+      className="border border-solid rounded-md p-3 px-0 mb-3"
+    >
       <ItemToolbar path={path} item={item} />
-      <span className="font-sans flex flex-wrap gap-1 text-base">
-        <HashLink hash={path} anchor="artículo" />
-        <b className="text-black mx-1 font-ConvencionFJ">
+      <HashLink hash={path} anchor="artículo" classNameOuter="float-left" />
+      <span className="font-sans flex flex-wrap gap-1 text-base pl-3">
+        <b className="text-black mr-1 font-ConvencionFJ">
           {getItemLabel(item)}
         </b>
         <AudioBadge fragmentoId={path} />

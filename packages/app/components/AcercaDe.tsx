@@ -1,6 +1,7 @@
 import Image, { ImageLoader } from "next/image";
 import { IconType } from "react-icons";
 import { BsWhatsapp, BsTwitter, BsTelegram, BsFacebook } from "react-icons/bs";
+import { BiBookmarks } from "react-icons/bi";
 import { AppNavbar } from "components/AppNavbar";
 import Indice from "./Indice";
 import * as ga from "lib/ga";
@@ -92,10 +93,12 @@ export default function AcercaDe({}) {
                 disposiciones transitorias.
               </h3>
               <p>
-                El símbolo ¶ que aparece a la izquierda de que cada párrafo es
-                un enlace directo al párrafo y que además lo resalta. Se puede
-                usar como marcador para luego navegar hacia atrás. Los enlaces
-                en la tabla de contenidos cumplen la misma función.
+                El símbolo{" "}
+                <BiBookmarks className="inline text-gray-500" size={20} /> que
+                aparece a la izquierda de que cada párrafo es un enlace directo
+                al párrafo y que además lo resalta. Se puede usar como marcador
+                para luego navegar hacia atrás. Los enlaces en la tabla de
+                contenidos cumplen la misma función.
               </p>
 
               <div className="text-center">

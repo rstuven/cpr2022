@@ -1,10 +1,13 @@
 import { PropsWithChildren } from "react";
+import { BiBookmarks } from "react-icons/bi";
+
 import { classNames } from "lib/helpers";
 import Tooltip from "./Tooltip";
 
 type HashLinkProps = PropsWithChildren<{
   hash: string;
-  className?: string;
+  classNameLink?: string;
+  classNameOuter?: string;
   title?: string;
   anchor?: string;
   visible?: boolean;
@@ -15,19 +18,21 @@ export default function HashLink(props: HashLinkProps) {
   if (props.anchor) {
     const title = props.title ?? "Enlace a " + props.anchor;
     return (
-      <div className="inline-block">
+      <div className={classNames(props.classNameOuter, "inline-block")}>
         <a
           className={classNames(
-            props.className,
-            "font-sans text-gray-300 no-underline",
+            props.classNameLink,
+            "text-amber-600/30",
             props.visible === false && "invisible"
           )}
           href={"/#" + props.hash}
           data-id={props.hash}
         >
-          <Tooltip placement="left" content={title}>
-            <div className={props.indent ? "-indent-3" : ""}>¶</div>
-          </Tooltip>
+          <div className={props.indent ? "-indent-3 -ml-2.5" : "pl-1"}>
+            <Tooltip placement="left" content={title}>
+              <BiBookmarks className="p-0 -mb-1" size={20} />
+            </Tooltip>
+          </div>
         </a>
       </div>
     );
@@ -35,7 +40,7 @@ export default function HashLink(props: HashLinkProps) {
   return (
     <a
       className={classNames(
-        props.className,
+        props.classNameLink,
         props.visible === false && "invisible"
       )}
       href={"/#" + props.hash}

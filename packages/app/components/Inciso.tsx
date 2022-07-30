@@ -58,12 +58,17 @@ export default function Inciso(props: IncisoProps) {
     <div
       data-hash={path}
       className={classNames(
-        `mt-2 leading-6 rounded`,
-        indent && `pl-[43px]`,
-        indent && `-indent-[30px]`
+        `mt-1 leading-6 rounded-lg pr-2 py-1`,
+        indent ? "pl-[3.4rem]" : "pl-8",
+        indent ? "-indent-10" : "-indent-8"
       )}
     >
-      <HashLink indent={indent} hash={path} anchor="inciso" /> <b>{bullet}</b>
+      <HashLink
+        indent={indent}
+        hash={path}
+        anchor={typeof props.item.key == "string" ? "letra" : "inciso"}
+      />{" "}
+      <b>{bullet}</b>
       &nbsp;&nbsp;
       {inject(props.item.content ?? "", injections)}
       <div className="flex gap-1">

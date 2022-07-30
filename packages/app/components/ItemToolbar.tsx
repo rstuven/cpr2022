@@ -29,7 +29,7 @@ export default function ItemToolbar({
   item: ItemObject;
 }) {
   return (
-    <div className="ml-1 float-right flex gap-2 font-sans">
+    <div className="ml-1 mr-2 float-right flex gap-2 font-sans">
       <PopoverWrapper
         target={
           <div className="cursor-pointer">

@@ -8,6 +8,7 @@ export function useHashScrolling(
   index?: boolean
 ) {
   const hash = useRef<string | undefined>();
+  const isSafari = navigator.userAgent.includes("Safari")
 
   useEffect(() => {
     const scroll = (behavior: ScrollBehavior) => {
@@ -23,7 +24,7 @@ export function useHashScrolling(
 
       if (!element || element.offsetTop == 0) return false;
 
-      if (defaultBehavior == "auto") {
+      if (defaultBehavior == "auto" && !isSafari) {
         element.focus();
         element.blur();
       } else {

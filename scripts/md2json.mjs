@@ -31,6 +31,7 @@ const constitucionNested = {
 
 const constitucionShallow = {
   enlaces: metadatos.enlaces,
+  glossary: metadatos.glossary,
   items: {
     [preambuloOid]: {
       oid: preambuloOid,

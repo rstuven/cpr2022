@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { IconType } from "react-icons/lib/cjs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import {
@@ -10,9 +10,7 @@ import {
 } from "react-icons/bs";
 import { VscCopy } from "react-icons/vsc";
 
-import { Popover } from "@mantine/core";
 import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
-import useRenderOnActivation from "hooks/useRenderOnActivation";
 import {
   getItemLabel,
   isFragmentoIdMatch,
@@ -22,6 +20,7 @@ import {
 import * as ga from "lib/ga";
 import Tooltip from "./Tooltip";
 import { HashContext } from "./HashProvider";
+import Popover from "./Popover";
 
 export default function ItemToolbar({
   path,
@@ -32,7 +31,9 @@ export default function ItemToolbar({
 }) {
   return (
     <div className="ml-1 mr-2 float-right flex gap-2 font-sans">
-      <PopoverWrapper
+      <Popover
+        width={240}
+        className="cursor-pointer"
         target={
           <div className="cursor-pointer">
             <Tooltip content={"Acciones sobre " + getItemTypeLabel(item.type)}>
@@ -42,35 +43,6 @@ export default function ItemToolbar({
         }
         dropdown={<ItemDropdown path={path} item={item} />}
       />
-    </div>
-  );
-}
-
-// Wrap to defer dropdown rendering and improve perfomance
-function PopoverWrapper({
-  target,
-  dropdown,
-}: {
-  target: ReactNode;
-  dropdown: ReactNode;
-}) {
-  const { render, onMouseOver, onTouchMove, onTouchEnd, onFocus } =
-    useRenderOnActivation();
-  return render ? (
-    <Popover width={240} shadow="md" withArrow>
-      <Popover.Target>{target}</Popover.Target>
-      <Popover.Dropdown>{dropdown}</Popover.Dropdown>
-    </Popover>
-  ) : (
-    <div
-      tabIndex={0}
-      className="cursor-pointer"
-      onMouseOver={onMouseOver}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-      onFocus={onFocus}
-    >
-      {target}
     </div>
   );
 }

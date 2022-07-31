@@ -1,6 +1,7 @@
 export type ConstitucionShallow = {
   readonly items: Record<string, ItemObject>;
   readonly enlaces: ReadonlyArray<Enlace>;
+  readonly glossary: ReadonlyArray<GlossaryEntry>;
 };
 
 export type ItemType =
@@ -46,4 +47,13 @@ export type Enlace = {
   readonly texto?: string;
   readonly etiqueta?: string;
   readonly autor?: string;
+};
+
+export type GlossaryEntry = {
+  readonly title: string;
+  readonly ignoreCase: boolean;
+  readonly aliases: ReadonlyArray<string>;
+  readonly content: string;
+  readonly author: string;
+  readonly source: string;
 };

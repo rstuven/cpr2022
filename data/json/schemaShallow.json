@@ -34,13 +34,20 @@
           },
           "type": "array"
         },
+        "glossary": {
+          "items": {
+            "$ref": "#/definitions/GlossaryEntry"
+          },
+          "type": "array"
+        },
         "items": {
           "$ref": "#/definitions/Record%3Cstring%2CItemObject%3E"
         }
       },
       "required": [
         "items",
-        "enlaces"
+        "enlaces",
+        "glossary"
       ],
       "type": "object"
     },
@@ -66,6 +73,41 @@
       "required": [
         "desde",
         "hacia"
+      ],
+      "type": "object"
+    },
+    "GlossaryEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "author": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "ignoreCase": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "ignoreCase",
+        "aliases",
+        "content",
+        "author",
+        "source"
       ],
       "type": "object"
     },

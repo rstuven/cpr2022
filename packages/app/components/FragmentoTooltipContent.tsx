@@ -61,9 +61,9 @@ export default function FragmentoTooltipContent({
       </div>
       {incisoContent && (
         <div className="mt-2">
-          &quot;
-          <span className="font-ConvencionFJ">{incisoContent}</span>
-          &quot;
+          &ldquo;
+          <span className="font-ConvencionFJ">{incisoContent.trim()}</span>
+          &rdquo;
         </div>
       )}
     </div>

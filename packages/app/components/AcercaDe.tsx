@@ -282,7 +282,8 @@ export default function AcercaDe({}) {
                 .
               </p>
               <p>
-                Las etiquetas enlazadas están basadas en su mayoría en las de{" "}
+                Las definiciones de conceptos y las etiquetas enlazadas están
+                basadas en su mayoría en las de{" "}
                 <a href="https://nuevaconstitucion.tiddlyhost.com/">
                   este TiddlyWiki
                 </a>{" "}

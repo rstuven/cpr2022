@@ -3807,6 +3807,117 @@
       "pagina": 162
     }
   ],
+  "glossary": [
+    {
+      "title": "Asamblea Constituyente",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Cuerpo colegiado conformado por un grupo de ciudadanos y ciudadanas electos por sufragio popular para discutir y diseñar exclusivamente un nuevo texto y orden constitucional y no para ejercer facultades legislativas” (PNUD 2015). Una Asamblea o Convención Constituyente contemporánea suele caracterizarse por: \n\na) ser íntegramente electa, \n\nb) tener por misión exclusiva la escritura de una Constitución, c) disolverse una vez terminado su mandato.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "Biodiversidad",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Biodiversidad es un sinónimo del concepto “diversidad biológica”, que comprende la variabilidad de los organismos vivos que forman parte de todos los ecosistemas terrestres y acuáticos. Incluye la diversidad dentro de una misma especie, entre especies y entre ecosistemas.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "ciudadanía",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Desde el punto de vista constitucional, se refiere a las personas que tiene ciertos derechos políticos y civiles y que cumplen con ciertos requisitos (usualmente edad y nacionalidad)",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "Contraloría General de la República",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Institución autónoma del Estado encargada de velar por el buen uso de los recursos públicos o del Estado y que se ajusten a los procedimientos administrativos establecidos en la ley.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "Estado",
+      "aliases": [],
+      "ignoreCase": false,
+      "content": "Organización política y administrativa que controla el monopolio de la fuerza, posee un sistema de administración, se organiza en un territorio y es reconocida por otros estados como tal",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "Estado social y democrático de derecho",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Es un sistema que pretende generar, a través de las políticas de Estado, un mayor bienestar social. Esto implica que el Estado tenga un rol activo en facilitar nuevas y mejores condiciones para el desarrollo individual y social. Así, se abandona el concepto de Estado subsidiario, implícito en la actual Constitución, que entrega principalmente a los privados el cumplimiento de los derechos sociales, desligando del Estado la responsabilidad de garantizarlos.",
+      "author": "ChileConvención",
+      "source": "https://www.chileconvencion.cl/news_cconstitucional/que-significa-que-chile-sea-un-estado-social-y-democratico-de-derecho%EF%BF%BC/"
+    },
+    {
+      "title": "Estado subsidiario",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Alude a un principio mediante el cual el Estado solo debe actuar por el bien común cuando ya sea empresarios u otros actores de la sociedad no pueden o no están interesados en satisfacer ciertas funciones en la sociedad.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "Fuerzas Armadas",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Instituciones del Estado que controlan el monopolio de la fuerza y que tienen por función la defensa de la nación respecto de amenazas externas. Constitucionalmente suele esablecerse que por concentrar el poder de las armas deben ser subordinadas al poder político, no deliberantes y profesionales",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "libertad de prensa",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Refiere a las garantías constitucionales o legales que se deben establecer para que el ejercicio de comunicación y difusión periodística a través de medios escritos, audiovisuales y de redes sociales, se realice libremente, sin amedrentamientos o cualquier tipo de coerción que pueda provenir del Estado u otros actores.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "paridad",
+      "aliases": [
+        "paritaria",
+        "paritario"
+      ],
+      "ignoreCase": true,
+      "content": "Se trata de un principio utilizado para garantizar la igualdad entre hombres y mujeres en el acceso a cargos de representación política",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "plurinacionalidad",
+      "aliases": [
+        "plurinacional"
+      ],
+      "ignoreCase": true,
+      "content": "Concepto que alude al reconocimiento dentro de un Estado de diversas naciones o pueblos que tienen características históricas, culturales y territoriales propias pero que aceptan convivir en un un mismo territorio",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "república",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Organización del Estado. En la actualidad se asocia con una forma de Estado que es representada por un Presidente elegido por sus ciudadanos.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "transparencia",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Se relaciona con el derecho de acceso a la información pública. La transparencia activa implica una obligación para los organismos públicos de mantener a disposición general cierta información. La transparencia pasiva es el mecanismo a traves del cual las personas pueden solicitar y recibir información de cualquier órgano de la Administración del Estado, en la forma y condiciones que establece la ley.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    }
+  ],
   "enlaces": [
     {
       "desde": "articulo:1@capitulo:1",

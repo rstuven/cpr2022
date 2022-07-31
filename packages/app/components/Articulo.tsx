@@ -5,9 +5,7 @@ import Inciso from "./Inciso";
 
 import { CgExternal } from "react-icons/cg";
 import { HiOutlineChevronDown } from "react-icons/hi";
-import { HoverCard } from "@mantine/core";
 import { CommonData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
-import useRenderOnActivation from "hooks/useRenderOnActivation";
 import {
   getChildrenOfType,
   getItemFragmentoId,
@@ -21,6 +19,7 @@ import Tooltip from "./Tooltip";
 import ItemToolbar from "./ItemToolbar";
 import EnlacesHacia from "./EnlacesHacia";
 import AudioBadge from "./AudioBadge";
+import HoverCard from "./HoverCard";
 
 export default function Articulo({
   item,
@@ -101,7 +100,10 @@ function BadgeEtiquetas(props: {
   }
   return (
     <Badge color="pink">
-      <HoverCardWrapper
+      <HoverCard
+        width={330}
+        openDelay={200}
+        className="cursor-pointer"
         target={
           <div className="cursor-pointer">
             <div className="flex">
@@ -128,42 +130,5 @@ function BadgeEtiquetas(props: {
         }
       />
     </Badge>
-  );
-}
-
-// Wrap to defer dropdown rendering and improve perfomance
-function HoverCardWrapper({
-  target,
-  dropdown,
-}: {
-  target: JSX.Element;
-  dropdown: JSX.Element;
-}) {
-  const { render, onMouseOver, onTouchMove, onTouchEnd, onFocus } =
-    useRenderOnActivation();
-
-  return render ? (
-    <HoverCard
-      width={330}
-      shadow="md"
-      withArrow
-      openDelay={200}
-      closeDelay={400}
-      initiallyOpened
-    >
-      <HoverCard.Target>{target}</HoverCard.Target>
-      <HoverCard.Dropdown>{dropdown}</HoverCard.Dropdown>
-    </HoverCard>
-  ) : (
-    <div
-      tabIndex={0}
-      className="cursor-pointer"
-      onMouseOver={onMouseOver}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-      onFocus={onFocus}
-    >
-      {target}
-    </div>
   );
 }

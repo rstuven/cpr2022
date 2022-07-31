@@ -1,4 +1,9 @@
-import { Enlace, ItemObject } from "cpr2022-data/src/types/schemaShallow";
+import {
+  Enlace,
+  GlossaryEntry,
+  ItemObject,
+} from "cpr2022-data/src/types/schemaShallow";
+import { constitucionShallow as constitucion } from "cpr2022-data";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import extractDomain from "extract-domain";
 import {
@@ -17,6 +22,8 @@ import Tooltip from "./Tooltip";
 import EnlacesHacia from "./EnlacesHacia";
 import FragmentoTooltipContent from "./FragmentoTooltipContent";
 import { SmallMediaContext } from "./SmallMediaProvider";
+import Popover from "./Popover";
+import HoverCard from "./HoverCard";
 
 type IncisoProps = {
   item: ItemObject;
@@ -54,6 +61,18 @@ export default function Inciso(props: IncisoProps) {
       render: renderHighlight,
     });
   }
+  const entries = constitucion.glossary.flatMap((entry) =>
+    entry.aliases.map((alias) => ({ ...entry, title: alias })).concat(entry)
+  );
+  entries.sort((a, b) => (a.title.length > b.title.length ? -1 : 1));
+  entries.forEach((entry) => {
+    injections.push({
+      text: entry.title,
+      value: entry,
+      ignoreCase: entry.ignoreCase,
+      render: renderGlossary,
+    });
+  });
   return (
     <div
       data-hash={path}
@@ -101,6 +120,40 @@ const renderHighlight = (
     <span key={key} className="bg-amber-400">
       {match}
     </span>
+  );
+};
+
+const renderGlossary = (
+  entry: GlossaryEntry,
+  match: string,
+  key: number
+): JSX.Element => {
+  return (
+    <HoverCard
+      width={500}
+      openDelay={600}
+      className="inline"
+      target={
+        <span
+          key={key}
+          className="underline decoration-2 decoration-dotted decoration-green-500 cursor-default"
+        >
+          {match}
+        </span>
+      }
+      dropdown={
+        // <div className="indent-0 text-sm text-white bg-black">
+        <div className="indent-0 text-sm font-sans flex flex-col gap-2">
+          <div className="max-w-md italic">{entry.content}</div>
+          <div>
+            Fuente:{" "}
+            <a href={entry.source} target="_blank" rel="noreferrer">
+              {entry.author}
+            </a>
+          </div>
+        </div>
+      }
+    />
   );
 };
 
@@ -159,7 +212,9 @@ function inject(text: string, injections: Injection[]) {
       const escapedRegExp = prepareRegex(injection.text);
       const regexFlags = (injection.ignoreCase ? "i" : "") + "g";
 
-      const matches = result.match(new RegExp(escapedRegExp, regexFlags));
+      const matches = result.match(
+        new RegExp("\\b" + escapedRegExp + "\\b", regexFlags)
+      );
       if (matches == null) {
         return result;
       }

@@ -102,7 +102,7 @@ function BadgeEtiquetas(props: {
     <Badge color="pink">
       <HoverCard
         width={330}
-        openDelay={200}
+        openDelay={600}
         className="cursor-pointer"
         target={
           <div className="cursor-pointer">

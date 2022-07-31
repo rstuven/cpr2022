@@ -22,7 +22,6 @@ import Tooltip from "./Tooltip";
 import EnlacesHacia from "./EnlacesHacia";
 import FragmentoTooltipContent from "./FragmentoTooltipContent";
 import { SmallMediaContext } from "./SmallMediaProvider";
-import Popover from "./Popover";
 import HoverCard from "./HoverCard";
 
 type IncisoProps = {
@@ -62,12 +61,12 @@ export default function Inciso(props: IncisoProps) {
     });
   }
   const entries = constitucion.glossary.flatMap((entry) =>
-    entry.aliases.map((alias) => ({ ...entry, title: alias })).concat(entry)
+    entry.aliases.map((alias) => ({ ...entry, search: alias })).concat({...entry, search: entry.title})
   );
   entries.sort((a, b) => (a.title.length > b.title.length ? -1 : 1));
   entries.forEach((entry) => {
     injections.push({
-      text: entry.title,
+      text: entry.search,
       value: entry,
       ignoreCase: entry.ignoreCase,
       render: renderGlossary,
@@ -130,7 +129,7 @@ const renderGlossary = (
 ): JSX.Element => {
   return (
     <HoverCard
-      width={500}
+      width={400}
       openDelay={600}
       className="inline"
       target={
@@ -144,6 +143,7 @@ const renderGlossary = (
       dropdown={
         // <div className="indent-0 text-sm text-white bg-black">
         <div className="indent-0 text-sm font-sans flex flex-col gap-2">
+          <div className="font-bold">{entry.title}</div>
           <div className="max-w-md italic">{entry.content}</div>
           <div>
             Fuente:{" "}

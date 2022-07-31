@@ -3916,6 +3916,76 @@
       "content": "Se relaciona con el derecho de acceso a la información pública. La transparencia activa implica una obligación para los organismos públicos de mantener a disposición general cierta información. La transparencia pasiva es el mecanismo a traves del cual las personas pueden solicitar y recibir información de cualquier órgano de la Administración del Estado, en la forma y condiciones que establece la ley.",
       "author": "Plataforma Contexto",
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "interculturalidad",
+      "aliases": [
+        "intercultural",
+        "interculturales"
+      ],
+      "ignoreCase": true,
+      "content": "Se refiere a la interacción respetuosa y equitativa entre comunidades que tienen diferentes culturas.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "inclusión",
+      "aliases": [
+        "inclusiva",
+        "inclusivo"
+      ],
+      "ignoreCase": true,
+      "content": "Concepto usado mayormente en al ámbito educación, extensible a los derechos de personas con discapacidad. A diferencia de la Integración, la Inclusión no se centra en la persona con discapacidad. La inclusión tiene como objetivo un efectivo e igual disfrute y ejercicio de derechos, mediante una mayor participación en el aprendizaje, las culturas y las comunidades, lo que implica procesos de transformacion social y modificar substancialmente la estructura, funcionamiento y propuestas para dar respuesta a las necesidades de todas las personas de manera que estas puedan disfrutar y ejercer sus derechos en igualdad de condiciones y sin discriminación.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "garantía",
+      "aliases": [
+        "garantías"
+      ],
+      "ignoreCase": true,
+      "content": "Instrumento o técnica normativa destinada al resguardo y protección de los derechos fundamentales. Por ejemplo las acciones constitucionales como la acción de protección o amparo son garantías jurisdiccionales, existiendo otros tipos de garantías como el control de constitucionalidad de las leyes.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "nación",
+      "aliases": [
+        "naciones"
+      ],
+      "ignoreCase": true,
+      "content": "Conjunto de personas que comparten vínculos históricos, sociales, o culturales y que se autoreconocen como parte de una misma comunidad.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "reconocimiento",
+      "aliases": [
+        "reconoce la coexistencia"
+      ],
+      "ignoreCase": true,
+      "content": "Acción de reconocer. En el debate constitucional se asocia con la aceptación y valoración de determinados grupos de la sociedad que han sido históricamente discriminados",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "inalienable",
+      "aliases": [
+        "inalienables"
+      ],
+      "ignoreCase": true,
+      "content": "Adjetivo que se predica generalmente respecto de los derechos fundamentales y humanos, que sean inalienables significa que no son disponibles para el Estado, es decir que no pueden ser despojados ni afectados en su contenido esencial.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "equidad",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Principio de justicia social que busca garantizar igualdad de oportunidades a todos los ciudadanos y ciudadanas. También puede ser entendida como un estado o situación en donde todos y todas las personas son tratadas justa y equitativamente.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
     }
   ],
   "enlaces": [

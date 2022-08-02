@@ -313,6 +313,15 @@ export default function AcercaDe({}) {
                 Contacto:{" "}
                 <a href="mailto:cpr2022.cl@gmail.com">cpr2022.cl@gmail.com</a>
               </p>
+              
+              <h2>Palabras de apoyo</h2>
+              <p>
+                Gran trabajo e iniciativa Ricardo, felicitaciones para tí
+                y tu equipo :) -
+                <a href="https://www.linkedin.com/in/leonardomontenegro123/">
+                  Leonardo
+                </a>
+              </p>
 
               <hr />
             </div>

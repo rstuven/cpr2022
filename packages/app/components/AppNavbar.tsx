@@ -4,6 +4,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BiSearchAlt } from "react-icons/bi";
 import { BsTwitter } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { ImSpinner2 } from "react-icons/im";
 
 import { Navbar, Avatar } from "flowbite-react";
 import useMediaQuery from "hooks/useMediaQuery";
@@ -19,8 +20,10 @@ export default function AppNavbar(props: {
 }) {
   const isMediumMinWidth = useMediaQuery("(min-width: 768px)", true);
   const [modifierKeyPrefix, setModifierKeyPrefix] = useState("");
+  const [staticLoading, setStaticLoading] = useState(true);
 
   useEffect(() => {
+    setStaticLoading(false);
     setModifierKeyPrefix(
       navigator.userAgent.includes("Macintosh") ||
         navigator.userAgent.includes("iPhone") ||
@@ -48,7 +51,20 @@ export default function AppNavbar(props: {
           Propuesta de Constitución Política de la República de Chile 2022
         </span>
       </Navbar.Brand>
-      <Navbar.Toggle />
+      {staticLoading ? (
+        <button
+          className={
+            "md:hidden" +
+            "ml-3 inline-flex items-center rounded-lg p-2 text-sm " +
+            "text-gray-500 hover:bg-gray-100 " +
+            "focus:outline-none focus:ring-2 focus:ring-gray-200 "
+          }
+        >
+          <ImSpinner2 size={24} className="animate-spin" />
+        </button>
+      ) : (
+        <Navbar.Toggle />
+      )}
       <Navbar.Collapse>
         {isMediumMinWidth ? (
           <>

@@ -14,7 +14,12 @@ function Constitucion({ filter }: { filter: ItemFilter }) {
     typeof window == "undefined" && process.env.NODE_ENV === "production";
   return (
     <AudioProvider>
-      <div className="prose px-3 sm:px-10 font-ConvencionFJ">
+      <div
+        className={
+          "prose px-3 sm:px-10 font-ConvencionFJ " +
+          (isServer ? "grayscale animate-pulse" : "")
+        }
+      >
         <a data-id="inicio" tabIndex={0} />
         <h1 className="text-center font-normal">
           <TitleCase

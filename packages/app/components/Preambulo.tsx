@@ -3,7 +3,9 @@ import React from "react";
 import HashLink from "./HashLink";
 import { ItemFilter, preambulo } from "lib/helpers";
 
-export default function Preambulo(props: { filter: ItemFilter }) {
+export default React.memo(Preambulo);
+
+function Preambulo(props: { filter: ItemFilter }) {
   if (
     props.filter.oids.length > 0 &&
     !props.filter.oids.includes(preambulo.oid)

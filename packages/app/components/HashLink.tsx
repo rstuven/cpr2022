@@ -1,3 +1,4 @@
+import React from "react"
 import { PropsWithChildren } from "react";
 import { BiBookmarks } from "react-icons/bi";
 
@@ -14,7 +15,9 @@ type HashLinkProps = PropsWithChildren<{
   indent?: boolean;
 }>;
 
-export default function HashLink(props: HashLinkProps) {
+export default React.memo(HashLink);
+
+function HashLink(props: HashLinkProps) {
   if (props.anchor) {
     const title = props.title ?? "Enlace a " + props.anchor;
     return (

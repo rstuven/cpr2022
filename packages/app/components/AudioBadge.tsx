@@ -1,3 +1,4 @@
+import React from "react"
 import { Badge } from "flowbite-react";
 import { MdStop } from "react-icons/md";
 import { RiWifiOffLine } from "react-icons/ri";
@@ -7,7 +8,9 @@ import { parseFragmento } from "lib/helpers";
 import { useCallback, useContext } from "react";
 import { AudioContext } from "components/AudioProvider";
 
-export default function AudioBadge(props: { fragmentoId: string }) {
+export default React.memo(AudioBadge);
+
+function AudioBadge(props: { fragmentoId: string }) {
   const fragmento = parseFragmento(props.fragmentoId);
   const file =
     fragmento == null

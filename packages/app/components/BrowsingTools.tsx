@@ -14,11 +14,12 @@ export default function BrowsingTools(props: {
   onClose: () => void;
   onFilterChange: (filter: string) => void;
 }) {
+  const propOnFilterChange = props.onFilterChange;
   const onFilterChange = useCallback(
     debounce((e: any) => {
-      props.onFilterChange(e.target?.value ?? "");
+      propOnFilterChange(e.target?.value ?? "");
     }, 500),
-    [props]
+    [propOnFilterChange]
   );
   const filterInput = useRef<HTMLInputElement>(null);
 

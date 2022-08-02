@@ -7,7 +7,9 @@ import TitleCase from "./TitleCase";
 import Preambulo from "./Preambulo";
 import { AudioProvider } from "./AudioProvider";
 
-export default function Constitucion({ filter }: { filter: ItemFilter }) {
+export default React.memo(Constitucion);
+
+function Constitucion({ filter }: { filter: ItemFilter }) {
   return (
     <AudioProvider>
       <div className="prose px-3 sm:px-10 font-ConvencionFJ">

@@ -5,7 +5,9 @@ import HashLink from "./HashLink";
 import { getItemsOfType, ItemFilter, transitorias } from "lib/helpers";
 import TitleCase from "./TitleCase";
 
-export default function Transitorias(props: { filter: ItemFilter }) {
+export default React.memo(Transitorias);
+
+function Transitorias(props: { filter: ItemFilter }) {
   if (
     props.filter.oids.length > 0 &&
     !props.filter.oids.includes(transitorias.oid)

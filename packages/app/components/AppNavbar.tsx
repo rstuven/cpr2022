@@ -18,24 +18,12 @@ import { getItemFragmentoId, getItemsOfType, getItemLabel } from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import Tooltip from "./Tooltip";
 
-export function AppNavbar(props: {
+export default function AppNavbar(props: {
   onToolsToggle?: () => void;
   setToolsOpen?: (value: boolean) => void;
 }) {
   const isMediumMinWidth = useMediaQuery("(min-width: 768px)");
   const install = usePWAInstall();
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "b") {
-        e.preventDefault();
-        e.stopPropagation();
-        props.onToolsToggle && props.onToolsToggle();
-      }
-    };
-    document.addEventListener("keydown", handler, false);
-    return () => document.removeEventListener("keydown", handler);
-  });
 
   return (
     <Navbar border rounded>
@@ -121,8 +109,8 @@ export function AppNavbar(props: {
             )}
             <hr className="my-1" />
             {getItemsOfType("preambulo", "capitulo", "transitorias").map(
-              (item, index) => (
-                <ItemNavLink key={index} item={item} />
+              (item) => (
+                <ItemNavLink key={item.oid} item={item} />
               )
             )}
             <hr className="my-1" />

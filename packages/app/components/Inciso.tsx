@@ -49,6 +49,7 @@ export default function Inciso(props: IncisoProps) {
         text: e.texto,
         value: e,
         ignoreCase: false,
+        word: false,
         render: renderEnlace,
       } as Injection)
   );
@@ -57,11 +58,14 @@ export default function Inciso(props: IncisoProps) {
       text: props.filter.text,
       value: props.filter.text,
       ignoreCase: true,
+      word: false,
       render: renderHighlight,
     });
   }
   const entries = constitucion.glossary.flatMap((entry) =>
-    entry.aliases.map((alias) => ({ ...entry, search: alias })).concat({...entry, search: entry.title})
+    entry.aliases
+      .map((alias) => ({ ...entry, search: alias }))
+      .concat({ ...entry, search: entry.title })
   );
   entries.sort((a, b) => (a.title.length > b.title.length ? -1 : 1));
   entries.forEach((entry) => {
@@ -69,6 +73,7 @@ export default function Inciso(props: IncisoProps) {
       text: entry.search,
       value: entry,
       ignoreCase: entry.ignoreCase,
+      word: true,
       render: renderGlossary,
     });
   });
@@ -92,9 +97,9 @@ export default function Inciso(props: IncisoProps) {
       <div className="flex gap-1">
         <EnlacesHacia path={path} />
       </div>
-      {getChildrenOfType(props.item, "inciso").map((subinciso, index) => (
+      {getChildrenOfType(props.item, "inciso").map((subinciso) => (
         <Inciso
-          key={index}
+          key={subinciso.oid}
           item={subinciso}
           baseItem={props.baseItem}
           filter={props.filter}
@@ -107,6 +112,7 @@ interface Injection {
   text: string;
   value: any;
   ignoreCase: boolean;
+  word: boolean;
   render: (value: any, match: string, key: number) => JSX.Element;
 }
 
@@ -129,6 +135,7 @@ const renderGlossary = (
 ): JSX.Element => {
   return (
     <HoverCard
+      key={key}
       width={400}
       openDelay={600}
       className="inline"
@@ -209,17 +216,18 @@ function inject(text: string, injections: Injection[]) {
       if (typeof result != "string") {
         return [result];
       }
-      const escapedRegExp = prepareRegex(injection.text);
+      const escapedPattern = prepareRegex(injection.text);
       const regexFlags = (injection.ignoreCase ? "i" : "") + "g";
+      const pattern = injection.word
+        ? "\\b" + escapedPattern + "\\b"
+        : escapedPattern;
 
-      const matches = result.match(
-        new RegExp("\\b" + escapedRegExp + "\\b", regexFlags)
-      );
+      const matches = result.match(new RegExp(pattern, regexFlags));
       if (matches == null) {
         return result;
       }
       const separator = injection.ignoreCase
-        ? new RegExp(escapedRegExp, regexFlags)
+        ? new RegExp(escapedPattern, regexFlags)
         : injection.text;
 
       return result

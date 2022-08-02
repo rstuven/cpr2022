@@ -1,5 +1,5 @@
+import React from "react";
 import { Badge } from "flowbite-react";
-
 import { CgInternal } from "react-icons/cg";
 import {
   getEnlacesHacia,
@@ -9,11 +9,13 @@ import {
 import Tooltip from "./Tooltip";
 import FragmentoTooltipContent from "./FragmentoTooltipContent";
 
-export default function EnlacesHacia(props: { path: string }) {
-  const enlacesHacia = getEnlacesHacia(props.path);
+export default React.memo(EnlacesHacia);
+
+function EnlacesHacia(props: { path: string }) {
+  const enlaces = getEnlacesHacia(props.path);
   return (
     <>
-      {enlacesHacia.map((enlace, index) => {
+      {enlaces.map((enlace, index) => {
         const fragmento = parseFragmento(enlace.desde);
         if (!fragmento || !("inciso" in fragmento) || !fragmento.inciso) {
           return null;

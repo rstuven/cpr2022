@@ -1,12 +1,18 @@
+import React from "react";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import { getChildrenOfType, ItemFilter } from "lib/helpers";
 import Articulo from "./Articulo";
 import HashLink from "./HashLink";
 
-type TituloProps = { item: ItemObject; path: string, filter: ItemFilter };
+type TituloProps = { item: ItemObject; path: string; filter: ItemFilter };
 
-export default function Titulo(props: TituloProps) {
-  if (props.filter.oids.length > 0 && !props.filter.oids.includes(props.item.oid)) {
+export default React.memo(Titulo);
+
+function Titulo(props: TituloProps) {
+  if (
+    props.filter.oids.length > 0 &&
+    !props.filter.oids.includes(props.item.oid)
+  ) {
     return null;
   }
   return (

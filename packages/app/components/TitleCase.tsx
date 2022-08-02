@@ -1,4 +1,8 @@
-export default function TitleCase(props: {
+import React from "react";
+
+export default React.memo(TitleCase);
+
+function TitleCase(props: {
   text: string;
   uppercaseClass?: string;
   lowercaseClass?: string;

@@ -43,10 +43,13 @@ const tituloLink = (highlight: boolean) =>
     highlight ? "text-white" : "text-[#bf77fa]"
   );
 
-export default function Indice(props: { filter: ItemFilter }) {
-  const imageLoader: ImageLoader = (props) => {
-    return props.src;
-  };
+const imageLoader: ImageLoader = (props) => {
+  return props.src;
+};
+
+export default React.memo(Indice);
+
+function Indice(props: { filter: ItemFilter }) {
   return (
     <div className="prose text-xs font-ConvencionFJ pl-3 pr-4 py-5">
       <HashLink hash="inicio" title="Ir al inicio">

@@ -1,9 +1,7 @@
 import { Badge } from "flowbite-react";
-import extractDomain from "extract-domain";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
 
-import { CgExternal } from "react-icons/cg";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { CommonData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import {
@@ -12,14 +10,13 @@ import {
   getItemsOfType,
   getItemLabel,
   firstToUpperCase,
-  getEnlacesDesde,
   ItemFilter,
 } from "lib/helpers";
-import Tooltip from "./Tooltip";
 import ItemToolbar from "./ItemToolbar";
 import EnlacesHacia from "./EnlacesHacia";
 import AudioBadge from "./AudioBadge";
 import HoverCard from "./HoverCard";
+import EnlacesDesde from "./EnlacesDesde";
 
 export default function Articulo({
   item,
@@ -33,7 +30,6 @@ export default function Articulo({
   }
   const path = getItemFragmentoId(item);
   const data = item.data as CommonData;
-  const enlacesDesde = getEnlacesDesde(path, true);
   return (
     <div
       data-hash={path}
@@ -47,35 +43,15 @@ export default function Articulo({
         </b>
         <AudioBadge fragmentoId={path} />
         <Badge color="purple"> {firstToUpperCase(data.sobre)}</Badge>
-        {data.etiquetas.map((etiqueta, index) => (
-          <BadgeEtiquetas key={index} etiqueta={etiqueta} item={item} />
+        {data.etiquetas.map((etiqueta) => (
+          <BadgeEtiquetas key={etiqueta} etiqueta={etiqueta} item={item} />
         ))}
         <EnlacesHacia path={path} />
-        {enlacesDesde.map((enlace, index) => (
-          <Badge color="info" key={index}>
-            <Tooltip
-              content={
-                <>
-                  {"por " + enlace.autor}
-                  <br />
-                  {"en " + extractDomain(enlace.hacia)}
-                </>
-              }
-            >
-              <span className="flex gap-1">
-                <a href={enlace.hacia} target="_blank" rel="noreferrer">
-                  {enlace.etiqueta}
-                  {enlacesDesde.length > 1 ? " " + (index + 1) : ""}
-                </a>
-                <CgExternal size={16} />
-              </span>
-            </Tooltip>
-          </Badge>
-        ))}
+        <EnlacesDesde path={path} />
       </span>
-      {getChildrenOfType(item, "inciso").map((inciso, incisoIndex) => (
+      {getChildrenOfType(item, "inciso").map((inciso) => (
         <Inciso
-          key={incisoIndex}
+          key={inciso.oid}
           item={inciso}
           baseItem={item}
           filter={filter}
@@ -114,9 +90,9 @@ function BadgeEtiquetas(props: {
         }
         dropdown={
           <div className="max-h-[202px] overflow-y-scroll overscroll-contain">
-            {etiquetas.map((articulo, index) => {
+            {etiquetas.map((articulo) => {
               return (
-                <div key={index}>
+                <div key={articulo.oid}>
                   <a
                     className="no-underline hover:underline font-normal"
                     href={"/#" + getItemFragmentoId(articulo)}

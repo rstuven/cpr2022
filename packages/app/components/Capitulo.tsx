@@ -1,3 +1,4 @@
+import React from "react"
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import { getChildrenOfType, getItemFragmentoId, ItemFilter } from "lib/helpers";
 import Titulo from "./Titulo";
@@ -5,13 +6,9 @@ import HashLink from "./HashLink";
 import Articulo from "./Articulo";
 import TitleCase from "./TitleCase";
 
-export default function Capitulo({
-  item,
-  filter,
-}: {
-  item: ItemObject;
-  filter: ItemFilter;
-}) {
+export default React.memo(Capitulo);
+
+function Capitulo({ item, filter }: { item: ItemObject; filter: ItemFilter }) {
   if (filter.oids.length > 0 && !filter.oids.includes(item.oid)) {
     return null;
   }

@@ -1,8 +1,15 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useTransition,
+} from "react";
 import { useHashHighlighting, useHashScrolling } from "hooks/useHash";
 import Indice from "./Indice";
 import Constitucion from "./Constitucion";
-import { AppNavbar } from "./AppNavbar";
+import AppNavbar from "./AppNavbar";
 import { HashProvider } from "./HashProvider";
 import { SmallMediaProvider } from "./SmallMediaProvider";
 import BrowsingTools from "./BrowsingTools";
@@ -21,6 +28,7 @@ export default function App() {
   useHashScrolling(isMediumMinHeight ? 350 : 150, "auto", main);
   useHashScrolling(isMediumMinHeight ? 350 : 150, "smooth", indice, true);
   useHashHighlighting(main);
+  const [isPending, startTransition] = useTransition();
 
   const [filter, setFilter] = useState("");
   const onFilterChange = useCallback((filter: string) => {
@@ -35,10 +43,24 @@ export default function App() {
 
   const onToolsToggle = useCallback(() => {
     setToolsOpen(!toolsOpen);
-    if (toolsOpen) setFilter("");
+    startTransition(() => {
+      if (toolsOpen) setFilter("");
+    });
   }, [toolsOpen]);
 
-  const itemFilter = getItemFilter(filter);
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "b") {
+        e.preventDefault();
+        e.stopPropagation();
+        onToolsToggle();
+      }
+    };
+    document.addEventListener("keydown", handler, false);
+    return () => document.removeEventListener("keydown", handler);
+  });
+
+  const itemFilter = useMemo(() => getItemFilter(filter), [filter]);
 
   return (
     <HashProvider>

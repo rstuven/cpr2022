@@ -1,3 +1,4 @@
+import React from "react";
 import { Badge } from "flowbite-react";
 import { ItemObject, CommonData } from "cpr2022-data/src/types/schemaShallow";
 import {
@@ -12,7 +13,9 @@ import Inciso from "./Inciso";
 import ItemToolbar from "./ItemToolbar";
 import AudioBadge from "./AudioBadge";
 
-export default function Transitoria({
+export default React.memo(Transitoria);
+
+function Transitoria({
   item,
   filter,
 }: {

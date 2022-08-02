@@ -2,7 +2,7 @@ import Image, { ImageLoader } from "next/image";
 import { IconType } from "react-icons";
 import { BsWhatsapp, BsTwitter, BsTelegram, BsFacebook } from "react-icons/bs";
 import { BiBookmarks } from "react-icons/bi";
-import { AppNavbar } from "components/AppNavbar";
+import AppNavbar from "components/AppNavbar";
 import Indice from "./Indice";
 import * as ga from "lib/ga";
 

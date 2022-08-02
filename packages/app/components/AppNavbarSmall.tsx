@@ -97,7 +97,6 @@ function NavLink(props: NavLinkProps) {
     <div
       className="hover:bg-gray-200 p-1 flex gap-1"
       onClick={onNavbarLinkClick}
-      onTouchEnd={onNavbarLinkClick}
     >
       <Icon size={20} />
 

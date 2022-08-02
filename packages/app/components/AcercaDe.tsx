@@ -1,10 +1,15 @@
-import Image, { ImageLoader } from "next/image";
+import dynamic from "next/dynamic"
+import { ImageLoader } from "next/image";
 import { IconType } from "react-icons";
 import { BsWhatsapp, BsTwitter, BsTelegram, BsFacebook } from "react-icons/bs";
 import { BiBookmarks } from "react-icons/bi";
 import AppNavbar from "components/AppNavbar";
 import Indice from "./Indice";
 import * as ga from "lib/ga";
+
+const Image = dynamic(() => import("next/image"), {
+  ssr: false,
+});
 
 const shareUrl = "https://cpr2022.cl";
 const shareMessage =

@@ -10,6 +10,8 @@ import { AudioProvider } from "./AudioProvider";
 export default React.memo(Constitucion);
 
 function Constitucion({ filter }: { filter: ItemFilter }) {
+  const isServer =
+    typeof window == "undefined" && process.env.NODE_ENV === "production";
   return (
     <AudioProvider>
       <div className="prose px-3 sm:px-10 font-ConvencionFJ">
@@ -23,9 +25,11 @@ function Constitucion({ filter }: { filter: ItemFilter }) {
 
         <Preambulo filter={filter} />
 
-        {getItemsOfType("capitulo").map((item) => (
-          <Capitulo key={item.oid} item={item} filter={filter} />
-        ))}
+        {getItemsOfType("capitulo")
+          .filter((_, i) => (isServer ? i == 0 : true))
+          .map((item) => (
+            <Capitulo key={item.oid} item={item} filter={filter} />
+          ))}
 
         <Transitorias filter={filter} />
 

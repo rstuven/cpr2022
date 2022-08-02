@@ -421,6 +421,7 @@ export function classNames(
 }
 
 export function getCurrentHash() {
+  if (typeof window == "undefined") return "";
   return decodeURIComponent(window.location.hash).substring(1);
 }
 

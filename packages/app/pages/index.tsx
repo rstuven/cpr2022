@@ -1,15 +1,11 @@
 import React from "react";
-
-import dynamic from "next/dynamic";
 import MetaTags from "components/MetaTags";
-
-const App = dynamic(() => import("../components/App"), {
-  ssr: false,
-});
+import App from "components/App";
 
 export async function getStaticProps() {
   return {
     props: {},
+    revalidate: 1,
   };
 }
 

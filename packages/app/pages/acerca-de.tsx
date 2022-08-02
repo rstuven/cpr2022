@@ -1,10 +1,6 @@
-import dynamic from "next/dynamic";
-import MetaTags from "components/MetaTags";
 import Head from "next/head";
-
-const AcercaDe = dynamic(() => import("../components/AcercaDe"), {
-  ssr: false,
-});
+import MetaTags from "components/MetaTags";
+import AcercaDe from "components/AcercaDe";
 
 export async function getStaticProps() {
   return {

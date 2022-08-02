@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import Image, { ImageLoader } from "next/image";
+import dynamic from "next/dynamic";
+import { ImageLoader } from "next/image";
 import HashLink from "./HashLink";
 import {
   classNames,
@@ -15,6 +16,10 @@ import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import tituloImage from "public/images/titulo.png";
 import escudoImage from "public/images/escudo.png";
 import { HashContext } from "./HashProvider";
+
+const Image = dynamic(() => import("next/image"), {
+  ssr: false,
+});
 
 const rootItem = () => classNames("mt-2 mb-0");
 

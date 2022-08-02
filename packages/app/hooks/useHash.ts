@@ -8,9 +8,10 @@ export function useHashScrolling(
   index?: boolean
 ) {
   const hash = useRef<string | undefined>();
-  const isSafari = navigator.userAgent.includes("Safari")
 
   useEffect(() => {
+    const isSafari = navigator.userAgent.includes("Safari");
+
     const scroll = (behavior: ScrollBehavior) => {
       if (target && !target.current) return false;
 

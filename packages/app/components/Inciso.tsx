@@ -15,8 +15,10 @@ import {
   getItemFragmentoId,
   ItemFilter,
   parseFragmento,
+  getCurrentHash,
 } from "lib/helpers";
 import { AnchorHTMLAttributes, useContext } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import HashLink from "./HashLink";
 import Tooltip from "./Tooltip";
 import EnlacesHacia from "./EnlacesHacia";
@@ -42,7 +44,55 @@ export default function Inciso(props: IncisoProps) {
   const bullet = getIncisoBullet(props.item, props.baseItem, !isSmallMedia);
   const indent = isSmallMedia && bullet != "";
   const path = getItemFragmentoId(props.item);
-  const enlaces = getEnlacesDesde(path).filter((e) => e.texto);
+
+  return (
+    <VisibilitySensor partialVisibility offset={{ top: -800, bottom: -800 }}>
+      {(args: { args: any }) =>
+        !args.isVisible ? (
+          <IncisoSimple {...{ path, indent, bullet, ...props }} />
+        ) : (
+          <IncisoFull {...{ path, indent, bullet, ...props }} />
+        )
+      }
+    </VisibilitySensor>
+  );
+}
+
+type IncisoVariantProps = IncisoProps & {
+  path: string;
+  indent: boolean;
+  bullet: string;
+};
+
+function IncisoSimple(props: IncisoVariantProps) {
+  return (
+    <div
+      data-hash={props.path}
+      data-id={props.path}
+      className={classNames(
+        `mt-1 leading-6 rounded-lg pr-2 py-1`,
+        props.indent ? "pl-[3.4rem]" : "pl-9",
+        props.indent ? "-indent-10" : "-indent-9"
+      )}
+    >
+      &nbsp;&nbsp;&nbsp;
+      {props.bullet}
+      &nbsp;&nbsp;
+      {props.item.content}
+      {getChildrenOfType(props.item, "inciso").map((subinciso) => (
+        <Inciso
+          key={subinciso.oid}
+          item={subinciso}
+          baseItem={props.baseItem}
+          filter={props.filter}
+        />
+      ))}
+    </div>
+  );
+}
+
+function IncisoFull(props: IncisoVariantProps) {
+  const enlaces = getEnlacesDesde(props.path).filter((e) => e.texto);
   const injections: Injection[] = enlaces.map(
     (e) =>
       ({
@@ -79,23 +129,24 @@ export default function Inciso(props: IncisoProps) {
   });
   return (
     <div
-      data-hash={path}
+      data-hash={props.path}
       className={classNames(
         `mt-1 leading-6 rounded-lg pr-2 py-1`,
-        indent ? "pl-[3.4rem]" : "pl-9",
-        indent ? "-indent-10" : "-indent-9"
+        props.indent ? "pl-[3.4rem]" : "pl-9",
+        props.indent ? "-indent-10" : "-indent-9",
+        getCurrentHash() == props.path && "bg-amber-100"
       )}
     >
       <HashLink
-        indent={indent}
-        hash={path}
+        indent={props.indent}
+        hash={props.path}
         anchor={typeof props.item.key == "string" ? "letra" : "inciso"}
       />{" "}
-      <b>{bullet}</b>
+      <b>{props.bullet}</b>
       &nbsp;&nbsp;
       {inject(props.item.content ?? "", injections)}
       <div className="flex gap-1">
-        <EnlacesHacia path={path} />
+        <EnlacesHacia path={props.path} />
       </div>
       {getChildrenOfType(props.item, "inciso").map((subinciso) => (
         <Inciso
@@ -108,6 +159,7 @@ export default function Inciso(props: IncisoProps) {
     </div>
   );
 }
+
 interface Injection {
   text: string;
   value: any;

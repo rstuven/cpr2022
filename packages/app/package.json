@@ -20,6 +20,7 @@
     "react-howler": "^5.2.0",
     "react-is": "^17.0.2",
     "react-use-pwa-install": "^0.2.1",
+    "react-visibility-sensor": "^5.1.1",
     "tslib": "^2.4.0"
   },
   "devDependencies": {

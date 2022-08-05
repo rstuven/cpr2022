@@ -1,8 +1,8 @@
 import { Badge } from "flowbite-react";
 import HashLink from "./HashLink";
 import Inciso from "./Inciso";
-
 import { HiOutlineChevronDown } from "react-icons/hi";
+import VisibilitySensor from "react-visibility-sensor";
 import { CommonData, ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import {
   getChildrenOfType,
@@ -31,33 +31,66 @@ export default function Articulo({
   const path = getItemFragmentoId(item);
   const data = item.data as CommonData;
   return (
-    <div
-      data-hash={path}
-      className="border border-solid rounded-lg p-3 pb-0 px-0 mb-3"
-    >
-      <ItemToolbar path={path} item={item} />
-      <HashLink hash={path} anchor="artículo" classNameOuter="float-left" />
-      <span className="font-sans flex flex-wrap gap-1 text-base pl-3">
-        <b className="text-black mr-1 font-ConvencionFJ">
-          {getItemLabel(item)}
-        </b>
-        <AudioBadge fragmentoId={path} />
-        <Badge color="purple"> {firstToUpperCase(data.sobre)}</Badge>
-        {data.etiquetas.map((etiqueta) => (
-          <BadgeEtiquetas key={etiqueta} etiqueta={etiqueta} item={item} />
-        ))}
-        <EnlacesHacia path={path} />
-        <EnlacesDesde path={path} />
-      </span>
-      {getChildrenOfType(item, "inciso").map((inciso) => (
-        <Inciso
-          key={inciso.oid}
-          item={inciso}
-          baseItem={item}
-          filter={filter}
-        />
-      ))}
-    </div>
+    <VisibilitySensor partialVisibility offset={{ top: -800, bottom: -800 }}>
+      {(args: { args: any }) =>
+        !args.isVisible ? (
+          <div
+            data-hash={path}
+            data-id={path}
+            className="border border-solid rounded-lg p-3 pb-0 px-0 mb-3"
+          >
+            <span className="font-ConvencionFJ flex flex-wrap gap-1 text-base pl-3">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {getItemLabel(item)}
+            </span>
+            {getChildrenOfType(item, "inciso").map((inciso) => (
+              <Inciso
+                key={inciso.oid}
+                item={inciso}
+                baseItem={item}
+                filter={filter}
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            data-hash={path}
+            className="border border-solid rounded-lg p-3 pb-0 px-0 mb-3"
+          >
+            <ItemToolbar path={path} item={item} />
+            <HashLink
+              hash={path}
+              anchor="artículo"
+              classNameOuter="float-left"
+            />
+            <span className="font-sans flex flex-wrap gap-1 text-base pl-3">
+              <b className="text-black mr-1 font-ConvencionFJ">
+                {getItemLabel(item)}
+              </b>
+              <AudioBadge fragmentoId={path} />
+              <Badge color="purple"> {firstToUpperCase(data.sobre)}</Badge>
+              {data.etiquetas.map((etiqueta) => (
+                <BadgeEtiquetas
+                  key={etiqueta}
+                  etiqueta={etiqueta}
+                  item={item}
+                />
+              ))}
+              <EnlacesHacia path={path} />
+              <EnlacesDesde path={path} />
+            </span>
+            {getChildrenOfType(item, "inciso").map((inciso) => (
+              <Inciso
+                key={inciso.oid}
+                item={inciso}
+                baseItem={item}
+                filter={filter}
+              />
+            ))}
+          </div>
+        )
+      }
+    </VisibilitySensor>
   );
 }
 

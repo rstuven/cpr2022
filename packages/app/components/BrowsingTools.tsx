@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
-import { GrFormClose } from "react-icons/gr";
+import { MdOutlineClose } from "react-icons/md";
 import {
   classNames,
   debounce,
@@ -45,13 +45,13 @@ export default function BrowsingTools(props: {
     return () => document.removeEventListener("keydown", handler);
   });
 
-  if (!props.open) return null;
-
   return (
     <div
       className={classNames(
         "fixed flex flex-col z-10",
-        "right-4 w-11/12 md:w-60 h-24 p-2 pl-4 pr-6 md:pr-4 top-[55px]",
+        "right-4 w-11/12 md:w-80 h-24 p-2 pl-4",
+        props.open ? "top-[55px]" : "-top-20",
+        "transition-[top] ease-in-out",
         "bg-white",
         "border-[1px] border-gray-200 rounded-lg",
         "justify-center",
@@ -60,20 +60,28 @@ export default function BrowsingTools(props: {
       )}
     >
       <div className="w-full">
-        <div className="md:hidden cursor-pointer float-right absolute right-0 top-1 p-1">
-          <GrFormClose size={16} onClick={props.onClose} />
-        </div>
-        <input
-          ref={filterInput}
-          autoFocus
-          tabIndex={0}
-          placeholder="Artículo o texto (mín. 4 caracteres)"
-          className="border rounded p-2 h-8 w-full placeholder:text-sm placeholder:text-gray-400"
-          type="text"
-          onChange={onFilterChange}
-          onFocus={onFocus}
-          defaultValue={props.filter.text}
-        />
+        {props.open && (
+          <div className="flex gap-1 items-center">
+            <input
+              ref={filterInput}
+              autoFocus
+              tabIndex={0}
+              placeholder="Artículo o texto (mínimo 4 caracteres)"
+              className="border rounded p-2 h-8 w-full placeholder:text-sm placeholder:text-gray-400"
+              type="text"
+              onChange={onFilterChange}
+              onFocus={onFocus}
+              defaultValue={props.filter.text}
+            />
+            <div className="cursor-pointer">
+              <MdOutlineClose
+                size={20}
+                onClick={props.onClose}
+                className="text-gray-700"
+              />
+            </div>
+          </div>
+        )}
       </div>
       {props.filter.text != "" && (
         <div className="text-sm pt-2">

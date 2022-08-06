@@ -1,10 +1,10 @@
 import React, {
+  startTransition,
   useCallback,
   useEffect,
   useMemo,
   useRef,
   useState,
-  useTransition,
 } from "react";
 import { useHashHighlighting, useHashScrolling } from "hooks/useHash";
 import Indice from "./Indice";
@@ -18,6 +18,7 @@ import {
   filterItems,
   ItemFilter,
   getParentOfType,
+  getCurrentHash,
 } from "lib/helpers";
 import useMediaQuery from "hooks/useMediaQuery";
 
@@ -28,23 +29,30 @@ export default function App() {
   useHashScrolling(isMediumMinHeight ? 350 : 150, "auto", main);
   useHashScrolling(isMediumMinHeight ? 350 : 150, "smooth", indice, true);
   useHashHighlighting(main);
-  const [isPending, startTransition] = useTransition();
 
-  const [filter, setFilter] = useState("");
+  const initialFilter =
+    new URLSearchParams(getCurrentHash()).get("buscar") ?? "";
+  const [filter, setFilter] = useState(initialFilter);
+
   const onFilterChange = useCallback((filter: string) => {
     setFilter(filter);
+    location.hash = "#buscar=" + filter;
   }, []);
 
   const [toolsOpen, setToolsOpen] = useState(false);
   const onClose = useCallback(() => {
     setToolsOpen(false);
     setFilter("");
+    location.hash = "";
   }, []);
 
   const onToolsToggle = useCallback(() => {
     setToolsOpen(!toolsOpen);
     startTransition(() => {
-      if (toolsOpen) setFilter("");
+      if (toolsOpen) {
+        setFilter("");
+        location.hash = "";
+      }
     });
   }, [toolsOpen]);
 

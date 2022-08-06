@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic"
+import dynamic from "next/dynamic";
 import { ImageLoader } from "next/image";
 import { IconType } from "react-icons";
 import { BsWhatsapp, BsTwitter, BsTelegram, BsFacebook } from "react-icons/bs";
@@ -81,6 +81,26 @@ export default function AcercaDe({}) {
                   leer la propuesta de forma contextualizada, aprovechando al
                   máximo las ventajas del hipertexto, y para usar como insumo de
                   conversaciones y debates.
+                  <br />
+                  <br />
+                  Y, si bien busca ser fiel al texto original, esta versión{" "}
+                  <b>no es oficial</b>. Siempre prefiere o contrasta con las
+                  fuentes oficiales: {/* <br /> */}
+                  <a
+                    href="https://chileconvencion.cl"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    chileconvencion.cl
+                  </a>{" "}
+                  y{" "}
+                  <a
+                    href="https://www.gob.cl/chilevotainformado/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    chilevotainformado.cl
+                  </a>
                 </div>
                 <div className="float-right pt-2 text-sm flex gap-2">
                   Compartir en:

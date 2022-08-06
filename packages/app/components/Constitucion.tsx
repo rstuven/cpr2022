@@ -6,6 +6,7 @@ import { getItemsOfType, ItemFilter } from "lib/helpers";
 import TitleCase from "./TitleCase";
 import Preambulo from "./Preambulo";
 import { AudioProvider } from "./AudioProvider";
+import NotOfficialWarning from "./NotOfficialWarning";
 
 export default React.memo(Constitucion);
 
@@ -19,6 +20,8 @@ function Constitucion({ filter }: { filter: ItemFilter }) {
           (isServer ? "grayscale animate-pulse" : "")
         }
       >
+        <NotOfficialWarning />
+
         <a data-id="inicio" tabIndex={0} />
         <h1 className="text-center font-normal">
           <TitleCase

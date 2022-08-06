@@ -21,7 +21,8 @@
     "react-is": "^17.0.2",
     "react-use-pwa-install": "^0.2.1",
     "react-visibility-sensor": "^5.1.1",
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.0",
+    "use-persisted-state": "^0.3.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",
@@ -29,6 +30,7 @@
     "@types/node": "^18.0.5",
     "@types/react": "18.0.1",
     "@types/react-howler": "^5.2.0",
+    "@types/use-persisted-state": "^0.3.1",
     "autoprefixer": "^10.4.7",
     "bun-framework-next": "^12",
     "canvas": "^2.9.3",

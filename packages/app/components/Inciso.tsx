@@ -270,16 +270,16 @@ function inject(text: string, injections: Injection[]) {
       }
       const escapedPattern = prepareRegex(injection.text);
       const regexFlags = (injection.ignoreCase ? "i" : "") + "g";
-      const pattern = injection.word
+      const matchPattern = injection.word
         ? "\\b" + escapedPattern + "\\b"
         : escapedPattern;
 
-      const matches = result.match(new RegExp(pattern, regexFlags));
+      const matches = result.match(new RegExp(matchPattern, regexFlags));
       if (matches == null) {
         return result;
       }
       const separator = injection.ignoreCase
-        ? new RegExp(escapedPattern, regexFlags)
+        ? new RegExp(matchPattern, regexFlags)
         : injection.text;
 
       return result

@@ -42,6 +42,8 @@ export default function Articulo({
             <span className="font-ConvencionFJ flex flex-wrap gap-1 text-base pl-3">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {getItemLabel(item)}
+              <br />
+              <br />
             </span>
             {getChildrenOfType(item, "inciso").map((inciso) => (
               <Inciso

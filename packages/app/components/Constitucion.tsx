@@ -10,8 +10,7 @@ import { AudioProvider } from "./AudioProvider";
 export default React.memo(Constitucion);
 
 function Constitucion({ filter }: { filter: ItemFilter }) {
-  const isServer =
-    typeof window == "undefined" && process.env.NODE_ENV === "production";
+  const isServer = typeof window == "undefined";
   return (
     <AudioProvider>
       <div
@@ -30,15 +29,19 @@ function Constitucion({ filter }: { filter: ItemFilter }) {
 
         <Preambulo filter={filter} />
 
-        {getItemsOfType("capitulo")
-          .filter((_, i) => (isServer ? i == 0 : true))
-          .map((item) => (
-            <Capitulo key={item.oid} item={item} filter={filter} />
-          ))}
+        {isServer ? (
+          <Capitulo item={getItemsOfType("capitulo")[0]} filter={filter} />
+        ) : (
+          <>
+            {getItemsOfType("capitulo").map((item) => (
+              <Capitulo key={item.oid} item={item} filter={filter} />
+            ))}
 
-        <Transitorias filter={filter} />
+            <Transitorias filter={filter} />
 
-        <div className="text-center text-2xl mt-10">********</div>
+            <div className="text-center text-2xl mt-10">********</div>
+          </>
+        )}
       </div>
     </AudioProvider>
   );

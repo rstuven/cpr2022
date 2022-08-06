@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 import { getChildrenOfType, getItemFragmentoId, ItemFilter } from "lib/helpers";
 import Titulo from "./Titulo";
@@ -13,6 +13,7 @@ function Capitulo({ item, filter }: { item: ItemObject; filter: ItemFilter }) {
     return null;
   }
   const path = getItemFragmentoId(item);
+  const isServer = typeof window == "undefined";
   return (
     <div>
       <h2 data-hash={path} className="text-center mt-1 rounded">
@@ -21,17 +22,26 @@ function Capitulo({ item, filter }: { item: ItemObject; filter: ItemFilter }) {
         <br />
         <TitleCase lowercaseClass="text-lg" text={item.label ?? ""} />
       </h2>
-      {getChildrenOfType(item, "articulo").map((item) => (
-        <Articulo key={item.oid} item={item} filter={filter} />
-      ))}
-      {getChildrenOfType(item, "titulo").map((child, tituloIndex) => (
-        <Titulo
-          key={tituloIndex}
-          item={child}
-          path={`${path}.${tituloIndex + 1}`}
+      {isServer ? (
+        <Articulo
+          item={getChildrenOfType(item, "articulo")[0]}
           filter={filter}
         />
-      ))}
+      ) : (
+        <>
+          {getChildrenOfType(item, "articulo").map((item) => (
+            <Articulo key={item.oid} item={item} filter={filter} />
+          ))}
+          {getChildrenOfType(item, "titulo").map((child, tituloIndex) => (
+            <Titulo
+              key={tituloIndex}
+              item={child}
+              path={`${path}.${tituloIndex + 1}`}
+              filter={filter}
+            />
+          ))}
+        </>
+      )}
     </div>
   );
 }

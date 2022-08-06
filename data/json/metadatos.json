@@ -3660,150 +3660,187 @@
     },
     {
       "transitoria": 21,
+      "sobre": "inicio del Consejo de las Gobernaciones",
       "pagina": 149
     },
     {
       "transitoria": 22,
+      "sobre": "tributos de afectación territorial",
       "pagina": 149
     },
     {
       "transitoria": 23,
+      "sobre": "autonomía financiera territorial",
       "pagina": 150
     },
     {
       "transitoria": 24,
+      "sobre": "funcionarios públicos",
       "pagina": 150
     },
     {
       "transitoria": 25,
+      "sobre": "asociaciones de funcionarios públicos",
       "pagina": 150
     },
     {
       "transitoria": 26,
+      "sobre": "ley marco de ordenamiento territorial",
       "pagina": 150
     },
     {
       "transitoria": 27,
+      "sobre": "leyes que crean sistemas de Seguridad Nacional y de Cuidados",
       "pagina": 151
     },
     {
       "transitoria": 28,
+      "sobre": "Comisión Territorial Indígena",
       "pagina": 151
     },
     {
       "transitoria": 29,
+      "sobre": "ley de Garantías y Protección Integral de los Derechos de la Niñez",
       "pagina": 151
     },
     {
       "transitoria": 30,
+      "sobre": "legislación laboral",
       "pagina": 152
     },
     {
       "transitoria": 31,
+      "sobre": "ley que crea el Sistema Nacional de Educación",
       "pagina": 152
     },
     {
       "transitoria": 32,
+      "sobre": "ley integral sobre vivienda digna y ciudad",
       "pagina": 152
     },
     {
       "transitoria": 33,
+      "sobre": "Política para Restauración de Suelos y Bosque Nativo",
       "pagina": 153
     },
     {
       "transitoria": 34,
+      "sobre": "ley para la creación de la Agencia Nacional del Agua",
       "pagina": 153
     },
     {
       "transitoria": 35,
+      "sobre": "derechos de aprovechamiento de aguas",
       "pagina": 153
     },
     {
       "transitoria": 36,
+      "sobre": "proceso de redistribución de los caudales de las cuencas",
       "pagina": 155
     },
     {
       "transitoria": 37,
+      "sobre": "creación de comisión de transición ecológica",
       "pagina": 155
     },
     {
       "transitoria": 38,
+      "sobre": "Codelco",
       "pagina": 155
     },
     {
       "transitoria": 39,
+      "sobre": "arbitrajes forzosos",
       "pagina": 156
     },
     {
       "transitoria": 40,
+      "sobre": "cese de funciones de jueces y juezas",
       "pagina": 156
     },
     {
       "transitoria": 41,
+      "sobre": "ley para incorporación defensoras y defensores penales",
       "pagina": 156
     },
     {
       "transitoria": 42,
+      "sobre": "procedimiento para las acciones de tutela de derechos",
       "pagina": 156
     },
     {
       "transitoria": 43,
+      "sobre": "plazo para legislar procedimiento de acciones de tutela",
       "pagina": 156
     },
     {
       "transitoria": 44,
+      "sobre": "leyes para tribunales administrativos",
       "pagina": 157
     },
     {
       "transitoria": 45,
+      "sobre": "transición de Tribunal Constitucional a Corte Constitucional",
       "pagina": 157
     },
     {
       "transitoria": 46,
+      "sobre": "procedimiento general sobre lo contencioso administrativo",
       "pagina": 159
     },
     {
       "transitoria": 47,
+      "sobre": "vigencia de nuevos órganos constitucionales",
       "pagina": 159
     },
     {
       "transitoria": 48,
+      "sobre": "ley para justicia vecinal",
       "pagina": 159
     },
     {
       "transitoria": 49,
+      "sobre": "ley para Consejo de la Justicia",
       "pagina": 160
     },
     {
       "transitoria": 50,
+      "sobre": "Comité del Ministerio Público",
       "pagina": 160
     },
     {
       "transitoria": 51,
+      "sobre": "contralorías regionales",
       "pagina": 160
     },
     {
       "transitoria": 52,
+      "sobre": "sentencias de derechos humanos por tribunales internacionales",
       "pagina": 160
     },
     {
       "transitoria": 53,
+      "sobre": "leyes para defensorías del Pueblo y de la Naturaleza",
       "pagina": 161
     },
     {
       "transitoria": 54,
+      "sobre": "prescripción de violaciones a los derechos humanos",
       "pagina": 161
     },
     {
       "transitoria": 55,
+      "sobre": "transición de órganos con rango constitucional",
       "pagina": 161
     },
     {
       "transitoria": 56,
+      "sobre": "protección penal a denunciantes de delitos económicos",
       "pagina": 161
     },
     {
       "transitoria": 57,
+      "sobre": "ley integral de patrimonios cultural, natural e indígena",
       "pagina": 162
     }
   ],
@@ -3918,13 +3955,65 @@
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
     },
     {
-      "title": "interculturalidad",
+      "title": "discriminación",
       "aliases": [
-        "intercultural",
-        "interculturales"
+        "discriminar",
+        "discriminada",
+        "discriminado",
+        "discriminaciones",
+        "discriminatorio"
       ],
       "ignoreCase": true,
-      "content": "Se refiere a la interacción respetuosa y equitativa entre comunidades que tienen diferentes culturas.",
+      "content": "De acuerdo a Naciones Unidas, la discriminación alude a impedir, obstruir o dificultar de modo arbitrario el pleno ejercicio de los derechos y garantías de la ciudadanía.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "equidad",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Principio de justicia social que busca garantizar igualdad de oportunidades a todos los ciudadanos y ciudadanas. También puede ser entendida como un estado o situación en donde todos y todas las personas son tratadas justa y equitativamente.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "estado de excepción",
+      "aliases": [
+        "estados de excepción"
+      ],
+      "ignoreCase": true,
+      "content": "Se trata de un régimen especial establecido en la Constitución y que le permite al poder Ejecutivo concentrar poderes, limitar derechos en vista de situaciones excepcionales o de extrema gravedad.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "garantía",
+      "aliases": [
+        "garantías"
+      ],
+      "ignoreCase": true,
+      "content": "Instrumento o técnica normativa destinada al resguardo y protección de los derechos fundamentales. Por ejemplo las acciones constitucionales como la acción de protección o amparo son garantías jurisdiccionales, existiendo otros tipos de garantías como el control de constitucionalidad de las leyes.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "inalienable",
+      "aliases": [
+        "inalienables"
+      ],
+      "ignoreCase": true,
+      "content": "Adjetivo que se predica generalmente respecto de los derechos fundamentales y humanos, que sean inalienables significa que no son disponibles para el Estado, es decir que no pueden ser despojados ni afectados en su contenido esencial.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "inaplicabilidad",
+      "aliases": [
+        "inaplicabilidades",
+        "inaplicable"
+      ],
+      "ignoreCase": true,
+      "content": "Acción realizada por un particular o como parte de un proceso judicial destinado a evitar que se aplique una o más leyes por ser inconstitucional. Dicha solicitud se presenta frente al Tribunal Constitucional.",
       "author": "Plataforma Contexto",
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
     },
@@ -3940,12 +4029,13 @@
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
     },
     {
-      "title": "garantía",
+      "title": "interculturalidad",
       "aliases": [
-        "garantías"
+        "intercultural",
+        "interculturales"
       ],
       "ignoreCase": true,
-      "content": "Instrumento o técnica normativa destinada al resguardo y protección de los derechos fundamentales. Por ejemplo las acciones constitucionales como la acción de protección o amparo son garantías jurisdiccionales, existiendo otros tipos de garantías como el control de constitucionalidad de las leyes.",
+      "content": "Se refiere a la interacción respetuosa y equitativa entre comunidades que tienen diferentes culturas.",
       "author": "Plataforma Contexto",
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
     },
@@ -3960,35 +4050,58 @@
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
     },
     {
+      "title": "nacionalidad",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "Vínculo jurídico que une a una persona con un Estado determinado. Este vínculo establece obligaciones y derechos tanto al sujeto como el Estado. La nacionalidad es la que determina si una persona es nacional o extranjera, de allí se desprenderá también su calidad de ciudadano o no. La nacionalidad por su importancia se encuentra en la Constitución Política. Así, el Código Civil, desde 1855, remite a la Carta Fundamental: “Son chilenos los que la Constitución declara tales”.",
+      "author": "Guía de Formación Cívica",
+      "source": "https://www.bcn.cl/formacioncivica/detalle_guia?h=10221.3/45661"
+    },
+    {
+      "title": "quorum",
+      "aliases": [],
+      "ignoreCase": true,
+      "content": "El quorum es una regla de proporcionalidad en el número de votos que se establece para la aprobación de normas. Existen quorum de mayoría simple, absoluta, o quorum especiales.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
       "title": "reconocimiento",
       "aliases": [
         "reconoce la coexistencia"
       ],
       "ignoreCase": true,
-      "content": "Acción de reconocer. En el debate constitucional se asocia con la aceptación y valoración de determinados grupos de la sociedad que han sido históricamente discriminados",
+      "content": "Acción de reconocer. En el debate constitucional se asocia con la aceptación y valoración de determinados grupos de la sociedad que han sido históricamente discriminados.",
       "author": "Plataforma Contexto",
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
     },
     {
-      "title": "inalienable",
-      "aliases": [
-        "inalienables"
-      ],
-      "ignoreCase": true,
-      "content": "Adjetivo que se predica generalmente respecto de los derechos fundamentales y humanos, que sean inalienables significa que no son disponibles para el Estado, es decir que no pueden ser despojados ni afectados en su contenido esencial.",
-      "author": "Plataforma Contexto",
-      "source": "https://plataformacontexto.cl/glosario-constitucional/"
-    },
-    {
-      "title": "equidad",
+      "title": "seguridad social",
       "aliases": [],
       "ignoreCase": true,
-      "content": "Principio de justicia social que busca garantizar igualdad de oportunidades a todos los ciudadanos y ciudadanas. También puede ser entendida como un estado o situación en donde todos y todas las personas son tratadas justa y equitativamente.",
+      "content": "Protección del Estado respecto de ciertas mínimas condiciones que aseguren una vida digna sobre todo en lo concerniente a salud, protección en enfermedad, desempleo, vivienda, enfermedad, invalidez, pérdida de vínculo familiar, entre otros.",
+      "author": "Plataforma Contexto",
+      "source": "https://plataformacontexto.cl/glosario-constitucional/"
+    },
+    {
+      "title": "universalismo",
+      "aliases": [
+        "universal",
+        "universales",
+        "universalidad"
+      ],
+      "ignoreCase": true,
+      "content": "Cuando un derecho social, por ejemplo, se aplica al conjunto de las personas sin importar origen social, nivel de ingreso, u otra consideración.",
       "author": "Plataforma Contexto",
       "source": "https://plataformacontexto.cl/glosario-constitucional/"
     }
   ],
   "enlaces": [
+    {
+      "desde": "articulo:1@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/estado-social/"
+    },
     {
       "desde": "articulo:1@capitulo:1",
       "etiqueta": "Evaluación",
@@ -4003,9 +4116,34 @@
     },
     {
       "desde": "articulo:2@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/temas-civicos/soberania/"
+    },
+    {
+      "desde": "articulo:2@capitulo:1",
       "etiqueta": "Evaluación",
       "autor": "CODEPU",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/46"
+    },
+    {
+      "desde": "articulo:3@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/territorio/"
+    },
+    {
+      "desde": "articulo:4@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/persona/"
+    },
+    {
+      "desde": "articulo:5@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/estado-plurinacional/"
+    },
+    {
+      "desde": "articulo:6@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/democracia-paritaria/"
     },
     {
       "desde": "articulo:6@capitulo:1",
@@ -4038,10 +4176,30 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/90"
     },
     {
+      "desde": "articulo:7@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/estado-regional/"
+    },
+    {
+      "desde": "articulo:8@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/principio-del-buen-vivir/"
+    },
+    {
       "desde": "articulo:8@capitulo:1",
       "etiqueta": "Evaluación",
       "autor": "Fundación Superación de la Pobreza",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/36"
+    },
+    {
+      "desde": "articulo:9@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/estado-laico/"
+    },
+    {
+      "desde": "articulo:10@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/temas-civicos/familia/"
     },
     {
       "desde": "articulo:10@capitulo:1",
@@ -4050,10 +4208,60 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/3"
     },
     {
+      "desde": "articulo:11@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/interculturalidad/"
+    },
+    {
+      "desde": "articulo:12@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/plurilinguismo/"
+    },
+    {
+      "desde": "articulo:13@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/emblemas-nacionales/"
+    },
+    {
+      "desde": "articulo:14@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/relaciones-internacionales/"
+    },
+    {
+      "desde": "articulo:15@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/relaciones-internacionales/"
+    },
+    {
+      "desde": "articulo:16@capitulo:1",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/supremacia-constitucional-y-legal/"
+    },
+    {
+      "desde": "articulo:17@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/fundamentos-y-titularidad-de-los-derechos-fundamentales/"
+    },
+    {
+      "desde": "articulo:18@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/fundamentos-y-titularidad-de-los-derechos-fundamentales/"
+    },
+    {
       "desde": "articulo:18@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "CODEPU",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/40"
+    },
+    {
+      "desde": "articulo:19@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/financiamiento-y-deberes-del-estado-respecto-a-los-derechos-fundamentales/"
+    },
+    {
+      "desde": "articulo:20@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/financiamiento-y-deberes-del-estado-respecto-a-los-derechos-fundamentales/"
     },
     {
       "desde": "articulo:20.2@capitulo:2",
@@ -4062,16 +4270,41 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/74"
     },
     {
+      "desde": "articulo:21@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-la-vida-y-a-la-integridad-personal/"
+    },
+    {
+      "desde": "articulo:22@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-la-vida-y-a-la-integridad-personal/"
+    },
+    {
       "desde": "articulo:22@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Amnistía Internacional",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/76"
     },
     {
+      "desde": "articulo:23@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/prohibicion-al-destierro-exilio-relegacion-y-desplazamiento-forzado/"
+    },
+    {
+      "desde": "articulo:24@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-al-esclarecimiento-conocimiento-de-la-verdad-y-a-la-memoria/"
+    },
+    {
       "desde": "articulo:24.5@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Amnistía Internacional",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/78"
+    },
+    {
+      "desde": "articulo:25@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-la-igualdad-igualdad-sustantiva-igualdad-ante-la-ley-y-no-discriminacion/"
     },
     {
       "desde": "articulo:25@capitulo:2",
@@ -4099,6 +4332,11 @@
     },
     {
       "desde": "articulo:26@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-ninas-ninos-y-adolescentes/"
+    },
+    {
+      "desde": "articulo:26@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Fundación Infancia Primero",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/5"
@@ -4108,6 +4346,11 @@
       "etiqueta": "Evaluación",
       "autor": "Corporación Opción",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/29"
+    },
+    {
+      "desde": "articulo:27@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-una-vida-libre-de-violencia-de-genero/"
     },
     {
       "desde": "articulo:27@capitulo:2",
@@ -4122,10 +4365,30 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/61"
     },
     {
+      "desde": "articulo:28@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-con-discapacidad/"
+    },
+    {
+      "desde": "articulo:29@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-neurodivergentes/"
+    },
+    {
+      "desde": "articulo:30@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-privadas-de-libertad/"
+    },
+    {
       "desde": "articulo:30@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Red Acción Carcelaria",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
+    },
+    {
+      "desde": "articulo:31@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-privadas-de-libertad/"
     },
     {
       "desde": "articulo:31@capitulo:2",
@@ -4135,15 +4398,35 @@
     },
     {
       "desde": "articulo:32@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-privadas-de-libertad/"
+    },
+    {
+      "desde": "articulo:32@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Red Acción Carcelaria",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
     },
     {
       "desde": "articulo:33@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-mayores/"
+    },
+    {
+      "desde": "articulo:33@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Gero Zoom",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/23"
+    },
+    {
+      "desde": "articulo:34@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-los-pueblos-y-naciones-indigenas/"
+    },
+    {
+      "desde": "articulo:35@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-la-educacion-y-sistema-nacional-de-educacion/"
     },
     {
       "desde": "articulo:35@capitulo:2",
@@ -4153,9 +4436,34 @@
     },
     {
       "desde": "articulo:36@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-la-educacion-y-sistema-nacional-de-educacion/"
+    },
+    {
+      "desde": "articulo:36@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Educación 2020",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/26"
+    },
+    {
+      "desde": "articulo:37@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/sistema-de-educacion-superior/"
+    },
+    {
+      "desde": "articulo:38@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-una-educacion-permanente/"
+    },
+    {
+      "desde": "articulo:39@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-una-educacion-permanente/"
+    },
+    {
+      "desde": "articulo:40@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-una-educacion-permanente/"
     },
     {
       "desde": "articulo:40@capitulo:2",
@@ -4165,9 +4473,19 @@
     },
     {
       "desde": "articulo:41@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/libertad-de-ensenanza-y-libertad-de-catedra/"
+    },
+    {
+      "desde": "articulo:41@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Educación 2020",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/28"
+    },
+    {
+      "desde": "articulo:42@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-de-participacion-en-el-proyecto-educativo-y-politica-educacional/"
     },
     {
       "desde": "articulo:42@capitulo:2",
@@ -4177,9 +4495,19 @@
     },
     {
       "desde": "articulo:43@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/rol-de-las-profesoras-y-profesores/"
+    },
+    {
+      "desde": "articulo:43@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Elige Educar",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/27"
+    },
+    {
+      "desde": "articulo:44@capitulo:2",
+      "etiqueta": "Explicación",
+      "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derecho-a-la-salud-y-al-bienestar-integral-y-sistema-nacional-de-salud/"
     },
     {
       "desde": "articulo:44@capitulo:2",
@@ -4314,6 +4642,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/81"
     },
     {
+      "desde": "articulo:79@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Amnistía Internacional",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/92"
+    },
+    {
       "desde": "articulo:81@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "FOJUCC A.C",
@@ -4330,6 +4664,18 @@
       "etiqueta": "Evaluación",
       "autor": "Amnistía Internacional",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/50"
+    },
+    {
+      "desde": "articulo:83@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Colegio de Periodistas",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/94"
+    },
+    {
+      "desde": "articulo:84@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Colegio de Periodistas",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/94"
     },
     {
       "desde": "articulo:84@capitulo:2",
@@ -4384,6 +4730,12 @@
       "etiqueta": "Evaluación",
       "autor": "Corporación Opción",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/39"
+    },
+    {
+      "desde": "articulo:123@capitulo:2.3",
+      "etiqueta": "Evaluación",
+      "autor": "Amnistía Internacional",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/93"
     },
     {
       "desde": "articulo:123.1@capitulo:2.3",
@@ -4997,6 +5349,11 @@
       "texto": "120",
       "desde": "transitoria:42.",
       "hacia": "articulo:120@capitulo:2.2"
+    },
+    {
+      "texto": "disposición transitoria cuadragésima segunda",
+      "desde": "transitoria:43.1",
+      "hacia": "transitoria:42."
     },
     {
       "texto": "artículo 332",

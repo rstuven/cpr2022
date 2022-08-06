@@ -9,6 +9,13 @@ export default React.memo(EnlacesDesde);
 
 function EnlacesDesde(props: { path: string }) {
   const enlaces = getEnlacesDesde(props.path, true);
+  const etiquetasCount: Record<string, number> = {};
+  const etiquetasIndex: Record<string, number> = {};
+  enlaces.forEach((enlace) => {
+    const etiqueta = enlace.etiqueta ?? "";
+    etiquetasCount[etiqueta] = (etiquetasCount[etiqueta] ?? 0) + 1;
+    etiquetasIndex[etiqueta] = 1;
+  });
   return (
     <>
       {enlaces.map((enlace, index) => (
@@ -16,8 +23,12 @@ function EnlacesDesde(props: { path: string }) {
           <Tooltip
             content={
               <>
-                {"por " + enlace.autor}
-                <br />
+                {enlace.autor && (
+                  <>
+                    por {enlace.autor}
+                    <br />
+                  </>
+                )}
                 {"en " + extractDomain(enlace.hacia)}
               </>
             }
@@ -25,7 +36,9 @@ function EnlacesDesde(props: { path: string }) {
             <span className="flex gap-1">
               <a href={enlace.hacia} target="_blank" rel="noreferrer">
                 {enlace.etiqueta}
-                {enlaces.length > 1 ? " " + (index + 1) : ""}
+                {etiquetasCount[enlace.etiqueta ?? ""] > 1
+                  ? " " + etiquetasIndex[enlace.etiqueta ?? ""]++
+                  : ""}
               </a>
               <CgExternal size={16} />
             </span>

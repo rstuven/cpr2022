@@ -45,6 +45,8 @@ export default function BrowsingTools(props: {
     return () => document.removeEventListener("keydown", handler);
   });
 
+  const defaultInputValue = props.filter.query ?? props.filter.text;
+
   return (
     <div
       className={classNames(
@@ -71,7 +73,7 @@ export default function BrowsingTools(props: {
               type="text"
               onChange={onFilterChange}
               onFocus={onFocus}
-              defaultValue={props.filter.text}
+              defaultValue={defaultInputValue}
             />
             <div className="cursor-pointer">
               <MdOutlineClose

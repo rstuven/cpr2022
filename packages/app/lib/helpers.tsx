@@ -13,6 +13,7 @@ export type ItemFilterResult = {
 
 export type ItemFilter = ItemFilterResult & {
   text: string;
+  query?: string;
 };
 
 export function firstToUpperCase(text: string) {

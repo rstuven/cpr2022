@@ -39,7 +39,7 @@ export default function App() {
     location.hash = "#buscar=" + filter;
   }, []);
 
-  const [toolsOpen, setToolsOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(initialFilter != "");
   const onClose = useCallback(() => {
     setToolsOpen(false);
     setFilter("");
@@ -120,24 +120,39 @@ function getItemFilter(filter: string) {
       foundItems: 0,
     };
   } else {
-    const regex = new RegExp(prepareRegex(filter), "ig");
+    const articulosTestRegex = new RegExp(/^(\d+(\.[\da-zñ]+)?,?)*$/);
+    const articulos = articulosTestRegex.test(filter)
+      ? filter.split(",").filter((x) => x)
+      : [];
     const filterResult = filterItems((item) => {
-      if (filter.length < 4) {
+      if (articulos.length > 0) {
         const articulo =
           item.type == "articulo"
             ? item
             : item.type == "inciso" && getParentOfType(item, "articulo");
-        if (articulo && filter == String(articulo.key)) {
+        if (articulo && articulos.includes(String(articulo.key))) {
+          return 1;
+        }
+        if (
+          articulo &&
+          item.type == "inciso" &&
+          articulos.includes(`${articulo.key}.${item.key}`)
+        ) {
           return 1;
         }
         return 0;
       }
+      if (filter.length < 4) {
+        return 0;
+      }
       const content = item.content ?? "";
-      const matches = Array.from(content.matchAll(regex));
+      const filterRegex = new RegExp(prepareRegex(filter), "ig");
+      const matches = Array.from(content.matchAll(filterRegex));
       return matches.length;
     });
     itemFilter = {
-      text: filter.length < 4 ? "" : filter,
+      query: filter,
+      text: articulos.length > 0 || filter.length < 4 ? "" : filter,
       ...filterResult,
     };
   }

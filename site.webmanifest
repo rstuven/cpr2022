@@ -2,6 +2,7 @@
   "name": "CPR Chile 2022",
   "short_name": "CPR 2022",
   "start_url": "/",
+  "scope": ".",
   "theme_color": "#34005f",
   "background_color": "#34005f",
   "display": "standalone",

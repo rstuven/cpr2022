@@ -117,18 +117,18 @@ function getElement(
       }
     }
     hashTry = hashTry.substring(0, lastIndex);
+    if (hashTry == "articulo") {
+      return;
+    }
   }
   return element;
 }
 
 function retry(action: () => boolean) {
-  if (!action()) {
-    setTimeout(() => {
-      if (!action()) {
-        setTimeout(() => {
-          action();
-        }, 100);
-      }
-    }, 100);
-  }
+  let count = 0;
+  const interval = setInterval(() => {
+    if (action() || count > 10) {
+      clearInterval(interval);
+    }
+  }, 100);
 }

@@ -30,16 +30,21 @@ export default function App() {
   useHashScrolling(isMediumMinHeight ? 350 : 150, "smooth", indice, true);
   useHashHighlighting(main);
 
-  const initialFilter =
-    new URLSearchParams(getCurrentHash()).get("buscar") ?? "";
-  const [filter, setFilter] = useState(initialFilter);
+  const [filter, setFilter] = useState("");
+  const [toolsOpen, setToolsOpen] = useState(false);
+
+  useEffect(() => {
+    const initialFilter =
+      new URLSearchParams(getCurrentHash()).get("buscar") ?? "";
+    setFilter(initialFilter);
+    setToolsOpen(initialFilter != "");
+  }, []);
 
   const onFilterChange = useCallback((filter: string) => {
     setFilter(filter);
     location.hash = "#buscar=" + filter;
   }, []);
 
-  const [toolsOpen, setToolsOpen] = useState(initialFilter != "");
   const onClose = useCallback(() => {
     setToolsOpen(false);
     setFilter("");

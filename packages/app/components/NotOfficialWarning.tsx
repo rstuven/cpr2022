@@ -1,11 +1,12 @@
 import React, { useCallback } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import createPersistedState from "use-persisted-state";
+import useIsServer from "hooks/useIsServer";
 
 const useWarningOpenState = createPersistedState("not-official-warning");
 
 export default function NotOfficialWarning() {
-  const isServer = typeof window == "undefined";
+  const isServer = useIsServer();
 
   const [warningOpen, setWarningOpen] = useWarningOpenState(!isServer);
 

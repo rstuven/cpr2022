@@ -11,7 +11,7 @@ function useMediaQuery(query: string, defaultValue = false): boolean {
     [defaultValue]
   );
 
-  const [matches, setMatches] = useState<boolean>(getMatches(query));
+  const [matches, setMatches] = useState<boolean>(defaultValue);
 
   const handleChange = useCallback(() => {
     setMatches(getMatches(query));

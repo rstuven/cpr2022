@@ -1,8 +1,9 @@
 import React from "react";
 
+import useIsServer from "hooks/useIsServer";
+import { getItemsOfType, ItemFilter } from "lib/helpers";
 import Capitulo from "./Capitulo";
 import Transitorias from "./Transitorias";
-import { getItemsOfType, ItemFilter } from "lib/helpers";
 import TitleCase from "./TitleCase";
 import Preambulo from "./Preambulo";
 import { AudioProvider } from "./AudioProvider";
@@ -11,7 +12,7 @@ import NotOfficialWarning from "./NotOfficialWarning";
 export default React.memo(Constitucion);
 
 function Constitucion({ filter }: { filter: ItemFilter }) {
-  const isServer = typeof window == "undefined";
+  const isServer = useIsServer();
   return (
     <AudioProvider>
       <div

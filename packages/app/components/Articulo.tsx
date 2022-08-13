@@ -14,7 +14,7 @@ import {
 import ItemToolbar from "./ItemToolbar";
 import EnlacesHacia from "./EnlacesHacia";
 import AudioBadge from "./AudioBadge";
-import HoverCard from "./HoverCard";
+import Popover from "./Popover";
 import EnlacesDesde from "./EnlacesDesde";
 import VisibilitySensor from "./VisibilitySensor";
 
@@ -103,10 +103,8 @@ function BadgeEtiquetas(props: {
   }
   return (
     <Badge color="pink">
-      <HoverCard
+      <Popover
         width={330}
-        openDelay={600}
-        className="cursor-pointer"
         target={
           <div className="cursor-pointer">
             <div className="flex">

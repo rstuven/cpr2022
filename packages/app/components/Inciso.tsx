@@ -185,17 +185,16 @@ const renderGlossary = (
       key={key}
       width={400}
       openDelay={600}
-      className="inline"
       target={
         <span
           key={key}
           className="underline decoration-2 decoration-dotted decoration-green-500 cursor-default"
+          onContextMenu={(e) => e.preventDefault()}
         >
           {match}
         </span>
       }
       dropdown={
-        // <div className="indent-0 text-sm text-white bg-black">
         <div className="indent-0 text-sm font-sans flex flex-col gap-2">
           <div className="font-bold">{entry.title}</div>
           <div className="max-w-md italic">{entry.content}</div>
@@ -218,7 +217,7 @@ const renderEnlace = (
 ): JSX.Element => {
   let content: JSX.Element;
   let attrs: AnchorHTMLAttributes<HTMLAnchorElement>;
-  let icon: JSX.Element | undefined = undefined;
+  let icon: JSX.Element | undefined;
 
   const fragmento = parseFragmento(enlace.hacia);
   if (fragmento && "inciso" in fragmento) {
@@ -237,7 +236,7 @@ const renderEnlace = (
   }
 
   return (
-    <a key={key} className="text-blue-800" {...attrs}>
+    <a key={key} className="inline-block text-blue-800" {...attrs}>
       <Tooltip placement="bottom" content={content}>
         {enlace.texto} {icon}
       </Tooltip>

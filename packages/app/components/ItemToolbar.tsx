@@ -33,9 +33,11 @@ export default function ItemToolbar({
     <div className="ml-1 mr-2 float-right flex gap-2 font-sans">
       <Popover
         width={240}
-        className="cursor-pointer"
         target={
-          <div className="cursor-pointer">
+          <div
+            className="cursor-pointer"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <Tooltip content={"Acciones sobre " + getItemTypeLabel(item.type)}>
               <HiOutlineDotsVertical size={20} />
             </Tooltip>

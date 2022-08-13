@@ -18,13 +18,13 @@ import {
   getCurrentHash,
 } from "lib/helpers";
 import { AnchorHTMLAttributes, useContext } from "react";
-import VisibilitySensor from "react-visibility-sensor";
 import HashLink from "./HashLink";
 import Tooltip from "./Tooltip";
 import EnlacesHacia from "./EnlacesHacia";
 import FragmentoTooltipContent from "./FragmentoTooltipContent";
 import { SmallMediaContext } from "./SmallMediaProvider";
 import HoverCard from "./HoverCard";
+import VisibilitySensor from "./VisibilitySensor";
 
 type IncisoProps = {
   item: ItemObject;
@@ -46,15 +46,10 @@ export default function Inciso(props: IncisoProps) {
   const path = getItemFragmentoId(props.item);
 
   return (
-    <VisibilitySensor partialVisibility offset={{ top: -800, bottom: -800 }}>
-      {(args: { args: any }) =>
-        !args.isVisible ? (
-          <IncisoSimple {...{ path, indent, bullet, ...props }} />
-        ) : (
-          <IncisoFull {...{ path, indent, bullet, ...props }} />
-        )
-      }
-    </VisibilitySensor>
+    <VisibilitySensor
+      invisible={<IncisoSimple {...{ path, indent, bullet, ...props }} />}
+      visible={<IncisoFull {...{ path, indent, bullet, ...props }} />}
+    />
   );
 }
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { PropsWithChildren } from "react";
 import { BiBookmarks } from "react-icons/bi";
 
@@ -30,6 +30,7 @@ function HashLink(props: HashLinkProps) {
           )}
           href={"/#" + props.hash}
           data-id={props.hash}
+          aria-label={title}
         >
           <div className={props.indent ? "-indent-3 -ml-2.5" : "pl-1"}>
             <Tooltip placement="left" content={title}>

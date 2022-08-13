@@ -75,16 +75,16 @@ export default function AppNavbar(props: {
               </div>
             </Navbar.Link>
 
-            <Navbar.Link href="mailto:cpr2022.cl@gmail.com">
+            <Navbar.Link href="mailto:cpr2022.cl@gmail.com" title="Email de contacto">
               <MdEmail size={20} />
             </Navbar.Link>
 
-            <Navbar.Link href="https://twitter.com/cpr2022cl">
+            <Navbar.Link href="https://twitter.com/cpr2022cl" title="Cuenta en Twitter">
               <BsTwitter size={20} />
             </Navbar.Link>
 
             {props.onToolsToggle && (
-              <div className="block p-0  hover:bg-transparent hover:text-blue-700 dark:hover:bg-transparent dark:hover:text-white">
+              <li className="block p-0  hover:bg-transparent hover:text-blue-700 dark:hover:bg-transparent dark:hover:text-white">
                 <div className="flex gap-1">
                   <Tooltip
                     placement="bottom"
@@ -104,7 +104,7 @@ export default function AppNavbar(props: {
                     />
                   </Tooltip>
                 </div>
-              </div>
+              </li>
             )}
           </>
         ) : (

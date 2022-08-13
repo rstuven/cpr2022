@@ -23,8 +23,7 @@ function Constitucion({ filter }: { filter: ItemFilter }) {
       >
         <NotOfficialWarning />
 
-        <a data-id="inicio" tabIndex={0} />
-        <h1 className="text-center font-normal">
+        <h1 data-id="inicio" tabIndex={0} className="text-center font-normal">
           <TitleCase
             lowercaseClass="text-3xl"
             text="Constitución Política de la República de Chile"

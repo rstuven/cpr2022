@@ -36,7 +36,7 @@ export default function AppNavbar(props: {
   return (
     <Navbar border rounded>
       <Navbar.Brand href="/#inicio">
-        <Avatar alt="Inicio" img="/images/logo.png" />
+        <Avatar alt="Inicio" img="/images/logo40.png" />
         &nbsp;
         <span className="p-1 text-md sm:hidden">
           Propuesta de Nueva Constitución

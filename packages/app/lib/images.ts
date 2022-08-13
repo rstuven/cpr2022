@@ -69,7 +69,7 @@ async function renderHeader(ctx: CanvasRenderingContext2D) {
   ctx.fillStyle = accentColor;
   ctx.fillRect(0, 0, ctx.canvas.width, height);
 
-  const logo = await loadImage("public/images/logo.png");
+  const logo = await loadImage("public/images/logo70.png");
   ctx.drawImage(logo, 0, 0, height, height);
 
   ctx.fillStyle = "white";

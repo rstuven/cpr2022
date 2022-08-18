@@ -12,7 +12,12 @@ import { MdEmail } from "react-icons/md";
 import { usePWAInstall } from "react-use-pwa-install";
 
 import { useNavbarContext } from "flowbite-react/lib/esm/components/Navbar/NavbarContext";
-import { getItemFragmentoId, getItemsOfType, getItemLabel } from "lib/helpers";
+import {
+  getItemFragmentoId,
+  getItemsOfType,
+  getItemLabel,
+  getChildrenOfType,
+} from "lib/helpers";
 import { ItemObject } from "cpr2022-data/src/types/schemaShallow";
 
 export default function AppNavbarSmall(props: {
@@ -22,18 +27,18 @@ export default function AppNavbarSmall(props: {
   const install = usePWAInstall();
   return (
     <div className="flex flex-col w-full h-screen pr-5 pb-[70px] absolute bg-white overflow-scroll">
-      <NavLink href="/#inicio" icon={AiOutlineHome}>
+      <NavLink href="/#inicio" icon={AiOutlineHome} className="w-full">
         Inicio
       </NavLink>
-      <NavLink href="/acerca-de" icon={AiOutlineInfoCircle}>
+      <NavLink href="/acerca-de" icon={AiOutlineInfoCircle} className="w-full">
         ¿Qué es esto?
       </NavLink>
 
       {props.setToolsOpen && <NavLinkTools setToolsOpen={props.setToolsOpen} />}
 
-      {install && (
-        <div className="p-1">
-          <button onClick={install} className="flex gap-1">
+      {!install && (
+        <div className="p-1 hover:bg-gray-200">
+          <button onClick={install} className="flex gap-1 w-full">
             <MdAddToHomeScreen size={20} />
             Instalar app
           </button>
@@ -79,11 +84,12 @@ function NavLinkTools(props: { setToolsOpen: (value: boolean) => void }) {
 }
 
 type NavLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
-  icon: IconType;
+  icon?: IconType;
+  className?: string;
 };
 
 function NavLink(props: NavLinkProps) {
-  const { icon: Icon, ...rest } = props;
+  const { icon: Icon, className, ...rest } = props;
   const { setIsOpen } = useNavbarContext();
 
   const onNavbarLinkClick = useCallback(() => {
@@ -98,17 +104,33 @@ function NavLink(props: NavLinkProps) {
       className="hover:bg-gray-200 p-1 flex gap-1"
       onClick={onNavbarLinkClick}
     >
-      <Icon size={20} />
+      {Icon && <Icon size={20} />}
 
-      <a className="block align-middle" {...rest} />
+      <a
+        className={"block align-middle w-full " + (className || "")}
+        {...rest}
+      />
     </div>
   );
 }
 
 function ItemNavLink({ item }: { item: ItemObject }) {
   return (
-    <NavLink href={"/#" + getItemFragmentoId(item)} icon={AiOutlineBook}>
-      <span className="font-ConvencionFJ">{getItemLabel(item)}</span>
-    </NavLink>
+    <>
+      <NavLink href={"/#" + getItemFragmentoId(item)} icon={AiOutlineBook}>
+        <span className="font-ConvencionFJ">{getItemLabel(item)}</span>
+      </NavLink>
+      {getChildrenOfType(item, "titulo").map((titulo, oid) => (
+        <NavLink
+          key={oid}
+          href={"/#" + getItemFragmentoId(titulo)}
+          className="-indent-10 pl-10"
+        >
+          <span className="font-ConvencionFJ pl-10 text-sm">
+            {getItemLabel(titulo, false)}
+          </span>
+        </NavLink>
+      ))}
+    </>
   );
 }

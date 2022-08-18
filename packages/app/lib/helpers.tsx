@@ -169,6 +169,11 @@ export function getItemFragmentoId(item: ItemObject, appendSuffix = true) {
     result += "." + (item.key ?? "");
   } else if (["preambulo", "transitorias"].includes(item.type)) {
     result = item.type;
+  } else if (item.type == "titulo") {
+    const capitulo = getParentOfType(item, "capitulo");
+    if (capitulo) {
+      result = `${capitulo.type}:${capitulo.ordinal}.${item.ordinal}`;
+    }
   } else {
     result = item.type + ":" + (item.ordinal ?? item.key ?? item.oid);
   }
@@ -177,7 +182,7 @@ export function getItemFragmentoId(item: ItemObject, appendSuffix = true) {
     const capitulo = getParentOfType(item, "capitulo");
     const titulo = getParentOfType(item, "titulo");
     if (capitulo) {
-      let suffix = "@capitulo:" + capitulo.ordinal;
+      let suffix = `@${capitulo.type}:${capitulo.ordinal}`;
       if (titulo) {
         suffix += "." + titulo.ordinal;
       }

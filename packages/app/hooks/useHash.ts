@@ -127,7 +127,7 @@ function getElement(
 function retry(action: () => boolean) {
   let count = 0;
   const interval = setInterval(() => {
-    if (action() || count > 10) {
+    if (action() || count > 100) {
       clearInterval(interval);
     }
   }, 100);

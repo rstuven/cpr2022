@@ -1,11 +1,6 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
-import { createGetInitialProps } from '@mantine/next';
+import { createGetInitialProps } from "@mantine/next";
 
 const getInitialProps = createGetInitialProps();
 
@@ -64,7 +59,7 @@ class MyDocument extends Document {
             `}
           </Script>
         </Head>
-        <body>
+        <body className="overflow-hidden">
           <Main />
           <NextScript />
         </body>

@@ -6,7 +6,7 @@ type VisibilitySensorProps = { visible: ReactNode; invisible?: ReactNode };
 export default function VisibilitySensor(props: VisibilitySensorProps) {
   const [offset, setOffset] = useState(0);
   useEffect(() => {
-    setOffset(window.innerHeight);
+    setOffset(window.innerHeight / 2);
   }, []);
   return (
     <ReactVisibilitySensor

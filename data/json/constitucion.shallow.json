@@ -18,6 +18,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/80"
     },
     {
+      "desde": "articulo:1@capitulo:1",
+      "etiqueta": "Estándar internacional",
+      "autor": "Isaac de Paz González (Abogado, México)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/5"
+    },
+    {
       "desde": "articulo:2@capitulo:1",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/temas-civicos/soberania/"
@@ -42,6 +48,12 @@
       "desde": "articulo:5@capitulo:1",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/estado-plurinacional/"
+    },
+    {
+      "desde": "articulo:5@capitulo:1",
+      "etiqueta": "Estándar internacional",
+      "autor": "Isaac de Paz González (Abogado, México)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/5"
     },
     {
       "desde": "articulo:6@capitulo:1",
@@ -77,6 +89,18 @@
       "etiqueta": "Evaluación",
       "autor": "Verónica Aranda Friz, Universidad de Chile",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/90"
+    },
+    {
+      "desde": "articulo:6@capitulo:1",
+      "etiqueta": "Estándar internacional",
+      "autor": "Valeria Esquivel (Economista, Argentina)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/2"
+    },
+    {
+      "desde": "articulo:6@capitulo:1",
+      "etiqueta": "Estándar internacional",
+      "autor": "Beatrice Duncan (Asesora, ONU Mujeres)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/13"
     },
     {
       "desde": "articulo:7@capitulo:1",
@@ -136,6 +160,12 @@
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/relaciones-internacionales/"
     },
     {
+      "desde": "articulo:15@capitulo:1",
+      "etiqueta": "Estándar internacional",
+      "autor": "José Luis Caballero (Abogado, México)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/7"
+    },
+    {
       "desde": "articulo:16@capitulo:1",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/principios-generales/supremacia-constitucional-y-legal/"
@@ -189,6 +219,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/76"
     },
     {
+      "desde": "articulo:22@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Santiago Corcuera Cabezut (Abogado, México)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/8"
+    },
+    {
       "desde": "articulo:23@capitulo:2",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/prohibicion-al-destierro-exilio-relegacion-y-desplazamiento-forzado/"
@@ -212,7 +248,7 @@
     {
       "desde": "articulo:25@capitulo:2",
       "etiqueta": "Evaluación",
-      "autor": "",
+      "autor": "Diversa Patagonia",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/22"
     },
     {
@@ -234,6 +270,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/12"
     },
     {
+      "desde": "articulo:25@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Meghan Campbell (Abogada, Canadá)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/10"
+    },
+    {
       "desde": "articulo:26@capitulo:2",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-ninas-ninos-y-adolescentes/"
@@ -249,6 +291,12 @@
       "etiqueta": "Evaluación",
       "autor": "Corporación Opción",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/29"
+    },
+    {
+      "desde": "articulo:26@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Conor O'Mahony (Abogado, Irlanda)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/9"
     },
     {
       "desde": "articulo:27@capitulo:2",
@@ -273,6 +321,12 @@
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-con-discapacidad/"
     },
     {
+      "desde": "articulo:28@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Michael Stein (Abogado, Estados Unidos)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/11"
+    },
+    {
       "desde": "articulo:29@capitulo:2",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-neurodivergentes/"
@@ -289,6 +343,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
     },
     {
+      "desde": "articulo:30@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Amnistía Internacional",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/95"
+    },
+    {
       "desde": "articulo:31@capitulo:2",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-privadas-de-libertad/"
@@ -300,6 +360,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
     },
     {
+      "desde": "articulo:31@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Amnistía Internacional",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/95"
+    },
+    {
       "desde": "articulo:32@capitulo:2",
       "etiqueta": "Explicación",
       "hacia": "https://www.diarioconstitucional.cl/nueva-constitucion/derechos-fundamentales-y-garantias/derechos-de-las-personas-privadas-de-libertad/"
@@ -309,6 +375,12 @@
       "etiqueta": "Evaluación",
       "autor": "Red Acción Carcelaria",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/77"
+    },
+    {
+      "desde": "articulo:32@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Amnistía Internacional",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/95"
     },
     {
       "desde": "articulo:33@capitulo:2",
@@ -336,6 +408,12 @@
       "etiqueta": "Evaluación",
       "autor": "Educación 2020",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/26"
+    },
+    {
+      "desde": "articulo:35@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Delphine Dorsi (Abogada, Francia)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/12"
     },
     {
       "desde": "articulo:36@capitulo:2",
@@ -419,6 +497,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/79"
     },
     {
+      "desde": "articulo:44@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Eduardo Arenas Catalán (Abogado, Chile)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/4"
+    },
+    {
       "desde": "articulo:45@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Luis Vargas, Universidad de Oxford",
@@ -429,6 +513,12 @@
       "etiqueta": "Evaluación",
       "autor": "Amnistía Internacional",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/35"
+    },
+    {
+      "desde": "articulo:46@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Valeria Esquivel (Economista, Argentina)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/3"
     },
     {
       "desde": "articulo:47@capitulo:2",
@@ -485,10 +575,34 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/44"
     },
     {
+      "desde": "articulo:54@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Christophe Golay (Investigador / Geneva Academy)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/14"
+    },
+    {
+      "desde": "articulo:55@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Christophe Golay (Investigador / Geneva Academy)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/14"
+    },
+    {
+      "desde": "articulo:56@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "Christophe Golay (Investigador / Geneva Academy)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/14"
+    },
+    {
       "desde": "articulo:57@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "RIMISP",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/43"
+    },
+    {
+      "desde": "articulo:60@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Fundación Clubes",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/96"
     },
     {
       "desde": "articulo:61@capitulo:2",
@@ -569,6 +683,12 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/50"
     },
     {
+      "desde": "articulo:82@capitulo:2",
+      "etiqueta": "Estándar internacional",
+      "autor": "José Buendía Hegewisch (Periodista, México)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/1"
+    },
+    {
       "desde": "articulo:83@capitulo:2",
       "etiqueta": "Evaluación",
       "autor": "Colegio de Periodistas",
@@ -597,6 +717,30 @@
       "etiqueta": "Evaluación",
       "autor": "Fundación Superación de la Pobreza",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/18"
+    },
+    {
+      "desde": "articulo:95@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Acción Conciencia",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/97"
+    },
+    {
+      "desde": "articulo:96@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Acción Conciencia",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/97"
+    },
+    {
+      "desde": "articulo:97@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Acción Conciencia",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/97"
+    },
+    {
+      "desde": "articulo:98@capitulo:2",
+      "etiqueta": "Evaluación",
+      "autor": "Acción Conciencia",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/97"
     },
     {
       "desde": "articulo:103@capitulo:2",
@@ -863,10 +1007,22 @@
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/66"
     },
     {
+      "desde": "articulo:299@capitulo:8",
+      "etiqueta": "Estándar internacional",
+      "autor": "Jorge Javier Romero Vadillo (Politólogo, México)",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluacionesinternacionales/evaluacionesint/6"
+    },
+    {
       "desde": "articulo:312@capitulo:9",
       "etiqueta": "Evaluación",
       "autor": "ABOFEM",
       "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/87"
+    },
+    {
+      "desde": "articulo:323@capitulo:9",
+      "etiqueta": "Evaluación",
+      "autor": "Núcleo Constitucional UAH",
+      "hacia": "https://laconstitucionesnuestra.cl/evaluaciones/verevaluaciones/98"
     },
     {
       "texto": "letra a)",

@@ -236,7 +236,7 @@ const renderEnlace = (
   }
 
   return (
-    <a key={key} className="inline-block text-blue-800" {...attrs}>
+    <a key={key} className="text-blue-800" {...attrs}>
       <Tooltip placement="bottom" content={content}>
         {enlace.texto} {icon}
       </Tooltip>

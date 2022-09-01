@@ -36,7 +36,7 @@ export default function AppNavbarSmall(props: {
 
       {props.setToolsOpen && <NavLinkTools setToolsOpen={props.setToolsOpen} />}
 
-      {!install && (
+      {install && (
         <div className="p-1 hover:bg-gray-200">
           <button onClick={install} className="flex gap-1 w-full">
             <MdAddToHomeScreen size={20} />
